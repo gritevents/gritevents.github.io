@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GRIT Events — Nairobi's premier luxury event planning and design company. Weddings, corporate events, galas, summits, birthdays, ruracio ceremonies and more across East Africa and internationally. Greatness Requires Internal Toughness.">
+<meta name="keywords" content="luxury event planner Nairobi, wedding planner Kenya, corporate event planner Nairobi, gala dinner planner East Africa, event designer Kenya, ruracio planner Nairobi, destination wedding Kenya, birthday planner Nairobi, baby shower planner Kenya, summit organizer Nairobi, GRIT Events">
+<meta name="author" content="GRIT Events">
+<meta property="og:title" content="GRIT Events — Luxury Event Planning & Design | Nairobi, Kenya">
+<meta property="og:description" content="We don't just plan events — we build extraordinary experiences. Luxury event planning across East Africa and internationally.">
+<meta property="og:type" content="website">
+<title>GRIT Events | Luxury Event Planning & Design — Nairobi, Kenya</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Josefin+Sans:wght@100;200;300;400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --crimson: #8B0000;
+  --crimson-light: #A50000;
+  --black: #1A1A1A;
+  --black-deep: #0D0D0D;
+  --gold: #C9A84C;
+  --gold-light: #E2C06A;
+  --cream: #F5F0E8;
+  --cream-dark: #EDE6D6;
+  --gray: #888;
+  --white: #ffffff;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background: var(--black-deep);
+  color: var(--cream);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ── CUSTOM CURSOR ── */
+.cursor {
+  width: 8px; height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease;
+  transform: translate(-50%, -50%);
+}
+.cursor-ring {
+  width: 32px; height: 32px;
+  border: 1px solid rgba(201,168,76,0.4);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.15s ease, width 0.2s, height 0.2s;
+  transform: translate(-50%, -50%);
+}
+
+/* ── NOISE OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9997;
+  opacity: 0.4;
+}
+
+/* ══════════════════════════════
+   HEADER / NAV
+══════════════════════════════ */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 0 60px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.4s ease, border-bottom 0.4s ease;
+}
+
+header.scrolled {
+  background: rgba(13,13,13,0.95);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  backdrop-filter: blur(12px);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.nav-monogram {
+  width: 44px; height: 44px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -2px;
+  position: relative;
+}
+
+.nav-monogram .g { color: var(--crimson); }
+.nav-monogram .e { color: var(--gold); }
+
+.nav-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-brand-name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 6px;
+  color: var(--cream);
+}
+
+.nav-brand-sub {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+nav a {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: rgba(245,240,232,0.7);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0; right: 0;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav a:hover { color: var(--gold); }
+nav a:hover::after { transform: scaleX(1); }
+
+.nav-cta {
+  padding: 10px 24px;
+  border: 1px solid var(--gold);
+  color: var(--gold) !important;
+  font-size: 10px !important;
+  letter-spacing: 3px !important;
+  transition: all 0.3s ease !important;
+}
+
+.nav-cta:hover {
+  background: var(--gold) !important;
+  color: var(--black) !important;
+}
+
+.nav-cta::after { display: none !important; }
+
+/* ══════════════════════════════
+   HERO
+══════════════════════════════ */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(105deg, rgba(139,0,0,0.85) 0%, rgba(13,13,13,0.95) 45%, rgba(13,13,13,1) 100%),
+    url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1800&q=80') center/cover no-repeat;
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 80px,
+    rgba(201,168,76,0.02) 80px,
+    rgba(201,168,76,0.02) 81px
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 120px 60px 80px;
+  max-width: 900px;
+}
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: fadeUp 1s ease 0.3s forwards;
+}
+
+.hero-eyebrow-line {
+  width: 40px; height: 1px;
+  background: var(--gold);
+}
+
+.hero-eyebrow-text {
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: clamp(64px, 10vw, 130px);
+  line-height: 0.85;
+  color: var(--cream);
+  margin-bottom: 8px;
+  opacity: 0;
+  animation: fadeUp 1s ease 0.5s forwards;
+}
+
+.hero-title span {
+  color: var(--crimson);
+  font-style: italic;
+}
+
+.hero-subtitle {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: clamp(14px, 2vw, 20px);
+  letter-spacing: 8px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeUp 1s ease 0.7s forwards;
+}
+
+.hero-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.8;
+  color: rgba(245,240,232,0.7);
+  max-width: 560px;
+  margin-bottom: 56px;
+  opacity: 0;
+  animation: fadeUp 1s ease 0.9s forwards;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  opacity: 0;
+  animation: fadeUp 1s ease 1.1s forwards;
+}
+
+.btn-primary {
+  padding: 16px 40px;
+  background: var(--crimson);
+  color: var(--cream);
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--crimson);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.btn-primary:hover {
+  color: var(--black);
+  border-color: var(--gold);
+}
+.btn-primary:hover::before { transform: scaleX(1); }
+
+.btn-secondary {
+  padding: 16px 40px;
+  background: transparent;
+  color: var(--cream);
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(245,240,232,0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* Hero scroll indicator */
+.hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  animation: fadeUp 1s ease 1.5s forwards;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(180deg, var(--gold), transparent);
+  animation: scrollPulse 2s ease infinite;
+}
+
+.scroll-text {
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: rgba(245,240,232,0.4);
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+}
+
+/* Hero stats */
+.hero-stats {
+  position: absolute;
+  right: 60px;
+  bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  opacity: 0;
+  animation: fadeUp 1s ease 1.3s forwards;
+}
+
+.stat {
+  text-align: right;
+}
+
+.stat-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 42px;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: rgba(245,240,232,0.4);
+  text-transform: uppercase;
+}
+
+/* Ghost text */
+.hero-ghost {
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 280px;
+  color: rgba(139,0,0,0.05);
+  line-height: 1;
+  pointer-events: none;
+  letter-spacing: -10px;
+  z-index: 1;
+}
+
+/* ══════════════════════════════
+   SECTION SHARED
+══════════════════════════════ */
+section { position: relative; }
+
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.eyebrow-line {
+  width: 40px; height: 1px;
+  background: var(--gold);
+}
+
+.eyebrow-text {
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: clamp(40px, 5vw, 72px);
+  line-height: 1;
+  color: var(--cream);
+  margin-bottom: 24px;
+}
+
+.section-title em {
+  font-style: italic;
+  color: var(--crimson);
+}
+
+.section-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  line-height: 1.9;
+  color: rgba(245,240,232,0.65);
+  max-width: 600px;
+}
+
+/* Gold divider */
+.gold-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 80px 0;
+}
+
+.gd-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.3), transparent);
+}
+
+.gd-diamond {
+  width: 8px; height: 8px;
+  border: 1px solid var(--gold);
+  transform: rotate(45deg);
+}
+
+/* ══════════════════════════════
+   MARQUEE STRIP
+══════════════════════════════ */
+.marquee-strip {
+  background: var(--crimson);
+  padding: 16px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-inner {
+  display: inline-flex;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-item {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: rgba(245,240,232,0.8);
+  text-transform: uppercase;
+  padding: 0 40px;
+}
+
+.marquee-dot {
+  color: var(--gold);
+  padding: 0 10px;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ══════════════════════════════
+   ABOUT / PHILOSOPHY
+══════════════════════════════ */
+.about {
+  padding: 120px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  background: var(--black);
+}
+
+.about-visual {
+  position: relative;
+}
+
+.about-img-main {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  filter: grayscale(20%) contrast(1.1);
+}
+
+.about-img-accent {
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 220px;
+  height: 280px;
+  object-fit: cover;
+  border: 4px solid var(--black);
+  filter: grayscale(20%);
+}
+
+.about-badge {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100px; height: 100px;
+  background: var(--crimson);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-badge-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--cream);
+  line-height: 1;
+}
+
+.about-badge-text {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.about-content { padding-left: 20px; }
+
+.grit-letters {
+  display: flex;
+  gap: 0;
+  margin: 40px 0;
+}
+
+.grit-letter-block {
+  flex: 1;
+  border-left: 1px solid rgba(201,168,76,0.2);
+  padding: 20px 16px;
+  transition: background 0.3s;
+}
+
+.grit-letter-block:hover {
+  background: rgba(139,0,0,0.1);
+}
+
+.gl-letter {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--crimson);
+  line-height: 1;
+}
+
+.gl-word {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin: 4px 0;
+}
+
+.gl-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  color: rgba(245,240,232,0.5);
+  line-height: 1.6;
+}
+
+/* ══════════════════════════════
+   SERVICES
+══════════════════════════════ */
+.services {
+  padding: 120px 60px;
+  background: var(--black-deep);
+}
+
+.services-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: end;
+  margin-bottom: 80px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(201,168,76,0.1);
+}
+
+.service-card {
+  background: var(--black);
+  padding: 40px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.4s ease;
+  cursor: pointer;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--crimson);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover { background: rgba(139,0,0,0.08); }
+.service-card:hover::before { transform: scaleX(1); }
+
+.service-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.service-icon {
+  font-size: 28px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.service-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--cream);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.service-desc {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  color: rgba(245,240,232,0.45);
+}
+
+.service-arrow {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  color: var(--gold);
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.service-card:hover .service-arrow {
+  opacity: 1;
+  transform: translate(4px, -4px);
+}
+
+/* ══════════════════════════════
+   WHY GRIT
+══════════════════════════════ */
+.why-grit {
+  padding: 120px 60px;
+  background: var(--crimson);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-grit::before {
+  content: 'GRIT';
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 400px;
+  color: rgba(0,0,0,0.1);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.why-content .section-title { color: var(--cream); }
+.why-content .section-title em { color: var(--gold); font-style: italic; }
+.why-content .section-body { color: rgba(245,240,232,0.8); }
+
+.why-points {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.why-point {
+  display: flex;
+  gap: 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(245,240,232,0.1);
+  align-items: flex-start;
+}
+
+.why-point:first-child { border-top: 1px solid rgba(245,240,232,0.1); }
+
+.why-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 42px;
+  color: rgba(245,240,232,0.15);
+  line-height: 1;
+  min-width: 50px;
+}
+
+.why-text h4 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.why-text p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(245,240,232,0.75);
+}
+
+/* ══════════════════════════════
+   PORTFOLIO TEASER
+══════════════════════════════ */
+.portfolio {
+  padding: 120px 60px;
+  background: var(--black);
+}
+
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 300px 300px;
+  gap: 12px;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.portfolio-item:first-child {
+  grid-row: span 2;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  filter: grayscale(30%) brightness(0.8);
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+  filter: grayscale(0%) brightness(0.9);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(139,0,0,0.8) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 28px;
+}
+
+.portfolio-item:hover .portfolio-overlay { opacity: 1; }
+
+.portfolio-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--cream);
+}
+
+.portfolio-coming {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(201,168,76,0.15);
+  border: 1px solid rgba(201,168,76,0.3);
+  padding: 6px 12px;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* ══════════════════════════════
+   TEAM
+══════════════════════════════ */
+.team {
+  padding: 120px 60px;
+  background: var(--black-deep);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.team-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-img-wrap {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.team-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(40%);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.team-card:hover .team-img-wrap img {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
+.team-accent {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--crimson), var(--gold));
+}
+
+.team-info {
+  padding: 20px 0 0;
+}
+
+.team-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--cream);
+}
+
+.team-role {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.team-bio {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  color: rgba(245,240,232,0.5);
+  line-height: 1.7;
+  margin-top: 12px;
+}
+
+/* ══════════════════════════════
+   TESTIMONIALS
+══════════════════════════════ */
+.testimonials {
+  padding: 120px 60px;
+  background: var(--black);
+  text-align: center;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.testimonial-card {
+  padding: 40px 32px;
+  border: 1px solid rgba(201,168,76,0.15);
+  position: relative;
+  transition: border-color 0.3s;
+}
+
+.testimonial-card:hover {
+  border-color: rgba(201,168,76,0.4);
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: 32px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 100px;
+  color: var(--crimson);
+  line-height: 1;
+  opacity: 0.4;
+}
+
+.testimonial-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(245,240,232,0.75);
+  margin-bottom: 28px;
+}
+
+.testimonial-author {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.testimonial-event {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: rgba(245,240,232,0.3);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.testimonial-stars {
+  color: var(--gold);
+  font-size: 12px;
+  margin-bottom: 20px;
+  letter-spacing: 4px;
+}
+
+/* ══════════════════════════════
+   CTA BANNER
+══════════════════════════════ */
+.cta-banner {
+  padding: 100px 60px;
+  background:
+    linear-gradient(135deg, rgba(139,0,0,0.9), rgba(13,13,13,0.97)),
+    url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1800&q=80') center/cover no-repeat;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 100px,
+    rgba(201,168,76,0.02) 100px,
+    rgba(201,168,76,0.02) 101px
+  );
+}
+
+.cta-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: clamp(40px, 6vw, 80px);
+  color: var(--cream);
+  line-height: 1;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.cta-title em { color: var(--gold); font-style: italic; }
+
+.cta-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  color: rgba(245,240,232,0.6);
+  margin-bottom: 48px;
+  font-style: italic;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ══════════════════════════════
+   FOOTER
+══════════════════════════════ */
+footer {
+  background: #080808;
+  padding: 80px 60px 40px;
+  border-top: 1px solid rgba(201,168,76,0.1);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.footer-brand-name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 8px;
+  color: var(--cream);
+  margin-bottom: 4px;
+}
+
+.footer-brand-sub {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: rgba(245,240,232,0.4);
+  line-height: 1.7;
+  max-width: 300px;
+  margin-bottom: 28px;
+}
+
+.footer-contact-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.footer-contact-dot {
+  width: 6px; height: 6px;
+  background: var(--crimson);
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.footer-contact-text {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: rgba(245,240,232,0.5);
+  line-height: 1.6;
+}
+
+.footer-col-title {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  color: rgba(245,240,232,0.5);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover { color: var(--gold); }
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  border-top: 1px solid rgba(245,240,232,0.06);
+}
+
+.footer-copy {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: rgba(245,240,232,0.25);
+  text-transform: uppercase;
+}
+
+.footer-copy span { color: var(--crimson); }
+
+.footer-socials {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social {
+  width: 36px; height: 36px;
+  border: 1px solid rgba(245,240,232,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: rgba(245,240,232,0.4);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.footer-social:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ══════════════════════════════
+   ANIMATIONS
+══════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ══════════════════════════════
+   RESPONSIVE
+══════════════════════════════ */
+@media (max-width: 1024px) {
+  header { padding: 0 30px; }
+  nav { gap: 20px; }
+  .hero-content { padding: 120px 30px 80px; }
+  .hero-stats { display: none; }
+  .about { grid-template-columns: 1fr; padding: 80px 30px; }
+  .about-img-accent { display: none; }
+  .services { padding: 80px 30px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-header { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; padding: 80px 30px; }
+  .why-grit { padding: 80px 30px; }
+  .portfolio { padding: 80px 30px; }
+  .portfolio-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .portfolio-item:first-child { grid-row: span 1; }
+  .team { padding: 80px 30px; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonials { padding: 80px 30px; }
+  .testimonial-grid { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+  footer { padding: 60px 30px 30px; }
+  .cta-banner { padding: 80px 30px; }
+}
+
+@media (max-width: 640px) {
+  header { padding: 0 20px; }
+  nav a:not(.nav-cta) { display: none; }
+  .hero-content { padding: 100px 20px 60px; }
+  .hero-ghost { display: none; }
+  .hero-scroll { left: 20px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 20px; }
+  .grit-letters { flex-wrap: wrap; }
+  .grit-letter-block { min-width: 45%; }
+}
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ══ HEADER ══ -->
+<header id="header">
+  <a href="#" class="nav-logo">
+    <div class="nav-monogram">
+      <span class="g">G</span><span class="e">E</span>
+    </div>
+    <div class="nav-brand">
+      <span class="nav-brand-name">GRIT</span>
+      <span class="nav-brand-sub">Events</span>
+    </div>
+  </a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#team">Team</a>
+    <a href="#contact" class="nav-cta">Enquire Now</a>
+  </nav>
+</header>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-ghost">GE</div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      <span class="hero-eyebrow-text">Nairobi · East Africa · International</span>
+    </div>
+    <h1 class="hero-title">
+      Where <span>Vision</span><br>Meets<br>Excellence
+    </h1>
+    <p class="hero-subtitle">Luxury Event Planning & Design</p>
+    <p class="hero-desc">
+      We don't just plan events — we build extraordinary experiences through precision, passion, and relentless excellence. That is GRIT.
+    </p>
+    <div class="hero-actions">
+      <a href="#services" class="btn-primary">Explore Our Services</a>
+      <a href="#contact" class="btn-secondary">Start Your Event</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">Scroll</span>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Client Satisfaction</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">11+</div>
+      <div class="stat-label">Event Categories</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">24/7</div>
+      <div class="stat-label">Available</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MARQUEE ══ -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span class="marquee-item">Weddings</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Corporate Events</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Gala Dinners</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Product Launches</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Birthdays</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Baby Showers</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Ruracio Ceremonies</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Summits</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Destination Events</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Car Décor</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Premium Décor</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Anniversaries</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Vendor Sourcing</span><span class="marquee-dot">◆</span>
+    <!-- Repeat for seamless loop -->
+    <span class="marquee-item">Weddings</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Corporate Events</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Gala Dinners</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Product Launches</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Birthdays</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Baby Showers</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Ruracio Ceremonies</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Summits</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Destination Events</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Car Décor</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Premium Décor</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Anniversaries</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Vendor Sourcing</span><span class="marquee-dot">◆</span>
+  </div>
+</div>
+
+<!-- ══ ABOUT ══ -->
+<section class="about" id="about">
+  <div class="about-visual reveal">
+    <div class="about-badge">
+      <span class="about-badge-num">EST</span>
+      <span class="about-badge-text">2024<br>Nairobi</span>
+    </div>
+    <img class="about-img-main"
+      src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=800&q=80"
+      alt="Luxury event design by GRIT Events Nairobi">
+    <img class="about-img-accent"
+      src="https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=400&q=80"
+      alt="Elegant wedding décor Nairobi Kenya">
+  </div>
+  <div class="about-content reveal">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Our Philosophy</span>
+    </div>
+    <h2 class="section-title">Built on <em>Grit.</em><br>Delivered with Grace.</h2>
+    <p class="section-body">
+      Behind every flawless event is the quiet, relentless work you'll never see — the 3am problem-solving, the vendor negotiations, the contingency plans already in place before anything goes wrong. That is the GRIT standard.
+    </p>
+    <div class="grit-letters">
+      <div class="grit-letter-block">
+        <div class="gl-letter">G</div>
+        <div class="gl-word">Greatness</div>
+        <div class="gl-desc">We pursue excellence in every detail, no matter how small.</div>
+      </div>
+      <div class="grit-letter-block">
+        <div class="gl-letter">R</div>
+        <div class="gl-word">Requires</div>
+        <div class="gl-desc">True luxury demands deliberate, disciplined effort.</div>
+      </div>
+      <div class="grit-letter-block">
+        <div class="gl-letter">I</div>
+        <div class="gl-word">Internal</div>
+        <div class="gl-desc">Our drive comes from within — not trends or shortcuts.</div>
+      </div>
+      <div class="grit-letter-block">
+        <div class="gl-letter">T</div>
+        <div class="gl-word">Toughness</div>
+        <div class="gl-desc">We handle the hard parts so you never have to.</div>
+      </div>
+    </div>
+    <a href="#contact" class="btn-primary">Work With Us</a>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══ -->
+<section class="services" id="services">
+  <div class="services-header">
+    <div class="reveal">
+      <div class="section-eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">What We Do</span>
+      </div>
+      <h2 class="section-title">Every Event.<br><em>Extraordinary.</em></h2>
+    </div>
+    <div class="reveal">
+      <p class="section-body">From intimate celebrations to grand productions, we bring the same uncompromising standard of excellence to every event we create across Nairobi, East Africa, and beyond.</p>
+    </div>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-number">01</div>
+      <span class="service-icon">💍</span>
+      <h3 class="service-name">Wedding Planning & Design</h3>
+      <p class="service-desc">Full-service luxury wedding planning in Nairobi and across Kenya. From intimate ceremonies to grand celebrations.</p>
+      <span class="service-arrow">↗</span>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-number">02</div>
+      <span class="service-icon">🏛️</span>
+      <h3 class="service-name">Corporate Events & Summits</h3>
+      <p class="service-desc">Professional corporate event management, conferences, and high-level summits across East Africa.</p>
+      <span class="service-arrow">↗</span>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-number">03</div>
+      <span class="service-icon">✨</span>
+      <h3 class="service-name">Gala Dinners & Award Nights</h3>
+      <p class="service-desc">Sophisticated gala experiences with impeccable table design and seamless event programming.</p>
+      <span class="service-arrow">↗</span>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-number">04</div>
+      <span class="service-icon">🚀</span>
+      <h3 class="service-name">Product Launches</h3>
+      <p class="service-desc">Brand launch events that generate buzz, create lasting impressions, and position your product powerfully.</p>
+      <span class="service-arrow">↗</span>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-number">05</div>
+      <span class="service-icon">🎂</span>
+      <h3 class="service-name">Birthday Celebrations</h3>
+      <p class="service-desc">Milestone birthdays designed with your personality at the center — intimate or grand, always unforgettable.</p>
+      <span class="service-arrow">↗</span>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-number">06</div>
+      <span class="service-icon">👶</span>
+      <h3 class="service-name">Baby Showers</h3>
+      <p class="service-desc">Elegant, thoughtfully designed baby shower experiences celebrating new life with beauty and intention.</p>
+      <span class="service-arrow">↗</span>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-number">07</div>
+      <span class="service-icon">🌍</span>
+      <h3 class="service-name">Traditional Ceremonies</h3>
+      <p class="service-desc">Authentic ruracio and dowry ceremony planning that honors your culture with elegance and precision.</p>
+      <span class="service-arrow">↗</span>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-number">08</div>
+      <span class="service-icon">✈️</span>
+      <h3 class="service-name">Destination Events</h3>
+      <p class="service-desc">Seamless destination event planning beyond borders — logistics, venues, and on-ground coordination handled.</p>
+      <span class="service-arrow">↗</span>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-number">09</div>
+      <span class="service-icon">💐</span>
+      <h3 class="service-name">Premium Décor & Styling</h3>
+      <p class="service-desc">Transforming spaces into extraordinary visual experiences — floral installations to full venue styling.</p>
+      <span class="service-arrow">↗</span>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-number">10</div>
+      <span class="service-icon">🚗</span>
+      <h3 class="service-name">Car Décor for Events</h3>
+      <p class="service-desc">Luxury car decoration for weddings, proms, and special occasions — beautiful, elegant, and memorable.</p>
+      <span class="service-arrow">↗</span>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-number">11</div>
+      <span class="service-icon">🎯</span>
+      <h3 class="service-name">Event Coordination</h3>
+      <p class="service-desc">Professional on-site event management — timelines, vendors, and logistics handled flawlessly on the day.</p>
+      <span class="service-arrow">↗</span>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-number">12</div>
+      <span class="service-icon">🤝</span>
+      <h3 class="service-name">Vendor Sourcing</h3>
+      <p class="service-desc">Access our trusted network of vetted photographers, caterers, florists, entertainers, and more across Kenya.</p>
+      <span class="service-arrow">↗</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY GRIT ══ -->
+<section class="why-grit">
+  <div class="why-grid">
+    <div class="why-content reveal">
+      <div class="section-eyebrow">
+        <div class="eyebrow-line" style="background:rgba(245,240,232,0.4)"></div>
+        <span class="eyebrow-text">Why Choose Us</span>
+      </div>
+      <h2 class="section-title">The <em>GRIT</em><br>Difference</h2>
+      <p class="section-body" style="margin-bottom:32px;">
+        Anyone can plan an event. Very few can build an experience that moves people, creates memories, and exceeds every expectation. We are the few.
+      </p>
+      <a href="#contact" class="btn-secondary" style="border-color:rgba(245,240,232,0.4);color:var(--cream)">Begin Your Journey</a>
+    </div>
+    <div class="why-points reveal">
+      <div class="why-point">
+        <div class="why-num">01</div>
+        <div class="why-text">
+          <h4>Uncompromising Detail</h4>
+          <p>Every element of your event is considered, curated, and executed to the highest standard — nothing is left to chance.</p>
+        </div>
+      </div>
+      <div class="why-point">
+        <div class="why-num">02</div>
+        <div class="why-text">
+          <h4>Client-First Vision</h4>
+          <p>Your vision leads everything. We listen deeply before we plan, ensuring every event is a true reflection of you.</p>
+        </div>
+      </div>
+      <div class="why-point">
+        <div class="why-num">03</div>
+        <div class="why-text">
+          <h4>Trusted Vendor Network</h4>
+          <p>Years of relationships with Nairobi's best photographers, caterers, florists, and suppliers — all vetted, all reliable.</p>
+        </div>
+      </div>
+      <div class="why-point">
+        <div class="why-num">04</div>
+        <div class="why-text">
+          <h4>Available 24/7</h4>
+          <p>Events don't keep office hours and neither do we. We are available around the clock for every question and concern.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PORTFOLIO ══ -->
+<section class="portfolio" id="portfolio">
+  <div class="portfolio-header reveal">
+    <div>
+      <div class="section-eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">Our Work</span>
+      </div>
+      <h2 class="section-title">Crafted <em>Experiences</em></h2>
+    </div>
+    <a href="#contact" class="btn-secondary">Commission Your Event</a>
+  </div>
+  <div class="portfolio-grid reveal">
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" alt="Luxury wedding planning Nairobi Kenya by GRIT Events">
+      <div class="portfolio-overlay"><span class="portfolio-label">Luxury Wedding · Nairobi</span></div>
+      <span class="portfolio-coming">Portfolio Coming Soon</span>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Corporate event summit Nairobi East Africa GRIT Events">
+      <div class="portfolio-overlay"><span class="portfolio-label">Corporate Summit</span></div>
+      <span class="portfolio-coming">Coming Soon</span>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80" alt="Gala dinner event design Nairobi Kenya">
+      <div class="portfolio-overlay"><span class="portfolio-label">Gala Dinner</span></div>
+      <span class="portfolio-coming">Coming Soon</span>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80" alt="Birthday celebration luxury event planner Nairobi">
+      <div class="portfolio-overlay"><span class="portfolio-label">Milestone Birthday</span></div>
+      <span class="portfolio-coming">Coming Soon</span>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=600&q=80" alt="Premium décor and styling event design Kenya">
+      <div class="portfolio-overlay"><span class="portfolio-label">Premium Décor</span></div>
+      <span class="portfolio-coming">Coming Soon</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TEAM ══ -->
+<section class="team" id="team">
+  <div class="reveal">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">The Team</span>
+    </div>
+    <h2 class="section-title">The Minds Behind<br><em>Every Moment</em></h2>
+  </div>
+  <div class="team-grid">
+    <div class="team-card reveal">
+      <div class="team-img-wrap">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" alt="Lead event planner GRIT Events Nairobi">
+        <div class="team-accent"></div>
+      </div>
+      <div class="team-info">
+        <div class="team-name">Grace T.</div>
+        <div class="team-role">Founder & Lead Planner</div>
+        <p class="team-bio">Visionary event designer with a passion for turning bold ideas into flawless realities across East Africa.</p>
+      </div>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-img-wrap">
+        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80" alt="Creative director GRIT Events">
+        <div class="team-accent"></div>
+      </div>
+      <div class="team-info">
+        <div class="team-name">Amara K.</div>
+        <div class="team-role">Creative Director</div>
+        <p class="team-bio">Transforms client visions into breathtaking design concepts with an eye for luxury and detail.</p>
+      </div>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-img-wrap">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Event coordinator GRIT Events Nairobi Kenya">
+        <div class="team-accent"></div>
+      </div>
+      <div class="team-info">
+        <div class="team-name">David M.</div>
+        <div class="team-role">Senior Event Coordinator</div>
+        <p class="team-bio">Master of logistics and on-ground execution — ensuring every event runs exactly as planned.</p>
+      </div>
+    </div>
+    <div class="team-card reveal">
+      <div class="team-img-wrap">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Décor specialist GRIT Events Kenya">
+        <div class="team-accent"></div>
+      </div>
+      <div class="team-info">
+        <div class="team-name">Lena W.</div>
+        <div class="team-role">Décor Specialist</div>
+        <p class="team-bio">Turns empty spaces into unforgettable worlds — florals, lighting, and styling done to perfection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="testimonials">
+  <div class="reveal">
+    <div class="section-eyebrow" style="justify-content:center">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Client Words</span>
+      <div class="eyebrow-line"></div>
+    </div>
+    <h2 class="section-title">What Our <em>Clients</em> Say</h2>
+  </div>
+  <div class="testimonial-grid">
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">Every single detail was perfect. GRIT Events took our vision and elevated it beyond what we imagined. Our wedding was the most beautiful day of our lives.</p>
+      <div class="testimonial-author">Sarah & James O.</div>
+      <div class="testimonial-event">Wedding · Karen, Nairobi</div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">The summit was flawlessly executed. Over 300 delegates and not a single hiccup. GRIT Events is the only team we trust with our corporate events.</p>
+      <div class="testimonial-author">Michael A.</div>
+      <div class="testimonial-event">Regional Summit · Nairobi</div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">Our ruracio was so beautifully organized. They honored our traditions while adding a touch of modern elegance. Our families were deeply impressed.</p>
+      <div class="testimonial-author">The Kamau Family</div>
+      <div class="testimonial-event">Ruracio Ceremony · Nairobi</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="cta-banner" id="contact">
+  <div class="reveal">
+    <div class="section-eyebrow" style="justify-content:center;margin-bottom:32px">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Let's Create Together</span>
+      <div class="eyebrow-line"></div>
+    </div>
+    <h2 class="cta-title">Your Event Deserves<br><em>Greatness</em></h2>
+    <p class="cta-sub">Tell us your vision. We'll build the rest.</p>
+    <div class="cta-actions">
+      <a href="tel:+254707768071" class="btn-primary">📞 +254 707 768 071</a>
+      <a href="https://wa.me/254707768071" class="btn-secondary">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">GRIT</div>
+      <div class="footer-brand-sub">Events</div>
+      <p class="footer-tagline">Greatness Requires Internal Toughness. We build extraordinary experiences through precision, passion, and relentless excellence.</p>
+      <div class="footer-contact-item">
+        <div class="footer-contact-dot"></div>
+        <span class="footer-contact-text">+254 707 768 071</span>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-dot"></div>
+        <span class="footer-contact-text">Nairobi, Kenya<br>East Africa & International</span>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-dot"></div>
+        <span class="footer-contact-text">Available 24/7</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#services">Wedding Planning</a></li>
+        <li><a href="#services">Corporate Events</a></li>
+        <li><a href="#services">Gala Dinners</a></li>
+        <li><a href="#services">Ruracio Ceremonies</a></li>
+        <li><a href="#services">Baby Showers</a></li>
+        <li><a href="#services">Car Décor</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="#about">About GRIT</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Locations</div>
+      <ul class="footer-links">
+        <li><a href="#">Nairobi, Kenya</a></li>
+        <li><a href="#">East Africa</a></li>
+        <li><a href="#">International</a></li>
+        <li><a href="#">Destination Events</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2024 <span>GRIT Events</span>. All rights reserved. · Nairobi, Kenya</div>
+    <div class="footer-socials">
+      <a href="#" class="footer-social">in</a>
+      <a href="#" class="footer-social">ig</a>
+      <a href="#" class="footer-social">fb</a>
+      <a href="#" class="footer-social">wa</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Custom cursor
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+
+document.addEventListener('mousemove', e => {
+  mouseX = e.clientX; mouseY = e.clientY;
+  cursor.style.left = mouseX + 'px';
+  cursor.style.top = mouseY + 'px';
+});
+
+function animateRing() {
+  ringX += (mouseX - ringX) * 0.12;
+  ringY += (mouseY - ringY) * 0.12;
+  ring.style.left = ringX + 'px';
+  ring.style.top = ringY + 'px';
+  requestAnimationFrame(animateRing);
+}
+animateRing();
+
+document.querySelectorAll('a, button').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    cursor.style.transform = 'translate(-50%,-50%) scale(2)';
+    ring.style.width = '50px'; ring.style.height = '50px';
+  });
+  el.addEventListener('mouseleave', () => {
+    cursor.style.transform = 'translate(-50%,-50%) scale(1)';
+    ring.style.width = '32px'; ring.style.height = '32px';
+  });
+});
+
+// Header scroll
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
