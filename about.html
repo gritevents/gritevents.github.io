@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="About GRIT Events — Nairobi's premier luxury event planning company. Our story, mission, vision, values and the team behind every extraordinary experience in Kenya and East Africa.">
+<meta name="keywords" content="about GRIT Events, luxury event planner Nairobi story, event planning company Kenya, best event planner East Africa, wedding planner Nairobi about, event design company Kenya mission vision">
+<meta name="author" content="GRIT Events">
+<title>About Us | GRIT Events — Luxury Event Planning & Design, Nairobi Kenya</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Josefin+Sans:wght@100;200;300;400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --crimson: #8B0000;
+  --crimson-light: #A50000;
+  --black: #1A1A1A;
+  --black-deep: #0D0D0D;
+  --gold: #C9A84C;
+  --gold-light: #E2C06A;
+  --cream: #F5F0E8;
+  --cream-dark: #EDE6D6;
+  --gray: #888;
+  --white: #ffffff;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background: var(--black-deep);
+  color: var(--cream);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ── CURSOR ── */
+.cursor { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transition: transform 0.1s ease; transform: translate(-50%, -50%); }
+.cursor-ring { width: 32px; height: 32px; border: 1px solid rgba(201,168,76,0.4); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998; transition: transform 0.15s ease, width 0.2s, height 0.2s; transform: translate(-50%, -50%); }
+
+/* ── NOISE ── */
+body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; z-index: 9997; opacity: 0.4; }
+
+/* ══ HEADER ══ */
+header {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 1000; padding: 0 60px; height: 80px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(13,13,13,0.95);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  backdrop-filter: blur(12px);
+}
+
+.nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.nav-monogram { width: 44px; height: 44px; border: 1px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 20px; letter-spacing: -2px; }
+.nav-monogram .g { color: var(--crimson); }
+.nav-monogram .e { color: var(--gold); }
+.nav-brand-name { font-weight: 700; font-size: 16px; letter-spacing: 6px; color: var(--cream); display: block; }
+.nav-brand-sub { font-weight: 100; font-size: 9px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; display: block; }
+
+nav { display: flex; align-items: center; gap: 40px; }
+nav a { font-weight: 300; font-size: 11px; letter-spacing: 3px; color: rgba(245,240,232,0.7); text-decoration: none; text-transform: uppercase; transition: color 0.3s; position: relative; }
+nav a::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 1px; background: var(--gold); transform: scaleX(0); transition: transform 0.3s ease; }
+nav a:hover { color: var(--gold); }
+nav a:hover::after { transform: scaleX(1); }
+nav a.active { color: var(--gold); }
+nav a.active::after { transform: scaleX(1); }
+.nav-cta { padding: 10px 24px; border: 1px solid var(--gold); color: var(--gold) !important; font-size: 10px !important; letter-spacing: 3px !important; transition: all 0.3s ease !important; }
+.nav-cta:hover { background: var(--gold) !important; color: var(--black) !important; }
+.nav-cta::after { display: none !important; }
+
+/* ══ HERO ══ */
+.about-hero {
+  min-height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-hero-bg {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(115deg, rgba(13,13,13,0.97) 0%, rgba(139,0,0,0.7) 50%, rgba(13,13,13,0.95) 100%),
+    url('https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=1800&q=80') center/cover no-repeat;
+}
+
+.about-hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(-45deg, transparent, transparent 80px, rgba(201,168,76,0.015) 80px, rgba(201,168,76,0.015) 81px);
+}
+
+.about-hero-content {
+  position: relative; z-index: 2;
+  padding: 140px 60px 80px;
+  max-width: 800px;
+}
+
+.breadcrumb {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 32px;
+  opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards;
+}
+
+.breadcrumb a { font-size: 10px; letter-spacing: 3px; color: rgba(245,240,232,0.4); text-decoration: none; text-transform: uppercase; transition: color 0.3s; }
+.breadcrumb a:hover { color: var(--gold); }
+.breadcrumb-sep { color: var(--gold); font-size: 10px; }
+.breadcrumb-current { font-size: 10px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; }
+
+.hero-page-label {
+  font-size: 10px; letter-spacing: 6px; color: var(--gold);
+  text-transform: uppercase; margin-bottom: 20px;
+  opacity: 0; animation: fadeUp 0.8s ease 0.4s forwards;
+}
+
+.about-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: clamp(56px, 8vw, 110px);
+  line-height: 0.88;
+  color: var(--cream);
+  margin-bottom: 32px;
+  opacity: 0; animation: fadeUp 0.8s ease 0.6s forwards;
+}
+
+.about-hero-title em { color: var(--crimson); font-style: italic; }
+
+.about-hero-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; line-height: 1.8;
+  color: rgba(245,240,232,0.65);
+  max-width: 560px;
+  opacity: 0; animation: fadeUp 0.8s ease 0.8s forwards;
+}
+
+.hero-scroll-down {
+  position: absolute; bottom: 40px; left: 60px;
+  display: flex; align-items: center; gap: 12px;
+  opacity: 0; animation: fadeUp 0.8s ease 1.2s forwards;
+}
+
+.scroll-line { width: 1px; height: 60px; background: linear-gradient(180deg, var(--gold), transparent); animation: scrollPulse 2s ease infinite; }
+.scroll-text { font-size: 9px; letter-spacing: 4px; color: rgba(245,240,232,0.4); text-transform: uppercase; writing-mode: vertical-rl; }
+
+/* Ghost text */
+.hero-ghost-about {
+  position: absolute; right: -20px; top: 50%; transform: translateY(-50%);
+  font-family: 'Cormorant Garamond', serif; font-weight: 700;
+  font-size: 260px; color: rgba(139,0,0,0.06); line-height: 1;
+  pointer-events: none; z-index: 1;
+}
+
+/* ══ SHARED ══ */
+.section-eyebrow { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.eyebrow-line { width: 40px; height: 1px; background: var(--gold); }
+.eyebrow-text { font-size: 10px; letter-spacing: 5px; color: var(--gold); text-transform: uppercase; }
+.section-title { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: clamp(38px, 5vw, 68px); line-height: 1; color: var(--cream); margin-bottom: 24px; }
+.section-title em { font-style: italic; color: var(--crimson); }
+.section-body { font-family: 'Cormorant Garamond', serif; font-size: 18px; line-height: 1.9; color: rgba(245,240,232,0.65); max-width: 600px; }
+
+.btn-primary { display: inline-block; padding: 16px 40px; background: var(--crimson); color: var(--cream); font-family: 'Josefin Sans', sans-serif; font-weight: 300; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; text-decoration: none; border: 1px solid var(--crimson); transition: all 0.3s ease; position: relative; overflow: hidden; }
+.btn-primary::before { content: ''; position: absolute; inset: 0; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; z-index: -1; }
+.btn-primary:hover { color: var(--black); border-color: var(--gold); }
+.btn-primary:hover::before { transform: scaleX(1); }
+.btn-secondary { display: inline-block; padding: 16px 40px; background: transparent; color: var(--cream); font-family: 'Josefin Sans', sans-serif; font-weight: 300; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; text-decoration: none; border: 1px solid rgba(245,240,232,0.3); transition: all 0.3s ease; }
+.btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ══ MARQUEE ══ */
+.marquee-strip { background: var(--crimson); padding: 16px 0; overflow: hidden; white-space: nowrap; }
+.marquee-inner { display: inline-flex; animation: marquee 30s linear infinite; }
+.marquee-item { font-family: 'Josefin Sans', sans-serif; font-weight: 100; font-size: 11px; letter-spacing: 4px; color: rgba(245,240,232,0.8); text-transform: uppercase; padding: 0 40px; }
+.marquee-dot { color: var(--gold); padding: 0 10px; }
+
+/* ══ OUR STORY ══ */
+.our-story {
+  padding: 120px 60px;
+  background: var(--black);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.story-visual { position: relative; }
+
+.story-img-main {
+  width: 100%; height: 600px;
+  object-fit: cover;
+  filter: grayscale(20%) contrast(1.05);
+}
+
+.story-img-float {
+  position: absolute;
+  bottom: -50px; right: -50px;
+  width: 240px; height: 300px;
+  object-fit: cover;
+  border: 6px solid var(--black);
+  filter: grayscale(10%);
+}
+
+.story-badge {
+  position: absolute;
+  top: 40px; left: -20px;
+  background: var(--crimson);
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.story-badge-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; font-size: 36px;
+  color: var(--cream); display: block;
+}
+
+.story-badge-label {
+  font-size: 8px; letter-spacing: 2px;
+  color: var(--gold); text-transform: uppercase;
+}
+
+.story-content { padding-bottom: 60px; }
+
+.story-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic; font-size: 26px;
+  line-height: 1.6; color: var(--gold);
+  border-left: 2px solid var(--crimson);
+  padding-left: 24px;
+  margin: 40px 0;
+}
+
+.story-timeline {
+  display: flex; flex-direction: column;
+  gap: 0; margin-top: 48px;
+}
+
+.timeline-item {
+  display: flex; gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+}
+
+.timeline-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; font-size: 13px;
+  color: var(--crimson); min-width: 50px;
+  letter-spacing: 1px;
+}
+
+.timeline-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px; color: rgba(245,240,232,0.6);
+  line-height: 1.6;
+}
+
+/* ══ MISSION VISION VALUES ══ */
+.mvv {
+  padding: 120px 60px;
+  background: var(--black-deep);
+  position: relative;
+  overflow: hidden;
+}
+
+.mvv::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 20% 50%, rgba(139,0,0,0.08) 0%, transparent 60%);
+}
+
+.mvv-header { text-align: center; margin-bottom: 80px; }
+.mvv-header .section-eyebrow { justify-content: center; }
+
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: rgba(201,168,76,0.08);
+  position: relative; z-index: 2;
+}
+
+.mvv-card {
+  background: var(--black);
+  padding: 56px 40px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.4s;
+}
+
+.mvv-card:hover { background: rgba(139,0,0,0.06); }
+
+.mvv-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--crimson), var(--gold));
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.mvv-card:hover::before { transform: scaleX(1); }
+
+.mvv-icon {
+  font-size: 40px; margin-bottom: 24px; display: block;
+}
+
+.mvv-card-label {
+  font-size: 9px; letter-spacing: 5px;
+  color: var(--gold); text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.mvv-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; font-size: 32px;
+  color: var(--cream); margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.mvv-card-title em { color: var(--crimson); font-style: italic; }
+
+.mvv-card-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px; line-height: 1.8;
+  color: rgba(245,240,232,0.6);
+}
+
+/* Values section */
+.values-section {
+  padding: 80px 60px;
+  background: var(--black-deep);
+  position: relative; z-index: 2;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.value-card {
+  padding: 36px 28px;
+  border: 1px solid rgba(201,168,76,0.1);
+  position: relative;
+  transition: all 0.3s;
+}
+
+.value-card:hover {
+  border-color: rgba(201,168,76,0.4);
+  transform: translateY(-6px);
+}
+
+.value-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; font-size: 60px;
+  color: rgba(139,0,0,0.15); line-height: 1;
+  position: absolute; top: 16px; right: 20px;
+}
+
+.value-icon { font-size: 28px; margin-bottom: 16px; display: block; }
+
+.value-name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400; font-size: 13px;
+  letter-spacing: 3px; color: var(--gold);
+  text-transform: uppercase; margin-bottom: 12px;
+}
+
+.value-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px; line-height: 1.7;
+  color: rgba(245,240,232,0.55);
+}
+
+/* ══ WHAT WE DO ══ */
+.what-we-do {
+  padding: 120px 60px;
+  background: var(--crimson);
+  position: relative; overflow: hidden;
+}
+
+.what-we-do::before {
+  content: 'GRIT';
+  position: absolute; right: -80px; top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; font-size: 500px;
+  color: rgba(0,0,0,0.08); line-height: 1;
+  pointer-events: none;
+}
+
+.what-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center;
+}
+
+.what-content .section-title { color: var(--cream); }
+.what-content .section-title em { color: var(--gold); }
+.what-content .section-body { color: rgba(245,240,232,0.8); margin-bottom: 40px; }
+
+.what-list {
+  display: flex; flex-direction: column; gap: 0;
+}
+
+.what-item {
+  display: flex; align-items: center; gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(245,240,232,0.1);
+  transition: padding-left 0.3s;
+}
+
+.what-item:hover { padding-left: 8px; }
+.what-item:first-child { border-top: 1px solid rgba(245,240,232,0.1); }
+
+.what-item-icon {
+  width: 36px; height: 36px;
+  background: rgba(0,0,0,0.15);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; flex-shrink: 0;
+}
+
+.what-item-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300; font-size: 12px;
+  letter-spacing: 2px; color: rgba(245,240,232,0.8);
+  text-transform: uppercase;
+}
+
+.what-item-arrow {
+  margin-left: auto; color: var(--gold);
+  font-size: 14px; opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.what-item:hover .what-item-arrow { opacity: 1; }
+
+/* ══ GOOGLE REVIEWS CAROUSEL ══ */
+.reviews {
+  padding: 120px 60px;
+  background: var(--black);
+  overflow: hidden;
+}
+
+.reviews-header {
+  display: flex; justify-content: space-between;
+  align-items: flex-end; margin-bottom: 60px;
+}
+
+.google-badge {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 20px;
+  border: 1px solid rgba(201,168,76,0.2);
+}
+
+.google-badge-rating {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; font-size: 32px; color: var(--gold);
+}
+
+.google-badge-info { display: flex; flex-direction: column; }
+.google-badge-stars { color: var(--gold); font-size: 12px; letter-spacing: 3px; }
+.google-badge-label { font-size: 9px; letter-spacing: 2px; color: rgba(245,240,232,0.4); text-transform: uppercase; margin-top: 2px; }
+
+.carousel-wrapper { position: relative; overflow: hidden; }
+
+.carousel-track {
+  display: flex; gap: 24px;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.review-card {
+  min-width: 380px;
+  background: var(--black-deep);
+  padding: 40px 36px;
+  border: 1px solid rgba(201,168,76,0.1);
+  position: relative;
+  flex-shrink: 0;
+  transition: border-color 0.3s;
+}
+
+.review-card:hover { border-color: rgba(201,168,76,0.3); }
+
+.review-card::before {
+  content: '"';
+  position: absolute; top: -10px; left: 28px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 80px; color: var(--crimson);
+  line-height: 1; opacity: 0.3;
+}
+
+.review-stars { color: var(--gold); font-size: 13px; letter-spacing: 4px; margin-bottom: 20px; }
+
+.review-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic; font-size: 18px;
+  line-height: 1.8; color: rgba(245,240,232,0.75);
+  margin-bottom: 28px;
+}
+
+.review-footer { display: flex; align-items: center; gap: 16px; }
+
+.review-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  object-fit: cover; border: 2px solid var(--crimson);
+}
+
+.review-name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400; font-size: 12px;
+  letter-spacing: 2px; color: var(--cream);
+}
+
+.review-event {
+  font-size: 10px; letter-spacing: 1px;
+  color: var(--gold); text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.review-google-icon {
+  margin-left: auto;
+  font-size: 10px; letter-spacing: 1px;
+  color: rgba(245,240,232,0.2);
+}
+
+.carousel-controls {
+  display: flex; gap: 12px;
+  margin-top: 40px; align-items: center;
+}
+
+.carousel-btn {
+  width: 48px; height: 48px;
+  border: 1px solid rgba(201,168,76,0.3);
+  background: transparent; color: var(--gold);
+  font-size: 18px; cursor: pointer;
+  transition: all 0.3s; display: flex;
+  align-items: center; justify-content: center;
+}
+
+.carousel-btn:hover { background: var(--crimson); border-color: var(--crimson); color: var(--cream); }
+
+.carousel-dots { display: flex; gap: 8px; align-items: center; margin-left: 8px; }
+
+.carousel-dot {
+  width: 6px; height: 6px;
+  background: rgba(201,168,76,0.2);
+  border-radius: 50%; cursor: pointer;
+  transition: all 0.3s;
+}
+
+.carousel-dot.active { background: var(--gold); width: 24px; border-radius: 3px; }
+
+/* ══ BLOG TEASER ══ */
+.blog-teaser {
+  padding: 120px 60px;
+  background: var(--black-deep);
+}
+
+.blog-header {
+  display: flex; justify-content: space-between;
+  align-items: flex-end; margin-bottom: 60px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 24px;
+}
+
+.blog-card {
+  position: relative; overflow: hidden;
+  text-decoration: none;
+  display: block;
+  background: var(--black);
+  transition: transform 0.4s;
+}
+
+.blog-card:hover { transform: translateY(-6px); }
+
+.blog-card-img {
+  width: 100%; height: 280px;
+  object-fit: cover;
+  filter: grayscale(30%) brightness(0.75);
+  transition: filter 0.4s, transform 0.4s;
+}
+
+.blog-card:first-child .blog-card-img { height: 440px; }
+.blog-card:hover .blog-card-img { filter: grayscale(0%) brightness(0.85); transform: scale(1.03); }
+
+.blog-card-overlay {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(13,13,13,0.95) 0%, rgba(13,13,13,0.5) 50%, transparent 100%);
+  padding: 32px 28px;
+}
+
+.blog-card-cat {
+  font-size: 9px; letter-spacing: 3px;
+  color: var(--gold); text-transform: uppercase;
+  margin-bottom: 10px; display: block;
+}
+
+.blog-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600; font-size: 22px;
+  color: var(--cream); line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.blog-card:first-child .blog-card-title { font-size: 30px; }
+
+.blog-card-date {
+  font-size: 9px; letter-spacing: 2px;
+  color: rgba(245,240,232,0.4); text-transform: uppercase;
+}
+
+.blog-card-arrow {
+  position: absolute; top: 20px; right: 20px;
+  width: 36px; height: 36px;
+  background: var(--crimson);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--cream); font-size: 14px;
+  opacity: 0; transition: opacity 0.3s;
+}
+
+.blog-card:hover .blog-card-arrow { opacity: 1; }
+
+/* ══ WHATSAPP FLOAT ══ */
+.whatsapp-float {
+  position: fixed; bottom: 32px; right: 32px;
+  z-index: 500;
+  display: flex; flex-direction: column;
+  align-items: flex-end; gap: 12px;
+}
+
+.wa-tooltip {
+  background: var(--black);
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 12px 16px;
+  font-size: 11px; letter-spacing: 1px;
+  color: rgba(245,240,232,0.7);
+  white-space: nowrap;
+  opacity: 0; transform: translateX(10px);
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.whatsapp-float:hover .wa-tooltip { opacity: 1; transform: translateX(0); }
+
+.wa-btn {
+  width: 56px; height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; font-size: 24px;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: waPulse 2.5s ease infinite;
+}
+
+.wa-btn:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(37,211,102,0.5); }
+
+@keyframes waPulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.3); }
+  50% { box-shadow: 0 4px 40px rgba(37,211,102,0.6); }
+}
+
+/* ══ GET QUOTE CTA ══ */
+.get-quote {
+  padding: 100px 60px;
+  background:
+    linear-gradient(135deg, rgba(139,0,0,0.92), rgba(13,13,13,0.98)),
+    url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1800&q=80') center/cover no-repeat;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+
+.get-quote::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(90deg, transparent, transparent 100px, rgba(201,168,76,0.02) 100px, rgba(201,168,76,0.02) 101px);
+}
+
+.get-quote-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700; font-size: clamp(40px, 6vw, 80px);
+  color: var(--cream); line-height: 1;
+  margin-bottom: 20px; position: relative;
+}
+
+.get-quote-title em { color: var(--gold); font-style: italic; }
+
+.get-quote-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; color: rgba(245,240,232,0.6);
+  margin-bottom: 48px; font-style: italic;
+}
+
+.get-quote-btns { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+
+.btn-gold {
+  display: inline-block; padding: 18px 48px;
+  background: var(--gold); color: var(--black);
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400; font-size: 11px;
+  letter-spacing: 4px; text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--gold);
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover { background: transparent; color: var(--gold); }
+
+/* ══ FOOTER ══ */
+footer {
+  background: #080808; padding: 80px 60px 40px;
+  border-top: 1px solid rgba(201,168,76,0.1);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 60px; margin-bottom: 60px;
+}
+
+.footer-brand-name { font-family: 'Josefin Sans', sans-serif; font-weight: 700; font-size: 28px; letter-spacing: 8px; color: var(--cream); margin-bottom: 4px; }
+.footer-brand-sub { font-size: 10px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 20px; }
+.footer-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 16px; color: rgba(245,240,232,0.4); line-height: 1.7; max-width: 300px; margin-bottom: 28px; }
+.footer-contact-item { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 12px; }
+.footer-contact-dot { width: 6px; height: 6px; background: var(--crimson); border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+.footer-contact-text { font-size: 12px; letter-spacing: 1px; color: rgba(245,240,232,0.5); line-height: 1.6; }
+.footer-col-title { font-size: 10px; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; margin-bottom: 24px; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.footer-links a { font-family: 'Cormorant Garamond', serif; font-size: 16px; color: rgba(245,240,232,0.5); text-decoration: none; transition: color 0.3s; }
+.footer-links a:hover { color: var(--gold); }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 40px; border-top: 1px solid rgba(245,240,232,0.06); }
+.footer-copy { font-size: 10px; letter-spacing: 2px; color: rgba(245,240,232,0.25); text-transform: uppercase; }
+.footer-copy span { color: var(--crimson); }
+.footer-socials { display: flex; gap: 20px; }
+.footer-social { width: 36px; height: 36px; border: 1px solid rgba(245,240,232,0.1); display: flex; align-items: center; justify-content: center; font-size: 12px; color: rgba(245,240,232,0.4); text-decoration: none; transition: all 0.3s; }
+.footer-social:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ══ ANIMATIONS ══ */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes scrollPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ══ RESPONSIVE ══ */
+@media (max-width: 1024px) {
+  header { padding: 0 30px; }
+  .about-hero-content { padding: 120px 30px 60px; }
+  .our-story { grid-template-columns: 1fr; padding: 80px 30px; }
+  .story-img-float { display: none; }
+  .mvv { padding: 80px 30px; }
+  .mvv-grid { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); padding: 60px 30px; }
+  .values-section { padding: 60px 30px; }
+  .what-we-do { padding: 80px 30px; }
+  .what-grid { grid-template-columns: 1fr; }
+  .reviews { padding: 80px 30px; }
+  .review-card { min-width: 320px; }
+  .blog-teaser { padding: 80px 30px; }
+  .blog-grid { grid-template-columns: 1fr; }
+  .blog-card-img { height: 220px !important; }
+  .get-quote { padding: 80px 30px; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+  footer { padding: 60px 30px 30px; }
+}
+
+@media (max-width: 640px) {
+  header { padding: 0 20px; }
+  nav a:not(.nav-cta) { display: none; }
+  .about-hero-content { padding: 100px 20px 60px; }
+  .hero-ghost-about { display: none; }
+  .values-grid { grid-template-columns: 1fr; }
+  .reviews-header { flex-direction: column; gap: 20px; align-items: flex-start; }
+  .blog-header { flex-direction: column; gap: 20px; align-items: flex-start; }
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 20px; }
+  .whatsapp-float { bottom: 20px; right: 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ══ HEADER ══ -->
+<header>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-monogram"><span class="g">G</span><span class="e">E</span></div>
+    <div class="nav-brand">
+      <span class="nav-brand-name">GRIT</span>
+      <span class="nav-brand-sub">Events</span>
+    </div>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#contact" class="nav-cta">Get A Quote</a>
+  </nav>
+</header>
+
+<!-- ══ HERO ══ -->
+<section class="about-hero">
+  <div class="about-hero-bg"></div>
+  <div class="hero-ghost-about">GRIT</div>
+  <div class="about-hero-content">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">◆</span>
+      <span class="breadcrumb-current">About Us</span>
+    </div>
+    <p class="hero-page-label">Our Story · Our Purpose · Our Grit</p>
+    <h1 class="about-hero-title">We Are Not<br>Just <em>Planners.</em><br>We Are Builders.</h1>
+    <p class="about-hero-desc">Behind every flawless event is quiet, disciplined, uncompromising work. We are GRIT Events — and this is our story.</p>
+  </div>
+  <div class="hero-scroll-down">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">Discover</span>
+  </div>
+</section>
+
+<!-- ══ MARQUEE ══ -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span class="marquee-item">Greatness</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Requires</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Internal</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Toughness</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Nairobi</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">East Africa</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">International</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Luxury Events</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Greatness</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Requires</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Internal</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Toughness</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Nairobi</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">East Africa</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">International</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Luxury Events</span><span class="marquee-dot">◆</span>
+  </div>
+</div>
+
+<!-- ══ OUR STORY ══ -->
+<section class="our-story" id="story">
+  <div class="story-visual reveal">
+    <div class="story-badge">
+      <span class="story-badge-year">2024</span>
+      <span class="story-badge-label">Founded<br>Nairobi</span>
+    </div>
+    <img class="story-img-main"
+      src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80"
+      alt="GRIT Events luxury event planning Nairobi Kenya story">
+    <img class="story-img-float"
+      src="https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=400&q=80"
+      alt="Event design and décor GRIT Events Kenya">
+  </div>
+  <div class="story-content reveal">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Our Story</span>
+    </div>
+    <h2 class="section-title">Born From<br><em>Toughness.</em><br>Built for Greatness.</h2>
+    <p class="section-body">
+      GRIT Events was born from a simple but powerful belief — that extraordinary experiences don't happen by accident. They are built, piece by piece, through discipline, creativity, and an unrelenting refusal to accept anything less than the best.
+    </p>
+    <blockquote class="story-quote">
+      "We don't just show up on the day. We live your event long before it happens."
+    </blockquote>
+    <p class="section-body">
+      Based in Nairobi, Kenya, we serve clients across East Africa and internationally — from intimate family ceremonies to high-profile corporate summits. Every event we touch carries the same signature: flawless execution, breathtaking design, and the quiet confidence that only comes from deep experience and absolute preparation.
+    </p>
+    <div class="story-timeline">
+      <div class="timeline-item">
+        <span class="timeline-year">2024</span>
+        <span class="timeline-text">GRIT Events founded in Nairobi, Kenya with a vision to redefine luxury event planning in East Africa.</span>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">Now</span>
+        <span class="timeline-text">Serving clients across Kenya, East Africa and internationally across 12 event categories.</span>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">Next</span>
+        <span class="timeline-text">Expanding our portfolio, growing our vendor network, and building East Africa's most trusted luxury event brand.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MISSION VISION VALUES ══ -->
+<section class="mvv" id="mission">
+  <div class="mvv-header reveal">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">What Drives Us</span>
+      <div class="eyebrow-line"></div>
+    </div>
+    <h2 class="section-title">Mission. Vision. <em>Purpose.</em></h2>
+  </div>
+  <div class="mvv-grid">
+    <div class="mvv-card reveal">
+      <span class="mvv-icon">🎯</span>
+      <div class="mvv-card-label">Our Mission</div>
+      <h3 class="mvv-card-title">To Create <em>Extraordinary</em> Experiences</h3>
+      <p class="mvv-card-body">
+        To deliver flawless, deeply personal event experiences that exceed every expectation — through meticulous planning, bold creativity, and an uncompromising commitment to excellence. We exist to turn your most important moments into memories that last a lifetime.
+      </p>
+    </div>
+    <div class="mvv-card reveal">
+      <span class="mvv-icon">🌍</span>
+      <div class="mvv-card-label">Our Vision</div>
+      <h3 class="mvv-card-title">East Africa's Most <em>Trusted</em> Luxury Brand</h3>
+      <p class="mvv-card-body">
+        To be the most respected and sought-after luxury event planning company in East Africa and beyond — known not just for beautiful events, but for the discipline, resilience, and leadership we bring to every project we take on.
+      </p>
+    </div>
+    <div class="mvv-card reveal">
+      <span class="mvv-icon">⚡</span>
+      <div class="mvv-card-label">Our Purpose</div>
+      <h3 class="mvv-card-title">Greatness Requires <em>Internal Toughness</em></h3>
+      <p class="mvv-card-body">
+        We believe that behind every seamless event is hard work that nobody sees. Our purpose is to carry that weight — so our clients never have to. We work in the shadows so you can shine in the spotlight on your most important day.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CORE VALUES ══ -->
+<section class="values-section">
+  <div class="reveal" style="text-align:center;margin-bottom:60px">
+    <div class="section-eyebrow" style="justify-content:center">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Core Values</span>
+      <div class="eyebrow-line"></div>
+    </div>
+    <h2 class="section-title">The Standards We <em>Never</em> Compromise</h2>
+  </div>
+  <div class="values-grid">
+    <div class="value-card reveal">
+      <span class="value-number">01</span>
+      <span class="value-icon">💎</span>
+      <div class="value-name">Excellence</div>
+      <p class="value-desc">We pursue perfection in every detail — from the grand design to the smallest finishing touch. Mediocrity is not in our vocabulary.</p>
+    </div>
+    <div class="value-card reveal">
+      <span class="value-number">02</span>
+      <span class="value-icon">🤝</span>
+      <div class="value-name">Integrity</div>
+      <p class="value-desc">We are honest, transparent, and accountable — to our clients, our vendors, and ourselves. Trust is the foundation of every relationship we build.</p>
+    </div>
+    <div class="value-card reveal">
+      <span class="value-number">03</span>
+      <span class="value-icon">💡</span>
+      <div class="value-name">Creativity</div>
+      <p class="value-desc">We don't copy trends — we set them. Every event we design is an original work, built from your vision and elevated by our imagination.</p>
+    </div>
+    <div class="value-card reveal">
+      <span class="value-number">04</span>
+      <span class="value-icon">🔥</span>
+      <div class="value-name">Resilience</div>
+      <p class="value-desc">When challenges arise — and they always do — we solve them quietly and quickly. Our clients experience only the result, never the struggle.</p>
+    </div>
+    <div class="value-card reveal">
+      <span class="value-number">05</span>
+      <span class="value-icon">👑</span>
+      <div class="value-name">Leadership</div>
+      <p class="value-desc">We take charge with confidence and clarity. From vendor management to on-site execution, we lead every detail with authority and calm.</p>
+    </div>
+    <div class="value-card reveal">
+      <span class="value-number">06</span>
+      <span class="value-icon">❤️</span>
+      <div class="value-name">Client First</div>
+      <p class="value-desc">Your vision is our north star. We listen deeply, plan thoroughly, and execute relentlessly — always with your happiness as the ultimate measure of success.</p>
+    </div>
+    <div class="value-card reveal">
+      <span class="value-number">07</span>
+      <span class="value-icon">⏱️</span>
+      <div class="value-name">Reliability</div>
+      <p class="value-desc">We deliver what we promise, when we promise it. Our clients rest easy knowing that GRIT Events never drops the ball.</p>
+    </div>
+    <div class="value-card reveal">
+      <span class="value-number">08</span>
+      <span class="value-icon">🌱</span>
+      <div class="value-name">Growth</div>
+      <p class="value-desc">We are constant learners — always evolving our craft, expanding our network, and raising our standard to serve our clients better.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHAT WE DO ══ -->
+<section class="what-we-do">
+  <div class="what-grid">
+    <div class="what-content reveal">
+      <div class="section-eyebrow">
+        <div class="eyebrow-line" style="background:rgba(245,240,232,0.3)"></div>
+        <span class="eyebrow-text">What We Do</span>
+      </div>
+      <h2 class="section-title">Every Event.<br>Every <em>Detail.</em><br>Every Time.</h2>
+      <p class="section-body">
+        From the grandest weddings to the most intimate celebrations, we bring the same uncompromising standard to every event. We are your partner from first vision to final farewell.
+      </p>
+      <br><br>
+      <a href="services.html" class="btn-secondary" style="border-color:rgba(245,240,232,0.4);color:var(--cream)">Explore All Services</a>
+    </div>
+    <div class="what-list reveal">
+      <div class="what-item">
+        <div class="what-item-icon">💍</div>
+        <span class="what-item-text">Wedding Planning & Design</span>
+        <span class="what-item-arrow">→</span>
+      </div>
+      <div class="what-item">
+        <div class="what-item-icon">🏛️</div>
+        <span class="what-item-text">Corporate Events & Summits</span>
+        <span class="what-item-arrow">→</span>
+      </div>
+      <div class="what-item">
+        <div class="what-item-icon">✨</div>
+        <span class="what-item-text">Gala Dinners & Award Nights</span>
+        <span class="what-item-arrow">→</span>
+      </div>
+      <div class="what-item">
+        <div class="what-item-icon">🎂</div>
+        <span class="what-item-text">Birthdays & Baby Showers</span>
+        <span class="what-item-arrow">→</span>
+      </div>
+      <div class="what-item">
+        <div class="what-item-icon">🌍</div>
+        <span class="what-item-text">Ruracio & Traditional Ceremonies</span>
+        <span class="what-item-arrow">→</span>
+      </div>
+      <div class="what-item">
+        <div class="what-item-icon">🚗</div>
+        <span class="what-item-text">Car Décor for Events</span>
+        <span class="what-item-arrow">→</span>
+      </div>
+      <div class="what-item">
+        <div class="what-item-icon">✈️</div>
+        <span class="what-item-text">Destination Events</span>
+        <span class="what-item-arrow">→</span>
+      </div>
+      <div class="what-item">
+        <div class="what-item-icon">🤝</div>
+        <span class="what-item-text">Vendor Sourcing & Management</span>
+        <span class="what-item-arrow">→</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GOOGLE REVIEWS CAROUSEL ══ -->
+<section class="reviews" id="reviews">
+  <div class="reviews-header reveal">
+    <div>
+      <div class="section-eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">Google Reviews</span>
+      </div>
+      <h2 class="section-title">What Our <em>Clients</em> Say</h2>
+    </div>
+    <div class="google-badge">
+      <div class="google-badge-rating">5.0</div>
+      <div class="google-badge-info">
+        <span class="google-badge-stars">★★★★★</span>
+        <span class="google-badge-label">Google Rating</span>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-wrapper reveal">
+    <div class="carousel-track" id="carouselTrack">
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Our wedding was absolutely beyond anything we imagined. GRIT Events handled every single detail with such grace and professionalism. Our guests are still talking about it months later.</p>
+        <div class="review-footer">
+          <img class="review-avatar" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80" alt="Client review GRIT Events wedding Nairobi">
+          <div>
+            <div class="review-name">Amara & David O.</div>
+            <div class="review-event">Wedding · Nairobi</div>
+          </div>
+          <span class="review-google-icon">Google ★</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">I hired GRIT Events for our regional summit with over 400 delegates. Flawless from start to finish. The logistics, the décor, the timing — everything was handled with exceptional precision.</p>
+        <div class="review-footer">
+          <img class="review-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Corporate client GRIT Events summit Nairobi">
+          <div>
+            <div class="review-name">James Whitfield</div>
+            <div class="review-event">Corporate Summit · Nairobi</div>
+          </div>
+          <span class="review-google-icon">Google ★</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Our ruracio ceremony was handled with so much respect and elegance. They understood our culture deeply and added a beautiful modern touch. Both families were absolutely impressed.</p>
+        <div class="review-footer">
+          <img class="review-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Ruracio ceremony client GRIT Events Kenya">
+          <div>
+            <div class="review-name">The Mwangi Family</div>
+            <div class="review-event">Ruracio Ceremony · Kiambu</div>
+          </div>
+          <span class="review-google-icon">Google ★</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">My 40th birthday was a dream come true. The décor, the ambiance, the surprise elements — I was completely blown away. GRIT Events truly understood my vision and multiplied it tenfold.</p>
+        <div class="review-footer">
+          <img class="review-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&q=80" alt="Birthday party planner GRIT Events Nairobi">
+          <div>
+            <div class="review-name">Sophie Laurent</div>
+            <div class="review-event">Birthday Celebration · Karen</div>
+          </div>
+          <span class="review-google-icon">Google ★</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">The product launch exceeded all our brand expectations. GRIT Events delivered a world-class event that positioned our brand exactly where we wanted. Professionalism at its finest.</p>
+        <div class="review-footer">
+          <img class="review-avatar" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&q=80" alt="Product launch event planner Kenya GRIT Events">
+          <div>
+            <div class="review-name">Michael Oduya</div>
+            <div class="review-event">Product Launch · Westlands</div>
+          </div>
+          <span class="review-google-icon">Google ★</span>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">From our first meeting to the last dance at our wedding, GRIT Events was with us every step of the way. They felt less like planners and more like family. Truly exceptional people.</p>
+        <div class="review-footer">
+          <img class="review-avatar" src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=100&q=80" alt="Wedding planner review GRIT Events Kenya">
+          <div>
+            <div class="review-name">Charlotte & Kibe N.</div>
+            <div class="review-event">Wedding · Diani Beach</div>
+          </div>
+          <span class="review-google-icon">Google ★</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="carousel-controls">
+    <button class="carousel-btn" id="prevBtn" onclick="moveCarousel(-1)">←</button>
+    <button class="carousel-btn" id="nextBtn" onclick="moveCarousel(1)">→</button>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </div>
+</section>
+
+<!-- ══ BLOG TEASER ══ -->
+<section class="blog-teaser" id="blog">
+  <div class="blog-header reveal">
+    <div>
+      <div class="section-eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">Insights & Ideas</span>
+      </div>
+      <h2 class="section-title">From the <em>GRIT</em> Blog</h2>
+    </div>
+    <a href="blog.html" class="btn-secondary">Explore All Articles</a>
+  </div>
+  <div class="blog-grid reveal">
+    <a href="blog.html" class="blog-card">
+      <img class="blog-card-img" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" alt="Luxury wedding planning tips Nairobi Kenya GRIT Events blog">
+      <div class="blog-card-overlay">
+        <span class="blog-card-cat">Wedding Planning</span>
+        <h3 class="blog-card-title">10 Things Every Bride in Nairobi Must Know Before Hiring an Event Planner</h3>
+        <span class="blog-card-date">Event Planning · 8 min read</span>
+      </div>
+      <div class="blog-card-arrow">↗</div>
+    </a>
+    <a href="blog.html" class="blog-card">
+      <img class="blog-card-img" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Corporate event planning tips Kenya East Africa">
+      <div class="blog-card-overlay">
+        <span class="blog-card-cat">Corporate Events</span>
+        <h3 class="blog-card-title">How to Plan a World-Class Summit in Nairobi</h3>
+        <span class="blog-card-date">Corporate · 6 min read</span>
+      </div>
+      <div class="blog-card-arrow">↗</div>
+    </a>
+    <a href="blog.html" class="blog-card">
+      <img class="blog-card-img" src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=600&q=80" alt="Event décor trends Kenya luxury design GRIT Events">
+      <div class="blog-card-overlay">
+        <span class="blog-card-cat">Décor & Design</span>
+        <h3 class="blog-card-title">Top Luxury Event Décor Trends in East Africa for 2025</h3>
+        <span class="blog-card-date">Design · 5 min read</span>
+      </div>
+      <div class="blog-card-arrow">↗</div>
+    </a>
+  </div>
+</section>
+
+<!-- ══ GET QUOTE ══ -->
+<section class="get-quote">
+  <div class="reveal">
+    <div class="section-eyebrow" style="justify-content:center;margin-bottom:32px">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Let's Begin</span>
+      <div class="eyebrow-line"></div>
+    </div>
+    <h2 class="get-quote-title">Ready to Build Something<br><em>Extraordinary?</em></h2>
+    <p class="get-quote-sub">Tell us about your event. We'll bring the GRIT.</p>
+    <div class="get-quote-btns">
+      <a href="index.html#contact" class="btn-gold">Get A Free Quote</a>
+      <a href="https://wa.me/254707768071" class="btn-secondary">💬 Chat on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">GRIT</div>
+      <div class="footer-brand-sub">Events</div>
+      <p class="footer-tagline">Greatness Requires Internal Toughness. We build extraordinary experiences through precision, passion, and relentless excellence.</p>
+      <div class="footer-contact-item">
+        <div class="footer-contact-dot"></div>
+        <span class="footer-contact-text">+254 707 768 071</span>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-dot"></div>
+        <span class="footer-contact-text">Nairobi, Kenya · East Africa & International</span>
+      </div>
+      <div class="footer-contact-item">
+        <div class="footer-contact-dot"></div>
+        <span class="footer-contact-text">Available 24/7</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="services.html">Wedding Planning</a></li>
+        <li><a href="services.html">Corporate Events</a></li>
+        <li><a href="services.html">Gala Dinners</a></li>
+        <li><a href="services.html">Ruracio Ceremonies</a></li>
+        <li><a href="services.html">Baby Showers</a></li>
+        <li><a href="services.html">Car Décor</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About GRIT</a></li>
+        <li><a href="index.html#team">Our Team</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Locations</div>
+      <ul class="footer-links">
+        <li><a href="#">Nairobi, Kenya</a></li>
+        <li><a href="#">East Africa</a></li>
+        <li><a href="#">International</a></li>
+        <li><a href="#">Destination Events</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2024 <span>GRIT Events</span>. All rights reserved. · Nairobi, Kenya</div>
+    <div class="footer-socials">
+      <a href="#" class="footer-social">in</a>
+      <a href="#" class="footer-social">ig</a>
+      <a href="#" class="footer-social">fb</a>
+      <a href="#" class="footer-social">wa</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ WHATSAPP FLOAT ══ -->
+<div class="whatsapp-float">
+  <div class="wa-tooltip">Chat with us on WhatsApp</div>
+  <a href="https://wa.me/254707768071" class="wa-btn" target="_blank">💬</a>
+</div>
+
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+document.addEventListener('mousemove', e => {
+  mouseX = e.clientX; mouseY = e.clientY;
+  cursor.style.left = mouseX + 'px'; cursor.style.top = mouseY + 'px';
+});
+function animateRing() {
+  ringX += (mouseX - ringX) * 0.12; ringY += (mouseY - ringY) * 0.12;
+  ring.style.left = ringX + 'px'; ring.style.top = ringY + 'px';
+  requestAnimationFrame(animateRing);
+}
+animateRing();
+document.querySelectorAll('a, button').forEach(el => {
+  el.addEventListener('mouseenter', () => { cursor.style.transform = 'translate(-50%,-50%) scale(2)'; ring.style.width = '50px'; ring.style.height = '50px'; });
+  el.addEventListener('mouseleave', () => { cursor.style.transform = 'translate(-50%,-50%) scale(1)'; ring.style.width = '32px'; ring.style.height = '32px'; });
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+reveals.forEach(el => observer.observe(el));
+
+// Carousel
+const track = document.getElementById('carouselTrack');
+const cards = track.querySelectorAll('.review-card');
+const dotsContainer = document.getElementById('carouselDots');
+let current = 0;
+const visible = () => window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+
+// Build dots
+cards.forEach((_, i) => {
+  const dot = document.createElement('div');
+  dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+  dot.onclick = () => goTo(i);
+  dotsContainer.appendChild(dot);
+});
+
+function goTo(index) {
+  const maxIndex = cards.length - visible();
+  current = Math.max(0, Math.min(index, maxIndex));
+  const cardWidth = cards[0].offsetWidth + 24;
+  track.style.transform = `translateX(-${current * cardWidth}px)`;
+  document.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+}
+
+function moveCarousel(dir) { goTo(current + dir); }
+
+window.addEventListener('resize', () => goTo(current));
+</script>
+</body>
+</html>
