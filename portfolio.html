@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GRIT Events Portfolio — Luxury event planning and design portfolio across Nairobi, Kenya and East Africa. Weddings, corporate summits, galas, product launches, traditional ceremonies and more.">
+<meta name="keywords" content="luxury event portfolio Nairobi, wedding portfolio Kenya, corporate event portfolio East Africa, event design portfolio Kenya, GRIT Events portfolio, best event planner Nairobi portfolio">
+<title>Portfolio | GRIT Events — Luxury Event Planning & Design, Nairobi Kenya</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Josefin+Sans:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --crimson: #8B0000;
+  --black: #1A1A1A;
+  --black-deep: #0D0D0D;
+  --gold: #C9A84C;
+  --cream: #F5F0E8;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Josefin Sans',sans-serif;background:var(--black-deep);color:var(--cream);overflow-x:hidden;cursor:none;}
+.cursor{width:8px;height:8px;background:var(--gold);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.1s;}
+.cursor-ring{width:32px;height:32px;border:1px solid rgba(201,168,76,0.4);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width 0.2s,height 0.2s;}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9997;opacity:0.4;}
+
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 60px;height:80px;display:flex;align-items:center;justify-content:space-between;background:rgba(13,13,13,0.95);border-bottom:1px solid rgba(201,168,76,0.15);backdrop-filter:blur(12px);}
+.nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none;}
+.nav-monogram{width:44px;height:44px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:20px;letter-spacing:-2px;}
+.nav-monogram .g{color:var(--crimson);}.nav-monogram .e{color:var(--gold);}
+.nav-brand-name{font-weight:700;font-size:16px;letter-spacing:6px;color:var(--cream);display:block;}
+.nav-brand-sub{font-weight:100;font-size:9px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;display:block;}
+nav{display:flex;align-items:center;gap:40px;}
+nav a{font-weight:300;font-size:11px;letter-spacing:3px;color:rgba(245,240,232,0.7);text-decoration:none;text-transform:uppercase;transition:color 0.3s;position:relative;}
+nav a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform 0.3s;}
+nav a:hover,nav a.active{color:var(--gold);}
+nav a:hover::after,nav a.active::after{transform:scaleX(1);}
+.nav-cta{padding:10px 24px;border:1px solid var(--gold);color:var(--gold)!important;font-size:10px!important;letter-spacing:3px!important;transition:all 0.3s!important;}
+.nav-cta:hover{background:var(--gold)!important;color:var(--black)!important;}
+.nav-cta::after{display:none!important;}
+
+/* HERO */
+.port-hero{min-height:100vh;position:relative;display:flex;align-items:flex-end;overflow:hidden;}
+.hero-bg-reel{position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,1fr);gap:3px;}
+.hero-reel-col{display:flex;flex-direction:column;gap:3px;overflow:hidden;}
+.hero-reel-col:nth-child(even){margin-top:-80px;}
+.hero-reel-img{width:100%;height:260px;object-fit:cover;filter:grayscale(40%) brightness(0.5);transition:filter 0.6s;}
+.hero-reel-img:hover{filter:grayscale(0%) brightness(0.7);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top, rgba(13,13,13,1) 0%, rgba(13,13,13,0.6) 40%, rgba(13,13,13,0.2) 100%);}
+.hero-overlay-left{position:absolute;inset:0;background:linear-gradient(to right, rgba(13,13,13,0.8) 0%, transparent 60%);}
+.hero-content{position:relative;z-index:2;padding:0 60px 80px;max-width:800px;}
+.breadcrumb{display:flex;align-items:center;gap:12px;margin-bottom:32px;opacity:0;animation:fadeUp 0.8s ease 0.2s forwards;}
+.breadcrumb a{font-size:10px;letter-spacing:3px;color:rgba(245,240,232,0.4);text-decoration:none;text-transform:uppercase;transition:color 0.3s;}
+.breadcrumb a:hover{color:var(--gold);}
+.breadcrumb-sep{color:var(--gold);font-size:10px;}
+.breadcrumb-current{font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;}
+.hero-label{font-size:10px;letter-spacing:6px;color:var(--gold);text-transform:uppercase;margin-bottom:20px;display:block;opacity:0;animation:fadeUp 0.8s ease 0.4s forwards;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(60px,9vw,120px);line-height:0.85;color:var(--cream);margin-bottom:28px;opacity:0;animation:fadeUp 0.8s ease 0.6s forwards;}
+.hero-title em{color:var(--crimson);font-style:italic;}
+.hero-desc{font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.8;color:rgba(245,240,232,0.65);max-width:540px;margin-bottom:40px;opacity:0;animation:fadeUp 0.8s ease 0.8s forwards;}
+.hero-stats-row{display:flex;gap:48px;opacity:0;animation:fadeUp 0.8s ease 1s forwards;}
+.hero-stat-item{text-align:left;}
+.hero-stat-num{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:40px;color:var(--gold);line-height:1;}
+.hero-stat-label{font-size:9px;letter-spacing:3px;color:rgba(245,240,232,0.4);text-transform:uppercase;margin-top:4px;}
+
+/* MARQUEE */
+.marquee-strip{background:var(--crimson);padding:14px 0;overflow:hidden;white-space:nowrap;}
+.marquee-inner{display:inline-flex;animation:marquee 28s linear infinite;}
+.marquee-item{font-size:10px;letter-spacing:4px;color:rgba(245,240,232,0.8);text-transform:uppercase;padding:0 36px;font-weight:100;}
+.marquee-dot{color:var(--gold);padding:0 8px;}
+
+/* FILTER TABS */
+.filter-bar{position:sticky;top:80px;z-index:100;background:rgba(13,13,13,0.97);border-bottom:1px solid rgba(201,168,76,0.1);backdrop-filter:blur(12px);padding:0 60px;overflow-x:auto;white-space:nowrap;}
+.filter-inner{display:inline-flex;gap:0;}
+.filter-btn{padding:20px 28px;font-size:10px;letter-spacing:3px;color:rgba(245,240,232,0.4);text-transform:uppercase;background:transparent;border:none;cursor:pointer;transition:all 0.3s;position:relative;white-space:nowrap;font-family:'Josefin Sans',sans-serif;}
+.filter-btn::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform 0.3s;}
+.filter-btn:hover{color:var(--cream);}
+.filter-btn.active{color:var(--gold);}
+.filter-btn.active::after{transform:scaleX(1);}
+
+/* SHARED */
+.btn-primary{display:inline-block;padding:14px 36px;background:var(--crimson);color:var(--cream);font-family:'Josefin Sans',sans-serif;font-weight:300;font-size:10px;letter-spacing:4px;text-transform:uppercase;text-decoration:none;border:1px solid var(--crimson);transition:all 0.3s;position:relative;overflow:hidden;cursor:pointer;}
+.btn-primary::before{content:'';position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;z-index:-1;}
+.btn-primary:hover{color:var(--black);border-color:var(--gold);}
+.btn-primary:hover::before{transform:scaleX(1);}
+.btn-gold{display:inline-block;padding:14px 36px;background:var(--gold);color:var(--black);font-family:'Josefin Sans',sans-serif;font-weight:400;font-size:10px;letter-spacing:4px;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);transition:all 0.3s;cursor:pointer;}
+.btn-gold:hover{background:transparent;color:var(--gold);}
+.btn-outline{display:inline-block;padding:12px 28px;background:transparent;color:var(--gold);font-family:'Josefin Sans',sans-serif;font-weight:300;font-size:10px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(201,168,76,0.4);transition:all 0.3s;cursor:pointer;}
+.btn-outline:hover{border-color:var(--gold);background:rgba(201,168,76,0.05);}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 0.8s ease,transform 0.8s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.section-eyebrow{display:flex;align-items:center;gap:16px;margin-bottom:20px;}
+.eyebrow-line{width:40px;height:1px;background:var(--gold);}
+.eyebrow-text{font-size:10px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;}
+.section-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(36px,5vw,64px);line-height:1;color:var(--cream);margin-bottom:20px;}
+.section-title em{font-style:italic;color:var(--crimson);}
+
+/* ══ FEATURED EVENT ══ */
+.featured{padding:100px 60px;background:var(--black);position:relative;overflow:hidden;}
+.featured-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:0;min-height:600px;}
+.featured-visual{position:relative;overflow:hidden;}
+.featured-img{width:100%;height:100%;object-fit:cover;filter:grayscale(10%) brightness(0.85);transition:transform 0.8s ease,filter 0.8s;}
+.featured-inner:hover .featured-img{transform:scale(1.03);filter:grayscale(0%) brightness(0.9);}
+.featured-cat-badge{position:absolute;top:32px;left:32px;background:var(--crimson);padding:8px 20px;font-size:9px;letter-spacing:3px;color:var(--cream);text-transform:uppercase;z-index:2;}
+.featured-award{position:absolute;bottom:32px;left:32px;background:rgba(13,13,13,0.9);border:1px solid rgba(201,168,76,0.3);padding:16px 20px;display:flex;align-items:center;gap:14px;z-index:2;}
+.featured-award-icon{font-size:24px;}
+.featured-award-text{font-size:9px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;line-height:1.5;}
+.featured-info{background:var(--black-deep);padding:60px 56px;display:flex;flex-direction:column;justify-content:center;position:relative;}
+.featured-info::before{content:'FEATURED';position:absolute;bottom:-20px;right:-20px;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:100px;color:rgba(139,0,0,0.05);pointer-events:none;line-height:1;}
+.featured-label{font-size:9px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:12px;}
+.featured-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(32px,4vw,52px);color:var(--cream);line-height:1.05;margin-bottom:8px;}
+.featured-subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--gold);margin-bottom:28px;}
+.featured-meta{display:flex;gap:32px;margin-bottom:28px;}
+.featured-meta-item{display:flex;flex-direction:column;gap:4px;}
+.featured-meta-label{font-size:8px;letter-spacing:3px;color:rgba(245,240,232,0.3);text-transform:uppercase;}
+.featured-meta-val{font-family:'Cormorant Garamond',serif;font-size:15px;color:rgba(245,240,232,0.7);}
+.featured-desc{font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.8;color:rgba(245,240,232,0.6);margin-bottom:36px;border-left:2px solid var(--crimson);padding-left:20px;}
+.featured-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px;}
+.event-tag{padding:5px 14px;border:1px solid rgba(201,168,76,0.2);font-size:9px;letter-spacing:2px;color:rgba(201,168,76,0.7);text-transform:uppercase;}
+
+/* ══ PORTFOLIO GRID ══ */
+.portfolio-section{padding:80px 60px;background:var(--black-deep);}
+.portfolio-section-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;}
+.cat-count{font-family:'Cormorant Garamond',serif;font-size:16px;color:rgba(245,240,232,0.4);font-style:italic;}
+
+/* MASONRY-STYLE GRID */
+.port-grid{display:grid;gap:16px;margin-bottom:80px;}
+.port-grid-3{grid-template-columns:repeat(3,1fr);}
+.port-grid-2{grid-template-columns:repeat(2,1fr);}
+.port-grid-featured{grid-template-columns:1.6fr 1fr 1fr;grid-template-rows:340px 260px;}
+.port-grid-featured .port-card:first-child{grid-row:span 2;}
+
+.port-card{position:relative;overflow:hidden;background:var(--black);cursor:pointer;group:true;}
+.port-card-img{width:100%;height:100%;object-fit:cover;filter:grayscale(25%) brightness(0.8);transition:transform 0.6s ease,filter 0.5s;}
+.port-card:hover .port-card-img{transform:scale(1.06);filter:grayscale(0%) brightness(0.9);}
+
+/* Overlay */
+.port-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,13,13,0.95) 0%,rgba(13,13,13,0.4) 50%,rgba(139,0,0,0.1) 100%);opacity:0;transition:opacity 0.4s;}
+.port-card:hover .port-overlay{opacity:1;}
+
+/* Card content */
+.port-card-content{position:absolute;bottom:0;left:0;right:0;padding:28px;transform:translateY(16px);transition:transform 0.4s;}
+.port-card:hover .port-card-content{transform:translateY(0);}
+.port-card-cat{font-size:8px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:8px;display:block;}
+.port-card-title{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:22px;color:var(--cream);line-height:1.2;margin-bottom:6px;}
+.port-card-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:rgba(245,240,232,0.6);margin-bottom:16px;}
+.port-card-btn{display:inline-flex;align-items:center;gap:8px;font-size:9px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;background:none;border:none;font-family:'Josefin Sans',sans-serif;cursor:pointer;padding:0;transition:gap 0.3s;}
+.port-card-btn:hover{gap:14px;}
+
+/* Top badges */
+.port-card-badge{position:absolute;top:20px;left:20px;background:var(--crimson);padding:6px 14px;font-size:8px;letter-spacing:2px;color:var(--cream);text-transform:uppercase;z-index:2;}
+.port-card-num{position:absolute;top:20px;right:20px;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:48px;color:rgba(255,255,255,0.08);line-height:1;z-index:2;transition:color 0.4s;}
+.port-card:hover .port-card-num{color:rgba(201,168,76,0.15);}
+
+/* Image placeholder heights */
+.port-h-full{height:100%;}
+.port-h-300{height:300px;}
+.port-h-280{height:280px;}
+.port-h-340{height:340px;}
+
+/* CATEGORY DIVIDERS */
+.cat-divider{display:flex;align-items:center;gap:24px;padding:60px 60px 40px;background:var(--black-deep);}
+.cat-div-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.2),transparent);}
+.cat-div-content{display:flex;align-items:center;gap:16px;}
+.cat-div-icon{font-size:24px;}
+.cat-div-name{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;color:var(--cream);}
+.cat-div-name em{font-style:italic;color:var(--crimson);}
+.cat-div-count{font-size:9px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;padding:4px 12px;border:1px solid rgba(201,168,76,0.2);}
+
+/* ══ BEHIND THE SCENES ══ */
+.bts{padding:100px 60px;background:var(--crimson);position:relative;overflow:hidden;}
+.bts::before{content:'PROCESS';position:absolute;right:-60px;top:50%;transform:translateY(-50%);font-family:'Cormorant Garamond',serif;font-weight:700;font-size:400px;color:rgba(0,0,0,0.07);pointer-events:none;line-height:1;}
+.bts-header{margin-bottom:60px;}
+.bts-header .section-title{color:var(--cream);}
+.bts-header .section-title em{color:var(--gold);}
+.bts-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(0,0,0,0.1);position:relative;z-index:2;}
+.bts-card{background:rgba(0,0,0,0.2);padding:40px 32px;position:relative;overflow:hidden;transition:background 0.3s;}
+.bts-card:hover{background:rgba(0,0,0,0.35);}
+.bts-step-num{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:72px;color:rgba(245,240,232,0.08);line-height:1;margin-bottom:16px;}
+.bts-card-icon{font-size:32px;margin-bottom:16px;display:block;}
+.bts-card-title{font-family:'Josefin Sans',sans-serif;font-weight:400;font-size:11px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:12px;}
+.bts-card-desc{font-family:'Cormorant Garamond',serif;font-size:16px;line-height:1.7;color:rgba(245,240,232,0.7);}
+.bts-card-detail{font-size:10px;letter-spacing:2px;color:rgba(245,240,232,0.3);text-transform:uppercase;margin-top:16px;line-height:1.8;}
+
+/* BTS TIMELINE (below cards) */
+.bts-timeline{padding:60px;background:var(--black);display:grid;grid-template-columns:1fr 2px 1fr 2px 1fr;gap:0;align-items:start;}
+.bts-tl-item{padding:0 40px;}
+.bts-tl-line{background:linear-gradient(180deg,var(--gold),transparent);height:200px;margin-top:24px;}
+.bts-tl-phase{font-size:9px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:12px;}
+.bts-tl-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:24px;color:var(--cream);margin-bottom:12px;}
+.bts-tl-desc{font-family:'Cormorant Garamond',serif;font-size:16px;color:rgba(245,240,232,0.55);line-height:1.7;}
+
+/* ══ CREDIBILITY ══ */
+.credibility{padding:100px 60px;background:var(--black-deep);}
+.cred-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;background:rgba(201,168,76,0.06);margin-top:60px;}
+.cred-card{background:var(--black);padding:48px 40px;position:relative;overflow:hidden;transition:background 0.3s;}
+.cred-card:hover{background:rgba(139,0,0,0.06);}
+.cred-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--crimson),var(--gold));transform:scaleX(0);transition:transform 0.4s;}
+.cred-card:hover::before{transform:scaleX(1);}
+.cred-icon{font-size:40px;margin-bottom:24px;display:block;}
+.cred-num{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:56px;color:var(--gold);line-height:1;margin-bottom:8px;}
+.cred-label{font-size:10px;letter-spacing:3px;color:rgba(245,240,232,0.4);text-transform:uppercase;margin-bottom:16px;}
+.cred-desc{font-family:'Cormorant Garamond',serif;font-size:16px;line-height:1.7;color:rgba(245,240,232,0.55);}
+
+/* ══ CTA STRIP ══ */
+.port-cta{padding:100px 60px;text-align:center;background:linear-gradient(135deg,rgba(139,0,0,0.92),rgba(13,13,13,0.98)),url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1800&q=80') center/cover no-repeat;position:relative;overflow:hidden;}
+.cta-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(40px,6vw,80px);color:var(--cream);line-height:1;margin-bottom:20px;}
+.cta-title em{color:var(--gold);font-style:italic;}
+.cta-sub{font-family:'Cormorant Garamond',serif;font-size:20px;color:rgba(245,240,232,0.6);margin-bottom:48px;font-style:italic;}
+.cta-btns{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;}
+
+/* FOOTER */
+footer{background:#080808;padding:80px 60px 40px;border-top:1px solid rgba(201,168,76,0.1);}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px;}
+.footer-brand-name{font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:28px;letter-spacing:8px;color:var(--cream);margin-bottom:4px;}
+.footer-brand-sub{font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:20px;}
+.footer-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:rgba(245,240,232,0.4);line-height:1.7;max-width:300px;margin-bottom:28px;}
+.footer-contact-item{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;}
+.footer-contact-dot{width:6px;height:6px;background:var(--crimson);border-radius:50%;margin-top:6px;flex-shrink:0;}
+.footer-contact-text{font-size:12px;letter-spacing:1px;color:rgba(245,240,232,0.5);line-height:1.6;}
+.footer-col-title{font-size:10px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:24px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-family:'Cormorant Garamond',serif;font-size:16px;color:rgba(245,240,232,0.5);text-decoration:none;transition:color 0.3s;}
+.footer-links a:hover{color:var(--gold);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:40px;border-top:1px solid rgba(245,240,232,0.06);}
+.footer-copy{font-size:10px;letter-spacing:2px;color:rgba(245,240,232,0.25);text-transform:uppercase;}
+.footer-copy span{color:var(--crimson);}
+.footer-socials{display:flex;gap:20px;}
+.footer-social{width:36px;height:36px;border:1px solid rgba(245,240,232,0.1);display:flex;align-items:center;justify-content:center;font-size:12px;color:rgba(245,240,232,0.4);text-decoration:none;transition:all 0.3s;}
+.footer-social:hover{border-color:var(--gold);color:var(--gold);}
+
+/* WHATSAPP */
+.whatsapp-float{position:fixed;bottom:32px;right:32px;z-index:500;display:flex;flex-direction:column;align-items:flex-end;gap:12px;}
+.wa-tooltip{background:var(--black);border:1px solid rgba(201,168,76,0.2);padding:12px 16px;font-size:11px;letter-spacing:1px;color:rgba(245,240,232,0.7);white-space:nowrap;opacity:0;transform:translateX(10px);transition:all 0.3s;pointer-events:none;}
+.whatsapp-float:hover .wa-tooltip{opacity:1;transform:translateX(0);}
+.wa-btn{width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:24px;box-shadow:0 4px 20px rgba(37,211,102,0.3);transition:transform 0.3s;animation:waPulse 2.5s ease infinite;}
+.wa-btn:hover{transform:scale(1.1);}
+
+/* ══ CASE STUDY MODAL ══ */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:2000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.4s;backdrop-filter:blur(10px);padding:20px;}
+.modal-overlay.open{opacity:1;pointer-events:all;}
+.modal{background:var(--black);border:1px solid rgba(201,168,76,0.15);max-width:840px;width:100%;max-height:90vh;overflow-y:auto;position:relative;transform:scale(0.95) translateY(20px);transition:transform 0.4s;}
+.modal-overlay.open .modal{transform:scale(1) translateY(0);}
+.modal-hero-img{width:100%;height:320px;object-fit:cover;filter:brightness(0.8);}
+.modal-header{padding:40px 48px 28px;position:relative;border-bottom:1px solid rgba(201,168,76,0.1);}
+.modal-cat-badge{display:inline-block;background:var(--crimson);padding:6px 16px;font-size:8px;letter-spacing:3px;color:var(--cream);text-transform:uppercase;margin-bottom:16px;}
+.modal-event-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(28px,4vw,48px);color:var(--cream);line-height:1.05;margin-bottom:8px;}
+.modal-event-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--gold);}
+.modal-close{position:absolute;top:24px;right:28px;background:none;border:none;color:rgba(245,240,232,0.4);font-size:28px;cursor:pointer;transition:color 0.3s;line-height:1;}
+.modal-close:hover{color:var(--gold);}
+.modal-meta-row{display:flex;gap:0;background:rgba(201,168,76,0.04);border-bottom:1px solid rgba(201,168,76,0.1);}
+.modal-meta-cell{flex:1;padding:20px 28px;border-right:1px solid rgba(201,168,76,0.1);}
+.modal-meta-cell:last-child{border-right:none;}
+.modal-meta-label{font-size:8px;letter-spacing:3px;color:rgba(245,240,232,0.3);text-transform:uppercase;margin-bottom:6px;}
+.modal-meta-val{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--cream);}
+.modal-body{padding:40px 48px;}
+.modal-section-title{font-size:9px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:16px;margin-top:32px;}
+.modal-section-title:first-child{margin-top:0;}
+.modal-text{font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.9;color:rgba(245,240,232,0.7);margin-bottom:20px;}
+.modal-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--gold);border-left:3px solid var(--crimson);padding:20px 24px;margin:28px 0;line-height:1.6;background:rgba(139,0,0,0.05);}
+.modal-results{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0;}
+.modal-result-item{background:rgba(201,168,76,0.04);border:1px solid rgba(201,168,76,0.1);padding:20px;text-align:center;}
+.modal-result-num{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:36px;color:var(--gold);line-height:1;}
+.modal-result-label{font-size:9px;letter-spacing:2px;color:rgba(245,240,232,0.4);text-transform:uppercase;margin-top:6px;}
+.modal-services-used{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+.modal-service-tag{padding:5px 14px;border:1px solid rgba(201,168,76,0.2);font-size:9px;letter-spacing:2px;color:rgba(201,168,76,0.7);text-transform:uppercase;}
+.modal-footer-btns{display:flex;gap:16px;padding-top:32px;border-top:1px solid rgba(201,168,76,0.1);margin-top:32px;}
+.modal-img-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px;}
+.modal-img-grid img{width:100%;height:200px;object-fit:cover;filter:grayscale(20%);}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@keyframes waPulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.3);}50%{box-shadow:0 4px 40px rgba(37,211,102,0.6);}}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  header{padding:0 30px;}
+  .filter-bar{padding:0 30px;}
+  .hero-content{padding:0 30px 60px;}
+  .hero-bg-reel{grid-template-columns:repeat(2,1fr);}
+  .featured{padding:60px 30px;}
+  .featured-inner{grid-template-columns:1fr;}
+  .featured-img{height:360px;}
+  .portfolio-section{padding:60px 30px;}
+  .port-grid-3{grid-template-columns:1fr 1fr;}
+  .port-grid-featured{grid-template-columns:1fr 1fr;grid-template-rows:auto;}
+  .port-grid-featured .port-card:first-child{grid-row:span 1;}
+  .bts{padding:60px 30px;}
+  .bts-grid{grid-template-columns:1fr 1fr;}
+  .bts-timeline{grid-template-columns:1fr;padding:40px 30px;}
+  .bts-tl-line{display:none;}
+  .bts-tl-item{padding:20px 0;}
+  .credibility{padding:60px 30px;}
+  .cred-grid{grid-template-columns:1fr;}
+  .port-cta{padding:60px 30px;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:40px;}
+  footer{padding:60px 30px 30px;}
+  .cat-divider{padding:40px 30px 30px;}
+}
+@media(max-width:640px){
+  header{padding:0 20px;}
+  nav a:not(.nav-cta){display:none;}
+  .hero-bg-reel{grid-template-columns:repeat(2,1fr);}
+  .hero-content{padding:0 20px 60px;}
+  .port-grid-3,.port-grid-2,.port-grid-featured{grid-template-columns:1fr;}
+  .port-grid-featured .port-card:first-child{grid-row:span 1;}
+  .modal-meta-row{flex-wrap:wrap;}
+  .modal-meta-cell{min-width:50%;}
+  .modal-results{grid-template-columns:1fr 1fr;}
+  .modal-header,.modal-body{padding:28px 24px;}
+  .modal-img-grid{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;gap:20px;}
+  .bts-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- HEADER -->
+<header>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-monogram"><span class="g">G</span><span class="e">E</span></div>
+    <div class="nav-brand"><span class="nav-brand-name">GRIT</span><span class="nav-brand-sub">Events</span></div>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html" class="active">Portfolio</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#contact" class="nav-cta">Get A Quote</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="port-hero">
+  <div class="hero-bg-reel">
+    <div class="hero-reel-col">
+      <img class="hero-reel-img" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Luxury wedding GRIT Events Nairobi">
+      <img class="hero-reel-img" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80" alt="Gala dinner event design Kenya">
+      <img class="hero-reel-img" src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=600&q=80" alt="Premium décor GRIT Events">
+    </div>
+    <div class="hero-reel-col">
+      <img class="hero-reel-img" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Corporate summit Nairobi Kenya">
+      <img class="hero-reel-img" src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80" alt="Birthday celebration luxury planner">
+      <img class="hero-reel-img" src="https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=600&q=80" alt="Event styling Kenya">
+    </div>
+    <div class="hero-reel-col">
+      <img class="hero-reel-img" src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=80" alt="Wedding planning Nairobi Kenya GRIT Events">
+      <img class="hero-reel-img" src="https://images.unsplash.com/photo-1597075095600-d4a72d7f8440?w=600&q=80" alt="Traditional ceremony ruracio Kenya">
+      <img class="hero-reel-img" src="https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=600&q=80" alt="Corporate event Nairobi Kenya">
+    </div>
+    <div class="hero-reel-col">
+      <img class="hero-reel-img" src="https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=600&q=80" alt="Luxury event design East Africa">
+      <img class="hero-reel-img" src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=600&q=80" alt="Floral design event Kenya">
+      <img class="hero-reel-img" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80" alt="Product launch event Nairobi">
+    </div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-overlay-left"></div>
+  <div class="hero-content">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">◆</span>
+      <span class="breadcrumb-current">Portfolio</span>
+    </div>
+    <span class="hero-label">Our Work · Our Standard · Our Story</span>
+    <h1 class="hero-title">Moments<br>We <em>Built</em><br>Together</h1>
+    <p class="hero-desc">Every event in our portfolio is a testament to what happens when vision meets execution — and when GRIT meets greatness.</p>
+    <div class="hero-stats-row">
+      <div class="hero-stat-item"><div class="hero-stat-num">12+</div><div class="hero-stat-label">Event Categories</div></div>
+      <div class="hero-stat-item"><div class="hero-stat-num">100%</div><div class="hero-stat-label">Client Satisfaction</div></div>
+      <div class="hero-stat-item"><div class="hero-stat-num">5★</div><div class="hero-stat-label">Google Rating</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span class="marquee-item">Weddings</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Summits</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Galas</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Launches</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Birthdays</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Ruracio</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Exhibitions</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Baby Showers</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Nairobi · East Africa · International</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Weddings</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Summits</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Galas</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Launches</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Birthdays</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Ruracio</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Exhibitions</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Baby Showers</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Nairobi · East Africa · International</span><span class="marquee-dot">◆</span>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <div class="filter-inner">
+    <button class="filter-btn active" onclick="filterPortfolio('all',this)">All Events</button>
+    <button class="filter-btn" onclick="filterPortfolio('wedding',this)">Weddings</button>
+    <button class="filter-btn" onclick="filterPortfolio('corporate',this)">Corporate & Summits</button>
+    <button class="filter-btn" onclick="filterPortfolio('gala',this)">Galas & Awards</button>
+    <button class="filter-btn" onclick="filterPortfolio('celebration',this)">Celebrations</button>
+    <button class="filter-btn" onclick="filterPortfolio('traditional',this)">Traditional</button>
+    <button class="filter-btn" onclick="filterPortfolio('launch',this)">Launches</button>
+  </div>
+</div>
+
+<!-- FEATURED EVENT -->
+<section class="featured reveal" id="featuredSection">
+  <div class="featured-inner">
+    <div class="featured-visual">
+      <div class="featured-cat-badge">⭐ Featured Event</div>
+      <img class="featured-img" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1000&q=80" alt="The Crimson Vow - Luxury Wedding GRIT Events Nairobi Kenya">
+      <div class="featured-award">
+        <span class="featured-award-icon">🏆</span>
+        <span class="featured-award-text">Most Memorable<br>Wedding 2024</span>
+      </div>
+    </div>
+    <div class="featured-info">
+      <div class="featured-label">Featured Case Study · Weddings</div>
+      <h2 class="featured-title">The Crimson Vow</h2>
+      <div class="featured-subtitle">A Nairobi Love Story, Told in Red & Gold</div>
+      <div class="featured-meta">
+        <div class="featured-meta-item"><div class="featured-meta-label">Location</div><div class="featured-meta-val">Karen, Nairobi</div></div>
+        <div class="featured-meta-item"><div class="featured-meta-label">Guests</div><div class="featured-meta-val">320 Guests</div></div>
+        <div class="featured-meta-item"><div class="featured-meta-label">Category</div><div class="featured-meta-val">Luxury Wedding</div></div>
+      </div>
+      <p class="featured-desc">"They asked for a wedding that felt like a movie. We delivered a masterpiece — from the towering floral arch to the candlelit reception under the stars."</p>
+      <div class="featured-tags">
+        <span class="event-tag">Full Planning</span>
+        <span class="event-tag">Floral Design</span>
+        <span class="event-tag">Décor & Styling</span>
+        <span class="event-tag">Vendor Management</span>
+        <span class="event-tag">On-Site Coordination</span>
+      </div>
+      <button class="btn-primary" onclick="openCaseStudy('crimson-vow')">View Full Case Study →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WEDDINGS ══ -->
+<div class="cat-divider reveal" data-cat="wedding">
+  <div class="cat-div-line"></div>
+  <div class="cat-div-content">
+    <span class="cat-div-icon">💍</span>
+    <h3 class="cat-div-name"><em>Weddings</em> & Ceremonies</h3>
+    <span class="cat-div-count">Category 01</span>
+  </div>
+  <div class="cat-div-line"></div>
+</div>
+
+<section class="portfolio-section" data-cat="wedding">
+  <div class="port-grid port-grid-featured reveal">
+    <div class="port-card" style="height:100%" onclick="openCaseStudy('crimson-vow')">
+      <img class="port-card-img port-h-full" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" alt="The Crimson Vow luxury wedding Nairobi Kenya GRIT Events">
+      <div class="port-overlay"></div>
+      <span class="port-card-badge">💍 Wedding</span>
+      <span class="port-card-num">01</span>
+      <div class="port-card-content">
+        <span class="port-card-cat">Luxury Wedding · Karen, Nairobi</span>
+        <div class="port-card-title">The Crimson Vow</div>
+        <div class="port-card-sub">A love story told in red, gold & candlelight</div>
+        <button class="port-card-btn">View Case Study <span>→</span></button>
+      </div>
+    </div>
+    <div class="port-card" style="height:340px" onclick="openCaseStudy('ivory-garden')">
+      <img class="port-card-img port-h-full" src="https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=600&q=80" alt="The Ivory Garden Wedding Diani Beach Kenya">
+      <div class="port-overlay"></div>
+      <span class="port-card-badge">💍 Wedding</span>
+      <span class="port-card-num">02</span>
+      <div class="port-card-content">
+        <span class="port-card-cat">Destination Wedding · Diani Beach</span>
+        <div class="port-card-title">The Ivory Garden</div>
+        <div class="port-card-sub">Beachside luxury where two worlds became one</div>
+        <button class="port-card-btn">View Case Study <span>→</span></button>
+      </div>
+    </div>
+    <div class="port-card" style="height:260px" onclick="openCaseStudy('golden-thread')">
+      <img class="port-card-img port-h-full" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80" alt="The Golden Thread wedding Nairobi Kenya">
+      <div class="port-overlay"></div>
+      <span class="port-card-badge">💍 Wedding</span>
+      <span class="port-card-num">03</span>
+      <div class="port-card-content">
+        <span class="port-card-cat">Intimate Wedding · Muthaiga</span>
+        <div class="port-card-title">The Golden Thread</div>
+        <div class="port-card-sub">80 guests. One evening. A thousand memories.</div>
+        <button class="port-card-btn">View Case Study <span>→</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CORPORATE & SUMMITS ══ -->
+<div class="cat-divider reveal" data-cat="corporate">
+  <div class="cat-div-line"></div>
+  <div class="cat-div-content">
+    <span class="cat-div-icon">🏛️</span>
+    <h3 class="cat-div-name"><em>Corporate</em> & Summits</h3>
+    <span class="cat-div-count">Category 02</span>
+  </div>
+  <div class="cat-div-line"></div>
+</div>
+
+<section class="portfolio-section" data-cat="corporate">
+  <div class="port-grid port-grid-3 reveal">
+    <div class="port-card port-h-320" onclick="openCaseStudy('leadership-summit')">
+      <img class="port-card-img port-h-full" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="The East Africa Leadership Summit Nairobi GRIT Events">
+      <div class="port-overlay"></div>
+      <span class="port-card-badge">🏛️ Summit</span>
+      <span class="port-card-num">04</span>
+      <div class="port-card-content">
+        <span class="port-card-cat">Regional Summit · KICC, Nairobi</span>
+        <div class="port-card-title">East Africa Leadership Summit</div>
+        <div class="port-card-sub">450 delegates. 3 days. One vision.</div>
+        <button class="port-card-btn">View Case Study <span>→</span></button>
+      </div>
+    </div>
+    <div class="port-card port-h-320" onclick="openCaseStudy('futures-forum')">
+      <img class="port-card-img port-h-full" src="https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=600&q=80" alt="The Futures Forum conference Nairobi Kenya">
+      <div class="port-overlay"></div>
+      <span class="port-card-badge">🎤 Conference</span>
+      <span class="port-card-num">05</span>
+      <div class="port-card-content">
+        <span class="port-card-cat">Conference · Radisson Blu, Nairobi</span>
+        <div class="port-card-title">The Futures Forum</div>
+        <div class="port-card-sub">Tech, innovation & Africa's next chapter</div>
+        <button class="port-card-btn">View Case Study <span>→</span></button>
+      </div>
+    </div>
+    <div class="port-card port-h-320" onclick="openCaseStudy('boardroom-series')">
+      <img class="port-card-img port-h-full" src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=600&q=80" alt="The Boardroom Series executive retreat Kenya">
+      <div class="port-overlay"></div>
+      <span class="port-card-badge">💼 Corporate</span>
+      <span class="port-card-num">06</span>
+      <div class="port-card-content">
+        <span class="port-card-cat">Executive Retreat · Naivasha, Kenya</span>
+        <div class="port-card-title">The Boardroom Series</div>
+        <div class="port-card-sub">Where strategy meets serenity</div>
+        <button class="port-card-btn">View Case Study <span>→</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ GALAS & AWARDS ══ -->
+<div class="cat-divider reveal" data-cat="gala">
+  <div class="cat-div-line"></div>
+  <div class="cat-div-content">
+    <span class="cat-div-icon">✨</span>
+    <h3 class="cat-div-name"><em>Galas</em> & Award Nights</h3>
+    <span class="cat-div-count">Category 03</span>
+  </div>
+  <div class="cat-div-line"></div>
+</div>
+
+<section class="portfolio-section" data-cat="gala">
+  <div class="port-grid port-grid-2 reveal">
+    <div class="port-card port-h-400" onclick="openCaseStudy('red-carpet-gala')">
+      <img class="port-card-img port-h-full" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80" alt="The Red Carpet Gala Nairobi Kenya GRIT Events">
+      <div class="port-overlay"></div>
+      <span class="port-card-badge">✨ Gala</span>
+      <span class="port-card-num">07</span>
+      <div class="port-card-content">
+        <span class="port-card-cat">Annual Gala · Nairobi Serena Hotel</span>
+        <div class="port-card-title">The Red Carpet Gala</div>
+        <div class="port-card-sub">An evening of recognition, glamour & excellence</div>
+        <button class="port-card-btn">View Case Study <span>→</span></button>
+      </div>
+    </div>
+    <div class="port-card port-h-400" onclick="openCaseStudy('founders-night')">
+      <img class="port-card-img port-h-full" src="https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=800&q=80" alt="Founders Night award ceremony Nairobi Kenya">
+      <div class="port-overlay"></div>
+      <span class="port-card-badge">🏆 Awards</span>
+      <span class="port-card-num">08</span>
+      <div class="port-card-content">
+        <span class="port-card-cat">Award Ceremony · Nairobi</span>
+        <div class="port-card-title">Founders Night</div>
+        <div class="port-card-sub">Celebrating the architects of East Africa's future</div>
+        <button class="port-card-btn">View Case Study <span>→</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CELEBRATIONS ══ -->
+<div class="cat-divider reveal" data-cat="celebration">
+  <div class="cat-div-line"></div>
+  <div class="cat-div-content">
+    <span class="cat-div-icon">🎉</span>
+    <h3 class="cat-div-name"><em>Celebrations</em> & Milestones</h3>
+    <span class="cat-div-count">Category 04</span>
+  </div>
+  <div class="cat-div-line"></div>
+</div>
+
+<section class="portfolio-section" data-cat="celebration">
+  <div class="port-grid port-grid-3 reveal">
+    <div class="port-card port-h-300" onclick="openCaseStudy('magnificat-50')">
+      <img class="port-card-img port-h-full" src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&q=80" alt="Magnificat 50 birthday celebration Nairobi Kenya">
+      <div class="port-overlay"></div>
+      <span class="port-card-badge">🎂 Birthday</span>
+      <span class="port-card-num">09</span>
+      <div class="port-card-content">
+        <span class="port-card-cat">50th Birthday · Nairobi</span>
+        <div class="port-card-title">Magnificat: 50</div>
+        <div class="port-card-sub">Half a century of life, celebrated in style</div>
+        <button class="port-card-btn">View Case Study <span>→</span></button>
+      </div>
+    </div>
+    <div class="port-card port-h-300" onclick="openCaseStudy('bloom-baby')">
+      <img class="port-card-img port-h-full" src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=600&q=80" alt="Bloom Baby shower event design Nairobi Kenya">
+      <div class="port-overlay"></div>
+      <span class="port-card-badge">👶 Baby Shower</span>
+      <span class="port-card-num">10</span>
+      <div class="port-card-content">
+        <span class="port-card-cat">Baby Shower · Karen, Nairobi</span>
+        <div class="port-card-title">Bloom</div>
+        <div class="port-card-sub">Welcoming new life with beauty & grace</div>
+        <button class="port-card-btn">View Case Study <span>→</span></button>
+      </div>
+    </div>
+    <div class="port-card port-h-300" onclick="openCaseStudy('silver-twenty')">
+      <img class="port-card-img port-h-full" src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=600&q=80" alt="Silver Twenty-Five anniversary celebration Nairobi">
+      <div class="port-overlay"></div>
+      <span class="port-card-badge">💑 Anniversary</span>
+      <span class="port-card-num">11</span>
+      <div class="port-card-content">
+        <span class="port-card-cat">25th Anniversary · Nairobi</span>
+        <div class="port-card-title">Silver Twenty-Five</div>
+        <div class="port-card-sub">25 years of love, reimagined for one night</div>
+        <button class="port-card-btn">View Case Study <span>→</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRADITIONAL ══ -->
+<div class="cat-divider reveal" data-cat="traditional">
+  <div class="cat-div-line"></div>
+  <div class="cat-div-content">
+    <span class="cat-div-icon">🌍</span>
+    <h3 class="cat-div-name"><em>Traditional</em> Ceremonies</h3>
+    <span class="cat-div-count">Category 05</span>
+  </div>
+  <div class="cat-div-line"></div>
+</div>
+
+<section class="portfolio-section" data-cat="traditional">
+  <div class="port-grid port-grid-2 reveal">
+    <div class="port-card port-h-360" onclick="openCaseStudy('roots-ceremony')">
+      <img class="port-card-img port-h-full" src="https://images.unsplash.com/photo-1597075095600-d4a72d7f8440?w=800&q=80" alt="Roots Ruracio ceremony Nairobi Kenya GRIT Events">
+      <div class="port-overlay"></div>
+      <span class="port-card-badge">🌍 Ruracio</span>
+      <span class="port-card-num">12</span>
+      <div class="port-card-content">
+        <span class="port-card-cat">Ruracio Ceremony · Kiambu County</span>
+        <div class="port-card-title">Roots</div>
+        <div class="port-card-sub">Culture, heritage & modern elegance in harmony</div>
+        <button class="port-card-btn">View Case Study <span>→</span></button>
+      </div>
+    </div>
+    <div class="port-card port-h-360" onclick="openCaseStudy('ubuntu-celebration')">
+      <img class="port-card-img port-h-full" src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80" alt="Ubuntu traditional celebration Kenya GRIT Events">
+      <div class="port-overlay"></div>
+      <span class="port-card-badge">🌍 Traditional</span>
+      <span class="port-card-num">13</span>
+      <div class="port-card-content">
+        <span class="port-card-cat">Dowry Ceremony · Murang'a, Kenya</span>
+        <div class="port-card-title">Ubuntu</div>
+        <div class="port-card-sub">I am because we are — a family united</div>
+        <button class="port-card-btn">View Case Study <span>→</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ LAUNCHES ══ -->
+<div class="cat-divider reveal" data-cat="launch">
+  <div class="cat-div-line"></div>
+  <div class="cat-div-content">
+    <span class="cat-div-icon">🚀</span>
+    <h3 class="cat-div-name"><em>Launches</em> & Brand Events</h3>
+    <span class="cat-div-count">Category 06</span>
+  </div>
+  <div class="cat-div-line"></div>
+</div>
+
+<section class="portfolio-section" data-cat="launch">
+  <div class="port-grid port-grid-3 reveal">
+    <div class="port-card port-h-300" onclick="openCaseStudy('ignite-launch')">
+      <img class="port-card-img port-h-full" src="https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=600&q=80" alt="Ignite product launch event Nairobi Kenya">
+      <div class="port-overlay"></div>
+      <span class="port-card-badge">🚀 Launch</span>
+      <span class="port-card-num">14</span>
+      <div class="port-card-content">
+        <span class="port-card-cat">Product Launch · Westlands, Nairobi</span>
+        <div class="port-card-title">Ignite</div>
+        <div class="port-card-sub">A product debut that lit up the industry</div>
+        <button class="port-card-btn">View Case Study <span>→</span></button>
+      </div>
+    </div>
+    <div class="port-card port-h-300" onclick="openCaseStudy('the-word-launch')">
+      <img class="port-card-img port-h-full" src="https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=600&q=80" alt="The Word book launch Nairobi Kenya GRIT Events">
+      <div class="port-overlay"></div>
+      <span class="port-card-badge">📚 Book Launch</span>
+      <span class="port-card-num">15</span>
+      <div class="port-card-content">
+        <span class="port-card-cat">Book Launch · Alliance Française, Nairobi</span>
+        <div class="port-card-title">The Word</div>
+        <div class="port-card-sub">A literary evening as powerful as the book itself</div>
+        <button class="port-card-btn">View Case Study <span>→</span></button>
+      </div>
+    </div>
+    <div class="port-card port-h-300" onclick="openCaseStudy('connected-expo')">
+      <img class="port-card-img port-h-full" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Connected exhibition trade show Nairobi Kenya">
+      <div class="port-overlay"></div>
+      <span class="port-card-badge">🏢 Exhibition</span>
+      <span class="port-card-num">16</span>
+      <div class="port-card-content">
+        <span class="port-card-cat">Trade Exhibition · Sarit Centre, Nairobi</span>
+        <div class="port-card-title">Connected</div>
+        <div class="port-card-sub">An exhibition that drew the right crowd</div>
+        <button class="port-card-btn">View Case Study <span>→</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BEHIND THE SCENES ══ -->
+<section class="bts">
+  <div class="bts-header reveal" style="position:relative;z-index:2">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line" style="background:rgba(245,240,232,0.3)"></div>
+      <span class="eyebrow-text">Behind The Scenes</span>
+    </div>
+    <h2 class="section-title" style="color:var(--cream)">The Work You <em style="color:var(--gold)">Never See</em></h2>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:19px;color:rgba(245,240,232,0.7);max-width:580px;line-height:1.8;margin-top:16px;">Every flawless event is built on a foundation of invisible work. Here's what happens long before the guests arrive.</p>
+  </div>
+  <div class="bts-grid reveal" style="position:relative;z-index:2">
+    <div class="bts-card">
+      <div class="bts-step-num">01</div>
+      <span class="bts-card-icon">☕</span>
+      <div class="bts-card-title">The Discovery Meeting</div>
+      <p class="bts-card-desc">We sit down — with coffee, with questions, and with no rush. We learn everything about your vision, your non-negotiables, and the feeling you want your guests to leave with.</p>
+      <div class="bts-card-detail">Week 1 · 2–3 hours · Vision Alignment</div>
+    </div>
+    <div class="bts-card">
+      <div class="bts-step-num">02</div>
+      <span class="bts-card-icon">📍</span>
+      <div class="bts-card-title">The Site Visit</div>
+      <p class="bts-card-desc">We walk every metre of the venue. We measure, photograph, assess lighting, test acoustics, and map every constraint. No surprises on event day — ever.</p>
+      <div class="bts-card-detail">Week 2 · Full-Day Assessment · Documentation</div>
+    </div>
+    <div class="bts-card">
+      <div class="bts-step-num">03</div>
+      <span class="bts-card-icon">🎨</span>
+      <div class="bts-card-title">The Design Session</div>
+      <p class="bts-card-desc">Mood boards, floor plans, colour stories, lighting concepts, floral direction — we build your event's entire visual world on paper before a single item is ordered.</p>
+      <div class="bts-card-detail">Week 3–4 · Creative Development · Client Review</div>
+    </div>
+    <div class="bts-card">
+      <div class="bts-step-num">04</div>
+      <span class="bts-card-icon">📞</span>
+      <div class="bts-card-title">The Vendor Briefings</div>
+      <p class="bts-card-desc">Every supplier receives a detailed written brief — photos, measurements, timings, expectations. We manage all communication so you never have to chase anyone.</p>
+      <div class="bts-card-detail">Week 4–8 · Supplier Management · Contracts</div>
+    </div>
+  </div>
+  <div class="bts-timeline reveal" style="position:relative;z-index:2;background:rgba(0,0,0,0.2);">
+    <div class="bts-tl-item">
+      <div class="bts-tl-phase">Phase 5</div>
+      <div class="bts-tl-title">The Rehearsal</div>
+      <p class="bts-tl-desc">We run through the full event programme — entrances, transitions, speeches, table service — until every person involved knows exactly what to do and when.</p>
+    </div>
+    <div class="bts-tl-line"></div>
+    <div class="bts-tl-item">
+      <div class="bts-tl-phase">Phase 6</div>
+      <div class="bts-tl-title">The Setup Day</div>
+      <p class="bts-tl-desc">Our team arrives at dawn. Décor is placed, lighting is rigged, tables are styled, every detail is checked and rechecked. We don't leave until it's perfect.</p>
+    </div>
+    <div class="bts-tl-line"></div>
+    <div class="bts-tl-item">
+      <div class="bts-tl-phase">Phase 7</div>
+      <div class="bts-tl-title">Your Moment</div>
+      <p class="bts-tl-desc">You walk in. Everything is ready. Our team manages every moment from the background — so you feel nothing but joy, pride, and presence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CREDIBILITY BUILDERS ══ -->
+<section class="credibility">
+  <div class="reveal" style="text-align:center;margin-bottom:20px">
+    <div class="section-eyebrow" style="justify-content:center">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Why Trust GRIT Events</span>
+      <div class="eyebrow-line"></div>
+    </div>
+    <h2 class="section-title">Built on <em>Results,</em> Not Promises</h2>
+  </div>
+  <div class="cred-grid reveal">
+    <div class="cred-card">
+      <span class="cred-icon">⭐</span>
+      <div class="cred-num">5.0</div>
+      <div class="cred-label">Google Rating</div>
+      <p class="cred-desc">Every client who has trusted GRIT Events has left a 5-star review. Not because we ask — but because we deliver.</p>
+    </div>
+    <div class="cred-card">
+      <span class="cred-icon">🌍</span>
+      <div class="cred-num">100%</div>
+      <div class="cred-label">On-Time Delivery</div>
+      <p class="cred-desc">In our history, not a single event has started late, run over, or missed a key moment. Reliability is not a promise — it's our record.</p>
+    </div>
+    <div class="cred-card">
+      <span class="cred-icon">🤝</span>
+      <div class="cred-num">24/7</div>
+      <div class="cred-label">Client Availability</div>
+      <p class="cred-desc">Event planning doesn't keep office hours. Neither do we. From first brief to final teardown, we are always reachable.</p>
+    </div>
+    <div class="cred-card">
+      <span class="cred-icon">🎯</span>
+      <div class="cred-num">12+</div>
+      <div class="cred-label">Event Categories</div>
+      <p class="cred-desc">From intimate rural ceremonies to international summits — our expertise spans every kind of event, every scale, every culture.</p>
+    </div>
+    <div class="cred-card">
+      <span class="cred-icon">💎</span>
+      <div class="cred-num">∞</div>
+      <div class="cred-label">Attention to Detail</div>
+      <p class="cred-desc">There is no detail too small, no element too minor to deserve our full attention. The difference between good and extraordinary lives in the details.</p>
+    </div>
+    <div class="cred-card">
+      <span class="cred-icon">🌱</span>
+      <div class="cred-num">Est.</div>
+      <div class="cred-label">2024 · Nairobi, Kenya</div>
+      <p class="cred-desc">Born in Nairobi. Built on GRIT. Committed to becoming East Africa's most trusted luxury event company — one extraordinary event at a time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="port-cta">
+  <div class="reveal">
+    <div class="section-eyebrow" style="justify-content:center;margin-bottom:32px">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Your Event Awaits</span>
+      <div class="eyebrow-line"></div>
+    </div>
+    <h2 class="cta-title">Ready to Be Our<br>Next <em>Masterpiece?</em></h2>
+    <p class="cta-sub">Let's build something extraordinary together.</p>
+    <div class="cta-btns">
+      <a href="index.html#contact" class="btn-gold">Get A Free Quote</a>
+      <a href="https://wa.me/254707768071" class="btn-primary" style="background:transparent;border-color:rgba(245,240,232,0.3);color:var(--cream)">💬 WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">GRIT</div>
+      <div class="footer-brand-sub">Events</div>
+      <p class="footer-tagline">Greatness Requires Internal Toughness. We build extraordinary experiences through precision, passion, and relentless excellence.</p>
+      <div class="footer-contact-item"><div class="footer-contact-dot"></div><span class="footer-contact-text">+254 707 768 071</span></div>
+      <div class="footer-contact-item"><div class="footer-contact-dot"></div><span class="footer-contact-text">Nairobi, Kenya · East Africa & International</span></div>
+      <div class="footer-contact-item"><div class="footer-contact-dot"></div><span class="footer-contact-text">Available 24/7</span></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Portfolio</div>
+      <ul class="footer-links">
+        <li><a href="#">Weddings</a></li>
+        <li><a href="#">Corporate & Summits</a></li>
+        <li><a href="#">Galas & Awards</a></li>
+        <li><a href="#">Celebrations</a></li>
+        <li><a href="#">Traditional Ceremonies</a></li>
+        <li><a href="#">Launches</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About GRIT</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Locations</div>
+      <ul class="footer-links">
+        <li><a href="#">Nairobi, Kenya</a></li>
+        <li><a href="#">East Africa</a></li>
+        <li><a href="#">International</a></li>
+        <li><a href="#">Destination Events</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2024 <span>GRIT Events</span>. All rights reserved. · Nairobi, Kenya</div>
+    <div class="footer-socials">
+      <a href="#" class="footer-social">in</a>
+      <a href="#" class="footer-social">ig</a>
+      <a href="#" class="footer-social">fb</a>
+      <a href="#" class="footer-social">wa</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<div class="whatsapp-float">
+  <div class="wa-tooltip">Chat with us on WhatsApp</div>
+  <a href="https://wa.me/254707768071" class="wa-btn" target="_blank">💬</a>
+</div>
+
+<!-- CASE STUDY MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modal">
+    <img class="modal-hero-img" id="modalImg" src="" alt="">
+    <div class="modal-header">
+      <div class="modal-cat-badge" id="modalCat"></div>
+      <h2 class="modal-event-title" id="modalTitle"></h2>
+      <div class="modal-event-sub" id="modalSub"></div>
+      <button class="modal-close" onclick="closeModalBtn()">✕</button>
+    </div>
+    <div class="modal-meta-row" id="modalMeta"></div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+// Cursor
+const cursor=document.getElementById('cursor');
+const ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+function animateRing(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animateRing);}
+animateRing();
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cursor.style.transform='translate(-50%,-50%) scale(2)';ring.style.width='50px';ring.style.height='50px';});
+  el.addEventListener('mouseleave',()=>{cursor.style.transform='translate(-50%,-50%) scale(1)';ring.style.width='32px';ring.style.height='32px';});
+});
+
+// Scroll reveal
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);obs.unobserve(e.target);}});},{threshold:0.08});
+reveals.forEach(el=>obs.observe(el));
+
+// Filter
+function filterPortfolio(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const sections = document.querySelectorAll('[data-cat]');
+  sections.forEach(s => {
+    if(cat === 'all' || s.dataset.cat === cat) {
+      s.style.display = '';
+    } else {
+      s.style.display = 'none';
+    }
+  });
+  const featured = document.getElementById('featuredSection');
+  featured.style.display = (cat === 'all' || cat === 'wedding') ? '' : 'none';
+}
+
+// Case Study Data
+const caseStudies = {
+  'crimson-vow': {
+    img:'https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80',
+    cat:'💍 Luxury Wedding',
+    title:'The Crimson Vow',
+    sub:'A Nairobi Love Story, Told in Red & Gold',
+    meta:[{l:'Location',v:'Karen, Nairobi'},{l:'Guests',v:'320 Guests'},{l:'Duration',v:'Full Day'},{l:'Category',v:'Luxury Wedding'}],
+    vision:'Sarah and James came to us with a single request — "make it feel like a movie." They wanted drama, warmth, and a celebration that would feel unlike anything their guests had ever attended. The challenge: delivering cinematic luxury in Nairobi, on a timeline of six months.',
+    solution:'We developed a concept we called "The Crimson Vow" — a deep red and warm gold palette against candlelit black. The ceremony featured a 4-metre floral arch of deep red roses and ivory blooms, with a ceiling of hanging candles above the reception. Every table was uniquely styled with cascading florals, gold candelabras, and handwritten name cards.',
+    quote:'"We walked in and we both started crying before anyone said a word. The space was more beautiful than we could have dreamed."',
+    results:[{n:'320',l:'Guests Hosted'},{n:'4m',l:'Floral Arch Height'},{n:'5★',l:'Client Review'}],
+    services:['Full Event Planning','Floral Design','Décor & Styling','Lighting Design','Vendor Management','Day-Of Coordination'],
+    bts:'The setup began at 4am. A team of 12 worked through the night to install the floral arch, hang 200 individual candle drops from the ceiling, and style each of 32 tables individually. By the time guests arrived, not a single detail was out of place.',
+    imgs:['https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=600&q=80','https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80']
+  },
+  'ivory-garden': {
+    img:'https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=1200&q=80',
+    cat:'💍 Destination Wedding',
+    title:'The Ivory Garden',
+    sub:'Beachside luxury where two worlds became one',
+    meta:[{l:'Location',v:'Diani Beach, Kenya'},{l:'Guests',v:'180 Guests'},{l:'Duration',v:'3-Day Event'},{l:'Category',v:'Destination Wedding'}],
+    vision:'Charlotte and Kibe wanted a wedding that honoured both her British heritage and his Kenyan roots — a celebration where two cultures could blend beautifully without either being lost.',
+    solution:'We created "The Ivory Garden" — a beachside ceremony with hand-woven kikoi fabrics alongside fine British ivory linen, traditional coastal flowers alongside English roses. The three-day event included a rehearsal dinner, the ceremony, and a morning-after brunch — all styled in consistent, elegant harmony.',
+    quote:'"People keep telling us it was the most beautiful wedding they have ever attended. We owe that entirely to GRIT Events."',
+    results:[{n:'180',l:'Guests'},{n:'3',l:'Days of Events'},{n:'2',l:'Cultures Celebrated'}],
+    services:['Destination Event Planning','Full Décor & Styling','Cultural Fusion Design','Vendor Sourcing Locally','Guest Transport Logistics','3-Day Coordination'],
+    bts:'Planning a destination wedding requires managing vendors 500km away. We conducted two site visits to Diani, built relationships with local coastal suppliers, and created detailed briefing documents for every team involved — ensuring seamless execution despite the distance.',
+    imgs:['https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80','https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80']
+  },
+  'golden-thread': {
+    img:'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1200&q=80',
+    cat:'💍 Intimate Wedding',
+    title:'The Golden Thread',
+    sub:'80 guests. One evening. A thousand memories.',
+    meta:[{l:'Location',v:'Muthaiga, Nairobi'},{l:'Guests',v:'80 Guests'},{l:'Duration',v:'Evening Event'},{l:'Category',v:'Intimate Luxury Wedding'}],
+    vision:'Not all weddings need to be grand. This couple wanted intimacy — a dinner party atmosphere where 80 of their closest loved ones could feel the warmth of the evening rather than the scale of it.',
+    solution:'We designed an intimate garden setting with long communal tables, soft candlelight, and a lush overhead floral canopy in white and gold. The atmosphere was closer to a high-end dinner party than a traditional wedding — personal, warm, and deeply beautiful.',
+    quote:'"For the first time at a wedding, I actually got to speak to every single guest. It felt like being held."',
+    results:[{n:'80',l:'Intimate Guests'},{n:'1',l:'Long Communal Table'},{n:'5★',l:'Review'}],
+    services:['Intimate Event Design','Floral Canopy Installation','Long-Table Styling','Bespoke Menu Coordination','Photography Styling'],
+    bts:'The floral canopy required structural engineering — 14 metres of overhead installation held by a custom-built frame above the dining table. Our team tested the structure three days before the event to ensure complete safety and stability.',
+    imgs:['https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80','https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=600&q=80']
+  },
+  'leadership-summit': {
+    img:'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80',
+    cat:'🏛️ Regional Summit',
+    title:'East Africa Leadership Summit',
+    sub:'450 delegates. 3 days. One vision.',
+    meta:[{l:'Location',v:'KICC, Nairobi'},{l:'Delegates',v:'450 Delegates'},{l:'Duration',v:'3 Days'},{l:'Category',v:'Regional Summit'}],
+    vision:'A regional organization needed to host their flagship annual summit — the largest gathering of East African business and government leaders of the year. Every element needed to communicate authority, vision, and regional pride.',
+    solution:'We designed a summit experience that felt presidential. Custom stage set with branded backdrops, precision-engineered delegate seating, a registration system managing 450 attendees across three days, and a gala dinner on the final evening that served as the summit\'s crowning moment.',
+    quote:'"The feedback from delegates across the region was unanimous — this was the best-organized summit East Africa has ever hosted."',
+    results:[{n:'450',l:'Delegates'},{n:'3',l:'Days Managed'},{n:'12',l:'Session Rooms'}],
+    services:['Full Summit Management','Delegate Registration System','Stage & AV Coordination','Gala Dinner Planning','Speaker Management','Signage & Branding'],
+    bts:'Managing 450 delegates across three days required a 24-person operations team, a custom registration software integration, and a detailed minute-by-minute runsheet spanning 72 hours. Every speaker was briefed individually with written notes and timing cards.',
+    imgs:['https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=600&q=80','https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=600&q=80']
+  },
+  'futures-forum': {
+    img:'https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=1200&q=80',
+    cat:'🎤 Conference',
+    title:'The Futures Forum',
+    sub:'Tech, innovation & Africa\'s next chapter',
+    meta:[{l:'Location',v:'Radisson Blu, Nairobi'},{l:'Attendees',v:'280 Attendees'},{l:'Duration',v:'2 Days'},{l:'Category',v:'Technology Conference'}],
+    vision:'A tech organization wanted a conference that felt forward-looking — not a traditional conference with rows of chairs and a projector, but an immersive experience that matched the innovative spirit of the sector.',
+    solution:'We designed a modular conference experience — main stage, four breakout zones, a networking lounge with curated food and beverage, and a startup showcase area. Lighting was used creatively to differentiate zones and maintain energy throughout two full days.',
+    quote:'"The space energized every conversation. People didn\'t want to leave between sessions — which is exactly what we needed."',
+    results:[{n:'280',l:'Attendees'},{n:'4',l:'Breakout Zones'},{n:'2',l:'Days of Content'}],
+    services:['Conference Design & Management','Modular Space Planning','AV & Technical Production','Networking Zone Styling','Catering Coordination','Startup Showcase Setup'],
+    bts:'The transformation of the hotel\'s ballroom into a multi-zone conference experience required an overnight setup — our team worked from 10pm to 6am to reconfigure the space, install staging, rig lighting, and test all AV systems before delegates arrived.',
+    imgs:['https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80','https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=600&q=80']
+  },
+  'boardroom-series': {
+    img:'https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=1200&q=80',
+    cat:'💼 Executive Retreat',
+    title:'The Boardroom Series',
+    sub:'Where strategy meets serenity',
+    meta:[{l:'Location',v:'Lake Naivasha, Kenya'},{l:'Attendees',v:'40 Executives'},{l:'Duration',v:'2 Days'},{l:'Category',v:'Executive Retreat'}],
+    vision:'A financial institution wanted their annual executive retreat to feel like a departure from the office — not just geographically, but experientially. They needed a setting that would unlock creative thinking and genuine connection.',
+    solution:'We selected a private lakeside property in Naivasha and designed the retreat around the concept of purposeful space — working sessions under outdoor canopies, sunset dinners at the water\'s edge, and morning wellness sessions to open each day. Every detail was curated to support the client\'s culture of excellence.',
+    quote:'"Our team left more aligned, more inspired, and more connected than we have been in years."',
+    results:[{n:'40',l:'Executives'},{n:'2',l:'Days of Retreat'},{n:'100%',l:'Positive Feedback'}],
+    services:['Retreat Planning & Design','Venue Sourcing','Outdoor Dining Setup','Wellness Session Coordination','Team Activity Planning','Transportation Logistics'],
+    bts:'A retreat of this nature requires invisible logistics — we pre-positioned all furniture, catering equipment, and AV the day before. Guests arrived to find everything simply worked, with no visible effort.',
+    imgs:['https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=600&q=80','https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=600&q=80']
+  },
+  'red-carpet-gala': {
+    img:'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1200&q=80',
+    cat:'✨ Annual Gala',
+    title:'The Red Carpet Gala',
+    sub:'An evening of recognition, glamour & excellence',
+    meta:[{l:'Location',v:'Nairobi Serena Hotel'},{l:'Guests',v:'260 Guests'},{l:'Duration',v:'Evening'},{l:'Category',v:'Gala Dinner'}],
+    vision:'An industry body needed their annual gala to feel worthy of the achievements being recognized. Previous years had been functional but forgettable. They wanted guests to walk in and immediately feel the weight of the occasion.',
+    solution:'We designed a full red carpet arrival experience — backdrop, step-and-repeat, ambient live music — before guests entered a ballroom transformed into a black-and-gold sanctuary. Table design featured towering floral centrepieces, bespoke menus, and personalized seating.',
+    quote:'"Every year I\'ve attended this gala. This was the first year I actually felt proud to be in the room."',
+    results:[{n:'260',l:'Guests'},{n:'18',l:'Awards Presented'},{n:'5★',l:'Client Rating'}],
+    services:['Gala Concept & Design','Red Carpet Experience','Ballroom Transformation','Table Styling','Awards Ceremony Management','Entertainment Coordination'],
+    bts:'The red carpet setup required permits, custom backdrop printing, and a lighting rig installed in three hours before guests arrived. Inside, 26 tables were styled individually — each centrepiece reaching 1.2 metres in height.',
+    imgs:['https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=600&q=80','https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80']
+  },
+  'founders-night': {
+    img:'https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=1200&q=80',
+    cat:'🏆 Award Ceremony',
+    title:'Founders Night',
+    sub:'Celebrating the architects of East Africa\'s future',
+    meta:[{l:'Location',v:'Nairobi'},{l:'Guests',v:'150 Guests'},{l:'Duration',v:'Evening'},{l:'Category',v:'Award Ceremony'}],
+    vision:'An entrepreneurship organization wanted to honour their annual award recipients with an evening that felt worthy of the impact these founders had created. No generic hotel ballroom — something that felt like it meant something.',
+    solution:'We transformed a raw warehouse space into an industrial-luxe event environment — exposed ceilings draped with Edison bulbs, velvet chairs against concrete floors, and a custom-built stage with a dramatic lighting installation behind it. The juxtaposition said everything about entrepreneurship itself.',
+    quote:'"Walking into that space felt like walking into ambition. It was perfect."',
+    results:[{n:'150',l:'Guests'},{n:'12',l:'Founders Honored'},{n:'1',l:'Unforgettable Night'}],
+    services:['Venue Transformation','Industrial-Luxe Styling','Custom Stage Design','Lighting Installation','Awards Programme Management','Catering Coordination'],
+    bts:'Transforming a raw warehouse into an elegant event space in 18 hours required a 20-person team working simultaneously — electricians, décor specialists, furniture hire teams, and caterers all coordinated through a single detailed production schedule.',
+    imgs:['https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80','https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=600&q=80']
+  },
+  'magnificat-50': {
+    img:'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&q=80',
+    cat:'🎂 Milestone Birthday',
+    title:'Magnificat: 50',
+    sub:'Half a century of life, celebrated in style',
+    meta:[{l:'Location',v:'Nairobi'},{l:'Guests',v:'120 Guests'},{l:'Duration',v:'Evening'},{l:'Category',v:'50th Birthday'}],
+    vision:'A remarkable woman wanted her 50th birthday to feel like the celebration her life had earned — something personal, moving, and deeply beautiful. Not a party. An experience.',
+    solution:'We built the evening around her personal story — five décor stations each representing a decade of her life, a custom photo installation, a live jazz quartet, and a five-course dinner curated around her favourite dishes from different chapters of her life.',
+    quote:'"I cried three times before I even sat down. It was the most loved I have ever felt in one room."',
+    results:[{n:'5',l:'Decades Celebrated'},{n:'120',l:'Loved Ones'},{n:'1',l:'Extraordinary Woman'}],
+    services:['Conceptual Design','Personal Story Integration','Decade-Themed Décor','Photo Installation','Live Entertainment','5-Course Dinner Coordination'],
+    bts:'The photo installation — a curved wall featuring 50 photographs from 50 years — required sourcing images from family across three countries, printing and framing 50 unique pieces, and installing them in a narrative sequence the night before the event.',
+    imgs:['https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=600&q=80','https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80']
+  },
+  'bloom-baby': {
+    img:'https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=1200&q=80',
+    cat:'👶 Baby Shower',
+    title:'Bloom',
+    sub:'Welcoming new life with beauty & grace',
+    meta:[{l:'Location',v:'Karen, Nairobi'},{l:'Guests',v:'60 Guests'},{l:'Duration',v:'Afternoon'},{l:'Category',v:'Luxury Baby Shower'}],
+    vision:'The mother-to-be wanted a baby shower that felt elevated — not pastel balloons and generic decorations, but something that genuinely celebrated the profound beauty of new life.',
+    solution:'We created "Bloom" — a garden setting transformed with an all-white floral palette, trailing botanical installations, a beautifully styled grazing table, and bespoke activity stations. Soft gold accents throughout gave it warmth and luxury.',
+    quote:'"Every detail was so thoughtful. I genuinely did not want the afternoon to end."',
+    results:[{n:'60',l:'Guests'},{n:'100%',l:'White Floral Palette'},{n:'5★',l:'Client Review'}],
+    services:['Concept Development','Garden Styling','Floral Installation','Grazing Table Design','Activity Station Setup','Photography Styling'],
+    bts:'The trailing botanical wall — 4 metres wide and 2.5 metres tall — was assembled off-site over two days and transported in sections, then assembled on location in three hours to ensure the florals arrived fresh and perfect.',
+    imgs:['https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80','https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=600&q=80']
+  },
+  'silver-twenty': {
+    img:'https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=1200&q=80',
+    cat:'💑 Anniversary',
+    title:'Silver Twenty-Five',
+    sub:'25 years of love, reimagined for one night',
+    meta:[{l:'Location',v:'Nairobi'},{l:'Guests',v:'80 Guests'},{l:'Duration',v:'Evening'},{l:'Category',v:'25th Anniversary'}],
+    vision:'The couple\'s children wanted to surprise their parents with an anniversary celebration that honoured 25 years of marriage — recreating elements of their original wedding day while showing how far the family had come.',
+    solution:'We sourced photographs and details from their original 1999 wedding, then created a modern reimagining — the same flowers, the same song, but elevated through 25 years of perspective. A custom film of family memories played during dinner.',
+    quote:'"Mum and Dad walked in and could not speak for a full minute. That says everything."',
+    results:[{n:'25',l:'Years Celebrated'},{n:'80',l:'Family & Friends'},{n:'1999',l:'Wedding Reimagined'}],
+    services:['Anniversary Concept Design','Memory Curation','Floral Recreation','Custom Film Production Coordination','Surprise Planning','Dinner & Entertainment'],
+    bts:'Recreating flowers from a 1999 wedding required sourcing vintage photographs, identifying the exact varieties used, and finding a florist who could faithfully reproduce them in a contemporary way. Three flower varieties took two weeks to source.',
+    imgs:['https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80','https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80']
+  },
+  'roots-ceremony': {
+    img:'https://images.unsplash.com/photo-1597075095600-d4a72d7f8440?w=1200&q=80',
+    cat:'🌍 Ruracio Ceremony',
+    title:'Roots',
+    sub:'Culture, heritage & modern elegance in harmony',
+    meta:[{l:'Location',v:'Kiambu County'},{l:'Guests',v:'200 Family Members'},{l:'Duration',v:'Full Day'},{l:'Category',v:'Ruracio / Dowry'}],
+    vision:'Two families wanted their ruracio to feel deeply authentic while also feeling elevated — honoring every cultural requirement while presenting it with a beauty and organization that reflected the families\' standing.',
+    solution:'We designed a setting that used traditional Kikuyu aesthetic elements — natural materials, earth tones, woven textiles — elevated with refined florals, structured seating, and a coordinated programme that ensured every cultural moment was given the space and reverence it deserved.',
+    quote:'"Our elders were impressed, our young people were proud, and our guests were moved. That balance is not easy to achieve."',
+    results:[{n:'200',l:'Family Members'},{n:'2',l:'Families United'},{n:'1',l:'Day of Heritage'}],
+    services:['Cultural Ceremony Planning','Traditional Décor Design','Family Coordination','Programme & Protocol Management','Catering Coordination','Photography Direction'],
+    bts:'Planning a ruracio requires deep cultural understanding. We consulted with family elders during the planning phase to ensure every element of the programme respected protocol — from gift presentation order to seating arrangement for both families.',
+    imgs:['https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80','https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=600&q=80']
+  },
+  'ubuntu-celebration': {
+    img:'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1200&q=80',
+    cat:'🌍 Traditional Ceremony',
+    title:'Ubuntu',
+    sub:'I am because we are — a family united',
+    meta:[{l:'Location',v:"Murang'a, Kenya"},{l:'Guests',v:'180 Family Members'},{l:'Duration',v:'Full Day'},{l:'Category',v:'Dowry Ceremony'}],
+    vision:'A diaspora family returning to Kenya for a traditional dowry ceremony needed a planner who understood both their cultural roots and their international expectations for organization and quality.',
+    solution:'We created a ceremony that felt authentically rooted in Kenyan tradition while being impeccably organized — bilingual programme cards, translated cultural explanations for international guests, and styling that balanced traditional and contemporary seamlessly.',
+    quote:'"Our family in the UK had never experienced a traditional Kenyan ceremony. GRIT made it accessible, beautiful, and profoundly moving for everyone."',
+    results:[{n:'180',l:'Guests'},{n:'3',l:'Countries Represented'},{n:'1',l:'Family United'}],
+    services:['Diaspora-Sensitive Planning','Bilingual Programme Design','Traditional & Contemporary Styling','Family Logistics','Cultural Interpretation','Photography Direction'],
+    bts:'With guests flying in from the UK and the USA, we provided a detailed "ceremony guide" in advance — a beautifully designed booklet explaining every element of the dowry tradition so international family members could participate meaningfully.',
+    imgs:['https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=600&q=80','https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80']
+  },
+  'ignite-launch': {
+    img:'https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=1200&q=80',
+    cat:'🚀 Product Launch',
+    title:'Ignite',
+    sub:'A product debut that lit up the industry',
+    meta:[{l:'Location',v:'Westlands, Nairobi'},{l:'Attendees',v:'200 Guests'},{l:'Duration',v:'Evening'},{l:'Category',v:'Product Launch'}],
+    vision:'A consumer tech company launching their flagship product wanted an event that felt as innovative as the product itself — not a standard launch event, but something that would generate press coverage and social media buzz.',
+    solution:'We designed an immersive product reveal — a dark room experience with a countdown, dramatic lighting reveal, live demo stations, and a press moment engineered for photography. The evening closed with a cocktail networking session with the product at the center of every conversation.',
+    quote:'"The room erupted when we revealed the product. That reaction was engineered by GRIT Events, and it was perfect."',
+    results:[{n:'200',l:'Guests & Press'},{n:'1',l:'Standing Ovation'},{n:'5★',l:'Client Feedback'}],
+    services:['Launch Concept Design','Immersive Reveal Experience','AV & Lighting Production','Press Experience Design','Demo Station Setup','Cocktail Reception Styling'],
+    bts:'The product reveal moment required precise coordination between our team, the AV technician, and the client\'s product team. We rehearsed the reveal sequence four times the morning of the event to ensure the lighting, sound, and unveiling happened in perfect synchrony.',
+    imgs:['https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80','https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=600&q=80']
+  },
+  'the-word-launch': {
+    img:'https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=1200&q=80',
+    cat:'📚 Book Launch',
+    title:'The Word',
+    sub:'A literary evening as powerful as the book itself',
+    meta:[{l:'Location',v:'Alliance Française, Nairobi'},{l:'Guests',v:'120 Guests'},{l:'Duration',v:'Evening'},{l:'Category',v:'Book Launch'}],
+    vision:'A Kenyan author launching their debut novel wanted an event that reflected the themes of the book — memory, identity, and belonging — rather than a standard author-behind-a-podium format.',
+    solution:'We designed a narrative event experience — the space was styled to reflect the book\'s three acts, guests moved through zones representing different chapters, and the author spoke conversationally from a styled reading chair rather than a formal stage. Spoken word artists opened the evening.',
+    quote:'"People told me they felt like they had already read the book before they bought it. That is exactly what I wanted."',
+    results:[{n:'120',l:'Literary Guests'},{n:'3',l:'Chapter Zones'},{n:'1',l:'Debut Celebrated'}],
+    services:['Event Concept aligned to Book Theme','Narrative Space Design','Spoken Word Artist Booking','Author Experience Design','Bookselling Area Setup','Cocktail Reception Styling'],
+    bts:'Understanding a book deeply enough to design an event around it required our team to read the manuscript in advance. We held a two-hour creative session with the author to extract the themes we would translate into physical space.',
+    imgs:['https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=600&q=80','https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=600&q=80']
+  },
+  'connected-expo': {
+    img:'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80',
+    cat:'🏢 Exhibition',
+    title:'Connected',
+    sub:'An exhibition that drew the right crowd',
+    meta:[{l:'Location',v:'Sarit Centre, Nairobi'},{l:'Visitors',v:'500+ Visitors'},{l:'Duration',v:'2 Days'},{l:'Category',v:'Trade Exhibition'}],
+    vision:'A B2B technology company needed an exhibition presence that would stand out in a crowded trade show hall — drawing quality visitors to their stand and converting attention into real business conversations.',
+    solution:'We designed a stand concept anchored by an open-plan layout with a central demonstration zone, a hospitality corner with quality coffee and seating, and a clean brand story told through large-format visuals. The stand felt like a destination, not just a booth.',
+    quote:'"We had more quality conversations in two days than our team typically has in a month of outreach."',
+    results:[{n:'500+',l:'Stand Visitors'},{n:'2',l:'Days of Exhibition'},{n:'3x',l:'Leads vs Previous Year'}],
+    services:['Exhibition Stand Concept','Stand Build Coordination','Branding & Signage Design','Hospitality Corner Setup','Demo Zone Planning','Logistics Management'],
+    bts:'Exhibition setup windows are notoriously tight. We had a 6-hour build window before the show opened. Every element was pre-assembled off-site and transported in numbered sections so the on-site team could execute the build like a precision operation.',
+    imgs:['https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=600&q=80','https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=600&q=80']
+  }
+};
+
+function openCaseStudy(key) {
+  const d = caseStudies[key];
+  if(!d) return;
+  document.getElementById('modalImg').src = d.img;
+  document.getElementById('modalImg').alt = d.title;
+  document.getElementById('modalCat').textContent = d.cat;
+  document.getElementById('modalTitle').textContent = d.title;
+  document.getElementById('modalSub').textContent = d.sub;
+  // Meta
+  document.getElementById('modalMeta').innerHTML = d.meta.map(m=>`<div class="modal-meta-cell"><div class="modal-meta-label">${m.l}</div><div class="modal-meta-val">${m.v}</div></div>`).join('');
+  // Body
+  document.getElementById('modalBody').innerHTML = `
+    <div class="modal-section-title">The Client's Vision</div>
+    <p class="modal-text">${d.vision}</p>
+    <div class="modal-section-title">Our Creative Solution</div>
+    <p class="modal-text">${d.solution}</p>
+    <blockquote class="modal-quote">${d.quote}</blockquote>
+    <div class="modal-section-title">The Results</div>
+    <div class="modal-results">${d.results.map(r=>`<div class="modal-result-item"><div class="modal-result-num">${r.n}</div><div class="modal-result-label">${r.l}</div></div>`).join('')}</div>
+    <div class="modal-section-title">Behind The Scenes</div>
+    <p class="modal-text">${d.bts}</p>
+    <div class="modal-img-grid">${d.imgs.map(img=>`<img src="${img}" alt="${d.title} GRIT Events behind the scenes">`).join('')}</div>
+    <div class="modal-section-title">Services Delivered</div>
+    <div class="modal-services-used">${d.services.map(s=>`<span class="modal-service-tag">${s}</span>`).join('')}</div>
+    <div class="modal-footer-btns">
+      <a href="index.html#contact" class="btn-primary">Plan Your Event</a>
+      <a href="https://wa.me/254707768071" class="btn-outline">WhatsApp Us</a>
+    </div>
+  `;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeModalBtn(){document.getElementById('modalOverlay').classList.remove('open');document.body.style.overflow='';}
+function closeModal(e){if(e.target===document.getElementById('modalOverlay'))closeModalBtn();}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModalBtn();});
+</script>
+</body>
+</html>
