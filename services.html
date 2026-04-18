@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GRIT Events Services — Luxury event planning, coordination, design, décor, floral, corporate events, weddings, summits and more across Nairobi, Kenya and East Africa.">
+<meta name="keywords" content="luxury event planning services Nairobi, wedding planning Kenya, event design Nairobi, corporate event management East Africa, floral design Kenya, event coordination Nairobi, product launch planner Kenya, gala dinner Nairobi, summit organizer Kenya, GRIT Events services">
+<meta name="author" content="GRIT Events">
+<title>Our Services | GRIT Events — Luxury Event Planning & Design, Nairobi Kenya</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Josefin+Sans:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --crimson: #8B0000;
+  --black: #1A1A1A;
+  --black-deep: #0D0D0D;
+  --gold: #C9A84C;
+  --cream: #F5F0E8;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Josefin Sans', sans-serif; background: var(--black-deep); color: var(--cream); overflow-x: hidden; cursor: none; }
+
+/* CURSOR */
+.cursor { width: 8px; height: 8px; background: var(--gold); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); transition: transform 0.1s; }
+.cursor-ring { width: 32px; height: 32px; border: 1px solid rgba(201,168,76,0.4); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: width 0.2s, height 0.2s; }
+
+/* NOISE */
+body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events:none; z-index:9997; opacity:0.4; }
+
+/* HEADER */
+header { position:fixed; top:0; left:0; right:0; z-index:1000; padding:0 60px; height:80px; display:flex; align-items:center; justify-content:space-between; background:rgba(13,13,13,0.95); border-bottom:1px solid rgba(201,168,76,0.15); backdrop-filter:blur(12px); }
+.nav-logo { display:flex; align-items:center; gap:14px; text-decoration:none; }
+.nav-monogram { width:44px; height:44px; border:1px solid var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-weight:700; font-size:20px; letter-spacing:-2px; }
+.nav-monogram .g { color:var(--crimson); }
+.nav-monogram .e { color:var(--gold); }
+.nav-brand-name { font-weight:700; font-size:16px; letter-spacing:6px; color:var(--cream); display:block; }
+.nav-brand-sub { font-weight:100; font-size:9px; letter-spacing:3px; color:var(--gold); text-transform:uppercase; display:block; }
+nav { display:flex; align-items:center; gap:40px; }
+nav a { font-weight:300; font-size:11px; letter-spacing:3px; color:rgba(245,240,232,0.7); text-decoration:none; text-transform:uppercase; transition:color 0.3s; position:relative; }
+nav a::after { content:''; position:absolute; bottom:-4px; left:0; right:0; height:1px; background:var(--gold); transform:scaleX(0); transition:transform 0.3s; }
+nav a:hover, nav a.active { color:var(--gold); }
+nav a:hover::after, nav a.active::after { transform:scaleX(1); }
+.nav-cta { padding:10px 24px; border:1px solid var(--gold); color:var(--gold)!important; font-size:10px!important; letter-spacing:3px!important; transition:all 0.3s!important; }
+.nav-cta:hover { background:var(--gold)!important; color:var(--black)!important; }
+.nav-cta::after { display:none!important; }
+
+/* HERO */
+.services-hero { min-height:72vh; position:relative; display:flex; align-items:center; overflow:hidden; }
+.hero-bg { position:absolute; inset:0; background: linear-gradient(120deg, rgba(13,13,13,0.98) 0%, rgba(139,0,0,0.75) 50%, rgba(13,13,13,0.96) 100%), url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1800&q=80') center/cover no-repeat; }
+.hero-bg::after { content:''; position:absolute; inset:0; background:repeating-linear-gradient(-45deg,transparent,transparent 80px,rgba(201,168,76,0.015) 80px,rgba(201,168,76,0.015) 81px); }
+.hero-content { position:relative; z-index:2; padding:140px 60px 80px; max-width:860px; }
+.breadcrumb { display:flex; align-items:center; gap:12px; margin-bottom:32px; opacity:0; animation:fadeUp 0.8s ease 0.2s forwards; }
+.breadcrumb a { font-size:10px; letter-spacing:3px; color:rgba(245,240,232,0.4); text-decoration:none; text-transform:uppercase; transition:color 0.3s; }
+.breadcrumb a:hover { color:var(--gold); }
+.breadcrumb-sep { color:var(--gold); font-size:10px; }
+.breadcrumb-current { font-size:10px; letter-spacing:3px; color:var(--gold); text-transform:uppercase; }
+.hero-label { font-size:10px; letter-spacing:6px; color:var(--gold); text-transform:uppercase; margin-bottom:20px; opacity:0; animation:fadeUp 0.8s ease 0.4s forwards; }
+.hero-title { font-family:'Cormorant Garamond',serif; font-weight:700; font-size:clamp(56px,8vw,110px); line-height:0.88; color:var(--cream); margin-bottom:32px; opacity:0; animation:fadeUp 0.8s ease 0.6s forwards; }
+.hero-title em { color:var(--crimson); font-style:italic; }
+.hero-desc { font-family:'Cormorant Garamond',serif; font-size:20px; line-height:1.8; color:rgba(245,240,232,0.65); max-width:580px; opacity:0; animation:fadeUp 0.8s ease 0.8s forwards; }
+.hero-ghost { position:absolute; right:-20px; top:50%; transform:translateY(-50%); font-family:'Cormorant Garamond',serif; font-weight:700; font-size:280px; color:rgba(139,0,0,0.05); pointer-events:none; z-index:1; }
+
+/* SERVICE NAV TABS */
+.service-tabs { position:sticky; top:80px; z-index:100; background:rgba(13,13,13,0.97); border-bottom:1px solid rgba(201,168,76,0.1); backdrop-filter:blur(12px); padding:0 60px; overflow-x:auto; white-space:nowrap; }
+.tabs-inner { display:inline-flex; gap:0; }
+.tab-btn { padding:20px 32px; font-size:10px; letter-spacing:3px; color:rgba(245,240,232,0.4); text-transform:uppercase; background:transparent; border:none; cursor:pointer; transition:all 0.3s; position:relative; white-space:nowrap; font-family:'Josefin Sans',sans-serif; }
+.tab-btn::after { content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background:var(--gold); transform:scaleX(0); transition:transform 0.3s; }
+.tab-btn:hover { color:var(--cream); }
+.tab-btn.active { color:var(--gold); }
+.tab-btn.active::after { transform:scaleX(1); }
+
+/* MARQUEE */
+.marquee-strip { background:var(--crimson); padding:14px 0; overflow:hidden; white-space:nowrap; }
+.marquee-inner { display:inline-flex; animation:marquee 28s linear infinite; }
+.marquee-item { font-size:10px; letter-spacing:4px; color:rgba(245,240,232,0.8); text-transform:uppercase; padding:0 36px; font-weight:100; }
+.marquee-dot { color:var(--gold); padding:0 8px; }
+
+/* SHARED */
+.section-eyebrow { display:flex; align-items:center; gap:16px; margin-bottom:20px; }
+.eyebrow-line { width:40px; height:1px; background:var(--gold); }
+.eyebrow-text { font-size:10px; letter-spacing:5px; color:var(--gold); text-transform:uppercase; }
+.section-title { font-family:'Cormorant Garamond',serif; font-weight:700; font-size:clamp(36px,5vw,64px); line-height:1; color:var(--cream); margin-bottom:20px; }
+.section-title em { font-style:italic; color:var(--crimson); }
+.section-body { font-family:'Cormorant Garamond',serif; font-size:18px; line-height:1.9; color:rgba(245,240,232,0.65); max-width:600px; }
+
+.btn-primary { display:inline-block; padding:14px 36px; background:var(--crimson); color:var(--cream); font-family:'Josefin Sans',sans-serif; font-weight:300; font-size:10px; letter-spacing:4px; text-transform:uppercase; text-decoration:none; border:1px solid var(--crimson); transition:all 0.3s; position:relative; overflow:hidden; }
+.btn-primary::before { content:''; position:absolute; inset:0; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform 0.3s; z-index:-1; }
+.btn-primary:hover { color:var(--black); border-color:var(--gold); }
+.btn-primary:hover::before { transform:scaleX(1); }
+.btn-gold { display:inline-block; padding:14px 36px; background:var(--gold); color:var(--black); font-family:'Josefin Sans',sans-serif; font-weight:400; font-size:10px; letter-spacing:4px; text-transform:uppercase; text-decoration:none; border:1px solid var(--gold); transition:all 0.3s; }
+.btn-gold:hover { background:transparent; color:var(--gold); }
+.btn-outline { display:inline-block; padding:12px 28px; background:transparent; color:var(--gold); font-family:'Josefin Sans',sans-serif; font-weight:300; font-size:10px; letter-spacing:3px; text-transform:uppercase; text-decoration:none; border:1px solid rgba(201,168,76,0.4); transition:all 0.3s; }
+.btn-outline:hover { border-color:var(--gold); background:rgba(201,168,76,0.05); }
+
+.reveal { opacity:0; transform:translateY(40px); transition:opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+/* ══ SERVICE SECTION STRUCTURE ══ */
+.service-section { padding:100px 60px; position:relative; }
+.service-section:nth-child(odd) { background:var(--black); }
+.service-section:nth-child(even) { background:var(--black-deep); }
+
+.service-section-header {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:60px; align-items:end;
+  margin-bottom:72px;
+  padding-bottom:48px;
+  border-bottom:1px solid rgba(201,168,76,0.1);
+}
+
+.service-section-num {
+  font-family:'Cormorant Garamond',serif;
+  font-size:120px; font-weight:700;
+  color:rgba(139,0,0,0.08);
+  line-height:1; position:absolute;
+  top:60px; right:60px;
+  pointer-events:none;
+}
+
+.service-section-icon { font-size:48px; margin-bottom:20px; display:block; }
+
+.service-section-title {
+  font-family:'Cormorant Garamond',serif;
+  font-weight:700; font-size:clamp(40px,5vw,68px);
+  line-height:0.95; color:var(--cream);
+  margin-bottom:16px;
+}
+
+.service-section-title em { font-style:italic; color:var(--crimson); }
+
+.service-section-sub {
+  font-family:'Cormorant Garamond',serif;
+  font-size:19px; line-height:1.8;
+  color:rgba(245,240,232,0.6);
+}
+
+.service-section-right { display:flex; flex-direction:column; justify-content:flex-end; gap:20px; }
+
+.service-section-tagline {
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic; font-size:22px;
+  color:var(--gold); line-height:1.5;
+  border-left:2px solid var(--crimson);
+  padding-left:20px;
+}
+
+/* OFFERINGS GRID */
+.offerings-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2px;
+  background:rgba(201,168,76,0.06);
+  margin-bottom:40px;
+}
+
+.offering-card {
+  background:var(--black-deep);
+  padding:36px 32px;
+  position:relative; overflow:hidden;
+  transition:background 0.3s;
+  cursor:default;
+}
+
+.service-section:nth-child(odd) .offering-card { background:var(--black-deep); }
+.service-section:nth-child(even) .offering-card { background:var(--black); }
+
+.offering-card::before { content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background:linear-gradient(180deg, var(--crimson), var(--gold)); transform:scaleY(0); transform-origin:top; transition:transform 0.4s; }
+.offering-card:hover::before { transform:scaleY(1); }
+.offering-card:hover { background:rgba(139,0,0,0.06); }
+
+.offering-icon { font-size:24px; margin-bottom:16px; display:block; }
+
+.offering-name {
+  font-family:'Josefin Sans',sans-serif;
+  font-weight:400; font-size:12px;
+  letter-spacing:3px; color:var(--cream);
+  text-transform:uppercase; margin-bottom:12px;
+}
+
+.offering-desc {
+  font-family:'Cormorant Garamond',serif;
+  font-size:16px; line-height:1.7;
+  color:rgba(245,240,232,0.5);
+  margin-bottom:20px;
+}
+
+.learn-more {
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:9px; letter-spacing:3px;
+  color:var(--gold); text-transform:uppercase;
+  text-decoration:none; transition:gap 0.3s;
+  cursor:pointer; background:none; border:none;
+  font-family:'Josefin Sans',sans-serif;
+}
+
+.learn-more:hover { gap:14px; }
+.learn-more-arrow { transition:transform 0.3s; }
+.learn-more:hover .learn-more-arrow { transform:translateX(4px); }
+
+/* LEARN MORE MODAL */
+.modal-overlay {
+  position:fixed; inset:0;
+  background:rgba(0,0,0,0.85);
+  z-index:2000; display:flex;
+  align-items:center; justify-content:center;
+  opacity:0; pointer-events:none;
+  transition:opacity 0.3s;
+  backdrop-filter:blur(8px);
+  padding:20px;
+}
+
+.modal-overlay.open { opacity:1; pointer-events:all; }
+
+.modal {
+  background:var(--black);
+  border:1px solid rgba(201,168,76,0.2);
+  max-width:680px; width:100%;
+  max-height:85vh; overflow-y:auto;
+  position:relative;
+  transform:translateY(30px);
+  transition:transform 0.3s;
+}
+
+.modal-overlay.open .modal { transform:translateY(0); }
+
+.modal-top { background:var(--crimson); padding:40px 48px 32px; position:relative; }
+.modal-top::after { content:''; position:absolute; bottom:0; left:0; right:0; height:1px; background:linear-gradient(90deg, transparent, var(--gold), transparent); }
+.modal-cat { font-size:9px; letter-spacing:4px; color:rgba(245,240,232,0.6); text-transform:uppercase; margin-bottom:8px; }
+.modal-title { font-family:'Cormorant Garamond',serif; font-weight:700; font-size:36px; color:var(--cream); line-height:1.1; }
+.modal-close { position:absolute; top:20px; right:24px; background:none; border:none; color:rgba(245,240,232,0.5); font-size:24px; cursor:pointer; transition:color 0.3s; line-height:1; }
+.modal-close:hover { color:var(--gold); }
+
+.modal-body { padding:40px 48px; }
+.modal-desc { font-family:'Cormorant Garamond',serif; font-size:19px; line-height:1.9; color:rgba(245,240,232,0.75); margin-bottom:32px; }
+.modal-includes-title { font-size:9px; letter-spacing:4px; color:var(--gold); text-transform:uppercase; margin-bottom:20px; }
+.modal-includes { list-style:none; display:flex; flex-direction:column; gap:12px; margin-bottom:36px; }
+.modal-includes li { display:flex; align-items:flex-start; gap:14px; font-family:'Cormorant Garamond',serif; font-size:17px; color:rgba(245,240,232,0.65); line-height:1.5; }
+.modal-includes li::before { content:'◆'; color:var(--crimson); font-size:8px; margin-top:6px; flex-shrink:0; }
+.modal-footer { display:flex; gap:16px; padding-top:24px; border-top:1px solid rgba(201,168,76,0.1); }
+
+/* ══ SECTION 1: PLANNING & COORDINATION ══ */
+/* ══ SECTION 2: EVENT DESIGN ══ */
+/* ══ SECTION 3: CELEBRATIONS ══ */
+/* ══ SECTION 4: CORPORATE ══ */
+
+/* PROCESS STRIP */
+.process-strip {
+  padding:80px 60px;
+  background:var(--crimson);
+  position:relative; overflow:hidden;
+}
+
+.process-strip::before { content:'PROCESS'; position:absolute; right:-40px; top:50%; transform:translateY(-50%); font-family:'Cormorant Garamond',serif; font-weight:700; font-size:300px; color:rgba(0,0,0,0.08); pointer-events:none; }
+
+.process-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:0; margin-top:60px; }
+
+.process-step {
+  padding:32px 28px;
+  border-right:1px solid rgba(245,240,232,0.1);
+  position:relative;
+}
+
+.process-step:last-child { border-right:none; }
+
+.process-num {
+  font-family:'Cormorant Garamond',serif;
+  font-weight:700; font-size:48px;
+  color:rgba(245,240,232,0.12); line-height:1;
+  margin-bottom:16px;
+}
+
+.process-icon { font-size:24px; margin-bottom:12px; display:block; }
+
+.process-name {
+  font-family:'Josefin Sans',sans-serif;
+  font-weight:400; font-size:11px;
+  letter-spacing:3px; color:var(--gold);
+  text-transform:uppercase; margin-bottom:10px;
+}
+
+.process-desc {
+  font-family:'Cormorant Garamond',serif;
+  font-size:15px; line-height:1.6;
+  color:rgba(245,240,232,0.6);
+}
+
+.process-arrow {
+  position:absolute; right:-12px; top:50%;
+  transform:translateY(-50%);
+  color:var(--gold); font-size:16px;
+  opacity:0.4;
+}
+
+.process-step:last-child .process-arrow { display:none; }
+
+/* WHY US */
+.why-us {
+  padding:120px 60px;
+  background:var(--black-deep);
+  position:relative; overflow:hidden;
+}
+
+.why-us::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 80% 50%, rgba(139,0,0,0.06) 0%, transparent 60%); }
+
+.why-us-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+
+.why-us-visual { position:relative; }
+
+.why-us-img { width:100%; height:580px; object-fit:cover; filter:grayscale(20%) contrast(1.05); }
+
+.why-us-badge {
+  position:absolute; bottom:-20px; right:-20px;
+  background:var(--gold); padding:32px;
+  text-align:center;
+}
+
+.why-us-badge-num { font-family:'Cormorant Garamond',serif; font-weight:700; font-size:48px; color:var(--black); line-height:1; display:block; }
+.why-us-badge-label { font-size:9px; letter-spacing:2px; color:var(--black); text-transform:uppercase; opacity:0.7; }
+
+.why-us-content .section-title em { color:var(--crimson); }
+
+.why-points { margin-top:40px; display:flex; flex-direction:column; gap:0; }
+.why-point { display:flex; gap:24px; padding:24px 0; border-bottom:1px solid rgba(201,168,76,0.1); }
+.why-point:first-child { border-top:1px solid rgba(201,168,76,0.1); }
+.why-point-icon { font-size:28px; flex-shrink:0; }
+.why-point-text h4 { font-family:'Josefin Sans',sans-serif; font-weight:400; font-size:12px; letter-spacing:3px; color:var(--gold); text-transform:uppercase; margin-bottom:8px; }
+.why-point-text p { font-family:'Cormorant Garamond',serif; font-size:17px; color:rgba(245,240,232,0.6); line-height:1.6; }
+
+/* STATS BAR */
+.stats-bar {
+  padding:60px;
+  background:var(--black);
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:0;
+  border-top:1px solid rgba(201,168,76,0.08);
+  border-bottom:1px solid rgba(201,168,76,0.08);
+}
+
+.stat-item { text-align:center; padding:20px; border-right:1px solid rgba(201,168,76,0.1); }
+.stat-item:last-child { border-right:none; }
+.stat-num { font-family:'Cormorant Garamond',serif; font-weight:700; font-size:56px; color:var(--gold); line-height:1; }
+.stat-label { font-size:9px; letter-spacing:3px; color:rgba(245,240,232,0.4); text-transform:uppercase; margin-top:8px; }
+
+/* CTA */
+.services-cta {
+  padding:100px 60px; text-align:center;
+  background: linear-gradient(135deg, rgba(139,0,0,0.92), rgba(13,13,13,0.98)), url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1800&q=80') center/cover no-repeat;
+  position:relative; overflow:hidden;
+}
+
+.cta-title { font-family:'Cormorant Garamond',serif; font-weight:700; font-size:clamp(40px,6vw,80px); color:var(--cream); line-height:1; margin-bottom:20px; }
+.cta-title em { color:var(--gold); font-style:italic; }
+.cta-sub { font-family:'Cormorant Garamond',serif; font-size:20px; color:rgba(245,240,232,0.6); margin-bottom:48px; font-style:italic; }
+.cta-btns { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
+
+/* FOOTER */
+footer { background:#080808; padding:80px 60px 40px; border-top:1px solid rgba(201,168,76,0.1); }
+.footer-top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:60px; margin-bottom:60px; }
+.footer-brand-name { font-family:'Josefin Sans',sans-serif; font-weight:700; font-size:28px; letter-spacing:8px; color:var(--cream); margin-bottom:4px; }
+.footer-brand-sub { font-size:10px; letter-spacing:3px; color:var(--gold); text-transform:uppercase; margin-bottom:20px; }
+.footer-tagline { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:16px; color:rgba(245,240,232,0.4); line-height:1.7; max-width:300px; margin-bottom:28px; }
+.footer-contact-item { display:flex; gap:12px; align-items:flex-start; margin-bottom:12px; }
+.footer-contact-dot { width:6px; height:6px; background:var(--crimson); border-radius:50%; margin-top:6px; flex-shrink:0; }
+.footer-contact-text { font-size:12px; letter-spacing:1px; color:rgba(245,240,232,0.5); line-height:1.6; }
+.footer-col-title { font-size:10px; letter-spacing:4px; color:var(--gold); text-transform:uppercase; margin-bottom:24px; }
+.footer-links { list-style:none; display:flex; flex-direction:column; gap:12px; }
+.footer-links a { font-family:'Cormorant Garamond',serif; font-size:16px; color:rgba(245,240,232,0.5); text-decoration:none; transition:color 0.3s; }
+.footer-links a:hover { color:var(--gold); }
+.footer-bottom { display:flex; justify-content:space-between; align-items:center; padding-top:40px; border-top:1px solid rgba(245,240,232,0.06); }
+.footer-copy { font-size:10px; letter-spacing:2px; color:rgba(245,240,232,0.25); text-transform:uppercase; }
+.footer-copy span { color:var(--crimson); }
+.footer-socials { display:flex; gap:20px; }
+.footer-social { width:36px; height:36px; border:1px solid rgba(245,240,232,0.1); display:flex; align-items:center; justify-content:center; font-size:12px; color:rgba(245,240,232,0.4); text-decoration:none; transition:all 0.3s; }
+.footer-social:hover { border-color:var(--gold); color:var(--gold); }
+
+/* WHATSAPP */
+.whatsapp-float { position:fixed; bottom:32px; right:32px; z-index:500; display:flex; flex-direction:column; align-items:flex-end; gap:12px; }
+.wa-tooltip { background:var(--black); border:1px solid rgba(201,168,76,0.2); padding:12px 16px; font-size:11px; letter-spacing:1px; color:rgba(245,240,232,0.7); white-space:nowrap; opacity:0; transform:translateX(10px); transition:all 0.3s; pointer-events:none; }
+.whatsapp-float:hover .wa-tooltip { opacity:1; transform:translateX(0); }
+.wa-btn { width:56px; height:56px; background:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center; text-decoration:none; font-size:24px; box-shadow:0 4px 20px rgba(37,211,102,0.3); transition:transform 0.3s; animation:waPulse 2.5s ease infinite; }
+.wa-btn:hover { transform:scale(1.1); }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+@keyframes marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+@keyframes waPulse { 0%,100% { box-shadow:0 4px 20px rgba(37,211,102,0.3); } 50% { box-shadow:0 4px 40px rgba(37,211,102,0.6); } }
+
+/* RESPONSIVE */
+@media (max-width:1024px) {
+  header { padding:0 30px; }
+  .service-tabs { padding:0 30px; }
+  .hero-content { padding:120px 30px 60px; }
+  .service-section { padding:80px 30px; }
+  .service-section-header { grid-template-columns:1fr; gap:32px; }
+  .offerings-grid { grid-template-columns:repeat(2,1fr); }
+  .process-grid { grid-template-columns:repeat(3,1fr); }
+  .why-us-grid { grid-template-columns:1fr; padding:80px 30px; }
+  .why-us { padding:80px 30px; }
+  .stats-bar { grid-template-columns:repeat(2,1fr); padding:40px 30px; }
+  .footer-top { grid-template-columns:1fr 1fr; gap:40px; }
+  footer { padding:60px 30px 30px; }
+  .services-cta { padding:80px 30px; }
+  .process-strip { padding:60px 30px; }
+}
+
+@media (max-width:640px) {
+  header { padding:0 20px; }
+  nav a:not(.nav-cta) { display:none; }
+  .hero-content { padding:100px 20px 60px; }
+  .hero-ghost { display:none; }
+  .offerings-grid { grid-template-columns:1fr; }
+  .process-grid { grid-template-columns:1fr 1fr; }
+  .stats-bar { grid-template-columns:1fr 1fr; padding:30px 20px; }
+  .footer-top { grid-template-columns:1fr; }
+  .footer-bottom { flex-direction:column; gap:20px; }
+  .modal-body, .modal-top { padding:28px 24px; }
+}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- HEADER -->
+<header>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-monogram"><span class="g">G</span><span class="e">E</span></div>
+    <div class="nav-brand">
+      <span class="nav-brand-name">GRIT</span>
+      <span class="nav-brand-sub">Events</span>
+    </div>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#contact" class="nav-cta">Get A Quote</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="services-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ghost">12</div>
+  <div class="hero-content">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">◆</span>
+      <span class="breadcrumb-current">Our Services</span>
+    </div>
+    <p class="hero-label">What We Offer · How We Serve · Why We Excel</p>
+    <h1 class="hero-title">Every Detail.<br>Every <em>Vision.</em><br>Every Time.</h1>
+    <p class="hero-desc">From the first consultation to the final farewell, we bring uncompromising excellence to every event we touch — across Nairobi, East Africa, and beyond.</p>
+  </div>
+</section>
+
+<!-- SERVICE NAV TABS -->
+<div class="service-tabs">
+  <div class="tabs-inner">
+    <button class="tab-btn active" onclick="scrollToSection('planning')">Planning & Coordination</button>
+    <button class="tab-btn" onclick="scrollToSection('design')">Event Design</button>
+    <button class="tab-btn" onclick="scrollToSection('celebrations')">Celebrations</button>
+    <button class="tab-btn" onclick="scrollToSection('corporate')">Corporate & Professional</button>
+    <button class="tab-btn" onclick="scrollToSection('vendor')">Vendor Network</button>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span class="marquee-item">End-to-End Planning</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Luxury Design</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Floral Artistry</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Vendor Sourcing</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">On-Site Management</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Concept Development</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Spatial Planning</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Nairobi · East Africa · International</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">End-to-End Planning</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Luxury Design</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Floral Artistry</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Vendor Sourcing</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">On-Site Management</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Concept Development</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Spatial Planning</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Nairobi · East Africa · International</span><span class="marquee-dot">◆</span>
+  </div>
+</div>
+
+<!-- ══ SECTION 1: PLANNING & COORDINATION ══ -->
+<section class="service-section" id="planning">
+  <div class="service-section-num">01</div>
+  <div class="service-section-header reveal">
+    <div>
+      <div class="section-eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">Service Category 01</span>
+      </div>
+      <span class="service-section-icon">📋</span>
+      <h2 class="service-section-title">Event Planning<br>& <em>Coordination</em></h2>
+      <p class="service-section-sub">The backbone of every extraordinary event. We manage every moving part — so you move freely through your most important day.</p>
+    </div>
+    <div class="service-section-right">
+      <p class="service-section-tagline">"We carry the weight of every detail so you feel nothing but joy."</p>
+      <a href="index.html#contact" class="btn-primary">Enquire About This Service</a>
+    </div>
+  </div>
+  <div class="offerings-grid reveal">
+    <div class="offering-card">
+      <span class="offering-icon">🗺️</span>
+      <div class="offering-name">Full-Scale Event Management</div>
+      <p class="offering-desc">From your very first vision to the final moment of your event, we hold every thread together with precision and calm. No detail is too small. No challenge is too large.</p>
+      <button class="learn-more" onclick="openModal('management')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">📍</span>
+      <div class="offering-name">Site Visits & Venue Assessment</div>
+      <p class="offering-desc">Before anything is confirmed, we walk the ground. We assess venues with a trained eye — flow, acoustics, capacity, logistics — so there are no surprises on the day.</p>
+      <button class="learn-more" onclick="openModal('sitevisit')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">🤝</span>
+      <div class="offering-name">Supplier & Vendor Oversight</div>
+      <p class="offering-desc">We handle all supplier communication, contracts, and follow-ups on your behalf — keeping every vendor accountable to the GRIT standard from booking to delivery.</p>
+      <button class="learn-more" onclick="openModal('vendor-oversight')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">📄</span>
+      <div class="offering-name">Programme & Runsheet Creation</div>
+      <p class="offering-desc">A meticulously crafted event programme and minute-by-minute runsheet, ensuring every segment flows seamlessly and every transition is intentional.</p>
+      <button class="learn-more" onclick="openModal('programme')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">⚡</span>
+      <div class="offering-name">Day-Of Coordination</div>
+      <p class="offering-desc">On the day of your event, our team is your invisible force — directing, managing, and solving. You arrive as a guest. We make it look effortless.</p>
+      <button class="learn-more" onclick="openModal('dayof')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">🌍</span>
+      <div class="offering-name">Destination Event Logistics</div>
+      <p class="offering-desc">Planning an event beyond Nairobi? We handle cross-border logistics, local ground coordination, accommodation, and travel planning so every destination event runs as smoothly as a local one.</p>
+      <button class="learn-more" onclick="openModal('destination')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 2: EVENT DESIGN ══ -->
+<section class="service-section" id="design">
+  <div class="service-section-num">02</div>
+  <div class="service-section-header reveal">
+    <div>
+      <div class="section-eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">Service Category 02</span>
+      </div>
+      <span class="service-section-icon">🎨</span>
+      <h2 class="service-section-title">Event Design<br>& <em>Styling</em></h2>
+      <p class="service-section-sub">We transform spaces into worlds. Through thoughtful design, artful décor, and deliberate styling, we create environments that move people — before a word is spoken.</p>
+    </div>
+    <div class="service-section-right">
+      <p class="service-section-tagline">"Design is not decoration. It is communication. We speak your story through space."</p>
+      <a href="index.html#contact" class="btn-primary">Enquire About This Service</a>
+    </div>
+  </div>
+  <div class="offerings-grid reveal">
+    <div class="offering-card">
+      <span class="offering-icon">💡</span>
+      <div class="offering-name">Concept Development & Moodboarding</div>
+      <p class="offering-desc">Every great event begins with a great idea. We sit with you, understand your vision, then translate it into a rich visual concept — complete with mood boards, colour palettes, and theme direction.</p>
+      <button class="learn-more" onclick="openModal('concept')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">🌸</span>
+      <div class="offering-name">Floral Design & Arrangements</div>
+      <p class="offering-desc">From towering centrepieces to cascading ceremony arches, our floral artistry breathes life into every space. Each arrangement is curated to complement your event's colour story and emotional tone.</p>
+      <button class="learn-more" onclick="openModal('floral')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">✨</span>
+      <div class="offering-name">Décor Curation & Styling</div>
+      <p class="offering-desc">From table linens to statement installations, we curate every decorative element with intentionality. Nothing is placed randomly. Everything tells a story.</p>
+      <button class="learn-more" onclick="openModal('decor')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">💡</span>
+      <div class="offering-name">Lighting Design & Atmosphere</div>
+      <p class="offering-desc">Chandeliers, uplighting, pin-spot lighting, LED installations, candle arrangements — we design lighting schemes that set the mood and transform any venue from ordinary to unforgettable.</p>
+      <button class="learn-more" onclick="openModal('lighting')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">🪑</span>
+      <div class="offering-name">Furniture Selection & Hire Coordination</div>
+      <p class="offering-desc">The right furniture shapes how guests feel. We select and coordinate the hire of chairs, tables, lounges, and statement pieces that align perfectly with your event's aesthetic and functional needs.</p>
+      <button class="learn-more" onclick="openModal('furniture')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">🗺️</span>
+      <div class="offering-name">Spatial Planning & Layout Design</div>
+      <p class="offering-desc">We map every square metre of your venue — guest flow, seating arrangements, stage positioning, catering stations — ensuring the layout serves both the aesthetics and the experience.</p>
+      <button class="learn-more" onclick="openModal('spatial')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">🪧</span>
+      <div class="offering-name">Signage & Stationery Styling</div>
+      <p class="offering-desc">Welcome signs, seating charts, menus, table numbers, programmes, and branded stationery — designed to be visually consistent, elegant, and deeply personal to your event.</p>
+      <button class="learn-more" onclick="openModal('signage')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">📸</span>
+      <div class="offering-name">Styling for Photography</div>
+      <p class="offering-desc">We style every corner with the camera in mind — ensuring that your event photographs beautifully from every angle, creating images worthy of gracing magazine pages and lasting a lifetime.</p>
+      <button class="learn-more" onclick="openModal('photostyling')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">🔧</span>
+      <div class="offering-name">On-Site Setup & Teardown</div>
+      <p class="offering-desc">Our team arrives early and leaves late — handling every aspect of the physical setup and post-event teardown so your venue is transformed and restored with complete care and professionalism.</p>
+      <button class="learn-more" onclick="openModal('setup')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 3: CELEBRATIONS ══ -->
+<section class="service-section" id="celebrations">
+  <div class="service-section-num">03</div>
+  <div class="service-section-header reveal">
+    <div>
+      <div class="section-eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">Service Category 03</span>
+      </div>
+      <span class="service-section-icon">🎉</span>
+      <h2 class="service-section-title">Celebrations<br>& <em>Milestones</em></h2>
+      <p class="service-section-sub">Life's most meaningful moments deserve to be marked with intention, beauty, and joy. We design celebrations that reflect who you are — and become memories you carry forever.</p>
+    </div>
+    <div class="service-section-right">
+      <p class="service-section-tagline">"Every milestone is a story. We make sure it's told beautifully."</p>
+      <a href="index.html#contact" class="btn-primary">Enquire About This Service</a>
+    </div>
+  </div>
+  <div class="offerings-grid reveal">
+    <div class="offering-card">
+      <span class="offering-icon">💍</span>
+      <div class="offering-name">Wedding Planning & Design</div>
+      <p class="offering-desc">Your love story is unique — your wedding should be too. From intimate garden ceremonies to grand ballroom receptions, we craft weddings that are deeply personal and flawlessly executed.</p>
+      <button class="learn-more" onclick="openModal('wedding')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">🌍</span>
+      <div class="offering-name">Traditional Ceremonies — Ruracio & Dowry</div>
+      <p class="offering-desc">We plan and execute traditional African ceremonies with deep cultural respect, authentic styling, and the logistical precision required to honour your family's heritage in the most meaningful way.</p>
+      <button class="learn-more" onclick="openModal('ruracio')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">🎂</span>
+      <div class="offering-name">Birthday Celebrations</div>
+      <p class="offering-desc">Whether it's a landmark milestone or a personal celebration, we design birthday experiences that reflect your personality — surprising, beautiful, and impossible to forget.</p>
+      <button class="learn-more" onclick="openModal('birthday')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">👶</span>
+      <div class="offering-name">Baby Showers & Gender Reveals</div>
+      <p class="offering-desc">A new life deserves a beautiful welcome. We create warm, elegant, thoughtfully designed baby shower and gender reveal experiences that celebrate new beginnings with joy and style.</p>
+      <button class="learn-more" onclick="openModal('babyshower')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">💑</span>
+      <div class="offering-name">Anniversary Celebrations</div>
+      <p class="offering-desc">Whether it's one year or fifty, we design anniversary experiences — intimate dinners, surprise parties, or grand celebrations — that honour the journey and the love behind it.</p>
+      <button class="learn-more" onclick="openModal('anniversary')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">🚗</span>
+      <div class="offering-name">Car Décor for Events</div>
+      <p class="offering-desc">Wedding getaway cars, prom night arrivals, surprise reveals — we create beautiful, personalized car décor that adds a stunning finishing touch to your most special moments.</p>
+      <button class="learn-more" onclick="openModal('cardecor')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 4: CORPORATE & PROFESSIONAL ══ -->
+<section class="service-section" id="corporate">
+  <div class="service-section-num">04</div>
+  <div class="service-section-header reveal">
+    <div>
+      <div class="section-eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">Service Category 04</span>
+      </div>
+      <span class="service-section-icon">🏛️</span>
+      <h2 class="service-section-title">Corporate &<br><em>Professional</em> Events</h2>
+      <p class="service-section-sub">Your brand deserves events that reflect its ambition. We deliver high-impact professional experiences that impress stakeholders, energize teams, and elevate your brand's standing.</p>
+    </div>
+    <div class="service-section-right">
+      <p class="service-section-tagline">"Your brand speaks volumes before anyone takes the stage. We make sure it speaks power."</p>
+      <a href="index.html#contact" class="btn-primary">Enquire About This Service</a>
+    </div>
+  </div>
+  <div class="offerings-grid reveal">
+    <div class="offering-card">
+      <span class="offering-icon">🏆</span>
+      <div class="offering-name">Gala Dinners & Award Ceremonies</div>
+      <p class="offering-desc">We create sophisticated, high-energy gala experiences — from the entrance ambiance to the awards presentation — that leave every guest impressed and every brand elevated.</p>
+      <button class="learn-more" onclick="openModal('gala')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">🎤</span>
+      <div class="offering-name">Conferences & Summits</div>
+      <p class="offering-desc">Large-scale conferences, regional summits, and thought-leadership events — managed with military precision, professional staging, and seamless delegate experience from registration to closing.</p>
+      <button class="learn-more" onclick="openModal('summit')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">🚀</span>
+      <div class="offering-name">Product & Brand Launches</div>
+      <p class="offering-desc">Your product's first impression is everything. We design launch events that generate excitement, command media attention, and position your brand powerfully in the marketplace.</p>
+      <button class="learn-more" onclick="openModal('launch')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">📚</span>
+      <div class="offering-name">Book Launches & Creative Events</div>
+      <p class="offering-desc">Celebrating a creative milestone deserves a creative event. We design book launches, art exhibitions, and creative showcases that reflect the essence of the work being celebrated.</p>
+      <button class="learn-more" onclick="openModal('book')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">🎊</span>
+      <div class="offering-name">End-of-Year Parties & Staff Events</div>
+      <p class="offering-desc">From intimate team celebrations to company-wide year-end parties, we create staff experiences that reward, energize, and build the culture that drives your organization forward.</p>
+      <button class="learn-more" onclick="openModal('endofyear')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">🏢</span>
+      <div class="offering-name">Exhibitions & Trade Shows</div>
+      <p class="offering-desc">We manage exhibition stands, trade show logistics, and branded experiential spaces that draw attention, communicate your brand story, and convert visitors into leads.</p>
+      <button class="learn-more" onclick="openModal('exhibition')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECTION 5: VENDOR NETWORK ══ -->
+<section class="service-section" id="vendor">
+  <div class="service-section-num">05</div>
+  <div class="service-section-header reveal">
+    <div>
+      <div class="section-eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">Service Category 05</span>
+      </div>
+      <span class="service-section-icon">🤝</span>
+      <h2 class="service-section-title">Trusted Vendor<br><em>Network</em></h2>
+      <p class="service-section-sub">Finding and managing the right suppliers is one of the most stressful parts of event planning. We take that entirely off your plate — connecting you to vetted, reliable professionals across every category.</p>
+    </div>
+    <div class="service-section-right">
+      <p class="service-section-tagline">"The right team behind the scenes makes everything in front of it look effortless."</p>
+      <a href="index.html#contact" class="btn-primary">Access Our Network</a>
+    </div>
+  </div>
+  <div class="offerings-grid reveal">
+    <div class="offering-card">
+      <span class="offering-icon">📷</span>
+      <div class="offering-name">Photography & Videography</div>
+      <p class="offering-desc">We connect you with skilled visual storytellers who capture every emotion, every detail, and every moment — producing imagery and film that preserves your event's memory for generations.</p>
+      <button class="learn-more" onclick="openModal('photo')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">🍽️</span>
+      <div class="offering-name">Catering & Beverage Teams</div>
+      <p class="offering-desc">From fine dining menus to cocktail receptions, we source experienced caterers and beverage professionals who deliver exceptional food quality, presentation, and service throughout your event.</p>
+      <button class="learn-more" onclick="openModal('catering')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">🎤</span>
+      <div class="offering-name">Entertainment & MC Talent</div>
+      <p class="offering-desc">Bands, DJs, live performers, professional MCs, spoken word artists — we source and brief the right talent to keep the energy and atmosphere of your event exactly where it needs to be.</p>
+      <button class="learn-more" onclick="openModal('entertainment')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">⛺</span>
+      <div class="offering-name">Tent, Marquee & Furniture Hire</div>
+      <p class="offering-desc">Quality tents, marquees, tables, chairs, and event furniture — sourced, coordinated, and installed through our trusted hire partners to meet your event's scale and aesthetic.</p>
+      <button class="learn-more" onclick="openModal('tents')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">🔊</span>
+      <div class="offering-name">Sound, AV & Lighting Technicians</div>
+      <p class="offering-desc">Professional audio-visual engineers and lighting technicians who ensure every speech is heard, every presentation is clear, and every lighting effect lands exactly as designed.</p>
+      <button class="learn-more" onclick="openModal('av')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+    <div class="offering-card">
+      <span class="offering-icon">🚌</span>
+      <div class="offering-name">Guest Transport & Logistics</div>
+      <p class="offering-desc">We coordinate safe, timely, and comfortable transportation for guests, equipment, and event supplies — ensuring everyone and everything arrives exactly when and where they should.</p>
+      <button class="learn-more" onclick="openModal('transport')">Learn More <span class="learn-more-arrow">→</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- OUR PROCESS -->
+<section class="process-strip">
+  <div class="reveal" style="position:relative;z-index:2">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line" style="background:rgba(245,240,232,0.3)"></div>
+      <span class="eyebrow-text">How We Work</span>
+    </div>
+    <h2 class="section-title" style="color:var(--cream)">Our <em style="color:var(--gold)">Process</em></h2>
+  </div>
+  <div class="process-grid reveal" style="position:relative;z-index:2">
+    <div class="process-step">
+      <div class="process-num">01</div>
+      <span class="process-icon">☕</span>
+      <div class="process-name">Discovery</div>
+      <p class="process-desc">We meet, we listen, we understand. Your vision, your budget, your non-negotiables — all captured in our first consultation.</p>
+      <span class="process-arrow">→</span>
+    </div>
+    <div class="process-step">
+      <div class="process-num">02</div>
+      <span class="process-icon">🗺️</span>
+      <div class="process-name">Site Visit</div>
+      <p class="process-desc">We walk the venue. We assess, measure, and plan — so every design and logistics decision is grounded in reality.</p>
+      <span class="process-arrow">→</span>
+    </div>
+    <div class="process-step">
+      <div class="process-num">03</div>
+      <span class="process-icon">🎨</span>
+      <div class="process-name">Concept & Design</div>
+      <p class="process-desc">We develop your event's full concept — mood boards, layouts, design direction, and supplier brief — all for your approval.</p>
+      <span class="process-arrow">→</span>
+    </div>
+    <div class="process-step">
+      <div class="process-num">04</div>
+      <span class="process-icon">⚙️</span>
+      <div class="process-name">Execution</div>
+      <p class="process-desc">The quiet, relentless work begins. Vendors briefed. Logistics confirmed. Timelines built. Everything prepared to perfection.</p>
+      <span class="process-arrow">→</span>
+    </div>
+    <div class="process-step">
+      <div class="process-num">05</div>
+      <span class="process-icon">✨</span>
+      <div class="process-name">Your Moment</div>
+      <p class="process-desc">You arrive. Everything is ready. We manage every detail in the background so you experience nothing but joy and pride.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar reveal">
+  <div class="stat-item">
+    <div class="stat-num">12+</div>
+    <div class="stat-label">Event Categories</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">24/7</div>
+    <div class="stat-label">Available to Clients</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Client Satisfaction</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">∞</div>
+    <div class="stat-label">Attention to Detail</div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section class="why-us">
+  <div class="why-us-grid">
+    <div class="why-us-visual reveal">
+      <img class="why-us-img" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80" alt="Why GRIT Events is the best luxury event planner in Nairobi Kenya">
+      <div class="why-us-badge">
+        <span class="why-us-badge-num">5★</span>
+        <span class="why-us-badge-label">Google<br>Rating</span>
+      </div>
+    </div>
+    <div class="why-us-content reveal">
+      <div class="section-eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">Why GRIT Events</span>
+      </div>
+      <h2 class="section-title">Why We Are the<br>Best at <em>What We Do</em></h2>
+      <p class="section-body">In a crowded market, GRIT Events stands apart — not because we say so, but because our results speak with an authority that no marketing ever could.</p>
+      <div class="why-points">
+        <div class="why-point">
+          <span class="why-point-icon">🎯</span>
+          <div class="why-point-text">
+            <h4>We Plan Before We Plan</h4>
+            <p>Our contingency thinking begins the moment we take your brief. By the time your event day arrives, we've already solved problems you'll never know existed.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <span class="why-point-icon">👑</span>
+          <div class="why-point-text">
+            <h4>Luxury Without Compromise</h4>
+            <p>We do not cut corners to fit budgets. We work creatively within every budget to deliver the highest possible standard — because our name is on every event we produce.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <span class="why-point-icon">🤝</span>
+          <div class="why-point-text">
+            <h4>Relationships, Not Transactions</h4>
+            <p>Our clients return not just because we delivered — but because they felt genuinely cared for throughout the process. We are partners in your most important moments.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <span class="why-point-icon">🌍</span>
+          <div class="why-point-text">
+            <h4>Nairobi Roots, Global Standard</h4>
+            <p>We understand the Kenyan market deeply — its culture, its vendors, its venues — while executing to an international standard that has no ceiling.</p>
+          </div>
+        </div>
+        <div class="why-point">
+          <span class="why-point-icon">⏰</span>
+          <div class="why-point-text">
+            <h4>Available When It Matters</h4>
+            <p>Event planning doesn't keep office hours. Neither do we. We are available 24/7 throughout the planning journey — because your peace of mind is part of our service.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="services-cta">
+  <div class="reveal">
+    <div class="section-eyebrow" style="justify-content:center;margin-bottom:32px">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Begin Your Event Journey</span>
+      <div class="eyebrow-line"></div>
+    </div>
+    <h2 class="cta-title">Let's Build Something<br><em>Extraordinary</em> Together</h2>
+    <p class="cta-sub">Tell us your vision. We'll handle everything else.</p>
+    <div class="cta-btns">
+      <a href="index.html#contact" class="btn-gold">Get A Free Consultation</a>
+      <a href="https://wa.me/254707768071" class="btn-primary" style="background:transparent;border-color:rgba(245,240,232,0.3);color:var(--cream)">💬 WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">GRIT</div>
+      <div class="footer-brand-sub">Events</div>
+      <p class="footer-tagline">Greatness Requires Internal Toughness. We build extraordinary experiences through precision, passion, and relentless excellence.</p>
+      <div class="footer-contact-item"><div class="footer-contact-dot"></div><span class="footer-contact-text">+254 707 768 071</span></div>
+      <div class="footer-contact-item"><div class="footer-contact-dot"></div><span class="footer-contact-text">Nairobi, Kenya · East Africa & International</span></div>
+      <div class="footer-contact-item"><div class="footer-contact-dot"></div><span class="footer-contact-text">Available 24/7</span></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#planning">Planning & Coordination</a></li>
+        <li><a href="#design">Event Design & Styling</a></li>
+        <li><a href="#celebrations">Celebrations</a></li>
+        <li><a href="#corporate">Corporate Events</a></li>
+        <li><a href="#vendor">Vendor Network</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About GRIT</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Locations</div>
+      <ul class="footer-links">
+        <li><a href="#">Nairobi, Kenya</a></li>
+        <li><a href="#">East Africa</a></li>
+        <li><a href="#">International</a></li>
+        <li><a href="#">Destination Events</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2024 <span>GRIT Events</span>. All rights reserved. · Nairobi, Kenya</div>
+    <div class="footer-socials">
+      <a href="#" class="footer-social">in</a>
+      <a href="#" class="footer-social">ig</a>
+      <a href="#" class="footer-social">fb</a>
+      <a href="#" class="footer-social">wa</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<div class="whatsapp-float">
+  <div class="wa-tooltip">Chat with us on WhatsApp</div>
+  <a href="https://wa.me/254707768071" class="wa-btn" target="_blank">💬</a>
+</div>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modal">
+    <div class="modal-top">
+      <div class="modal-cat" id="modalCat"></div>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <button class="modal-close" onclick="closeModalBtn()">✕</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-desc" id="modalDesc"></p>
+      <div class="modal-includes-title">What's Included</div>
+      <ul class="modal-includes" id="modalIncludes"></ul>
+      <div class="modal-footer">
+        <a href="index.html#contact" class="btn-primary">Get A Quote</a>
+        <a href="https://wa.me/254707768071" class="btn-outline">WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Cursor
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mouseX=0, mouseY=0, ringX=0, ringY=0;
+document.addEventListener('mousemove', e => { mouseX=e.clientX; mouseY=e.clientY; cursor.style.left=mouseX+'px'; cursor.style.top=mouseY+'px'; });
+function animateRing() { ringX+=(mouseX-ringX)*0.12; ringY+=(mouseY-ringY)*0.12; ring.style.left=ringX+'px'; ring.style.top=ringY+'px'; requestAnimationFrame(animateRing); }
+animateRing();
+document.querySelectorAll('a,button').forEach(el => {
+  el.addEventListener('mouseenter',()=>{ cursor.style.transform='translate(-50%,-50%) scale(2)'; ring.style.width='50px'; ring.style.height='50px'; });
+  el.addEventListener('mouseleave',()=>{ cursor.style.transform='translate(-50%,-50%) scale(1)'; ring.style.width='32px'; ring.style.height='32px'; });
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e,i) => { if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('visible'),i*80); obs.unobserve(e.target); } });
+}, { threshold:0.08 });
+reveals.forEach(el=>obs.observe(el));
+
+// Tab scroll
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior:'smooth', block:'start' });
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+// Update active tab on scroll
+const sections = ['planning','design','celebrations','corporate','vendor'];
+window.addEventListener('scroll', () => {
+  sections.forEach((id,i) => {
+    const el = document.getElementById(id);
+    if(el) {
+      const rect = el.getBoundingClientRect();
+      if(rect.top <= 200 && rect.bottom >= 200) {
+        document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+        document.querySelectorAll('.tab-btn')[i].classList.add('active');
+      }
+    }
+  });
+});
+
+// Modal data
+const modalData = {
+  management: { cat:'Planning & Coordination', title:'Full-Scale Event Management', desc:'Our end-to-end event management service means we take complete ownership of your event from the first consultation to the final moment. You share your vision — we build the roadmap, manage every stakeholder, and deliver the result.', includes:['Initial consultation and vision alignment session','Detailed project timeline and planning schedule','Full budget management and financial tracking','Venue sourcing and contract negotiation','Comprehensive runsheet and event programme','Dedicated GRIT Events project manager throughout','Post-event debrief and review'] },
+  sitevisit: { cat:'Planning & Coordination', title:'Site Visits & Venue Assessment', desc:'A venue looks very different through a planner\'s eyes. We conduct thorough site visits to assess every operational and aesthetic factor — giving you the confidence that your chosen space can deliver your vision.', includes:['Physical venue walk-through and measurement','Acoustics and sound assessment','Capacity and flow planning','Utilities and logistics evaluation','Photography and documentation of the space','Written venue assessment report','Recommendations for layout and design optimization'] },
+  'vendor-oversight': { cat:'Planning & Coordination', title:'Supplier & Vendor Oversight', desc:'Managing multiple suppliers is one of the most stressful aspects of event planning. We become the single point of contact for all your vendors — briefing, managing, and holding them accountable so you never have to chase anyone.', includes:['Vendor identification and vetting','Contract review and negotiation support','Briefing documents prepared for all suppliers','Regular check-ins and progress updates','On-day supplier coordination and management','Performance review post-event'] },
+  programme: { cat:'Planning & Coordination', title:'Programme & Runsheet Creation', desc:'A great event runs on a great plan. We create detailed event programmes and minute-by-minute runsheets that keep every element synchronized — from guest arrival to final farewell.', includes:['Full event programme document for guests','Detailed internal runsheet for the production team','MC and speaker briefing notes','Vendor-specific timing schedules','Contingency timings built in','Printed and digital formats available'] },
+  dayof: { cat:'Planning & Coordination', title:'Day-Of Coordination', desc:'Already planned your event but need a professional to run it on the day? Our day-of coordination service ensures everything you\'ve planned actually happens — exactly as you envisioned, with a calm and capable team at the helm.', includes:['Pre-event briefing and team deployment','Vendor arrival and setup supervision','Guest arrival management','Real-time programme management','Problem-solving and contingency handling','Teardown coordination and supplier sign-off'] },
+  destination: { cat:'Planning & Coordination', title:'Destination Event Logistics', desc:'Planning an event in another city or country adds a layer of complexity that requires a specialist. We manage cross-border event logistics with the same precision and calm we bring to every Nairobi event.', includes:['Destination research and venue scouting','Local vendor sourcing and vetting','Accommodation and travel coordination','Cross-border logistics management','On-ground team coordination','Guest experience planning and communication'] },
+  concept: { cat:'Event Design & Styling', title:'Concept Development & Moodboarding', desc:'Every extraordinary event begins with a powerful concept. We translate your ideas, personality, and vision into a rich, detailed design direction that guides every creative decision throughout the planning process.', includes:['In-depth vision and inspiration consultation','Full concept document with theme direction','Colour palette development','Detailed mood boards and visual references','Material and texture guides','Concept presentation and refinement session'] },
+  floral: { cat:'Event Design & Styling', title:'Floral Design & Arrangements', desc:'Flowers are one of the most powerful ways to set the emotional tone of an event. Our floral designs range from lush, dramatic installations to delicate, intentional arrangements — always in perfect harmony with your event\'s story.', includes:['Bridal bouquets and personal florals','Ceremony arch and aisle arrangements','Reception centrepieces and table florals','Statement floral installations','Venue entrance and lobby arrangements','Corsages and buttonholes','Full floral setup and teardown'] },
+  decor: { cat:'Event Design & Styling', title:'Décor Curation & Styling', desc:'Great décor is not about spending more — it is about choosing better. We curate every decorative element with intention, creating spaces that feel cohesive, luxurious, and deeply personal to your event.', includes:['Full décor concept aligned to event theme','Table linen, overlay and napkin styling','Statement pieces and focal installations','Prop sourcing and coordination','Backdrop design and setup','Candle and ambient element styling','Setup and teardown management'] },
+  lighting: { cat:'Event Design & Styling', title:'Lighting Design & Atmosphere', desc:'Lighting is the most transformative design tool in any event space. We design lighting schemes that create the exact atmosphere your event demands — from intimate warmth to dramatic grandeur.', includes:['Chandelier and pendant light coordination','Uplighting and wall wash design','Pin-spot and table lighting','LED and colour-wash installations','Candle and atmospheric lighting','Stage and performance lighting direction','Day-to-night lighting transition planning'] },
+  furniture: { cat:'Event Design & Styling', title:'Furniture Selection & Hire Coordination', desc:'Furniture shapes how guests experience a space. We select and coordinate the hire of every piece — from ceremony chairs to lounge areas — ensuring aesthetic consistency and guest comfort throughout.', includes:['Furniture concept and selection aligned to theme','Chair, table and linen coordination','Lounge and soft seating arrangement','Bar and buffet table styling','Hire supplier sourcing and management','Setup and collection coordination'] },
+  spatial: { cat:'Event Design & Styling', title:'Spatial Planning & Layout Design', desc:'How a space is laid out determines how guests move, interact, and feel throughout the event. We design layouts that serve both the visual and functional goals of your event — down to every metre.', includes:['Floor plan design and guest flow mapping','Ceremony and reception layout planning','Stage and AV positioning','Catering and bar placement strategy','Guest seating arrangement','Accessibility and safety planning','Printed layout documents for all vendors'] },
+  signage: { cat:'Event Design & Styling', title:'Signage & Stationery Styling', desc:'The details that guests notice and remember. We design and coordinate all event stationery and signage — ensuring a consistent, elegant visual language runs through every touchpoint of your event.', includes:['Welcome and entrance signage','Seating charts and escort cards','Table numbers and name cards','Printed menus and programmes','Order-of-service booklets','Branded directional signage','Digital and printed format options'] },
+  photostyling: { cat:'Event Design & Styling', title:'Styling for Photography', desc:'We design with the camera in mind — ensuring every styled corner, every table, and every background creates a beautiful image. Your event photographs are as much a part of the experience as the event itself.', includes:['Photography brief and shot list development','Styled flat-lay and detail setups','Backdrop and photo wall styling','Bridal and portrait area design','Photobooth concept and styling','Coordination with your photographer on styled moments'] },
+  setup: { cat:'Event Design & Styling', title:'On-Site Setup & Teardown', desc:'The physical transformation of a venue requires an experienced, organized team. We arrive early, work precisely, and leave the venue exactly as we found it — with everything in between executed to the highest standard.', includes:['Full setup day management','Décor installation and styling','Vendor coordination during setup','Quality check before guest arrival','Full teardown and clearing post-event','Supplier collection coordination'] },
+  wedding: { cat:'Celebrations & Milestones', title:'Wedding Planning & Design', desc:'Your wedding day is unlike any other — and it deserves planning that matches its significance. We offer full-service luxury wedding planning across Nairobi and Kenya, managing everything from engagement to the final dance.', includes:['Full-service wedding planning and design','Venue sourcing and coordination','Wedding supplier management','Ceremony and reception design','Bridal party logistics','Day-of coordination and management','Honeymoon logistics support'] },
+  ruracio: { cat:'Celebrations & Milestones', title:'Traditional Ceremonies — Ruracio & Dowry', desc:'We plan and execute traditional African ceremonies with deep cultural understanding, authentic styling, and the logistical expertise required to honour your family\'s heritage with elegance and precision.', includes:['Cultural consultation and ceremony planning','Traditional décor and styling','Family coordination and protocol guidance','Catering and traditional food planning','Programme creation and MC briefing','Gifts and presentation coordination','Photography and documentation planning'] },
+  birthday: { cat:'Celebrations & Milestones', title:'Birthday Celebrations', desc:'From landmark milestone birthdays to intimate annual celebrations, we design experiences that are as unique as the person being celebrated — surprising, beautiful, and impossible to forget.', includes:['Themed concept development','Venue sourcing and décor design','Entertainment and activities coordination','Catering and cake coordination','Guest management and invitations','Surprise element planning','Photography and videography briefing'] },
+  babyshower: { cat:'Celebrations & Milestones', title:'Baby Showers & Gender Reveals', desc:'A new life is the most beautiful reason to celebrate. We create warm, elegant baby shower and gender reveal experiences that honour the joy of new beginnings with thoughtfulness and style.', includes:['Theme and colour palette development','Venue or home styling and décor','Floral arrangements and balloon styling','Games and activity coordination','Catering and cake table styling','Gift table setup and coordination','Photography styling and setup'] },
+  anniversary: { cat:'Celebrations & Milestones', title:'Anniversary Celebrations', desc:'Years of love deserve to be celebrated with the same intention that built them. We design anniversary experiences — from intimate dinners to grand celebrations — that honour the journey and the people who made it.', includes:['Intimate or grand celebration planning','Venue and décor design','Surprise planning and coordination','Catering and floral arrangements','Guest management','Photo memory wall and display styling','Personalized programme creation'] },
+  cardecor: { cat:'Celebrations & Milestones', title:'Car Décor for Events', desc:'A beautifully decorated car is more than an aesthetic choice — it is a moment that photographs beautifully and creates a lasting memory. We design personalized car décor for weddings, proms, and special occasions.', includes:['Floral and ribbon car decoration','Personalized signage and banners','Just Married and themed lettering','Colour-matched to your event palette','Setup at your preferred location','Photography-ready styling'] },
+  gala: { cat:'Corporate & Professional Events', title:'Gala Dinners & Award Ceremonies', desc:'We create sophisticated, high-energy gala experiences that honour achievement, celebrate excellence, and leave every guest with the feeling that they attended something truly special.', includes:['Full gala concept and theme development','Venue styling and table design','Stage and AV coordination','Awards presentation management','Entertainment and programme design','Guest arrival and reception management','Catering and beverage coordination'] },
+  summit: { cat:'Corporate & Professional Events', title:'Conferences & Summits', desc:'Large-scale professional events require a level of logistical mastery that goes beyond standard planning. We manage conferences and summits with military precision — from delegate registration to closing ceremony.', includes:['Full conference logistics management','Delegate registration and management system','Stage, AV and technical coordination','Speaker management and briefing','Breakout session coordination','Catering and hospitality management','Event branding and signage'] },
+  launch: { cat:'Corporate & Professional Events', title:'Product & Brand Launches', desc:'Your product\'s market debut deserves an event that commands attention. We design launch events that generate excitement, build brand narrative, and create experiences that media and guests remember and share.', includes:['Launch concept and brand alignment','Press and media coordination support','Product display and showcase design','Influencer and guest experience planning','Live demonstration staging','Entertainment and programme design','Photography and content creation planning'] },
+  book: { cat:'Corporate & Professional Events', title:'Book Launches & Creative Events', desc:'A creative work deserves a creative celebration. We design book launches, art exhibitions, and creative showcases that authentically reflect the essence of the work — creating environments that inspire and impress.', includes:['Event concept aligned to the creative work','Venue styling and book/work display','Author or artist experience planning','Guest and press coordination','Reading or presentation staging','Catering and signing session planning','Photography documentation'] },
+  endofyear: { cat:'Corporate & Professional Events', title:'End-of-Year Parties & Staff Events', desc:'A well-planned staff celebration does more than mark the end of a year — it builds culture, rewards effort, and energizes a team for what lies ahead. We design corporate parties that people genuinely look forward to.', includes:['Theme development and décor','Venue sourcing and management','Entertainment and activities coordination','Catering and bar management','Awards and recognition segment planning','Team engagement activities','Programme management throughout the event'] },
+  exhibition: { cat:'Corporate & Professional Events', title:'Exhibitions & Trade Shows', desc:'We manage exhibition stands, trade show participation, and branded experiential spaces that draw the right attention, communicate your brand clearly, and convert visitor interest into real opportunity.', includes:['Stand concept and design direction','Supplier and build coordination','Branding and signage management','Demonstration and presentation setup','Hospitality and lead capture planning','Logistics and installation management','Teardown and equipment return coordination'] },
+  photo: { cat:'Trusted Vendor Network', title:'Photography & Videography', desc:'We connect you with skilled visual storytellers who understand light, emotion, and timing — capturing your event in a way that preserves every meaningful moment with artistry and precision.', includes:['Photography vendor sourcing and vetting','Videography and cinematography sourcing','Shot list development and photographer briefing','Drone and aerial photography coordination','Same-day edit options','Photo booth sourcing and coordination','Delivery timeline and file management'] },
+  catering: { cat:'Trusted Vendor Network', title:'Catering & Beverage Teams', desc:'Great food and drink is at the heart of every memorable event. We source and manage experienced catering professionals who deliver exceptional quality, presentation, and service throughout your event.', includes:['Caterer sourcing matched to your event style','Menu development and tasting coordination','Dietary and cultural requirement management','Beverage and bar team sourcing','Service staff coordination','Catering setup and presentation management','Post-event clearing coordination'] },
+  entertainment: { cat:'Trusted Vendor Network', title:'Entertainment & MC Talent', desc:'The right entertainment transforms a good event into an unforgettable one. We source and brief talent who understand how to read a room and deliver exactly the energy your event needs at every moment.', includes:['Professional MC sourcing and briefing','Live band and musician coordination','DJ sourcing and playlist briefing','Spoken word and performance artists','Cultural performers for traditional events','Entertainment schedule integration','Technical requirements coordination'] },
+  tents: { cat:'Trusted Vendor Network', title:'Tent, Marquee & Furniture Hire', desc:'Quality structures and furnishings make an immediate impression. We source and coordinate tent, marquee, and furniture hire through trusted partners who deliver quality products and reliable setup.', includes:['Tent and marquee sourcing and sizing','Table, chair and linen coordination','Lounge and statement furniture hire','Generator and power equipment sourcing','Flooring and staging hire','Setup and collection management'] },
+  av: { cat:'Trusted Vendor Network', title:'Sound, AV & Lighting Technicians', desc:'Professional technical production ensures every visual and audio element of your event lands exactly as designed. We source experienced technicians who deliver reliable, high-quality results every time.', includes:['Sound system sourcing and setup','PA and microphone management','Projector and screen coordination','LED wall and display sourcing','Lighting rig design and installation','Live streaming and recording coordination','Technical rehearsal management'] },
+  transport: { cat:'Trusted Vendor Network', title:'Guest Transport & Logistics', desc:'Safe, timely, and comfortable transportation is a critical but often overlooked element of event logistics. We coordinate everything — from guest shuttles to bridal car arrangements — with precision.', includes:['Guest shuttle coordination','Bridal and VIP vehicle sourcing','Driver briefing and route planning','Equipment and décor transport','Arrival and departure scheduling','Airport transfers for destination events','Real-time logistics management on the day'] }
+};
+
+function openModal(key) {
+  const data = modalData[key];
+  if(!data) return;
+  document.getElementById('modalCat').textContent = data.cat;
+  document.getElementById('modalTitle').textContent = data.title;
+  document.getElementById('modalDesc').textContent = data.desc;
+  const ul = document.getElementById('modalIncludes');
+  ul.innerHTML = '';
+  data.includes.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    ul.appendChild(li);
+  });
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModalBtn() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closeModal(e) {
+  if(e.target === document.getElementById('modalOverlay')) closeModalBtn();
+}
+
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModalBtn(); });
+</script>
+</body>
+</html>
