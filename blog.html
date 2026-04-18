@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GRIT Events Blog — Expert insights on luxury event planning, vendor sourcing, wedding planning, corporate events, décor trends and more from Nairobi's premier event planning company.">
+<meta name="keywords" content="event planning blog Nairobi, wedding planning tips Kenya, vendor sourcing management Kenya, luxury event design East Africa, corporate event planning Nairobi blog, GRIT Events blog, event coordinator Nairobi advice">
+<meta name="author" content="GRIT Events">
+<title>Blog | GRIT Events — Event Planning Insights from Nairobi, Kenya</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Josefin+Sans:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--crimson:#8B0000;--black:#1A1A1A;--black-deep:#0D0D0D;--gold:#C9A84C;--cream:#F5F0E8;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Josefin Sans',sans-serif;background:var(--black-deep);color:var(--cream);overflow-x:hidden;cursor:none;}
+.cursor{width:8px;height:8px;background:var(--gold);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.1s;}
+.cursor-ring{width:32px;height:32px;border:1px solid rgba(201,168,76,0.4);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width 0.2s,height 0.2s;}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9997;opacity:0.4;}
+
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 60px;height:80px;display:flex;align-items:center;justify-content:space-between;background:rgba(13,13,13,0.95);border-bottom:1px solid rgba(201,168,76,0.15);backdrop-filter:blur(12px);}
+.nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none;}
+.nav-monogram{width:44px;height:44px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:20px;letter-spacing:-2px;}
+.nav-monogram .g{color:var(--crimson);}.nav-monogram .e{color:var(--gold);}
+.nav-brand-name{font-weight:700;font-size:16px;letter-spacing:6px;color:var(--cream);display:block;}
+.nav-brand-sub{font-weight:100;font-size:9px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;display:block;}
+nav{display:flex;align-items:center;gap:40px;}
+nav a{font-weight:300;font-size:11px;letter-spacing:3px;color:rgba(245,240,232,0.7);text-decoration:none;text-transform:uppercase;transition:color 0.3s;position:relative;}
+nav a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform 0.3s;}
+nav a:hover,nav a.active{color:var(--gold);}
+nav a:hover::after,nav a.active::after{transform:scaleX(1);}
+.nav-cta{padding:10px 24px;border:1px solid var(--gold);color:var(--gold)!important;font-size:10px!important;letter-spacing:3px!important;transition:all 0.3s!important;}
+.nav-cta:hover{background:var(--gold)!important;color:var(--black)!important;}
+.nav-cta::after{display:none!important;}
+
+/* HERO */
+.blog-hero{min-height:65vh;position:relative;display:flex;align-items:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(120deg,rgba(13,13,13,0.98) 0%,rgba(139,0,0,0.7) 55%,rgba(13,13,13,0.95) 100%),url('https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1800&q=80') center/cover no-repeat;}
+.hero-bg::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 80px,rgba(201,168,76,0.015) 80px,rgba(201,168,76,0.015) 81px);}
+.hero-content{position:relative;z-index:2;padding:140px 60px 80px;max-width:860px;}
+.breadcrumb{display:flex;align-items:center;gap:12px;margin-bottom:32px;opacity:0;animation:fadeUp 0.8s ease 0.2s forwards;}
+.breadcrumb a{font-size:10px;letter-spacing:3px;color:rgba(245,240,232,0.4);text-decoration:none;text-transform:uppercase;}
+.breadcrumb a:hover{color:var(--gold);}
+.breadcrumb-sep{color:var(--gold);font-size:10px;}
+.breadcrumb-current{font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;}
+.hero-label{font-size:10px;letter-spacing:6px;color:var(--gold);text-transform:uppercase;margin-bottom:20px;display:block;opacity:0;animation:fadeUp 0.8s ease 0.4s forwards;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(56px,8vw,110px);line-height:0.88;color:var(--cream);margin-bottom:32px;opacity:0;animation:fadeUp 0.8s ease 0.6s forwards;}
+.hero-title em{color:var(--crimson);font-style:italic;}
+.hero-desc{font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.8;color:rgba(245,240,232,0.65);max-width:580px;opacity:0;animation:fadeUp 0.8s ease 0.8s forwards;}
+.hero-ghost{position:absolute;right:-20px;top:50%;transform:translateY(-50%);font-family:'Cormorant Garamond',serif;font-weight:700;font-size:280px;color:rgba(139,0,0,0.05);pointer-events:none;z-index:1;}
+
+/* MARQUEE */
+.marquee-strip{background:var(--crimson);padding:14px 0;overflow:hidden;white-space:nowrap;}
+.marquee-inner{display:inline-flex;animation:marquee 28s linear infinite;}
+.marquee-item{font-size:10px;letter-spacing:4px;color:rgba(245,240,232,0.8);text-transform:uppercase;padding:0 36px;font-weight:100;}
+.marquee-dot{color:var(--gold);padding:0 8px;}
+
+/* SEARCH & FILTER BAR */
+.blog-controls{position:sticky;top:80px;z-index:100;background:rgba(13,13,13,0.97);border-bottom:1px solid rgba(201,168,76,0.1);backdrop-filter:blur(12px);padding:16px 60px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.search-box{display:flex;align-items:center;gap:12px;border:1px solid rgba(201,168,76,0.2);padding:10px 20px;background:rgba(255,255,255,0.02);flex:1;max-width:360px;}
+.search-icon{color:var(--gold);font-size:14px;}
+.search-input{background:transparent;border:none;color:var(--cream);font-family:'Josefin Sans',sans-serif;font-size:11px;letter-spacing:2px;width:100%;}
+.search-input:focus{outline:none;}
+.search-input::placeholder{color:rgba(245,240,232,0.3);}
+.cat-filters{display:flex;gap:0;overflow-x:auto;}
+.cat-filter-btn{padding:10px 20px;font-size:9px;letter-spacing:3px;color:rgba(245,240,232,0.4);text-transform:uppercase;background:transparent;border:none;cursor:pointer;transition:all 0.3s;position:relative;white-space:nowrap;font-family:'Josefin Sans',sans-serif;}
+.cat-filter-btn::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform 0.3s;}
+.cat-filter-btn:hover{color:var(--cream);}
+.cat-filter-btn.active{color:var(--gold);}
+.cat-filter-btn.active::after{transform:scaleX(1);}
+
+/* SHARED */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 0.8s ease,transform 0.8s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.section-eyebrow{display:flex;align-items:center;gap:16px;margin-bottom:20px;}
+.eyebrow-line{width:40px;height:1px;background:var(--gold);}
+.eyebrow-text{font-size:10px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;}
+.section-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(36px,5vw,64px);line-height:1;color:var(--cream);margin-bottom:20px;}
+.section-title em{font-style:italic;color:var(--crimson);}
+.btn-primary{display:inline-block;padding:14px 36px;background:var(--crimson);color:var(--cream);font-family:'Josefin Sans',sans-serif;font-weight:300;font-size:10px;letter-spacing:4px;text-transform:uppercase;text-decoration:none;border:1px solid var(--crimson);transition:all 0.3s;cursor:pointer;position:relative;overflow:hidden;}
+.btn-primary::before{content:'';position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;z-index:-1;}
+.btn-primary:hover{color:var(--black);border-color:var(--gold);}
+.btn-primary:hover::before{transform:scaleX(1);}
+.btn-gold{display:inline-block;padding:14px 36px;background:var(--gold);color:var(--black);font-family:'Josefin Sans',sans-serif;font-weight:400;font-size:10px;letter-spacing:4px;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);transition:all 0.3s;cursor:pointer;}
+.btn-gold:hover{background:transparent;color:var(--gold);}
+.btn-outline{display:inline-block;padding:12px 28px;background:transparent;color:var(--gold);font-family:'Josefin Sans',sans-serif;font-weight:300;font-size:10px;letter-spacing:3px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(201,168,76,0.4);transition:all 0.3s;cursor:pointer;}
+.btn-outline:hover{border-color:var(--gold);}
+
+/* FEATURED POST */
+.featured-post{padding:80px 60px;background:var(--black);}
+.featured-inner{display:grid;grid-template-columns:1.4fr 1fr;gap:0;min-height:560px;cursor:pointer;}
+.featured-img-wrap{position:relative;overflow:hidden;}
+.featured-img{width:100%;height:100%;object-fit:cover;filter:grayscale(15%) brightness(0.82);transition:transform 0.6s,filter 0.5s;}
+.featured-inner:hover .featured-img{transform:scale(1.04);filter:grayscale(0%) brightness(0.9);}
+.featured-badge{position:absolute;top:28px;left:28px;background:var(--crimson);padding:8px 20px;font-size:9px;letter-spacing:3px;color:var(--cream);text-transform:uppercase;}
+.featured-read-time{position:absolute;bottom:28px;left:28px;background:rgba(13,13,13,0.85);padding:8px 16px;font-size:9px;letter-spacing:2px;color:rgba(245,240,232,0.7);text-transform:uppercase;}
+.featured-content{background:var(--black-deep);padding:56px 52px;display:flex;flex-direction:column;justify-content:center;position:relative;}
+.featured-content::before{content:'FEATURED';position:absolute;bottom:-10px;right:-10px;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:80px;color:rgba(139,0,0,0.06);pointer-events:none;line-height:1;}
+.feat-cat{font-size:9px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:16px;}
+.feat-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(28px,3.5vw,44px);color:var(--cream);line-height:1.1;margin-bottom:16px;}
+.feat-excerpt{font-family:'Cormorant Garamond',serif;font-size:17px;line-height:1.8;color:rgba(245,240,232,0.6);margin-bottom:32px;}
+.feat-meta{display:flex;align-items:center;gap:20px;margin-bottom:32px;}
+.feat-author-img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--crimson);}
+.feat-author-name{font-size:11px;letter-spacing:2px;color:var(--cream);}
+.feat-date{font-size:10px;letter-spacing:1px;color:rgba(245,240,232,0.4);}
+.feat-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;}
+.blog-tag{padding:4px 12px;border:1px solid rgba(201,168,76,0.2);font-size:8px;letter-spacing:2px;color:rgba(201,168,76,0.7);text-transform:uppercase;}
+.read-more-btn{display:inline-flex;align-items:center;gap:10px;font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;background:none;border:none;font-family:'Josefin Sans',sans-serif;cursor:pointer;padding:0;transition:gap 0.3s;}
+.read-more-btn:hover{gap:16px;}
+
+/* BLOG GRID */
+.blog-grid-section{padding:80px 60px;background:var(--black-deep);}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px;}
+.blog-card{background:var(--black);cursor:pointer;transition:transform 0.3s;position:relative;overflow:hidden;}
+.blog-card:hover{transform:translateY(-6px);}
+.blog-card-img-wrap{position:relative;overflow:hidden;height:220px;}
+.blog-card-img{width:100%;height:100%;object-fit:cover;filter:grayscale(25%) brightness(0.8);transition:transform 0.5s,filter 0.5s;}
+.blog-card:hover .blog-card-img{transform:scale(1.05);filter:grayscale(0%) brightness(0.85);}
+.blog-card-cat-badge{position:absolute;bottom:0;left:0;background:var(--crimson);padding:6px 14px;font-size:8px;letter-spacing:2px;color:var(--cream);text-transform:uppercase;}
+.blog-card-read-time{position:absolute;top:14px;right:14px;background:rgba(13,13,13,0.8);padding:5px 12px;font-size:8px;letter-spacing:2px;color:rgba(245,240,232,0.7);text-transform:uppercase;}
+.blog-card-body{padding:28px;}
+.blog-card-title{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:22px;color:var(--cream);line-height:1.25;margin-bottom:12px;transition:color 0.3s;}
+.blog-card:hover .blog-card-title{color:var(--gold);}
+.blog-card-excerpt{font-family:'Cormorant Garamond',serif;font-size:15px;line-height:1.7;color:rgba(245,240,232,0.5);margin-bottom:20px;}
+.blog-card-footer{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid rgba(201,168,76,0.08);}
+.blog-card-date{font-size:9px;letter-spacing:2px;color:rgba(245,240,232,0.3);text-transform:uppercase;}
+.blog-card-arrow{color:var(--gold);font-size:16px;opacity:0;transition:opacity 0.3s,transform 0.3s;}
+.blog-card:hover .blog-card-arrow{opacity:1;transform:translateX(4px);}
+
+/* NO RESULTS */
+.no-results{text-align:center;padding:80px;color:rgba(245,240,232,0.3);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;}
+
+/* NEWSLETTER */
+.newsletter{padding:80px 60px;background:var(--black);position:relative;overflow:hidden;}
+.newsletter::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(139,0,0,0.08) 0%,transparent 70%);}
+.newsletter-inner{max-width:600px;margin:0 auto;text-align:center;position:relative;z-index:2;}
+.newsletter-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(32px,5vw,56px);color:var(--cream);line-height:1;margin-bottom:16px;}
+.newsletter-title em{font-style:italic;color:var(--crimson);}
+.newsletter-desc{font-family:'Cormorant Garamond',serif;font-size:18px;color:rgba(245,240,232,0.6);margin-bottom:40px;line-height:1.7;}
+.newsletter-form{display:flex;gap:0;max-width:480px;margin:0 auto;}
+.newsletter-input{flex:1;padding:16px 20px;background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.2);border-right:none;color:var(--cream);font-family:'Josefin Sans',sans-serif;font-size:11px;letter-spacing:2px;}
+.newsletter-input:focus{outline:none;border-color:var(--gold);}
+.newsletter-input::placeholder{color:rgba(245,240,232,0.25);}
+.newsletter-btn{padding:16px 28px;background:var(--crimson);border:1px solid var(--crimson);color:var(--cream);font-family:'Josefin Sans',sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:all 0.3s;white-space:nowrap;}
+.newsletter-btn:hover{background:var(--gold);border-color:var(--gold);color:var(--black);}
+
+/* CTA */
+.blog-cta{padding:80px 60px;text-align:center;background:linear-gradient(135deg,rgba(139,0,0,0.92),rgba(13,13,13,0.98)),url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1800&q=80') center/cover no-repeat;}
+.cta-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(36px,5vw,72px);color:var(--cream);line-height:1;margin-bottom:16px;}
+.cta-title em{color:var(--gold);font-style:italic;}
+.cta-sub{font-family:'Cormorant Garamond',serif;font-size:20px;color:rgba(245,240,232,0.6);margin-bottom:40px;font-style:italic;}
+.cta-btns{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;}
+
+/* FOOTER */
+footer{background:#080808;padding:80px 60px 40px;border-top:1px solid rgba(201,168,76,0.1);}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px;}
+.footer-brand-name{font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:28px;letter-spacing:8px;color:var(--cream);margin-bottom:4px;}
+.footer-brand-sub{font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:20px;}
+.footer-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:rgba(245,240,232,0.4);line-height:1.7;max-width:300px;margin-bottom:28px;}
+.footer-contact-item{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;}
+.footer-contact-dot{width:6px;height:6px;background:var(--crimson);border-radius:50%;margin-top:6px;flex-shrink:0;}
+.footer-contact-text{font-size:12px;letter-spacing:1px;color:rgba(245,240,232,0.5);line-height:1.6;}
+.footer-col-title{font-size:10px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:24px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-family:'Cormorant Garamond',serif;font-size:16px;color:rgba(245,240,232,0.5);text-decoration:none;transition:color 0.3s;}
+.footer-links a:hover{color:var(--gold);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:40px;border-top:1px solid rgba(245,240,232,0.06);}
+.footer-copy{font-size:10px;letter-spacing:2px;color:rgba(245,240,232,0.25);text-transform:uppercase;}
+.footer-copy span{color:var(--crimson);}
+.footer-socials{display:flex;gap:20px;}
+.footer-social{width:36px;height:36px;border:1px solid rgba(245,240,232,0.1);display:flex;align-items:center;justify-content:center;font-size:12px;color:rgba(245,240,232,0.4);text-decoration:none;transition:all 0.3s;}
+.footer-social:hover{border-color:var(--gold);color:var(--gold);}
+
+/* WHATSAPP */
+.whatsapp-float{position:fixed;bottom:32px;right:32px;z-index:500;display:flex;flex-direction:column;align-items:flex-end;gap:12px;}
+.wa-tooltip{background:var(--black);border:1px solid rgba(201,168,76,0.2);padding:12px 16px;font-size:11px;letter-spacing:1px;color:rgba(245,240,232,0.7);white-space:nowrap;opacity:0;transform:translateX(10px);transition:all 0.3s;pointer-events:none;}
+.whatsapp-float:hover .wa-tooltip{opacity:1;transform:translateX(0);}
+.wa-btn{width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:24px;box-shadow:0 4px 20px rgba(37,211,102,0.3);transition:transform 0.3s;animation:waPulse 2.5s ease infinite;}
+.wa-btn:hover{transform:scale(1.1);}
+
+/* ARTICLE MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.9);z-index:2000;display:flex;align-items:flex-start;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.4s;backdrop-filter:blur(10px);padding:0;overflow-y:auto;}
+.modal-overlay.open{opacity:1;pointer-events:all;}
+.article-modal{background:var(--black);width:100%;max-width:800px;margin:40px auto;position:relative;transform:translateY(30px);transition:transform 0.4s;}
+.modal-overlay.open .article-modal{transform:translateY(0);}
+.article-hero-img{width:100%;height:400px;object-fit:cover;filter:brightness(0.8);}
+.article-close{position:fixed;top:20px;right:20px;width:48px;height:48px;background:var(--crimson);border:none;color:var(--cream);font-size:20px;cursor:pointer;z-index:2001;display:flex;align-items:center;justify-content:center;transition:background 0.3s;}
+.article-close:hover{background:var(--gold);color:var(--black);}
+.article-header{padding:48px 56px 32px;}
+.article-cat-badge{display:inline-block;background:var(--crimson);padding:6px 16px;font-size:8px;letter-spacing:3px;color:var(--cream);text-transform:uppercase;margin-bottom:20px;}
+.article-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(28px,4vw,48px);color:var(--cream);line-height:1.1;margin-bottom:16px;}
+.article-meta-row{display:flex;align-items:center;gap:20px;padding-bottom:24px;border-bottom:1px solid rgba(201,168,76,0.1);margin-bottom:32px;}
+.article-author-img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid var(--crimson);}
+.article-author-name{font-size:12px;letter-spacing:2px;color:var(--cream);}
+.article-date{font-size:10px;letter-spacing:1px;color:rgba(245,240,232,0.4);}
+.article-read-time{font-size:10px;letter-spacing:2px;color:var(--gold);margin-left:auto;border:1px solid rgba(201,168,76,0.2);padding:4px 12px;}
+.article-body{padding:0 56px 40px;}
+.article-body h2{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;color:var(--cream);margin:36px 0 16px;line-height:1.1;}
+.article-body h3{font-family:'Josefin Sans',sans-serif;font-size:12px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin:28px 0 12px;}
+.article-body p{font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.9;color:rgba(245,240,232,0.72);margin-bottom:20px;}
+.article-body blockquote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--gold);border-left:3px solid var(--crimson);padding:20px 24px;margin:32px 0;line-height:1.6;background:rgba(139,0,0,0.05);}
+.article-body ul{list-style:none;margin:20px 0;display:flex;flex-direction:column;gap:12px;}
+.article-body ul li{font-family:'Cormorant Garamond',serif;font-size:18px;color:rgba(245,240,232,0.72);line-height:1.6;padding-left:24px;position:relative;}
+.article-body ul li::before{content:'◆';color:var(--crimson);font-size:8px;position:absolute;left:0;top:7px;}
+.article-share{padding:32px 56px;border-top:1px solid rgba(201,168,76,0.1);background:rgba(201,168,76,0.03);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+.article-share-label{font-size:9px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;}
+.share-btns{display:flex;gap:12px;}
+.share-btn{padding:10px 20px;font-size:9px;letter-spacing:3px;text-transform:uppercase;border:1px solid rgba(201,168,76,0.3);color:var(--gold);background:transparent;cursor:pointer;font-family:'Josefin Sans',sans-serif;transition:all 0.3s;}
+.share-btn:hover{background:var(--gold);color:var(--black);border-color:var(--gold);}
+.article-cta{padding:40px 56px;background:var(--crimson);text-align:center;}
+.article-cta p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:rgba(245,240,232,0.8);margin-bottom:20px;}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@keyframes waPulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.3);}50%{box-shadow:0 4px 40px rgba(37,211,102,0.6);}}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  header{padding:0 30px;}
+  .blog-controls{padding:16px 30px;}
+  .hero-content{padding:120px 30px 60px;}
+  .featured-post{padding:60px 30px;}
+  .featured-inner{grid-template-columns:1fr;}
+  .blog-grid-section{padding:60px 30px;}
+  .blog-grid{grid-template-columns:1fr 1fr;}
+  .newsletter{padding:60px 30px;}
+  .blog-cta{padding:60px 30px;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:40px;}
+  footer{padding:60px 30px 30px;}
+  .article-header,.article-body,.article-share,.article-cta{padding-left:32px;padding-right:32px;}
+}
+@media(max-width:640px){
+  header{padding:0 20px;}
+  nav a:not(.nav-cta){display:none;}
+  .hero-content{padding:100px 20px 60px;}
+  .hero-ghost{display:none;}
+  .blog-grid{grid-template-columns:1fr;}
+  .newsletter-form{flex-direction:column;}
+  .newsletter-input{border-right:1px solid rgba(201,168,76,0.2);}
+  .footer-top{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;gap:20px;}
+  .article-header,.article-body,.article-share,.article-cta{padding-left:20px;padding-right:20px;}
+}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- HEADER -->
+<header>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-monogram"><span class="g">G</span><span class="e">E</span></div>
+    <div class="nav-brand"><span class="nav-brand-name">GRIT</span><span class="nav-brand-sub">Events</span></div>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="blog.html" class="active">Blog</a>
+    <a href="index.html#contact" class="nav-cta">Get A Quote</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="blog-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ghost">BLOG</div>
+  <div class="hero-content">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">◆</span>
+      <span class="breadcrumb-current">Blog</span>
+    </div>
+    <span class="hero-label">Insights · Ideas · Expertise · GRIT</span>
+    <h1 class="hero-title">The <em>GRIT</em><br>Perspective</h1>
+    <p class="hero-desc">Expert insights on luxury event planning, design, vendor management, and everything in between — straight from Nairobi's premier event company.</p>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span class="marquee-item">Event Planning</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Wedding Tips</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Vendor Sourcing</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Décor Trends</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Corporate Events</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">On-Site Coordination</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">GRIT Events Nairobi</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Event Planning</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Wedding Tips</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Vendor Sourcing</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Décor Trends</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Corporate Events</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">On-Site Coordination</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">GRIT Events Nairobi</span><span class="marquee-dot">◆</span>
+  </div>
+</div>
+
+<!-- SEARCH & FILTERS -->
+<div class="blog-controls">
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input class="search-input" id="searchInput" placeholder="Search articles..." oninput="filterBlogs()">
+  </div>
+  <div class="cat-filters">
+    <button class="cat-filter-btn active" onclick="filterByCategory('all',this)">All</button>
+    <button class="cat-filter-btn" onclick="filterByCategory('wedding',this)">Weddings</button>
+    <button class="cat-filter-btn" onclick="filterByCategory('corporate',this)">Corporate</button>
+    <button class="cat-filter-btn" onclick="filterByCategory('vendor',this)">Vendor</button>
+    <button class="cat-filter-btn" onclick="filterByCategory('design',this)">Design</button>
+    <button class="cat-filter-btn" onclick="filterByCategory('planning',this)">Planning</button>
+    <button class="cat-filter-btn" onclick="filterByCategory('traditional',this)">Traditional</button>
+  </div>
+</div>
+
+<!-- FEATURED POST -->
+<section class="featured-post reveal" id="featuredSection">
+  <div class="featured-inner" onclick="openArticle('vendor-sourcing')">
+    <div class="featured-img-wrap">
+      <img class="featured-img" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1000&q=80" alt="Vendor Sourcing and Management by GRIT Events Nairobi Kenya">
+      <div class="featured-badge">⭐ Featured Article</div>
+      <div class="featured-read-time">⏱ 8 Min Read</div>
+    </div>
+    <div class="featured-content">
+      <div class="feat-cat">Vendor Management · By GRIT Events</div>
+      <h2 class="feat-title">Vendor Sourcing and Management by GRIT Events: The Complete Guide</h2>
+      <p class="feat-excerpt">Finding the right vendors can make or break any event. At GRIT Events, vendor sourcing is not a task — it is a discipline. Here is everything you need to know about how we do it, and how you can too.</p>
+      <div class="feat-meta">
+        <img class="feat-author-img" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="GRIT Events author">
+        <div>
+          <div class="feat-author-name">GRIT Events Team</div>
+          <div class="feat-date">January 2025 · Nairobi, Kenya</div>
+        </div>
+      </div>
+      <div class="feat-tags">
+        <span class="blog-tag">Vendor Sourcing</span>
+        <span class="blog-tag">Event Planning</span>
+        <span class="blog-tag">GRIT Events</span>
+        <span class="blog-tag">Nairobi</span>
+      </div>
+      <button class="read-more-btn">Read Full Article <span>→</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG GRID -->
+<section class="blog-grid-section">
+  <div class="reveal">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">All Articles</span>
+    </div>
+    <h2 class="section-title">Expert <em>Insights</em> from GRIT Events</h2>
+  </div>
+  <div class="blog-grid" id="blogGrid">
+
+    <div class="blog-card reveal" data-cat="wedding" data-title="10 Things Every Bride in Nairobi Must Know Before Hiring an Event Planner" onclick="openArticle('bride-nairobi')">
+      <div class="blog-card-img-wrap">
+        <img class="blog-card-img" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Wedding planning tips Nairobi Kenya GRIT Events">
+        <div class="blog-card-cat-badge">💍 Wedding Planning</div>
+        <div class="blog-card-read-time">8 min</div>
+      </div>
+      <div class="blog-card-body">
+        <h3 class="blog-card-title">10 Things Every Bride in Nairobi Must Know Before Hiring an Event Planner</h3>
+        <p class="blog-card-excerpt">Choosing the right event planner is one of the most important decisions you will make for your wedding. Here is what GRIT Events wants every bride to know first.</p>
+        <div class="blog-card-footer">
+          <span class="blog-card-date">Jan 2025</span>
+          <span class="blog-card-arrow">→</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card reveal" data-cat="corporate" data-title="How to Plan a World-Class Summit in Nairobi" onclick="openArticle('summit-nairobi')">
+      <div class="blog-card-img-wrap">
+        <img class="blog-card-img" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="Corporate summit planning Nairobi Kenya GRIT Events">
+        <div class="blog-card-cat-badge">🏛️ Corporate Events</div>
+        <div class="blog-card-read-time">6 min</div>
+      </div>
+      <div class="blog-card-body">
+        <h3 class="blog-card-title">How to Plan a World-Class Summit in Nairobi by GRIT Events</h3>
+        <p class="blog-card-excerpt">Nairobi is fast becoming East Africa's premier conference destination. Here is the GRIT Events blueprint for executing a summit that delegates remember for years.</p>
+        <div class="blog-card-footer">
+          <span class="blog-card-date">Jan 2025</span>
+          <span class="blog-card-arrow">→</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card reveal" data-cat="design" data-title="Top Luxury Event Décor Trends in East Africa for 2025" onclick="openArticle('decor-trends')">
+      <div class="blog-card-img-wrap">
+        <img class="blog-card-img" src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=600&q=80" alt="Luxury event décor trends Kenya 2025 GRIT Events">
+        <div class="blog-card-cat-badge">🎨 Design & Décor</div>
+        <div class="blog-card-read-time">5 min</div>
+      </div>
+      <div class="blog-card-body">
+        <h3 class="blog-card-title">Top Luxury Event Décor Trends in East Africa for 2025</h3>
+        <p class="blog-card-excerpt">From immersive floral installations to chandelier-lit ceilings — GRIT Events breaks down the design directions defining luxury events across East Africa this year.</p>
+        <div class="blog-card-footer">
+          <span class="blog-card-date">Feb 2025</span>
+          <span class="blog-card-arrow">→</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card reveal" data-cat="planning" data-title="End-to-End Event Planning in Nairobi by GRIT Events" onclick="openArticle('end-to-end')">
+      <div class="blog-card-img-wrap">
+        <img class="blog-card-img" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80" alt="End to end event planning Nairobi Kenya GRIT Events">
+        <div class="blog-card-cat-badge">📋 Event Planning</div>
+        <div class="blog-card-read-time">7 min</div>
+      </div>
+      <div class="blog-card-body">
+        <h3 class="blog-card-title">End-to-End Event Planning in Nairobi by GRIT Events</h3>
+        <p class="blog-card-excerpt">What does end-to-end event planning actually mean? GRIT Events takes you behind the curtain — from first consultation to final farewell — revealing the full anatomy of a perfectly executed event.</p>
+        <div class="blog-card-footer">
+          <span class="blog-card-date">Feb 2025</span>
+          <span class="blog-card-arrow">→</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card reveal" data-cat="planning" data-title="The Art of On-Site Event Coordination by GRIT Events" onclick="openArticle('onsite')">
+      <div class="blog-card-img-wrap">
+        <img class="blog-card-img" src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=80" alt="On-site event coordination GRIT Events Nairobi Kenya">
+        <div class="blog-card-cat-badge">⚡ Coordination</div>
+        <div class="blog-card-read-time">6 min</div>
+      </div>
+      <div class="blog-card-body">
+        <h3 class="blog-card-title">The Art of On-Site Event Coordination by GRIT Events</h3>
+        <p class="blog-card-excerpt">On event day, everything changes. Here is how GRIT Events manages the controlled chaos of a live event — and why your guests never see a single problem, even when they happen.</p>
+        <div class="blog-card-footer">
+          <span class="blog-card-date">Mar 2025</span>
+          <span class="blog-card-arrow">→</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card reveal" data-cat="traditional" data-title="How to Plan a Ruracio Ceremony in Kenya by GRIT Events" onclick="openArticle('ruracio')">
+      <div class="blog-card-img-wrap">
+        <img class="blog-card-img" src="https://images.unsplash.com/photo-1597075095600-d4a72d7f8440?w=600&q=80" alt="Ruracio ceremony planning Kenya GRIT Events">
+        <div class="blog-card-cat-badge">🌍 Traditional</div>
+        <div class="blog-card-read-time">7 min</div>
+      </div>
+      <div class="blog-card-body">
+        <h3 class="blog-card-title">How to Plan a Ruracio Ceremony in Kenya by GRIT Events</h3>
+        <p class="blog-card-excerpt">The ruracio is one of Kenya's most meaningful traditions. GRIT Events shares a complete guide to planning a dowry ceremony that honors every cultural requirement beautifully.</p>
+        <div class="blog-card-footer">
+          <span class="blog-card-date">Mar 2025</span>
+          <span class="blog-card-arrow">→</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card reveal" data-cat="corporate" data-title="Corporate Event Planning in East Africa by GRIT Events" onclick="openArticle('corporate-ea')">
+      <div class="blog-card-img-wrap">
+        <img class="blog-card-img" src="https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=600&q=80" alt="Corporate event planning East Africa GRIT Events Nairobi">
+        <div class="blog-card-cat-badge">💼 Corporate</div>
+        <div class="blog-card-read-time">6 min</div>
+      </div>
+      <div class="blog-card-body">
+        <h3 class="blog-card-title">Corporate Event Planning in East Africa by GRIT Events</h3>
+        <p class="blog-card-excerpt">From Nairobi to Kigali, the corporate events landscape in East Africa is evolving rapidly. GRIT Events explores what modern organizations need from their event partners.</p>
+        <div class="blog-card-footer">
+          <span class="blog-card-date">Apr 2025</span>
+          <span class="blog-card-arrow">→</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card reveal" data-cat="design" data-title="How to Choose the Right Event Designer in Nairobi" onclick="openArticle('choose-designer')">
+      <div class="blog-card-img-wrap">
+        <img class="blog-card-img" src="https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=600&q=80" alt="How to choose event designer Nairobi Kenya GRIT Events">
+        <div class="blog-card-cat-badge">💡 Design</div>
+        <div class="blog-card-read-time">5 min</div>
+      </div>
+      <div class="blog-card-body">
+        <h3 class="blog-card-title">How to Choose the Right Event Designer in Nairobi</h3>
+        <p class="blog-card-excerpt">Not all event designers are equal. GRIT Events gives you the definitive checklist for selecting a designer who can truly translate your vision into an extraordinary physical space.</p>
+        <div class="blog-card-footer">
+          <span class="blog-card-date">Apr 2025</span>
+          <span class="blog-card-arrow">→</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card reveal" data-cat="vendor" data-title="Vendor Sourcing and Management by GRIT Events" onclick="openArticle('vendor-sourcing')">
+      <div class="blog-card-img-wrap">
+        <img class="blog-card-img" src="https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=600&q=80" alt="Vendor sourcing management events Kenya GRIT Events">
+        <div class="blog-card-cat-badge">🤝 Vendor</div>
+        <div class="blog-card-read-time">8 min</div>
+      </div>
+      <div class="blog-card-body">
+        <h3 class="blog-card-title">Vendor Sourcing and Management by GRIT Events: The Complete Guide</h3>
+        <p class="blog-card-excerpt">The vendors you choose determine the quality of your event. GRIT Events shares our complete framework for sourcing, vetting, briefing, and managing event suppliers in Kenya.</p>
+        <div class="blog-card-footer">
+          <span class="blog-card-date">Apr 2025</span>
+          <span class="blog-card-arrow">→</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="no-results" id="noResults" style="display:none">No articles found. Try a different search term.</div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter reveal">
+  <div class="newsletter-inner">
+    <div class="section-eyebrow" style="justify-content:center">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Stay Inspired</span>
+      <div class="eyebrow-line"></div>
+    </div>
+    <h2 class="newsletter-title">Get <em>GRIT</em> Delivered to Your Inbox</h2>
+    <p class="newsletter-desc">New articles on luxury event planning, design trends, and industry insights — straight from Nairobi's premier event company. No spam. Ever.</p>
+    <div class="newsletter-form">
+      <input class="newsletter-input" placeholder="Your email address" type="email">
+      <button class="newsletter-btn">Subscribe</button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="blog-cta">
+  <div class="reveal">
+    <div class="section-eyebrow" style="justify-content:center;margin-bottom:32px">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Ready to Work Together?</span>
+      <div class="eyebrow-line"></div>
+    </div>
+    <h2 class="cta-title">Knowledge is Power.<br><em>Execution</em> is Everything.</h2>
+    <p class="cta-sub">Let GRIT Events bring everything you've read here to life — for your event.</p>
+    <div class="cta-btns">
+      <a href="index.html#contact" class="btn-gold">Get A Free Quote</a>
+      <a href="https://wa.me/254707768071" class="btn-primary" style="background:transparent;border-color:rgba(245,240,232,0.3);color:var(--cream)">💬 WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">GRIT</div>
+      <div class="footer-brand-sub">Events</div>
+      <p class="footer-tagline">Greatness Requires Internal Toughness. Expert luxury event planning insights from Nairobi, Kenya.</p>
+      <div class="footer-contact-item"><div class="footer-contact-dot"></div><span class="footer-contact-text">+254 707 768 071</span></div>
+      <div class="footer-contact-item"><div class="footer-contact-dot"></div><span class="footer-contact-text">Nairobi, Kenya · East Africa & International</span></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Blog Topics</div>
+      <ul class="footer-links">
+        <li><a href="#">Wedding Planning</a></li>
+        <li><a href="#">Corporate Events</a></li>
+        <li><a href="#">Vendor Management</a></li>
+        <li><a href="#">Design & Décor</a></li>
+        <li><a href="#">Traditional Ceremonies</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About GRIT</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Follow Us</div>
+      <ul class="footer-links">
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Twitter / X</a></li>
+        <li><a href="#">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 <span>GRIT Events</span>. All rights reserved. · Nairobi, Kenya</div>
+    <div class="footer-socials">
+      <a href="#" class="footer-social">in</a>
+      <a href="#" class="footer-social">ig</a>
+      <a href="#" class="footer-social">𝕏</a>
+      <a href="#" class="footer-social">fb</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<div class="whatsapp-float">
+  <div class="wa-tooltip">Chat with us on WhatsApp</div>
+  <a href="https://wa.me/254707768071" class="wa-btn" target="_blank">💬</a>
+</div>
+
+<!-- ARTICLE MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeArticle(event)">
+  <button class="article-close" onclick="closeArticleBtn()">✕</button>
+  <div class="article-modal" id="articleModal">
+    <img class="article-hero-img" id="articleImg" src="" alt="">
+    <div class="article-header">
+      <div class="article-cat-badge" id="articleCat"></div>
+      <h1 class="article-title" id="articleTitle"></h1>
+      <div class="article-meta-row">
+        <img class="article-author-img" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="GRIT Events">
+        <div>
+          <div class="article-author-name">GRIT Events Team</div>
+          <div class="article-date" id="articleDate"></div>
+        </div>
+        <div class="article-read-time" id="articleReadTime"></div>
+      </div>
+    </div>
+    <div class="article-body" id="articleBody"></div>
+    <div class="article-share">
+      <span class="article-share-label">Share This Article</span>
+      <div class="share-btns">
+        <button class="share-btn" onclick="shareArticle('linkedin')">LinkedIn</button>
+        <button class="share-btn" onclick="shareArticle('twitter')">Twitter / X</button>
+        <button class="share-btn" onclick="shareArticle('whatsapp')">WhatsApp</button>
+      </div>
+    </div>
+    <div class="article-cta">
+      <p>"Ready to put this knowledge into action? GRIT Events is here to help."</p>
+      <a href="index.html#contact" class="btn-gold">Plan Your Event with GRIT Events</a>
+    </div>
+  </div>
+</div>
+
+<script>
+// Cursor
+const cursor=document.getElementById('cursor');
+const ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+function animateRing(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animateRing);}
+animateRing();
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cursor.style.transform='translate(-50%,-50%) scale(2)';ring.style.width='50px';ring.style.height='50px';});
+  el.addEventListener('mouseleave',()=>{cursor.style.transform='translate(-50%,-50%) scale(1)';ring.style.width='32px';ring.style.height='32px';});
+});
+
+// Scroll reveal
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);obs.unobserve(e.target);}});},{threshold:0.08});
+reveals.forEach(el=>obs.observe(el));
+
+// Filter & Search
+function filterByCategory(cat,btn){
+  document.querySelectorAll('.cat-filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('searchInput').value='';
+  filterBlogs(cat);
+}
+
+function filterBlogs(cat){
+  const catFilter=document.querySelector('.cat-filter-btn.active')?.textContent?.toLowerCase()||'all';
+  const search=document.getElementById('searchInput').value.toLowerCase();
+  const cards=document.querySelectorAll('.blog-card');
+  let visible=0;
+  cards.forEach(card=>{
+    const cardCat=card.dataset.cat||'';
+    const cardTitle=card.dataset.title?.toLowerCase()||'';
+    const cardText=card.querySelector('.blog-card-excerpt')?.textContent?.toLowerCase()||'';
+    const catMatch=catFilter==='all'||cardCat===catFilter;
+    const searchMatch=!search||cardTitle.includes(search)||cardText.includes(search);
+    if(catMatch&&searchMatch){card.style.display='';visible++;}
+    else{card.style.display='none';}
+  });
+  document.getElementById('noResults').style.display=visible===0?'block':'none';
+  const feat=document.getElementById('featuredSection');
+  feat.style.display=(catFilter==='all'||catFilter==='vendor')&&!search?'':'none';
+}
+
+// Articles data
+const articles={
+  'vendor-sourcing':{
+    img:'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80',
+    cat:'🤝 Vendor Management · By GRIT Events',
+    title:'Vendor Sourcing and Management by GRIT Events: The Complete Guide',
+    date:'April 2025 · Nairobi, Kenya',
+    readTime:'8 Min Read',
+    body:`
+      <p>At GRIT Events, we have a saying: <em>your event is only as good as the vendors behind it.</em> No matter how brilliant the concept, how beautiful the design, or how meticulous the planning — if the caterer delivers cold food, the photographer misses the first kiss, or the sound system cuts out during the keynote, the event is remembered for all the wrong reasons.</p>
+      <p>Vendor sourcing and management is not a peripheral task in event planning. It is one of the most critical disciplines — and one that separates amateur planners from true professionals.</p>
+
+      <h2>What is Vendor Sourcing?</h2>
+      <p>Vendor sourcing is the process of identifying, evaluating, and selecting the right suppliers for every element of your event. In Nairobi and across East Africa, this includes photographers, videographers, caterers, florists, tent hire companies, sound and lighting technicians, entertainment, MCs, transport providers, and many more.</p>
+      <p>At GRIT Events, we do not rely on whoever is available or whoever quotes the lowest price. We have built a curated network of vetted professionals across every category — people we have worked with, tested, and trust to deliver to our standard.</p>
+
+      <h2>The GRIT Events Vendor Sourcing Framework</h2>
+      <h3>Step 1: Define the Brief</h3>
+      <p>Before approaching any vendor, we create a detailed brief that specifies exactly what is needed — quantities, quality expectations, timeline, setup requirements, and aesthetic direction. Vague briefs lead to vague results. At GRIT Events, every vendor brief is a written document, not a phone call.</p>
+
+      <h3>Step 2: Source and Shortlist</h3>
+      <p>We approach multiple vendors in each category and request quotes, portfolios, and references. We never rely on a single quote. Comparison is how you protect the client's budget and ensure quality.</p>
+
+      <h3>Step 3: Vet Thoroughly</h3>
+      <p>We check references, review past work, and where possible, conduct in-person or video meetings with key vendors before confirming. For new vendors, we may request a sample or trial before committing to a full event.</p>
+
+      <h3>Step 4: Negotiate and Contract</h3>
+      <p>All vendor agreements at GRIT Events are documented in writing. We negotiate on behalf of our clients — protecting budgets, clarifying deliverables, and ensuring cancellation and contingency terms are in place.</p>
+
+      <h3>Step 5: Brief and Manage</h3>
+      <p>Once confirmed, every vendor receives a detailed written brief including timelines, contact protocols, setup instructions, and expectations. We become the single point of contact so our clients never have to manage multiple supplier relationships.</p>
+
+      <h3>Step 6: On-Day Coordination</h3>
+      <p>On event day, our team manages every vendor arrival, setup, and performance. If a problem arises — and in events, something always does — we solve it quietly, quickly, and completely out of our client's sight.</p>
+
+      <h2>Vendors GRIT Events Sources for Every Event</h2>
+      <ul>
+        <li>Photographers and videographers — capturing every emotion with precision and artistry</li>
+        <li>Caterers and beverage teams — delivering exceptional quality and presentation</li>
+        <li>Florists and décor suppliers — bringing your visual concept to life</li>
+        <li>Entertainment and MCs — keeping your guests engaged and energized</li>
+        <li>Tent, marquee and furniture hire — quality structures for any setting</li>
+        <li>Sound, AV and lighting technicians — professional technical production</li>
+        <li>Guest transport and logistics — seamless movement for people and equipment</li>
+      </ul>
+
+      <blockquote>"The difference between a good event and a great one often comes down to the quality and management of the vendors behind it." — GRIT Events</blockquote>
+
+      <h2>Why Hire GRIT Events for Vendor Management?</h2>
+      <p>When you hire GRIT Events, you get access to our entire vetted vendor network — built over time, tested across dozens of events. You also get a dedicated team that manages every supplier relationship on your behalf, from first brief to final invoice. You focus on enjoying your event. We handle everything else.</p>
+
+      <h2>Final Thoughts</h2>
+      <p>Vendor sourcing and management is a skill, a discipline, and an art form. Done well, it is invisible — your guests simply experience a seamless event. Done poorly, it becomes the story everyone tells afterwards. At GRIT Events in Nairobi, we exist to make sure the only story told is an extraordinary one.</p>
+    `
+  },
+  'bride-nairobi':{
+    img:'https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80',
+    cat:'💍 Wedding Planning · By GRIT Events',
+    title:'10 Things Every Bride in Nairobi Must Know Before Hiring an Event Planner',
+    date:'January 2025 · Nairobi, Kenya',
+    readTime:'8 Min Read',
+    body:`
+      <p>Planning a wedding in Nairobi is one of the most exciting — and overwhelming — experiences of your life. The venues, the vendors, the budgets, the family dynamics, the weather. There is a lot to navigate. And the single most important decision you will make in this process is who you trust to help you navigate it.</p>
+      <p>At GRIT Events, we have sat across from hundreds of brides. Here is what we wish every bride knew before walking into that first meeting.</p>
+
+      <h2>1. Know Your Vision Before You Talk Budget</h2>
+      <p>Many brides lead with budget before they have articulated what they actually want. A good planner needs to understand your vision first — then help you achieve the best version of it within your means. Start with a mood board, not a spreadsheet.</p>
+
+      <h2>2. Your Planner Should Ask More Than They Tell</h2>
+      <p>In your first meeting, a great planner will ask you far more questions than they answer. Be wary of planners who immediately start showing you portfolios and packages before understanding who you are and what your wedding means to you.</p>
+
+      <h2>3. The Cheapest Quote is Rarely the Best Value</h2>
+      <p>In Nairobi's event planning market, pricing varies enormously. A very low quote often means fewer site visits, less thorough vendor management, minimal on-day coordination, and little contingency planning. You get what you pay for — especially on the day that matters most.</p>
+
+      <h2>4. Always Ask for a Detailed Written Proposal</h2>
+      <p>Never agree to anything based on a verbal conversation. A professional planner will provide a written proposal clearly outlining what is included, what is excluded, payment terms, cancellation policies, and deliverables. If they won't put it in writing, move on.</p>
+
+      <h2>5. Site Visits Are Non-Negotiable</h2>
+      <p>Your planner should visit your venue — not just scroll through photos of it. A site visit reveals details that photographs never capture: acoustics, natural light, power access, guest flow, setup logistics. At GRIT Events, no event is planned without a site visit.</p>
+
+      <h2>6. Understand Who Will Be There on the Day</h2>
+      <p>Some planners sell you with one person and send a junior team on the day. Always ask: who specifically will be managing my wedding on the day? Make sure the person you trust is the person who shows up.</p>
+
+      <h2>7. Ask About Contingency Planning</h2>
+      <p>What happens if a vendor cancels two days before the wedding? What if it rains during an outdoor ceremony? A professional planner will have answers to these questions immediately — because they have already thought through every scenario.</p>
+
+      <h2>8. Your Planner Should Protect Your Relationships</h2>
+      <p>A great wedding planner absorbs the stress so you don't have to — including managing difficult family members, late vendors, and unexpected changes. They should be a buffer between logistics and your joy.</p>
+
+      <h2>9. Communication Style Matters More Than You Think</h2>
+      <p>You will communicate with your planner more than almost anyone else in the months before your wedding. Make sure their communication style works for you — response times, meeting preferences, update frequency. Misaligned expectations here cause enormous stress.</p>
+
+      <h2>10. Trust Your Instincts</h2>
+      <p>Beyond credentials, portfolio, and price — trust how you feel after that first meeting. Do you feel heard? Do you feel confident? Do you feel like this person genuinely cares about your wedding? At GRIT Events, every bride should leave their first meeting feeling like they have just found their greatest ally.</p>
+
+      <blockquote>"The right event planner doesn't just manage your wedding. They protect your peace of mind from the first meeting to the last dance." — GRIT Events</blockquote>
+    `
+  },
+  'summit-nairobi':{
+    img:'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80',
+    cat:'🏛️ Corporate Events · By GRIT Events',
+    title:'How to Plan a World-Class Summit in Nairobi by GRIT Events',
+    date:'January 2025 · Nairobi, Kenya',
+    readTime:'6 Min Read',
+    body:`
+      <p>Nairobi has emerged as one of Africa's most dynamic conference destinations. With world-class venues, a growing infrastructure, and a strategic position as East Africa's business hub, the city hosts hundreds of summits, conferences, and professional gatherings every year.</p>
+      <p>But hosting a summit and hosting a world-class summit are very different things. Here is the GRIT Events blueprint.</p>
+
+      <h2>Start with the Objective, Not the Venue</h2>
+      <p>The most common mistake organizations make is booking a venue before defining what the summit is actually supposed to achieve. Is it thought leadership? Networking? Training? Policy alignment? Decision-making? The objective determines everything — format, layout, programming, technology, and experience design.</p>
+
+      <h2>Delegate Experience is Your Product</h2>
+      <p>In a world where content is available on demand, delegates attend summits for the experience — the connection, the energy, the inspiration of being in the same room with others who share their mission. Every element of your summit should be designed around the delegate experience, not the organizing committee's convenience.</p>
+
+      <h2>Choose Your Venue Strategically</h2>
+      <p>Nairobi has excellent summit venues — from KICC to Radisson Blu, the Sarit Centre to boutique hotel conference facilities. The right venue depends on your delegate count, technical requirements, breakout space needs, accommodation proximity, and budget. At GRIT Events, we conduct thorough site visits and technical assessments before any venue recommendation.</p>
+
+      <h2>Build a Detailed Runsheet</h2>
+      <p>A world-class summit runs on a minute-by-minute runsheet. Every session, every transition, every meal break, every technical cue — documented, distributed to all stakeholders, and rehearsed. Improvisation has no place in a professional summit.</p>
+
+      <h2>Brief Every Speaker Individually</h2>
+      <p>Unbriefed speakers are one of the greatest risks to any summit. Every speaker should receive a written brief: their allotted time, the audience profile, the theme of the day, technical requirements for their presentation, and the flow of the programme around them.</p>
+
+      <h2>Invest in Technical Production</h2>
+      <p>Poor sound quality, a failing projector, or a shaky internet connection can undermine even the most brilliant content. Technical production is not the place to cut costs. GRIT Events always works with professional AV technicians who conduct full technical rehearsals before delegates arrive.</p>
+
+      <h2>Design the Networking Moments</h2>
+      <p>The conversations that happen between sessions are often more valuable than the sessions themselves. Design your networking breaks — their duration, their catering, their physical layout — to maximize genuine connection between delegates.</p>
+
+      <blockquote>"A world-class summit is not measured by how impressive the stage looks. It is measured by the conversations it starts and the decisions it enables." — GRIT Events</blockquote>
+
+      <h2>Plan for What Could Go Wrong</h2>
+      <p>A speaker cancels. The internet fails. The catering arrives late. In three days of a summit, something will not go according to plan. A professional event management team has contingency plans for every critical failure point — and the experience to execute them calmly under pressure.</p>
+    `
+  },
+  'decor-trends':{
+    img:'https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=1200&q=80',
+    cat:'🎨 Design & Décor · By GRIT Events',
+    title:'Top Luxury Event Décor Trends in East Africa for 2025',
+    date:'February 2025 · Nairobi, Kenya',
+    readTime:'5 Min Read',
+    body:`
+      <p>The luxury events landscape in East Africa is evolving faster than ever. Clients are more sophisticated, more globally informed, and more demanding — in the best possible way. At GRIT Events, we are constantly studying what is emerging in design and translating it into experiences that feel both globally relevant and authentically East African.</p>
+      <p>Here are the trends defining luxury event décor in 2025.</p>
+
+      <h2>1. Immersive Floral Installations</h2>
+      <p>The era of the simple centrepiece is over. In 2025, florals are becoming architectural — towering installations that define entire zones of a venue, overhead floral canopies that transform ceilings, and floor-to-ceiling floral walls that create photographic destinations within the event space. At GRIT Events, we are designing floral moments that guests walk into, not just look at.</p>
+
+      <h2>2. The Return of Candlelight</h2>
+      <p>After years of LED-dominated events, candlelight is making a powerful return — because nothing creates warmth, romance, and intimacy like a real flame. We are seeing clients request hundreds of individual candles, candelabras, and taper arrangements as the primary lighting element for dinner settings.</p>
+
+      <h2>3. Chandelier-Led Ceilings</h2>
+      <p>Statement ceiling design is one of the most dramatic ways to transform a venue. Chandeliers — crystal, gold, rustic, modern — suspended at varying heights create visual depth and luxury that photographs extraordinarily. At GRIT Events, ceiling design is now part of every venue assessment we conduct.</p>
+
+      <h2>4. Nature and Greenery as Design Elements</h2>
+      <p>Across East Africa, there is a growing trend toward biophilic design — incorporating living greenery, natural textures, and organic materials into event environments. Moss walls, hanging plants, natural wood, and stone elements create spaces that feel both luxurious and grounded in the natural beauty of the continent.</p>
+
+      <h2>5. Bespoke Stationery and Signage</h2>
+      <p>The most design-conscious clients in 2025 are treating every printed element as part of the overall aesthetic — hand-lettered place cards, custom wax-sealed invitations, linen-textured menus, and acrylic signage with gold lettering. The details that guests touch and hold are as important as what they see.</p>
+
+      <h2>6. Rich, Dark Color Palettes</h2>
+      <p>The all-white, all-blush aesthetic is giving way to deeper, richer palettes — deep crimson, forest green, midnight navy, burnt amber. These colours create drama, sophistication, and a sense of occasion that lighter palettes cannot achieve.</p>
+
+      <h2>7. Styling for Social Media</h2>
+      <p>In 2025, every event is also a content opportunity. The most sophisticated clients are asking their event designers to think about Instagram and TikTok moments during the design process — creating styled corners, backdrops, and installations specifically designed to be photographed and shared.</p>
+
+      <blockquote>"The best event design in 2025 is not about following trends. It is about understanding your client deeply enough to create something that feels completely original — and completely them." — GRIT Events</blockquote>
+    `
+  },
+  'end-to-end':{
+    img:'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1200&q=80',
+    cat:'📋 Event Planning · By GRIT Events',
+    title:'End-to-End Event Planning in Nairobi by GRIT Events',
+    date:'February 2025 · Nairobi, Kenya',
+    readTime:'7 Min Read',
+    body:`
+      <p>The phrase "end-to-end event planning" gets used a lot in the events industry. But what does it actually mean — and what should you expect when you hire a company that offers it?</p>
+      <p>At GRIT Events in Nairobi, end-to-end planning means exactly what it says: we take full ownership of your event from the very first conversation to the moment the last vendor leaves the venue. Here is the full anatomy of what that looks like.</p>
+
+      <h2>Phase 1: Discovery and Vision Alignment</h2>
+      <p>Before anything else, we meet. We want to understand not just the logistics of your event — dates, guest counts, budget — but the feeling you want it to create. What do you want guests to experience? What story do you want to tell? What does success look like to you? This conversation shapes everything that follows.</p>
+
+      <h2>Phase 2: Site Visit and Venue Assessment</h2>
+      <p>We visit every venue before committing to any design or logistics decisions. We assess the space with a professional eye — measuring dimensions, testing acoustics, evaluating lighting, mapping guest flow, and identifying operational challenges. No surprises on event day.</p>
+
+      <h2>Phase 3: Concept Development</h2>
+      <p>With your vision and venue information in hand, our creative team develops a full event concept — theme, colour palette, mood boards, design direction, and spatial planning. This is presented to you for review and refinement before any orders are placed.</p>
+
+      <h2>Phase 4: Budgeting and Financial Management</h2>
+      <p>We build a detailed budget that accounts for every line item — from major vendor fees to contingency reserves. We manage this budget actively throughout the planning process, keeping you informed and protecting you from unexpected costs.</p>
+
+      <h2>Phase 5: Vendor Sourcing and Management</h2>
+      <p>We source, vet, negotiate with, and manage every vendor involved in your event. Every supplier receives a detailed written brief. We are the single point of contact — you never have to chase anyone.</p>
+
+      <h2>Phase 6: Programme Creation</h2>
+      <p>We develop a full event programme and detailed internal runsheet — a minute-by-minute document that governs every aspect of the event's execution. This is shared with all key stakeholders and rehearsed before the event day.</p>
+
+      <h2>Phase 7: Setup and Execution</h2>
+      <p>Our team arrives early — often the night before or at dawn on event day — to oversee every aspect of the physical setup. Every décor element, every vendor, every technical requirement is checked and confirmed before the first guest arrives.</p>
+
+      <h2>Phase 8: On-Day Management</h2>
+      <p>On the day of your event, our team manages everything from the background. We direct vendors, manage the programme, solve problems quietly, and ensure every moment unfolds exactly as planned. You experience the event as a guest. We carry the operational weight.</p>
+
+      <h2>Phase 9: Teardown and Post-Event</h2>
+      <p>After the final guest leaves, we oversee the complete teardown — vendor collection, venue restoration, and equipment return. We then provide a post-event debrief, gathering feedback and documenting lessons for future events.</p>
+
+      <blockquote>"End-to-end planning means you hand us a vision and receive back an extraordinary memory. Everything in between is ours to carry." — GRIT Events</blockquote>
+    `
+  },
+  'onsite':{
+    img:'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1200&q=80',
+    cat:'⚡ On-Site Coordination · By GRIT Events',
+    title:'The Art of On-Site Event Coordination by GRIT Events',
+    date:'March 2025 · Nairobi, Kenya',
+    readTime:'6 Min Read',
+    body:`
+      <p>Months of meticulous planning converge into a single day. And on that day, the difference between an extraordinary event and a disastrous one comes down to one thing: what happens in the room, in real time, when things do not go according to plan.</p>
+      <p>On-site event coordination is arguably the most demanding skill in the events industry — and the most underestimated by clients who have never experienced it done well.</p>
+
+      <h2>What On-Site Coordination Actually Involves</h2>
+      <p>On-site coordination is not standing at the entrance looking organized. It is simultaneously managing 20 different variables — vendor arrivals, setup progress, programme timing, guest flow, technical production, catering, entertainment, VIP management, and a dozen other moving parts — while projecting an atmosphere of complete calm.</p>
+
+      <h2>The Pre-Event Setup Phase</h2>
+      <p>At GRIT Events, our on-site team arrives long before any guest does — sometimes the night before, sometimes at 4am on event day. This setup phase is where the real work happens. Every vendor is received, every element is placed, every technical system is tested. We do not leave for our final preparation until we have walked every corner of the venue and confirmed that everything is exactly right.</p>
+
+      <h2>Managing the Runsheet in Real Time</h2>
+      <p>Our event coordinator holds the master runsheet and actively manages it throughout the day. When a speaker runs five minutes over, we adjust. When a meal service takes longer than anticipated, we communicate with the MC and adapt the programme. The runsheet is a living document — and a great coordinator manages it like a conductor manages an orchestra.</p>
+
+      <h2>Problem Solving Under Pressure</h2>
+      <p>In every event GRIT Events has managed, something has not gone exactly to plan. A vendor arrives late. A microphone fails. A key person gets stuck in Nairobi traffic. The measure of a great coordinator is not whether problems occur — it is whether the client ever knows they did. Our team is trained to solve problems quickly, quietly, and completely out of sight.</p>
+
+      <h2>Guest Management</h2>
+      <p>How guests move through and experience an event is directly shaped by on-site coordination. Arrival flow, seating management, queue prevention, VIP protocol, accessibility needs — all of these require active management throughout the event to ensure every guest feels taken care of.</p>
+
+      <h2>Vendor Coordination on the Day</h2>
+      <p>On event day, our team becomes the hub of all vendor communication. Caterers, photographers, MCs, entertainment, AV technicians — every supplier knows to communicate with GRIT Events and only GRIT Events. This single point of contact prevents confusion, duplication, and the kind of miscommunication that causes event failures.</p>
+
+      <blockquote>"The best on-site coordination is the kind nobody notices — because when it is done right, everything simply works." — GRIT Events</blockquote>
+
+      <h2>After the Last Guest Leaves</h2>
+      <p>Our work is not done when the event ends. Our team manages the teardown — overseeing vendor collection, venue restoration, and the final checks that ensure our client's relationship with the venue remains excellent for future events.</p>
+    `
+  },
+  'ruracio':{
+    img:'https://images.unsplash.com/photo-1597075095600-d4a72d7f8440?w=1200&q=80',
+    cat:'🌍 Traditional Ceremonies · By GRIT Events',
+    title:'How to Plan a Ruracio Ceremony in Kenya by GRIT Events',
+    date:'March 2025 · Nairobi, Kenya',
+    readTime:'7 Min Read',
+    body:`
+      <p>The ruracio — Kenya's traditional dowry and betrothal ceremony — is one of the most culturally significant events in the Kikuyu tradition. It is a moment where two families formally meet, negotiate, and unite — a ceremony steeped in meaning, protocol, and generational continuity.</p>
+      <p>At GRIT Events in Nairobi, we have had the privilege of planning and coordinating beautiful ruracio ceremonies — and we have learned that doing it well requires deep cultural understanding alongside meticulous logistics.</p>
+
+      <h2>Understand the Cultural Protocol First</h2>
+      <p>No two ruracios are identical — the specific protocols, gift requirements, and programme structure vary between families, clans, and regions. Before any planning begins, GRIT Events conducts a thorough consultation with the family to understand the specific traditions they wish to honour and the family elders who will guide the protocol.</p>
+
+      <h2>Define the Guest Count and Setting Early</h2>
+      <p>Ruracios can range from intimate family gatherings of 40 people to large celebrations of 300 or more. The guest count determines the venue — home compound, rented space, or outdoor setting — which in turn determines logistics like tent hire, furniture, catering capacity, and parking.</p>
+
+      <h2>The Role of the Programme</h2>
+      <p>A ruracio has a defined sequence of events — the arrival of the groom's delegation, the introductions, the presentation of gifts, the negotiations, the formal acceptance, the celebration. A skilled event coordinator creates a programme that honours this sequence while keeping energy high and managing time respectfully.</p>
+
+      <h2>Catering and Traditional Foods</h2>
+      <p>Traditional Kenyan foods play a central role in a ruracio — and the quality and presentation of the food reflects on the host family's generosity and standing. GRIT Events works with caterers who understand traditional Kenyan cuisine and can present it at a standard that honours the occasion.</p>
+
+      <h2>Décor: Balancing Tradition and Elegance</h2>
+      <p>The best ruracio décor feels authentically rooted in Kenyan culture while being elevated and beautiful. We use natural materials, earth tones, African textiles, and traditional patterns — styled with the kind of thoughtfulness and quality that makes the ceremony feel genuinely special.</p>
+
+      <h2>Managing Family Dynamics</h2>
+      <p>A ruracio brings two extended families together — often for the first time. A great event coordinator manages the logistics of this beautifully: seating arrangements that reflect family hierarchy, introductions that proceed in the correct order, and a programme that gives each family the space and dignity the occasion demands.</p>
+
+      <h2>Photography and Documentation</h2>
+      <p>The ruracio is a moment that deserves to be beautifully documented. GRIT Events works with photographers who understand the ceremony's flow and can capture the key moments — the presentations, the negotiations, the formal acceptance — with artistry and sensitivity.</p>
+
+      <blockquote>"A well-planned ruracio is one where every cultural requirement is met with honour, and every family member — elder and young — feels the weight and beauty of the moment." — GRIT Events</blockquote>
+    `
+  },
+  'corporate-ea':{
+    img:'https://images.unsplash.com/photo-1470229538611-16ba8c7ffbd7?w=1200&q=80',
+    cat:'💼 Corporate Events · By GRIT Events',
+    title:'Corporate Event Planning in East Africa by GRIT Events',
+    date:'April 2025 · Nairobi, Kenya',
+    readTime:'6 Min Read',
+    body:`
+      <p>The corporate events landscape in East Africa is undergoing a significant transformation. Organizations that once settled for a projector and a buffet are now demanding experiences that reflect their brand, energize their people, and leave stakeholders genuinely impressed.</p>
+      <p>At GRIT Events in Nairobi, we have witnessed this evolution firsthand — and we are helping to lead it. Here is what modern corporate event planning in East Africa looks like.</p>
+
+      <h2>The Business Case for Excellent Corporate Events</h2>
+      <p>A poorly executed corporate event is not just forgettable — it actively damages brand perception. Delegates who experience a disorganized conference, a mediocre gala dinner, or a chaotic product launch leave with reduced confidence in the organization that hosted it. Conversely, an exceptional event builds trust, elevates brand standing, and creates the kind of goodwill that no advertising campaign can buy.</p>
+
+      <h2>What East African Clients Are Demanding in 2025</h2>
+      <p>The most sophisticated corporate clients in Nairobi, Kigali, Dar es Salaam, and Kampala are now asking for: immersive experiences rather than passive attendance, technology integration including live streaming and hybrid formats, sustainable event practices, culturally authentic elements that reflect African identity, and delegate wellbeing built into the programme design.</p>
+
+      <h2>The Nairobi Advantage</h2>
+      <p>Nairobi has a compelling case as East Africa's premier corporate event destination. World-class hotels with professional conference facilities, a growing community of skilled event professionals, direct international flight connections, and a vibrant city culture that keeps delegates engaged beyond the conference room.</p>
+
+      <h2>How GRIT Events Approaches Corporate Briefs</h2>
+      <p>Every corporate brief we receive at GRIT Events is treated as a brand brief. We ask: what does this organization stand for? What impression do they want to make? What outcome do they need this event to achieve? Only when we understand the brand and the objective do we begin designing the experience.</p>
+
+      <h2>The Events We Manage</h2>
+      <ul>
+        <li>Annual general meetings and board retreats</li>
+        <li>Regional and international conferences and summits</li>
+        <li>Gala dinners and award ceremonies</li>
+        <li>Product and brand launches</li>
+        <li>Trade exhibitions and brand activations</li>
+        <li>End-of-year celebrations and staff events</li>
+        <li>Training programs and workshops</li>
+      </ul>
+
+      <blockquote>"A great corporate event does not just meet the brief. It shifts the energy of an organization — and that impact lasts long after the venue lights go off." — GRIT Events</blockquote>
+
+      <h2>Working with GRIT Events on Your Corporate Programme</h2>
+      <p>When you partner with GRIT Events for corporate events, you gain a team that understands business objectives, respects budgets, manages logistics with military precision, and consistently delivers experiences that exceed expectations. We are not just event planners. We are strategic partners in how your organization presents itself to the world.</p>
+    `
+  },
+  'choose-designer':{
+    img:'https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=1200&q=80',
+    cat:'💡 Design · By GRIT Events',
+    title:'How to Choose the Right Event Designer in Nairobi',
+    date:'April 2025 · Nairobi, Kenya',
+    readTime:'5 Min Read',
+    body:`
+      <p>Nairobi has no shortage of people who call themselves event designers. From talented independent stylists to full-service design studios, the options can feel overwhelming — especially when every portfolio looks beautiful on Instagram.</p>
+      <p>At GRIT Events, we believe you deserve more than beautiful photos. Here is how to identify a truly great event designer.</p>
+
+      <h2>1. Look Beyond the Portfolio</h2>
+      <p>A portfolio shows you the best of someone's past work. It does not show you the problems they encountered, how they solved them, or whether the client was happy with the experience. Ask for references and actually call them. Ask: was the design executed as proposed? Were there any challenges? Would you hire them again?</p>
+
+      <h2>2. They Should Lead with Questions</h2>
+      <p>A great event designer's first instinct is to listen, not to show. They should want to understand your vision, your aesthetic preferences, your budget, your venue, and the emotional tone you want to create before they suggest a single idea. If a designer starts pitching concepts in your first meeting before understanding who you are, proceed with caution.</p>
+
+      <h2>3. Concept is Everything</h2>
+      <p>Any designer can make something look nice. A great designer can make something look like you. They should be able to develop a concept that feels deeply personal to your event — not a template or a trend repurposed for the hundredth time.</p>
+
+      <h2>4. They Must Understand the Venue</h2>
+      <p>Event design exists in physical space. A designer who has not visited your venue — or who does not insist on a site visit — is designing in a vacuum. The best designs are informed by the specific dimensions, lighting, architecture, and atmosphere of the actual space.</p>
+
+      <h2>5. Execution is as Important as Imagination</h2>
+      <p>Ideas without execution are just dreams. Ask any prospective designer: who sets up the design on event day? What is their team structure? How do they manage vendor coordination? A beautiful mood board means nothing if the setup team is overwhelmed and things are placed incorrectly under pressure.</p>
+
+      <h2>6. They Should Know What is Possible in Nairobi</h2>
+      <p>A designer with deep knowledge of Nairobi's supplier market will know what is available locally, what needs to be sourced from elsewhere, what typically costs what, and which vendors can be trusted to deliver. This market knowledge protects your budget and your event.</p>
+
+      <h2>7. Trust Your Chemistry</h2>
+      <p>You will work closely with your event designer for weeks or months. You will share ideas, make decisions, and sometimes disagree. The relationship needs to be built on trust, respect, and genuine creative alignment. If the chemistry is not there in the first meeting, it will not improve under the pressure of event planning.</p>
+
+      <blockquote>"The right event designer feels less like a vendor and more like a creative collaborator who is just as invested in the outcome as you are." — GRIT Events</blockquote>
+    `
+  }
+};
+
+let currentArticleKey = '';
+
+function openArticle(key){
+  const d = articles[key];
+  if(!d) return;
+  currentArticleKey = key;
+  document.getElementById('articleImg').src = d.img;
+  document.getElementById('articleImg').alt = d.title;
+  document.getElementById('articleCat').textContent = d.cat;
+  document.getElementById('articleTitle').textContent = d.title;
+  document.getElementById('articleDate').textContent = d.date;
+  document.getElementById('articleReadTime').textContent = d.readTime;
+  document.getElementById('articleBody').innerHTML = d.body;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  document.getElementById('articleModal').scrollTop=0;
+}
+
+function closeArticleBtn(){
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function closeArticle(e){
+  if(e.target===document.getElementById('modalOverlay')) closeArticleBtn();
+}
+
+function shareArticle(platform){
+  const title = encodeURIComponent(articles[currentArticleKey]?.title || 'GRIT Events Blog');
+  const url = encodeURIComponent('https://gritevents.github.io/blog.html');
+  if(platform==='linkedin') window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`,'_blank');
+  else if(platform==='twitter') window.open(`https://twitter.com/intent/tweet?text=${title}&url=${url}&via=GRITEvents`,'_blank');
+  else if(platform==='whatsapp') window.open(`https://wa.me/?text=${title}%20${url}`,'_blank');
+}
+
+document.addEventListener('keydown',e=>{if(e.key==='Escape') closeArticleBtn();});
+</script>
+</body>
+</html>
