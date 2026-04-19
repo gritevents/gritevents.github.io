@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Meet the GRIT Events Team — the passionate, talented, and slightly obsessed people behind Nairobi's premier luxury event planning company.">
+<meta name="keywords" content="GRIT Events team Nairobi, luxury event planner Kenya team, event planning company Nairobi staff, Grace Titus event planner Kenya">
+<meta name="author" content="GRIT Events">
+<title>Our Team | GRIT Events — The People Behind Every Extraordinary Event</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Josefin+Sans:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--crimson:#8B0000;--black:#1A1A1A;--black-deep:#0D0D0D;--gold:#C9A84C;--cream:#F5F0E8;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Josefin Sans',sans-serif;background:var(--black-deep);color:var(--cream);overflow-x:hidden;cursor:none;}
+.cursor{width:8px;height:8px;background:var(--gold);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.1s;}
+.cursor-ring{width:32px;height:32px;border:1px solid rgba(201,168,76,0.4);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width 0.2s,height 0.2s;}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9997;opacity:0.4;}
+
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 60px;height:80px;display:flex;align-items:center;justify-content:space-between;background:rgba(13,13,13,0.95);border-bottom:1px solid rgba(201,168,76,0.15);backdrop-filter:blur(12px);}
+.nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none;}
+.nav-monogram{width:44px;height:44px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:20px;letter-spacing:-2px;}
+.nav-monogram .g{color:var(--crimson);}.nav-monogram .e{color:var(--gold);}
+.nav-brand-name{font-weight:700;font-size:16px;letter-spacing:6px;color:var(--cream);display:block;}
+.nav-brand-sub{font-weight:100;font-size:9px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;display:block;}
+nav{display:flex;align-items:center;gap:40px;}
+nav a{font-weight:300;font-size:11px;letter-spacing:3px;color:rgba(245,240,232,0.7);text-decoration:none;text-transform:uppercase;transition:color 0.3s;position:relative;}
+nav a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform 0.3s;}
+nav a:hover,nav a.active{color:var(--gold);}
+nav a:hover::after,nav a.active::after{transform:scaleX(1);}
+.nav-cta{padding:10px 24px;border:1px solid var(--gold);color:var(--gold)!important;font-size:10px!important;letter-spacing:3px!important;transition:all 0.3s!important;}
+.nav-cta:hover{background:var(--gold)!important;color:var(--black)!important;}
+.nav-cta::after{display:none!important;}
+
+/* HERO */
+.team-hero{min-height:75vh;position:relative;display:flex;align-items:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(115deg,rgba(13,13,13,0.98) 0%,rgba(139,0,0,0.72) 55%,rgba(13,13,13,0.96) 100%),url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1800&q=80') center/cover no-repeat;}
+.hero-bg::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 80px,rgba(201,168,76,0.015) 80px,rgba(201,168,76,0.015) 81px);}
+.hero-content{position:relative;z-index:2;padding:140px 60px 80px;max-width:860px;}
+.breadcrumb{display:flex;align-items:center;gap:12px;margin-bottom:32px;opacity:0;animation:fadeUp 0.8s ease 0.2s forwards;}
+.breadcrumb a{font-size:10px;letter-spacing:3px;color:rgba(245,240,232,0.4);text-decoration:none;text-transform:uppercase;transition:color 0.3s;}
+.breadcrumb a:hover{color:var(--gold);}
+.breadcrumb-sep{color:var(--gold);font-size:10px;}
+.breadcrumb-current{font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;}
+.hero-label{font-size:10px;letter-spacing:6px;color:var(--gold);text-transform:uppercase;margin-bottom:20px;display:block;opacity:0;animation:fadeUp 0.8s ease 0.4s forwards;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(56px,8vw,110px);line-height:0.88;color:var(--cream);margin-bottom:32px;opacity:0;animation:fadeUp 0.8s ease 0.6s forwards;}
+.hero-title em{color:var(--crimson);font-style:italic;}
+.hero-desc{font-family:'Cormorant Garamond',serif;font-size:20px;line-height:1.8;color:rgba(245,240,232,0.65);max-width:600px;opacity:0;animation:fadeUp 0.8s ease 0.8s forwards;}
+.hero-ghost{position:absolute;right:-20px;top:50%;transform:translateY(-50%);font-family:'Cormorant Garamond',serif;font-weight:700;font-size:260px;color:rgba(139,0,0,0.05);pointer-events:none;z-index:1;line-height:1;}
+
+/* MARQUEE */
+.marquee-strip{background:var(--crimson);padding:14px 0;overflow:hidden;white-space:nowrap;}
+.marquee-inner{display:inline-flex;animation:marquee 28s linear infinite;}
+.marquee-item{font-size:10px;letter-spacing:4px;color:rgba(245,240,232,0.8);text-transform:uppercase;padding:0 36px;font-weight:100;}
+.marquee-dot{color:var(--gold);padding:0 8px;}
+
+/* SHARED */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity 0.8s ease,transform 0.8s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.section-eyebrow{display:flex;align-items:center;gap:16px;margin-bottom:20px;}
+.eyebrow-line{width:40px;height:1px;background:var(--gold);}
+.eyebrow-text{font-size:10px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;}
+.section-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(36px,5vw,64px);line-height:1;color:var(--cream);margin-bottom:20px;}
+.section-title em{font-style:italic;color:var(--crimson);}
+.btn-primary{display:inline-block;padding:14px 36px;background:var(--crimson);color:var(--cream);font-family:'Josefin Sans',sans-serif;font-weight:300;font-size:10px;letter-spacing:4px;text-transform:uppercase;text-decoration:none;border:1px solid var(--crimson);transition:all 0.3s;cursor:pointer;position:relative;overflow:hidden;}
+.btn-primary::before{content:'';position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;z-index:-1;}
+.btn-primary:hover{color:var(--black);border-color:var(--gold);}
+.btn-primary:hover::before{transform:scaleX(1);}
+.btn-gold{display:inline-block;padding:14px 36px;background:var(--gold);color:var(--black);font-family:'Josefin Sans',sans-serif;font-weight:400;font-size:10px;letter-spacing:4px;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);transition:all 0.3s;}
+.btn-gold:hover{background:transparent;color:var(--gold);}
+
+/* ══ FOUNDER SPOTLIGHT ══ */
+.founder-section{padding:100px 60px;background:var(--black);position:relative;overflow:hidden;}
+.founder-section::before{content:'01';position:absolute;top:40px;right:60px;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:200px;color:rgba(139,0,0,0.05);line-height:1;pointer-events:none;}
+.founder-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:center;}
+
+.founder-visual{position:relative;}
+.founder-img-frame{position:relative;overflow:hidden;}
+.founder-img{width:100%;height:640px;object-fit:cover;filter:grayscale(10%) contrast(1.05);transition:filter 0.6s;}
+.founder-img-frame:hover .founder-img{filter:grayscale(0%);}
+
+/* Crimson accent border */
+.founder-img-frame::before{content:'';position:absolute;top:-12px;left:-12px;right:12px;bottom:12px;border:2px solid var(--crimson);z-index:-1;}
+.founder-img-frame::after{content:'';position:absolute;top:12px;left:12px;right:-12px;bottom:-12px;border:1px solid rgba(201,168,76,0.3);z-index:-1;}
+
+.founder-badge{position:absolute;bottom:-24px;right:-24px;background:var(--gold);padding:28px 24px;text-align:center;z-index:2;}
+.founder-badge-title{font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:10px;letter-spacing:3px;color:var(--black);text-transform:uppercase;display:block;}
+.founder-badge-name{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:22px;color:var(--black);display:block;margin-top:4px;}
+
+.founder-content{padding-left:20px;}
+.founder-tag{display:inline-block;background:var(--crimson);padding:6px 20px;font-size:9px;letter-spacing:4px;color:var(--cream);text-transform:uppercase;margin-bottom:24px;}
+.founder-name{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(40px,5vw,68px);color:var(--cream);line-height:0.95;margin-bottom:8px;}
+.founder-role{font-size:10px;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:32px;display:block;}
+.founder-bio{font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.9;color:rgba(245,240,232,0.7);margin-bottom:24px;}
+.founder-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--gold);border-left:3px solid var(--crimson);padding:16px 24px;margin:28px 0;line-height:1.6;background:rgba(139,0,0,0.05);}
+
+/* Fun fact */
+.fun-fact-box{background:var(--black-deep);border:1px solid rgba(201,168,76,0.15);padding:24px 28px;margin-top:32px;position:relative;}
+.fun-fact-box::before{content:'😄';position:absolute;top:-14px;left:20px;font-size:24px;background:var(--black);padding:0 8px;}
+.fun-fact-label{font-size:8px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:10px;}
+.fun-fact-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:rgba(245,240,232,0.7);line-height:1.7;}
+
+/* Founder stats */
+.founder-stats{display:flex;gap:0;margin-top:36px;border:1px solid rgba(201,168,76,0.1);}
+.founder-stat{flex:1;padding:20px;text-align:center;border-right:1px solid rgba(201,168,76,0.1);}
+.founder-stat:last-child{border-right:none;}
+.f-stat-num{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:32px;color:var(--gold);line-height:1;}
+.f-stat-label{font-size:8px;letter-spacing:2px;color:rgba(245,240,232,0.3);text-transform:uppercase;margin-top:4px;}
+
+/* ══ TEAM SECTION ══ */
+.team-section{padding:100px 60px;background:var(--black-deep);}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:60px;}
+
+/* TEAM CARD */
+.team-card{position:relative;background:var(--black);overflow:hidden;cursor:pointer;transition:transform 0.4s;}
+.team-card:hover{transform:translateY(-8px);}
+
+.team-card-img-wrap{position:relative;height:380px;overflow:hidden;}
+.team-card-img{width:100%;height:100%;object-fit:cover;filter:grayscale(30%) brightness(0.85);transition:transform 0.6s,filter 0.5s;}
+.team-card:hover .team-card-img{transform:scale(1.05);filter:grayscale(0%) brightness(0.9);}
+
+/* Crimson accent bar */
+.team-card-accent{position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--crimson),var(--gold));}
+
+/* Number */
+.team-card-num{position:absolute;top:20px;right:20px;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:64px;color:rgba(255,255,255,0.06);line-height:1;}
+
+/* Hover overlay */
+.team-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(139,0,0,0.92) 0%,rgba(13,13,13,0.5) 60%,transparent 100%);opacity:0;transition:opacity 0.4s;display:flex;align-items:flex-end;padding:28px;}
+.team-card:hover .team-card-overlay{opacity:1;}
+.overlay-fun{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:rgba(245,240,232,0.9);line-height:1.6;}
+
+.team-card-body{padding:28px 28px 32px;}
+.team-card-role-badge{display:inline-block;background:rgba(139,0,0,0.15);border:1px solid rgba(139,0,0,0.3);padding:4px 14px;font-size:8px;letter-spacing:3px;color:var(--crimson);text-transform:uppercase;margin-bottom:14px;}
+.team-card-name{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:28px;color:var(--cream);line-height:1;margin-bottom:6px;}
+.team-card-role{font-size:9px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:16px;display:block;}
+.team-card-desc{font-family:'Cormorant Garamond',serif;font-size:15px;line-height:1.7;color:rgba(245,240,232,0.5);margin-bottom:20px;}
+
+/* Skills tags */
+.team-skills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;}
+.skill-tag{padding:3px 10px;border:1px solid rgba(201,168,76,0.15);font-size:8px;letter-spacing:2px;color:rgba(201,168,76,0.6);text-transform:uppercase;}
+
+/* Fun divider */
+.fun-divider{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.fun-div-line{flex:1;height:1px;background:rgba(201,168,76,0.1);}
+.fun-div-emoji{font-size:16px;}
+
+.team-card-fun{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:rgba(245,240,232,0.4);line-height:1.6;}
+
+/* ══ OPERATIONS MANAGER ══ */
+.ops-section{padding:100px 60px;background:var(--black);position:relative;overflow:hidden;}
+.ops-section::before{content:'02';position:absolute;top:40px;right:60px;font-family:'Cormorant Garamond',serif;font-weight:700;font-size:200px;color:rgba(139,0,0,0.05);line-height:1;pointer-events:none;}
+.ops-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:center;}
+
+.ops-content{}
+.ops-tag{display:inline-block;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);padding:6px 20px;font-size:9px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:24px;}
+.ops-name{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(40px,5vw,68px);color:var(--cream);line-height:0.95;margin-bottom:8px;}
+.ops-role{font-size:10px;letter-spacing:5px;color:var(--crimson);text-transform:uppercase;margin-bottom:32px;display:block;}
+.ops-bio{font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.9;color:rgba(245,240,232,0.7);margin-bottom:24px;}
+
+/* What I actually do list */
+.ops-does-title{font-size:9px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:16px;}
+.ops-does-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:32px;}
+.ops-does-list li{display:flex;align-items:flex-start;gap:14px;font-family:'Cormorant Garamond',serif;font-size:16px;color:rgba(245,240,232,0.65);line-height:1.5;}
+.ops-does-list li::before{content:'◆';color:var(--crimson);font-size:8px;margin-top:6px;flex-shrink:0;}
+
+.ops-visual{position:relative;}
+.ops-img-frame{position:relative;overflow:hidden;}
+.ops-img{width:100%;height:580px;object-fit:cover;filter:grayscale(15%) contrast(1.05);transition:filter 0.6s;}
+.ops-img-frame:hover .ops-img{filter:grayscale(0%);}
+.ops-img-frame::before{content:'';position:absolute;top:12px;left:12px;right:-12px;bottom:-12px;border:2px solid var(--gold);z-index:-1;opacity:0.3;}
+.ops-badge{position:absolute;top:-20px;right:-20px;background:var(--crimson);padding:24px 20px;text-align:center;z-index:2;}
+.ops-badge-icon{font-size:28px;display:block;margin-bottom:4px;}
+.ops-badge-text{font-size:8px;letter-spacing:2px;color:rgba(245,240,232,0.7);text-transform:uppercase;}
+
+/* ══ VALUES BANNER ══ */
+.values-banner{padding:80px 60px;background:var(--crimson);position:relative;overflow:hidden;}
+.values-banner::before{content:'TEAM';position:absolute;right:-40px;top:50%;transform:translateY(-50%);font-family:'Cormorant Garamond',serif;font-weight:700;font-size:400px;color:rgba(0,0,0,0.07);pointer-events:none;line-height:1;}
+.values-banner-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:2;}
+.values-banner-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(40px,5vw,68px);color:var(--cream);line-height:1;}
+.values-banner-title em{font-style:italic;color:var(--gold);}
+.values-list{display:flex;flex-direction:column;gap:0;}
+.value-item{display:flex;align-items:center;gap:20px;padding:18px 0;border-bottom:1px solid rgba(245,240,232,0.1);}
+.value-item:first-child{border-top:1px solid rgba(245,240,232,0.1);}
+.value-emoji{font-size:24px;flex-shrink:0;width:40px;text-align:center;}
+.value-text{font-family:'Josefin Sans',sans-serif;font-size:11px;letter-spacing:3px;color:rgba(245,240,232,0.8);text-transform:uppercase;}
+
+/* ══ JOIN US ══ */
+.join-us{padding:100px 60px;background:var(--black-deep);position:relative;overflow:hidden;}
+.join-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.join-content .section-title em{color:var(--crimson);}
+.join-desc{font-family:'Cormorant Garamond',serif;font-size:18px;line-height:1.9;color:rgba(245,240,232,0.65);margin-bottom:32px;}
+.join-perks{display:flex;flex-direction:column;gap:0;margin-bottom:40px;}
+.perk-item{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid rgba(201,168,76,0.08);align-items:flex-start;}
+.perk-item:first-child{border-top:1px solid rgba(201,168,76,0.08);}
+.perk-icon{font-size:24px;flex-shrink:0;}
+.perk-text h4{font-family:'Josefin Sans',sans-serif;font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:6px;}
+.perk-text p{font-family:'Cormorant Garamond',serif;font-size:16px;color:rgba(245,240,232,0.55);line-height:1.6;}
+.join-visual{position:relative;}
+.join-img-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.join-img{width:100%;height:260px;object-fit:cover;filter:grayscale(20%) brightness(0.8);}
+.join-img:first-child{height:540px;grid-row:span 2;filter:grayscale(10%) brightness(0.85);}
+.join-quote{position:absolute;bottom:-20px;left:-20px;background:var(--crimson);padding:24px 28px;max-width:260px;}
+.join-quote-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--cream);line-height:1.6;}
+
+/* ══ CTA ══ */
+.team-cta{padding:100px 60px;text-align:center;background:linear-gradient(135deg,rgba(139,0,0,0.92),rgba(13,13,13,0.98)),url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1800&q=80') center/cover no-repeat;}
+.cta-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(36px,5vw,72px);color:var(--cream);line-height:1;margin-bottom:16px;}
+.cta-title em{color:var(--gold);font-style:italic;}
+.cta-sub{font-family:'Cormorant Garamond',serif;font-size:20px;color:rgba(245,240,232,0.6);margin-bottom:40px;font-style:italic;}
+.cta-btns{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;}
+
+/* FOOTER */
+footer{background:#080808;padding:80px 60px 40px;border-top:1px solid rgba(201,168,76,0.1);}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px;}
+.footer-brand-name{font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:28px;letter-spacing:8px;color:var(--cream);margin-bottom:4px;}
+.footer-brand-sub{font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:20px;}
+.footer-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:rgba(245,240,232,0.4);line-height:1.7;max-width:300px;margin-bottom:28px;}
+.footer-contact-item{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;}
+.footer-contact-dot{width:6px;height:6px;background:var(--crimson);border-radius:50%;margin-top:6px;flex-shrink:0;}
+.footer-contact-text{font-size:12px;letter-spacing:1px;color:rgba(245,240,232,0.5);line-height:1.6;}
+.footer-col-title{font-size:10px;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:24px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-family:'Cormorant Garamond',serif;font-size:16px;color:rgba(245,240,232,0.5);text-decoration:none;transition:color 0.3s;}
+.footer-links a:hover{color:var(--gold);}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:40px;border-top:1px solid rgba(245,240,232,0.06);}
+.footer-copy{font-size:10px;letter-spacing:2px;color:rgba(245,240,232,0.25);text-transform:uppercase;}
+.footer-copy span{color:var(--crimson);}
+.footer-socials{display:flex;gap:20px;}
+.footer-social{width:36px;height:36px;border:1px solid rgba(245,240,232,0.1);display:flex;align-items:center;justify-content:center;font-size:12px;color:rgba(245,240,232,0.4);text-decoration:none;transition:all 0.3s;}
+.footer-social:hover{border-color:var(--gold);color:var(--gold);}
+
+/* WHATSAPP */
+.whatsapp-float{position:fixed;bottom:32px;right:32px;z-index:500;display:flex;flex-direction:column;align-items:flex-end;gap:12px;}
+.wa-tooltip{background:var(--black);border:1px solid rgba(201,168,76,0.2);padding:12px 16px;font-size:11px;letter-spacing:1px;color:rgba(245,240,232,0.7);white-space:nowrap;opacity:0;transform:translateX(10px);transition:all 0.3s;pointer-events:none;}
+.whatsapp-float:hover .wa-tooltip{opacity:1;transform:translateX(0);}
+.wa-btn{width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:24px;box-shadow:0 4px 20px rgba(37,211,102,0.3);transition:transform 0.3s;animation:waPulse 2.5s ease infinite;}
+.wa-btn:hover{transform:scale(1.1);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@keyframes waPulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.3);}50%{box-shadow:0 4px 40px rgba(37,211,102,0.6);}}
+
+@media(max-width:1024px){
+  header{padding:0 30px;}
+  .hero-content{padding:120px 30px 60px;}
+  .founder-section,.ops-section{padding:80px 30px;}
+  .founder-inner,.ops-inner{grid-template-columns:1fr;gap:48px;}
+  .founder-content{padding-left:0;}
+  .founder-badge{bottom:-16px;right:16px;}
+  .ops-badge{top:-12px;right:12px;}
+  .team-section{padding:80px 30px;}
+  .team-grid{grid-template-columns:1fr 1fr;}
+  .values-banner{padding:60px 30px;}
+  .values-banner-inner{grid-template-columns:1fr;gap:40px;}
+  .join-us{padding:80px 30px;}
+  .join-inner{grid-template-columns:1fr;gap:48px;}
+  .team-cta{padding:60px 30px;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:40px;}
+  footer{padding:60px 30px 30px;}
+}
+@media(max-width:640px){
+  header{padding:0 20px;}
+  nav a:not(.nav-cta){display:none;}
+  .hero-content{padding:100px 20px 60px;}
+  .hero-ghost{display:none;}
+  .team-grid{grid-template-columns:1fr;}
+  .join-img-grid{grid-template-columns:1fr;}
+  .join-img:first-child{height:260px;grid-row:span 1;}
+  .footer-top{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;gap:20px;}
+  .founder-stats{flex-wrap:wrap;}
+  .founder-stat{min-width:50%;}
+}
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- HEADER -->
+<header>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-monogram"><span class="g">G</span><span class="e">E</span></div>
+    <div class="nav-brand"><span class="nav-brand-name">GRIT</span><span class="nav-brand-sub">Events</span></div>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="blog.html">Blog</a>
+    <a href="team.html" class="active">Team</a>
+    <a href="contact.html" class="nav-cta">Get A Quote</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="team-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ghost">TEAM</div>
+  <div class="hero-content">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">◆</span>
+      <span class="breadcrumb-current">Our Team</span>
+    </div>
+    <span class="hero-label">The People · The Passion · The GRIT</span>
+    <h1 class="hero-title">Meet the<br>Minds Behind<br>Every <em>Moment</em></h1>
+    <p class="hero-desc">We are not just a team. We are a group of deeply passionate, slightly obsessed, and completely committed individuals who believe that extraordinary events change lives. Also, we take our coffee very seriously.</p>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span class="marquee-item">Founder</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Operations</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Creative</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Design</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Coordination</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">GRIT Events Nairobi</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Greatness Requires Internal Toughness</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Founder</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Operations</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Creative</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Design</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Coordination</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">GRIT Events Nairobi</span><span class="marquee-dot">◆</span>
+    <span class="marquee-item">Greatness Requires Internal Toughness</span><span class="marquee-dot">◆</span>
+  </div>
+</div>
+
+<!-- ══ FOUNDER ══ -->
+<section class="founder-section">
+  <div class="founder-inner">
+    <div class="founder-visual reveal">
+      <div class="founder-img-frame">
+        <img class="founder-img"
+          src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80"
+          alt="Grace Titus Founder GRIT Events Nairobi Kenya luxury event planner">
+      </div>
+      <div class="founder-badge">
+        <span class="founder-badge-title">Founder & Lead Planner</span>
+        <span class="founder-badge-name">GRIT Events</span>
+      </div>
+    </div>
+
+    <div class="founder-content reveal">
+      <div class="founder-tag">⭐ The Visionary · No. 01</div>
+      <h2 class="founder-name">Grace Titus</h2>
+      <span class="founder-role">Founder & Lead Event Planner · Nairobi, Kenya</span>
+
+      <p class="founder-bio">Grace is not just the founder of GRIT Events — she is the living embodiment of everything the brand stands for. Resilient, relentless, and deeply creative, she built GRIT Events from the ground up with a singular belief: that every event, regardless of its size, deserves to be extraordinary.</p>
+
+      <p class="founder-bio">With an eye for design that borders on obsessive and a work ethic that has been described by her team as "frankly alarming in the best possible way," Grace leads every project with both her heart and her strategy. She is the first to arrive at a venue and the last to leave — and she will notice if a single candle is one centimetre out of place.</p>
+
+      <blockquote class="founder-quote">"I started GRIT Events because I believe that great events are not a luxury — they are a love language. And I plan to make East Africa fluent in it."</blockquote>
+
+      <div class="fun-fact-box">
+        <div class="fun-fact-label">Something You Should Know About Grace</div>
+        <p class="fun-fact-text">She has been known to rearrange her own living room at midnight — not because anything was wrong, but because the spatial flow "wasn't right." Her team takes this as a feature, not a bug. Also, she will outwork everyone in the room and still look flawless doing it. We are both inspired and slightly intimidated. Mostly inspired.</p>
+      </div>
+
+      <div class="founder-stats">
+        <div class="founder-stat">
+          <div class="f-stat-num">∞</div>
+          <div class="f-stat-label">Attention to Detail</div>
+        </div>
+        <div class="founder-stat">
+          <div class="f-stat-num">24/7</div>
+          <div class="f-stat-label">Always Available</div>
+        </div>
+        <div class="founder-stat">
+          <div class="f-stat-num">5★</div>
+          <div class="f-stat-label">Every Review</div>
+        </div>
+        <div class="founder-stat">
+          <div class="f-stat-num">100%</div>
+          <div class="f-stat-label">GRIT</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OPERATIONS MANAGER ══ -->
+<section class="ops-section">
+  <div class="ops-inner">
+    <div class="ops-content reveal">
+      <div class="ops-tag">⚙️ The Engine · No. 02</div>
+      <h2 class="ops-name">[Your Ops Manager's Name]</h2>
+      <span class="ops-role">Operations Manager · GRIT Events</span>
+
+      <p class="ops-bio">If Grace is the visionary, [Name] is the architect who makes the vision structurally sound. As GRIT Events' Operations Manager, [Name] is the person who ensures that every beautiful idea has a timeline, a budget, a backup plan — and a second backup plan just in case.</p>
+
+      <p class="ops-bio">Calm under pressure, meticulous in execution, and possessed of an almost supernatural ability to manage twelve things simultaneously without losing composure, [Name] is the backbone of every event GRIT delivers.</p>
+
+      <div class="ops-does-title">What [Name] Actually Does</div>
+      <ul class="ops-does-list">
+        <li>Builds and manages detailed project timelines for every event</li>
+        <li>Coordinates all vendor relationships and supplier communications</li>
+        <li>Manages event budgets and financial tracking</li>
+        <li>Oversees team deployment and on-site coordination logistics</li>
+        <li>Creates the runsheets that make every event run like clockwork</li>
+        <li>Is the person who answers when something goes wrong at 11pm (and fixes it by midnight)</li>
+      </ul>
+
+      <div class="fun-fact-box">
+        <div class="fun-fact-label">Something You Should Know About [Name]</div>
+        <p class="fun-fact-text">Has never in their life been late. Not once. Not even to casual things. The team suspects they simply experience time differently from the rest of us. Also, their spreadsheets are a work of art — Grace once caught herself admiring one for ten full minutes. That is a true story.</p>
+      </div>
+    </div>
+
+    <div class="ops-visual reveal">
+      <div class="ops-img-frame">
+        <img class="ops-img"
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+          alt="Operations Manager GRIT Events Nairobi Kenya event planning">
+      </div>
+      <div class="ops-badge">
+        <span class="ops-badge-icon">⚙️</span>
+        <span class="ops-badge-text">Operations<br>Manager</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FULL TEAM GRID ══ -->
+<section class="team-section">
+  <div class="reveal">
+    <div class="section-eyebrow">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">The Full Team</span>
+    </div>
+    <h2 class="section-title">Every Person. Every <em>Role.</em> All GRIT.</h2>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:18px;color:rgba(245,240,232,0.6);max-width:580px;line-height:1.8;margin-top:12px;">Hover over any team member to discover what they would never admit in a formal meeting.</p>
+  </div>
+
+  <div class="team-grid">
+
+    <!-- CARD 1 - Creative Director -->
+    <div class="team-card reveal">
+      <div class="team-card-img-wrap">
+        <img class="team-card-img"
+          src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80"
+          alt="Creative Director GRIT Events Nairobi Kenya">
+        <div class="team-card-accent"></div>
+        <span class="team-card-num">03</span>
+        <div class="team-card-overlay">
+          <p class="overlay-fun">"She once redesigned an entire event concept overnight because a mood board 'felt slightly off.' The result was the best event we have ever done. We no longer question her instincts." 🎨</p>
+        </div>
+      </div>
+      <div class="team-card-body">
+        <div class="team-card-role-badge">Creative</div>
+        <div class="team-card-name">Amara Kimani</div>
+        <span class="team-card-role">Creative Director</span>
+        <p class="team-card-desc">Amara transforms client visions into breathtaking visual concepts. With an eye trained across design, fashion, and fine art, she leads all creative direction at GRIT Events — from mood boards to final styling.</p>
+        <div class="team-skills">
+          <span class="skill-tag">Concept Design</span>
+          <span class="skill-tag">Mood Boarding</span>
+          <span class="skill-tag">Brand Styling</span>
+        </div>
+        <div class="fun-divider">
+          <div class="fun-div-line"></div>
+          <span class="fun-div-emoji">✨</span>
+          <div class="fun-div-line"></div>
+        </div>
+        <p class="team-card-fun">"Sees colour combinations that haven't been invented yet. Communicates exclusively in aesthetic references. Has never once used a colour from the suggested palette — but her choices are always better."</p>
+      </div>
+    </div>
+
+    <!-- CARD 2 - Senior Coordinator -->
+    <div class="team-card reveal">
+      <div class="team-card-img-wrap">
+        <img class="team-card-img"
+          src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&q=80"
+          alt="Senior Event Coordinator GRIT Events Nairobi Kenya">
+        <div class="team-card-accent"></div>
+        <span class="team-card-num">04</span>
+        <div class="team-card-overlay">
+          <p class="overlay-fun">"David once managed a wedding where the generator failed, two vendors were late, and the MC got stuck in traffic — all simultaneously. He solved all three before the bride arrived. Nobody saw a thing." ⚡</p>
+        </div>
+      </div>
+      <div class="team-card-body">
+        <div class="team-card-role-badge">Coordination</div>
+        <div class="team-card-name">David Mwangi</div>
+        <span class="team-card-role">Senior Event Coordinator</span>
+        <p class="team-card-desc">David is GRIT Events' master of on-day execution. He runs event days with the calm authority of someone who has planned for every possible scenario — because he genuinely has.</p>
+        <div class="team-skills">
+          <span class="skill-tag">On-Site Management</span>
+          <span class="skill-tag">Runsheet Execution</span>
+          <span class="skill-tag">Crisis Resolution</span>
+        </div>
+        <div class="fun-divider">
+          <div class="fun-div-line"></div>
+          <span class="fun-div-emoji">⚡</span>
+          <div class="fun-div-line"></div>
+        </div>
+        <p class="team-card-fun">"Has a walkie-talkie he doesn't technically need but refuses to give up. His contingency plans have contingency plans. Once printed a runsheet for a 4-hour event that was 12 pages long. We love him."</p>
+      </div>
+    </div>
+
+    <!-- CARD 3 - Décor Specialist -->
+    <div class="team-card reveal">
+      <div class="team-card-img-wrap">
+        <img class="team-card-img"
+          src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=600&q=80"
+          alt="Décor Specialist GRIT Events Kenya event designer">
+        <div class="team-card-accent"></div>
+        <span class="team-card-num">05</span>
+        <div class="team-card-overlay">
+          <p class="overlay-fun">"Lena once spent 45 minutes arranging a table of flowers that would only be visible in the background of a single photograph. The photo won a design award. We rest our case." 🌸</p>
+        </div>
+      </div>
+      <div class="team-card-body">
+        <div class="team-card-role-badge">Design</div>
+        <div class="team-card-name">Lena Waweru</div>
+        <span class="team-card-role">Décor & Floral Specialist</span>
+        <p class="team-card-desc">Lena transforms empty spaces into worlds. Her specialty is floral design and décor styling — she approaches every setup as a sculptor approaches raw material, coaxing beauty out of every element.</p>
+        <div class="team-skills">
+          <span class="skill-tag">Floral Design</span>
+          <span class="skill-tag">Décor Styling</span>
+          <span class="skill-tag">Spatial Aesthetics</span>
+        </div>
+        <div class="fun-divider">
+          <div class="fun-div-line"></div>
+          <span class="fun-div-emoji">🌸</span>
+          <div class="fun-div-line"></div>
+        </div>
+        <p class="team-card-fun">"Cannot walk past a flower arrangement — any flower arrangement, anywhere — without mentally redesigning it. Her home is essentially a botanical garden with a bed in it. She calls it 'living with intention.'"</p>
+      </div>
+    </div>
+
+    <!-- CARD 4 - Vendor Relations -->
+    <div class="team-card reveal">
+      <div class="team-card-img-wrap">
+        <img class="team-card-img"
+          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80"
+          alt="Vendor Relations Manager GRIT Events Nairobi Kenya">
+        <div class="team-card-accent"></div>
+        <span class="team-card-num">06</span>
+        <div class="team-card-overlay">
+          <p class="overlay-fun">"Fatuma once negotiated a vendor quote down by 30% while simultaneously making the vendor feel like they had gotten the better deal. We still do not know how she did it. She just smiled." 🤝</p>
+        </div>
+      </div>
+      <div class="team-card-body">
+        <div class="team-card-role-badge">Vendor</div>
+        <div class="team-card-name">Fatuma Hassan</div>
+        <span class="team-card-role">Vendor Relations Manager</span>
+        <p class="team-card-desc">Fatuma manages GRIT Events' entire vendor network — sourcing, vetting, briefing, and maintaining relationships with the best suppliers across Nairobi and East Africa. She knows everyone worth knowing.</p>
+        <div class="team-skills">
+          <span class="skill-tag">Vendor Sourcing</span>
+          <span class="skill-tag">Negotiation</span>
+          <span class="skill-tag">Supplier Management</span>
+        </div>
+        <div class="fun-divider">
+          <div class="fun-div-line"></div>
+          <span class="fun-div-emoji">🤝</span>
+          <div class="fun-div-line"></div>
+        </div>
+        <p class="team-card-fun">"Has a contact for literally everything. Need a chandelier at 10pm the night before an event? She knows someone. Rare flowers from Nakuru by Friday? Already sorted. We suspect she was a spy in a previous life."</p>
+      </div>
+    </div>
+
+    <!-- CARD 5 - Client Experience -->
+    <div class="team-card reveal">
+      <div class="team-card-img-wrap">
+        <img class="team-card-img"
+          src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80"
+          alt="Client Experience Manager GRIT Events Nairobi Kenya">
+        <div class="team-card-accent"></div>
+        <span class="team-card-num">07</span>
+        <div class="team-card-overlay">
+          <p class="overlay-fun">"Zara once talked a bride off a ledge (metaphorically) three days before her wedding when three things went wrong simultaneously. The bride cried from stress. Then cried from relief. Then gave GRIT a 5-star review." 💛</p>
+        </div>
+      </div>
+      <div class="team-card-body">
+        <div class="team-card-role-badge">Client Care</div>
+        <div class="team-card-name">Zara Omondi</div>
+        <span class="team-card-role">Client Experience Manager</span>
+        <p class="team-card-desc">Zara is the heartbeat of every client relationship at GRIT Events. She ensures every client feels heard, informed, and genuinely cared for throughout the planning journey — from first enquiry to final thank you.</p>
+        <div class="team-skills">
+          <span class="skill-tag">Client Relations</span>
+          <span class="skill-tag">Communication</span>
+          <span class="skill-tag">Problem Solving</span>
+        </div>
+        <div class="fun-divider">
+          <div class="fun-div-line"></div>
+          <span class="fun-div-emoji">💛</span>
+          <div class="fun-div-line"></div>
+        </div>
+        <p class="team-card-fun">"Remembers the name of every client's dog, mother, and childhood best friend. Sends 'thinking of you' messages before clients even know they need them. Is genuinely, actually, unreasonably kind. We think she is superhuman."</p>
+      </div>
+    </div>
+
+    <!-- CARD 6 - Logistics -->
+    <div class="team-card reveal">
+      <div class="team-card-img-wrap">
+        <img class="team-card-img"
+          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80"
+          alt="Logistics Coordinator GRIT Events Nairobi Kenya events">
+        <div class="team-card-accent"></div>
+        <span class="team-card-num">08</span>
+        <div class="team-card-overlay">
+          <p class="overlay-fun">"Tony once rerouted an entire event's equipment delivery around a Nairobi traffic jam using a route that doesn't appear on any map. He simply 'knows the roads.' We believe him." 🚗</p>
+        </div>
+      </div>
+      <div class="team-card-body">
+        <div class="team-card-role-badge">Logistics</div>
+        <div class="team-card-name">Tony Njoroge</div>
+        <span class="team-card-role">Logistics & Setup Coordinator</span>
+        <p class="team-card-desc">Tony manages the physical reality of every GRIT event — transportation, equipment movement, setup coordination, and teardown. He is the reason everything arrives exactly when and where it should.</p>
+        <div class="team-skills">
+          <span class="skill-tag">Event Logistics</span>
+          <span class="skill-tag">Setup Management</span>
+          <span class="skill-tag">Transport Coordination</span>
+        </div>
+        <div class="fun-divider">
+          <div class="fun-div-line"></div>
+          <span class="fun-div-emoji">🚗</span>
+          <div class="fun-div-line"></div>
+        </div>
+        <p class="team-card-fun">"Arrives first. Leaves last. Has never once complained about either. Treats a perfectly loaded equipment truck the way an artist treats a finished painting — with quiet pride and a single nod of satisfaction."</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ TEAM VALUES BANNER ══ -->
+<section class="values-banner">
+  <div class="values-banner-inner">
+    <div class="reveal">
+      <h2 class="values-banner-title">What Makes Us<br>a <em>Real</em> Team</h2>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:18px;color:rgba(245,240,232,0.75);line-height:1.8;margin-top:20px;">We don't just work together. We cover for each other, push each other, and occasionally send each other voice notes at 2am about event details that 'can't wait until morning.'</p>
+    </div>
+    <div class="values-list reveal">
+      <div class="value-item">
+        <span class="value-emoji">🔥</span>
+        <span class="value-text">We show up fully — every single time</span>
+      </div>
+      <div class="value-item">
+        <span class="value-emoji">🤝</span>
+        <span class="value-text">We cover each other without being asked</span>
+      </div>
+      <div class="value-item">
+        <span class="value-emoji">💡</span>
+        <span class="value-text">We bring ideas, not just execution</span>
+      </div>
+      <div class="value-item">
+        <span class="value-emoji">😄</span>
+        <span class="value-text">We laugh — even when things get hard</span>
+      </div>
+      <div class="value-item">
+        <span class="value-emoji">👑</span>
+        <span class="value-text">We protect the client's experience above all else</span>
+      </div>
+      <div class="value-item">
+        <span class="value-emoji">📈</span>
+        <span class="value-text">We grow individually and as a unit</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ JOIN THE TEAM ══ -->
+<section class="join-us">
+  <div class="join-inner">
+    <div class="join-content reveal">
+      <div class="section-eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">Grow With Us</span>
+      </div>
+      <h2 class="section-title">Think You Have<br>What It <em>Takes?</em></h2>
+      <p class="join-desc">GRIT Events is growing — and we are looking for passionate, talented, slightly obsessed people who believe that extraordinary events change lives. We do not hire CVs. We hire character, creativity, and work ethic.</p>
+
+      <div class="join-perks">
+        <div class="perk-item">
+          <span class="perk-icon">🎯</span>
+          <div class="perk-text">
+            <h4>Real Responsibility, From Day One</h4>
+            <p>We don't believe in sitting on the sidelines. Every team member at GRIT Events contributes meaningfully from the moment they join — because we trust the people we hire.</p>
+          </div>
+        </div>
+        <div class="perk-item">
+          <span class="perk-icon">🌍</span>
+          <div class="perk-text">
+            <h4>Work That Actually Matters</h4>
+            <p>The events we plan mark the most important moments of our clients' lives. The work you do here has real meaning — and you will feel it every time you see a room full of people moved by something you helped create.</p>
+          </div>
+        </div>
+        <div class="perk-item">
+          <span class="perk-icon">📈</span>
+          <div class="perk-text">
+            <h4>A Brand You Will Be Proud to Represent</h4>
+            <p>GRIT Events is building something that matters in East Africa's events industry. Being part of this team, at this stage, means being part of the foundation of something great.</p>
+          </div>
+        </div>
+        <div class="perk-item">
+          <span class="perk-icon">☕</span>
+          <div class="perk-text">
+            <h4>Good Coffee. Great People.</h4>
+            <p>We take our craft seriously. We take our coffee seriously. We do not take ourselves too seriously. It is a very good balance.</p>
+          </div>
+        </div>
+      </div>
+      <a href="contact.html" class="btn-primary">Send Us Your Application</a>
+    </div>
+
+    <div class="join-visual reveal">
+      <div class="join-img-grid">
+        <img class="join-img" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="GRIT Events team working Nairobi Kenya event planning">
+        <img class="join-img" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80" alt="Event team collaboration GRIT Events Kenya">
+        <img class="join-img" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" alt="GRIT Events team meeting Nairobi">
+      </div>
+      <div class="join-quote">
+        <p class="join-quote-text">"We are building East Africa's most extraordinary event company — one hire, one event, one unforgettable moment at a time."<br><br>— Grace Titus, Founder</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="team-cta">
+  <div class="reveal">
+    <div class="section-eyebrow" style="justify-content:center;margin-bottom:32px">
+      <div class="eyebrow-line"></div>
+      <span class="eyebrow-text">Work With This Team</span>
+      <div class="eyebrow-line"></div>
+    </div>
+    <h2 class="cta-title">Ready to Experience<br>What We <em>Create?</em></h2>
+    <p class="cta-sub">This is the team behind every extraordinary GRIT Events experience. Let's build yours.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn-gold">Get A Free Quote</a>
+      <a href="https://wa.me/254707768071" class="btn-primary" style="background:transparent;border-color:rgba(245,240,232,0.3);color:var(--cream)">💬 WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">GRIT</div>
+      <div class="footer-brand-sub">Events</div>
+      <p class="footer-tagline">Greatness Requires Internal Toughness. The team behind every extraordinary experience.</p>
+      <div class="footer-contact-item"><div class="footer-contact-dot"></div><span class="footer-contact-text">+254 707 768 071</span></div>
+      <div class="footer-contact-item"><div class="footer-contact-dot"></div><span class="footer-contact-text">Nairobi, Kenya · East Africa & International</span></div>
+      <div class="footer-contact-item"><div class="footer-contact-dot"></div><span class="footer-contact-text">Available 24/7</span></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Meet The Team</div>
+      <ul class="footer-links">
+        <li><a href="#">Grace Titus — Founder</a></li>
+        <li><a href="#">Operations Manager</a></li>
+        <li><a href="#">Creative Director</a></li>
+        <li><a href="#">Senior Coordinator</a></li>
+        <li><a href="#">Décor Specialist</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About GRIT</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Join Us</div>
+      <ul class="footer-links">
+        <li><a href="contact.html">Send Your CV</a></li>
+        <li><a href="contact.html">Internships</a></li>
+        <li><a href="contact.html">Vendor Partnership</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 <span>GRIT Events</span>. All rights reserved. · Nairobi, Kenya</div>
+    <div class="footer-socials">
+      <a href="#" class="footer-social">in</a>
+      <a href="#" class="footer-social">ig</a>
+      <a href="#" class="footer-social">𝕏</a>
+      <a href="#" class="footer-social">fb</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<div class="whatsapp-float">
+  <div class="wa-tooltip">Chat with us on WhatsApp</div>
+  <a href="https://wa.me/254707768071" class="wa-btn" target="_blank">💬</a>
+</div>
+
+<script>
+const cursor=document.getElementById('cursor');
+const ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+function animateRing(){rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(animateRing);}
+animateRing();
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cursor.style.transform='translate(-50%,-50%) scale(2)';ring.style.width='50px';ring.style.height='50px';});
+  el.addEventListener('mouseleave',()=>{cursor.style.transform='translate(-50%,-50%) scale(1)';ring.style.width='32px';ring.style.height='32px';});
+});
+const reveals=document.querySelectorAll('.reveal');
+const obs=new IntersectionObserver(entries=>{entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('visible'),i*80);obs.unobserve(e.target);}});},{threshold:0.08});
+reveals.forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
