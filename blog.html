@@ -242,6 +242,71 @@ footer{background:#080808;padding:80px 60px 40px;border-top:1px solid rgba(201,1
   .footer-bottom{flex-direction:column;gap:20px;}
   .article-header,.article-body,.article-share,.article-cta{padding-left:20px;padding-right:20px;}
 }
+
+/* ── MASTER NAV STYLES ── */
+header { position:fixed; top:0; left:0; right:0; z-index:1000; padding:0 60px; height:80px; display:flex; align-items:center; justify-content:space-between; transition:background 0.4s ease,border-bottom 0.4s ease; }
+header.scrolled { background:rgba(13,13,13,0.97); border-bottom:1px solid rgba(201,168,76,0.15); backdrop-filter:blur(12px); }
+header:not(.scrolled) { background:rgba(13,13,13,0.95); border-bottom:1px solid rgba(201,168,76,0.15); backdrop-filter:blur(12px); }
+.nav-logo { display:flex; align-items:center; gap:14px; text-decoration:none; }
+.nav-monogram { width:44px; height:44px; border:1px solid var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-weight:700; font-size:20px; letter-spacing:-2px; }
+.nav-monogram .g { color:var(--crimson); } .nav-monogram .e { color:var(--gold); }
+.nav-brand-name { font-weight:700; font-size:16px; letter-spacing:6px; color:var(--cream); display:block; }
+.nav-brand-sub { font-weight:100; font-size:9px; letter-spacing:3px; color:var(--gold); text-transform:uppercase; display:block; }
+#mainNav { display:flex; align-items:center; gap:36px; }
+.nav-link { font-weight:300; font-size:11px; letter-spacing:3px; color:rgba(245,240,232,0.7); text-decoration:none; text-transform:uppercase; transition:color 0.3s; position:relative; }
+.nav-link::after { content:''; position:absolute; bottom:-4px; left:0; right:0; height:1px; background:var(--gold); transform:scaleX(0); transition:transform 0.3s; }
+.nav-link:hover, .nav-link.active { color:var(--gold); }
+.nav-link:hover::after, .nav-link.active::after { transform:scaleX(1); }
+.nav-cta { padding:10px 22px; border:1px solid var(--gold); color:var(--gold)!important; font-size:10px!important; letter-spacing:3px!important; transition:all 0.3s!important; }
+.nav-cta:hover { background:var(--gold)!important; color:var(--black)!important; }
+.nav-cta::after { display:none!important; }
+/* Hamburger */
+.hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px; z-index:1001; }
+.hamburger span { display:block; width:26px; height:2px; background:var(--cream); transition:all 0.3s; }
+.hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity:0; }
+.hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+/* ── MASTER FOOTER STYLES ── */
+footer { background:#080808; padding:80px 60px 40px; border-top:1px solid rgba(201,168,76,0.1); }
+.footer-top { display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr 1fr 0.8fr 0.8fr; gap:32px; margin-bottom:60px; flex-wrap:wrap; }
+.footer-brand-name { font-family:'Josefin Sans',sans-serif; font-weight:700; font-size:28px; letter-spacing:8px; color:var(--cream); margin-bottom:4px; }
+.footer-brand-sub { font-size:10px; letter-spacing:3px; color:var(--gold); text-transform:uppercase; margin-bottom:16px; }
+.footer-tagline { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:15px; color:rgba(245,240,232,0.4); line-height:1.7; max-width:280px; margin-bottom:20px; }
+.footer-contact-item { display:flex; gap:10px; align-items:flex-start; margin-bottom:10px; }
+.footer-contact-dot { width:5px; height:5px; background:var(--crimson); border-radius:50%; margin-top:7px; flex-shrink:0; }
+.footer-contact-text { font-size:12px; letter-spacing:1px; color:rgba(245,240,232,0.5); line-height:1.6; text-decoration:none; transition:color 0.3s; }
+a.footer-contact-text:hover { color:var(--gold); }
+.footer-col-title { font-size:9px; letter-spacing:4px; color:var(--gold); text-transform:uppercase; margin-bottom:20px; }
+.footer-links { list-style:none; display:flex; flex-direction:column; gap:10px; }
+.footer-links a { font-family:'Cormorant Garamond',serif; font-size:15px; color:rgba(245,240,232,0.5); text-decoration:none; transition:color 0.3s; }
+.footer-links a:hover { color:var(--gold); }
+.footer-bottom { display:flex; justify-content:space-between; align-items:center; padding-top:40px; border-top:1px solid rgba(245,240,232,0.06); }
+.footer-copy { font-size:10px; letter-spacing:2px; color:rgba(245,240,232,0.25); text-transform:uppercase; }
+.footer-copy span { color:var(--crimson); }
+.footer-socials { display:flex; gap:10px; }
+.footer-social { width:36px; height:36px; border:1px solid rgba(245,240,232,0.1); display:flex; align-items:center; justify-content:center; font-size:11px; color:rgba(245,240,232,0.4); text-decoration:none; transition:all 0.3s; }
+.footer-social:hover { border-color:var(--gold); color:var(--gold); }
+/* ── RESPONSIVE ── */
+@media(max-width:1200px) {
+  header { padding:0 30px; }
+  #mainNav { gap:24px; }
+  .nav-link { font-size:10px; letter-spacing:2px; }
+  .footer-top { grid-template-columns:1fr 1fr 1fr; gap:32px; }
+}
+@media(max-width:900px) {
+  .hamburger { display:flex; }
+  #mainNav { position:fixed; top:0; right:-100%; width:280px; height:100vh; background:rgba(13,13,13,0.99); border-left:1px solid rgba(201,168,76,0.15); flex-direction:column; align-items:flex-start; justify-content:center; gap:28px; padding:80px 40px; transition:right 0.4s ease; backdrop-filter:blur(20px); z-index:999; }
+  #mainNav.open { right:0; }
+  .nav-link { font-size:14px; letter-spacing:4px; }
+  .nav-cta { width:100%; text-align:center; padding:14px 20px; }
+  .footer-top { grid-template-columns:1fr 1fr; gap:32px; }
+}
+@media(max-width:640px) {
+  header { padding:0 20px; }
+  .footer-top { grid-template-columns:1fr; }
+  .footer-bottom { flex-direction:column; gap:16px; text-align:center; }
+}
+
 </style>
 </head>
 <body>
@@ -250,19 +315,26 @@ footer{background:#080808;padding:80px 60px 40px;border-top:1px solid rgba(201,1
 <div class="cursor-ring" id="cursorRing"></div>
 
 <!-- HEADER -->
-<header>
+<header id="header">
   <a href="index.html" class="nav-logo">
     <div class="nav-monogram"><span class="g">G</span><span class="e">E</span></div>
-    <div class="nav-brand"><span class="nav-brand-name">GRIT</span><span class="nav-brand-sub">Events</span></div>
+    <div class="nav-brand">
+      <span class="nav-brand-name">GRIT</span>
+      <span class="nav-brand-sub">Events</span>
+    </div>
   </a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="blog.html" class="active">Blog</a>
-    <a href="index.html#contact" class="nav-cta">Get A Quote</a>
+  <nav id="mainNav">
+    <a href="index.html" class="nav-link" data-page="index">Home</a>
+    <a href="about.html" class="nav-link" data-page="about">About</a>
+    <a href="services.html" class="nav-link" data-page="services">Services</a>
+    <a href="portfolio.html" class="nav-link" data-page="portfolio">Portfolio</a>
+    <a href="blog.html" class="nav-link" data-page="blog">Blog</a>
+    <a href="team.html" class="nav-link" data-page="team">Team</a>
+    <a href="contact.html" class="nav-cta nav-link" data-page="contact">Get A Quote</a>
   </nav>
+  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
 <!-- HERO -->
@@ -544,49 +616,88 @@ footer{background:#080808;padding:80px 60px 40px;border-top:1px solid rgba(201,1
 <!-- FOOTER -->
 <footer>
   <div class="footer-top">
-    <div>
+    <div class="footer-brand-col">
       <div class="footer-brand-name">GRIT</div>
       <div class="footer-brand-sub">Events</div>
-      <p class="footer-tagline">Greatness Requires Internal Toughness. Expert luxury event planning insights from Nairobi, Kenya.</p>
-      <div class="footer-contact-item"><div class="footer-contact-dot"></div><span class="footer-contact-text">+254 707 768 071</span></div>
-      <div class="footer-contact-item"><div class="footer-contact-dot"></div><span class="footer-contact-text">Nairobi, Kenya · East Africa & International</span></div>
+      <p class="footer-tagline">Greatness Requires Internal Toughness. We build extraordinary experiences through precision, passion, and relentless excellence.</p>
+      <div class="footer-contact-item"><div class="footer-contact-dot"></div><a href="tel:+254707768071" class="footer-contact-text">+254 707 768 071</a></div>
+      <div class="footer-contact-item"><div class="footer-contact-dot"></div><a href="tel:+254701441045" class="footer-contact-text">+254 701 441 045</a></div>
+      <div class="footer-contact-item"><div class="footer-contact-dot"></div><a href="mailto:gracetitusn@gmail.com" class="footer-contact-text">gracetitusn@gmail.com</a></div>
+      <div class="footer-contact-item"><div class="footer-contact-dot"></div><span class="footer-contact-text">Nairobi, Kenya · Available 24/7</span></div>
     </div>
     <div>
-      <div class="footer-col-title">Blog Topics</div>
+      <div class="footer-col-title">Services</div>
       <ul class="footer-links">
-        <li><a href="#">Wedding Planning</a></li>
-        <li><a href="#">Corporate Events</a></li>
-        <li><a href="#">Vendor Management</a></li>
-        <li><a href="#">Design & Décor</a></li>
-        <li><a href="#">Traditional Ceremonies</a></li>
+        <li><a href="services.html#celebrations">Wedding Planning</a></li>
+        <li><a href="services.html#corporate">Corporate Events</a></li>
+        <li><a href="services.html#corporate">Gala Dinners</a></li>
+        <li><a href="services.html#celebrations">Ruracio Ceremonies</a></li>
+        <li><a href="services.html#celebrations">Baby Showers</a></li>
+        <li><a href="services.html#celebrations">Car Décor</a></li>
+        <li><a href="services.html#corporate">Launches</a></li>
       </ul>
     </div>
     <div>
-      <div class="footer-col-title">Company</div>
+      <div class="footer-col-title">Quick Links</div>
       <ul class="footer-links">
-        <li><a href="about.html">About GRIT</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="index.html#contact">Contact Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <div>
       <div class="footer-col-title">Follow Us</div>
       <ul class="footer-links">
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Twitter / X</a></li>
-        <li><a href="#">Facebook</a></li>
+        <li><a href="#" target="_blank">Instagram</a></li>
+        <li><a href="#" target="_blank">Facebook</a></li>
+        <li><a href="#" target="_blank">LinkedIn</a></li>
+        <li><a href="#" target="_blank">Twitter / X</a></li>
+        <li><a href="#" target="_blank">TikTok</a></li>
+        <li><a href="https://linktr.ee/gritevents" target="_blank">Linktree</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Blog Topics</div>
+      <ul class="footer-links">
+        <li><a href="blog.html">Wedding Planning</a></li>
+        <li><a href="blog.html">Corporate Events</a></li>
+        <li><a href="blog.html">Vendor Management</a></li>
+        <li><a href="blog.html">Design &amp; Décor</a></li>
+        <li><a href="blog.html">Traditional Ceremonies</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Join Us</div>
+      <ul class="footer-links">
+        <li><a href="contact.html">Send Your CV</a></li>
+        <li><a href="contact.html">Internships</a></li>
+        <li><a href="contact.html">Vendor Partnership</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Locations</div>
+      <ul class="footer-links">
+        <li><a href="#">Nairobi, Kenya</a></li>
+        <li><a href="#">East Africa</a></li>
+        <li><a href="#">International</a></li>
+        <li><a href="#">Destination Events</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">© 2025 <span>GRIT Events</span>. All rights reserved. · Nairobi, Kenya</div>
     <div class="footer-socials">
-      <a href="#" class="footer-social">in</a>
-      <a href="#" class="footer-social">ig</a>
-      <a href="#" class="footer-social">𝕏</a>
-      <a href="#" class="footer-social">fb</a>
+      <a href="#" class="footer-social" target="_blank" title="Instagram">ig</a>
+      <a href="#" class="footer-social" target="_blank" title="Facebook">fb</a>
+      <a href="#" class="footer-social" target="_blank" title="TikTok">tk</a>
+      <a href="#" class="footer-social" target="_blank" title="Twitter/X">𝕏</a>
+      <a href="https://wa.me/254707768071" class="footer-social" target="_blank" title="WhatsApp">wa</a>
+      <a href="https://linktr.ee/gritevents" class="footer-social" target="_blank" title="Linktree">🔗</a>
+      <a href="#" class="footer-social" target="_blank" title="LinkedIn">in</a>
     </div>
   </div>
 </footer>
@@ -1063,6 +1174,52 @@ function shareArticle(platform){
 }
 
 document.addEventListener('keydown',e=>{if(e.key==='Escape') closeArticleBtn();});
+</script>
+<script>
+// ── ACTIVE NAV ──
+(function(){
+  const page = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-link').forEach(a => {
+    const ap = a.getAttribute('href') || '';
+    if(ap === page || (page === '' && ap === 'index.html')) {
+      a.classList.add('active');
+    }
+  });
+})();
+
+// ── HAMBURGER ──
+function toggleMenu() {
+  const nav = document.getElementById('mainNav');
+  const btn = document.getElementById('hamburger');
+  nav.classList.toggle('open');
+  btn.classList.toggle('open');
+  document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+}
+document.addEventListener('click', function(e) {
+  const nav = document.getElementById('mainNav');
+  const btn = document.getElementById('hamburger');
+  if(nav && nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
+    nav.classList.remove('open');
+    btn.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+// Close nav on link click
+document.querySelectorAll('.nav-link').forEach(a => {
+  a.addEventListener('click', () => {
+    const nav = document.getElementById('mainNav');
+    const btn = document.getElementById('hamburger');
+    if(nav) { nav.classList.remove('open'); }
+    if(btn) { btn.classList.remove('open'); }
+    document.body.style.overflow = '';
+  });
+});
+
+// ── HEADER SCROLL ──
+window.addEventListener('scroll', () => {
+  const h = document.getElementById('header');
+  if(h) h.classList.toggle('scrolled', window.scrollY > 50);
+});
 </script>
 </body>
 </html>
