@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRIT Events — Company Profile 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Josefin+Sans:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --crimson: #8B0000;
+  --black: #1A1A1A;
+  --gold: #C9A84C;
+  --cream: #F5F0E8;
+  --light: #faf8f4;
+  --border: #e8e0d0;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { font-size:16px; }
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background: #e8e0d0;
+  color: var(--black);
+}
+
+/* ── PRINT BUTTON (hidden on print) ── */
+.print-bar {
+  background: var(--black);
+  padding: 14px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.print-bar-brand {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 5px;
+  color: var(--cream);
+}
+.print-bar-brand span { color: var(--gold); }
+.print-bar-actions { display: flex; gap: 12px; }
+.print-btn {
+  padding: 10px 28px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-pdf { background: var(--gold); color: var(--black); }
+.btn-pdf:hover { background: #b8943e; }
+.btn-view { background: var(--crimson); color: var(--cream); }
+.btn-view:hover { background: #6b0000; }
+
+/* ── DOCUMENT WRAPPER ── */
+.doc-wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px 80px;
+}
+
+/* ── PAGE ── */
+.page {
+  background: white;
+  margin-bottom: 4px;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.12);
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+}
+
+/* ══════════════════════
+   PAGE 1 — COVER
+══════════════════════ */
+.cover {
+  min-height: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cover-left {
+  background: var(--crimson);
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-left::before {
+  content: 'GE';
+  position: absolute;
+  bottom: -40px;
+  left: -30px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 280px;
+  color: rgba(255,255,255,0.04);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.cover-left::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgba(201,168,76,0.4), transparent);
+}
+
+.cover-monogram {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mono-letters {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 80px;
+  letter-spacing: -6px;
+  line-height: 1;
+  color: white;
+}
+
+.mono-letters .e { color: var(--gold); }
+
+.mono-ring {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  margin-top: 12px;
+}
+
+.cover-tagline-block { position: relative; z-index: 2; }
+
+.cover-tagline-label {
+  font-size: 9px;
+  letter-spacing: 5px;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.cover-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 24px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.5;
+  border-left: 2px solid var(--gold);
+  padding-left: 20px;
+}
+
+.cover-contact-block { position: relative; z-index: 2; }
+
+.cover-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.cover-contact-dot {
+  width: 5px; height: 5px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.cover-contact-text {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* Right side of cover */
+.cover-right {
+  background: white;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cover-right-top { }
+
+.cover-doc-label {
+  font-size: 9px;
+  letter-spacing: 6px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cover-doc-label::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.cover-brand-name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 52px;
+  letter-spacing: 10px;
+  color: var(--black);
+  line-height: 0.9;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.cover-brand-sub {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  letter-spacing: 8px;
+  color: var(--crimson);
+  display: block;
+  margin-bottom: 40px;
+}
+
+.cover-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.cover-div-line { flex: 1; height: 1px; background: var(--border); }
+.cover-div-diamond { width: 6px; height: 6px; border: 1px solid var(--gold); transform: rotate(45deg); }
+
+.cover-about-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #666;
+}
+
+.cover-right-bottom { }
+
+.cover-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+
+.cover-stat {
+  padding: 20px;
+  text-align: center;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.cover-stat:nth-child(2) { border-right: none; }
+.cover-stat:nth-child(3) { border-bottom: none; }
+.cover-stat:nth-child(4) { border-right: none; border-bottom: none; }
+
+.cover-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--crimson);
+  line-height: 1;
+  display: block;
+}
+
+.cover-stat-label {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #aaa;
+  text-transform: uppercase;
+  margin-top: 4px;
+  display: block;
+}
+
+.cover-year-badge {
+  background: var(--black);
+  color: var(--cream);
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cover-year-label {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: rgba(245,240,232,0.4);
+  text-transform: uppercase;
+}
+
+.cover-year-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--gold);
+}
+
+/* Top gold bar */
+.page-top-bar { height: 6px; background: linear-gradient(90deg, var(--crimson), var(--gold)); }
+
+/* ══════════════════════
+   INNER PAGE STYLES
+══════════════════════ */
+.inner-page { padding: 0; }
+
+/* Section header */
+.section-header {
+  background: var(--black);
+  padding: 40px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-header-left { }
+
+.section-num {
+  font-size: 9px;
+  letter-spacing: 5px;
+  color: rgba(245,240,232,0.25);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.section-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--cream);
+  line-height: 1;
+}
+
+.section-name em { font-style: italic; color: var(--crimson); }
+
+.section-header-right {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: rgba(245,240,232,0.4);
+  max-width: 280px;
+  text-align: right;
+  line-height: 1.6;
+}
+
+/* Page body */
+.page-body { padding: 48px 60px; }
+
+/* Body text */
+.body-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+/* Gold label */
+.gold-label {
+  font-size: 9px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gold-label::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* Two column */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+
+/* Crimson divider */
+.crimson-divider {
+  height: 2px;
+  background: linear-gradient(90deg, var(--crimson), transparent);
+  margin: 32px 0;
+}
+
+/* ── MISSION VISION VALUES ── */
+.mvv-card {
+  border: 1px solid var(--border);
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mvv-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--crimson), var(--gold));
+}
+
+.mvv-icon { font-size: 32px; margin-bottom: 16px; display: block; }
+
+.mvv-label {
+  font-size: 8px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.mvv-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--black);
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+
+.mvv-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* ── SERVICES LIST ── */
+.service-item {
+  display: flex;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+}
+
+.service-item:first-child { border-top: 1px solid var(--border); }
+
+.service-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: rgba(139,0,0,0.12);
+  line-height: 1;
+  min-width: 36px;
+}
+
+.service-icon { font-size: 18px; margin-top: 2px; flex-shrink: 0; }
+
+.service-text h4 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--black);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.service-text p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  color: #888;
+  line-height: 1.5;
+}
+
+/* ── GRIT VALUES ── */
+.grit-block {
+  background: var(--crimson);
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.grit-block::before {
+  content: attr(data-letter);
+  position: absolute;
+  right: -10px;
+  bottom: -20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 120px;
+  color: rgba(255,255,255,0.05);
+  line-height: 1;
+}
+
+.grit-letter {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 56px;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.grit-word {
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.grit-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.6;
+}
+
+/* ── VENDOR SECTION ── */
+.vendor-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.vendor-dot {
+  width: 8px; height: 8px;
+  background: var(--crimson);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.vendor-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+/* ── PROCESS STEPS ── */
+.process-step {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.process-step-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 40px;
+  color: rgba(139,0,0,0.1);
+  line-height: 1;
+  min-width: 48px;
+}
+
+.process-step-content h4 {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.process-step-content p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ── BACK COVER ── */
+.back-cover {
+  min-height: 600px;
+  background: var(--black);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.back-left {
+  background: var(--crimson);
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.back-left::before {
+  content: 'GRIT';
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 140px;
+  color: rgba(0,0,0,0.08);
+  line-height: 1;
+}
+
+.back-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 44px;
+  color: white;
+  line-height: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.back-title em { font-style: italic; color: var(--gold); }
+
+.back-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.6;
+  border-left: 2px solid var(--gold);
+  padding-left: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.back-right {
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.back-contact-title {
+  font-size: 9px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.back-contact-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.back-contact-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.back-contact-label {
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: rgba(245,240,232,0.3);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.back-contact-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  color: rgba(245,240,232,0.8);
+  line-height: 1.3;
+}
+
+.back-logo-block {
+  border-top: 1px solid rgba(245,240,232,0.08);
+  padding-top: 28px;
+}
+
+.back-logo-name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 8px;
+  color: var(--cream);
+  display: block;
+}
+
+.back-logo-sub {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* ── QUOTE CALLOUT ── */
+.quote-callout {
+  background: var(--light);
+  border-left: 4px solid var(--crimson);
+  padding: 24px 28px;
+  margin: 28px 0;
+}
+
+.quote-callout-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--black);
+  line-height: 1.6;
+}
+
+/* ── PAGE FOOTER ── */
+.page-footer {
+  background: var(--light);
+  border-top: 1px solid var(--border);
+  padding: 16px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-footer-brand {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: #bbb;
+  text-transform: uppercase;
+}
+
+.page-footer-brand span { color: var(--crimson); }
+
+.page-footer-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: #bbb;
+}
+
+/* ── PRINT STYLES ── */
+@media print {
+  .print-bar { display: none !important; }
+  .doc-wrapper { margin: 0; padding: 0; max-width: 100%; }
+  body { background: white; }
+  .page { box-shadow: none; margin-bottom: 0; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+@media(max-width:700px) {
+  .cover { grid-template-columns: 1fr; }
+  .cover-right { display: none; }
+  .two-col, .three-col { grid-template-columns: 1fr; }
+  .back-cover { grid-template-columns: 1fr; }
+  .back-right { display: none; }
+  .section-header { flex-direction: column; gap: 16px; }
+  .section-header-right { text-align: left; }
+  .page-body { padding: 32px 28px; }
+  .section-header { padding: 32px 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- PRINT BAR -->
+<div class="print-bar">
+  <div class="print-bar-brand">GRIT <span>Events</span> · Company Profile 2025</div>
+  <div class="print-bar-actions">
+    <button class="print-btn btn-pdf" onclick="window.print()">🖨️ Save as PDF</button>
+    <a class="print-btn btn-view" href="https://gritevents.github.io" target="_blank">🌐 View Website</a>
+  </div>
+</div>
+
+<div class="doc-wrapper">
+
+<!-- ══════════════════════
+     PAGE 1 — COVER
+══════════════════════ -->
+<div class="page">
+  <div class="page-top-bar"></div>
+  <div class="cover">
+
+    <div class="cover-left">
+      <div class="cover-monogram">
+        <div class="mono-letters">G<span class="e">E</span></div>
+        <div class="mono-ring"></div>
+      </div>
+
+      <div class="cover-tagline-block">
+        <span class="cover-tagline-label">Our Philosophy</span>
+        <p class="cover-tagline">
+          "We don't just plan events — we build extraordinary experiences through precision, passion, and relentless excellence."
+        </p>
+      </div>
+
+      <div class="cover-contact-block">
+        <div class="cover-contact-item">
+          <div class="cover-contact-dot"></div>
+          <span class="cover-contact-text">+254 707 768 071</span>
+        </div>
+        <div class="cover-contact-item">
+          <div class="cover-contact-dot"></div>
+          <span class="cover-contact-text">+254 701 441 045</span>
+        </div>
+        <div class="cover-contact-item">
+          <div class="cover-contact-dot"></div>
+          <span class="cover-contact-text">gracetitusn@gmail.com</span>
+        </div>
+        <div class="cover-contact-item">
+          <div class="cover-contact-dot"></div>
+          <span class="cover-contact-text">gritevents.github.io</span>
+        </div>
+        <div class="cover-contact-item">
+          <div class="cover-contact-dot"></div>
+          <span class="cover-contact-text">Nairobi, Kenya · East Africa & International</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-right">
+      <div class="cover-right-top">
+        <div class="cover-doc-label">Company Profile</div>
+        <span class="cover-brand-name">GRIT</span>
+        <span class="cover-brand-sub">Events</span>
+        <div class="cover-divider">
+          <div class="cover-div-line"></div>
+          <div class="cover-div-diamond"></div>
+          <div class="cover-div-line"></div>
+        </div>
+        <p class="cover-about-text">
+          GRIT Events is Nairobi's premier luxury event planning and design company. We create extraordinary experiences across weddings, corporate events, galas, summits, traditional ceremonies, and more — serving clients across East Africa and internationally.
+        </p>
+        <br>
+        <p class="cover-about-text">
+          GRIT stands for <strong>Greatness Requires Internal Toughness</strong> — the belief that behind every flawless event is quiet, disciplined, uncompromising work that our clients never have to see.
+        </p>
+      </div>
+
+      <div class="cover-right-bottom">
+        <div class="cover-stats">
+          <div class="cover-stat">
+            <span class="cover-stat-num">12+</span>
+            <span class="cover-stat-label">Event Categories</span>
+          </div>
+          <div class="cover-stat">
+            <span class="cover-stat-num">5★</span>
+            <span class="cover-stat-label">Google Rating</span>
+          </div>
+          <div class="cover-stat">
+            <span class="cover-stat-num">24/7</span>
+            <span class="cover-stat-label">Availability</span>
+          </div>
+          <div class="cover-stat">
+            <span class="cover-stat-num">100%</span>
+            <span class="cover-stat-label">Client Satisfaction</span>
+          </div>
+        </div>
+        <div class="cover-year-badge">
+          <span class="cover-year-label">Established</span>
+          <span class="cover-year-val">2024 · Nairobi, Kenya</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════
+     PAGE 2 — ABOUT & PHILOSOPHY
+══════════════════════ -->
+<div class="page inner-page">
+  <div class="page-top-bar"></div>
+  <div class="section-header">
+    <div class="section-header-left">
+      <div class="section-num">Section 01</div>
+      <div class="section-name">About <em>GRIT Events</em></div>
+    </div>
+    <div class="section-header-right">Who we are, what we believe, and why we exist.</div>
+  </div>
+
+  <div class="page-body">
+    <div class="two-col">
+      <div>
+        <div class="gold-label">Our Story</div>
+        <p class="body-text">
+          GRIT Events was founded in Nairobi, Kenya in 2024 with a singular, powerful belief — that extraordinary events do not happen by accident. They are built, piece by piece, through discipline, creativity, and an unrelenting refusal to accept anything less than the best.
+        </p>
+        <p class="body-text">
+          Led by founder and lead event planner Grace Titus, GRIT Events was born from a deep passion for creating experiences that move people — events that guests remember not just for how they looked, but for how they felt.
+        </p>
+        <p class="body-text">
+          Based in Nairobi, we serve clients across Kenya, East Africa, and internationally — from intimate family ceremonies to high-profile corporate summits with hundreds of delegates.
+        </p>
+      </div>
+      <div>
+        <div class="gold-label">What GRIT Means</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(201,168,76,0.1);">
+          <div class="grit-block" data-letter="G">
+            <div class="grit-letter">G</div>
+            <div class="grit-word">Greatness</div>
+            <p class="grit-desc">We pursue excellence in every detail, no matter how small.</p>
+          </div>
+          <div class="grit-block" data-letter="R">
+            <div class="grit-letter">R</div>
+            <div class="grit-word">Requires</div>
+            <p class="grit-desc">True luxury demands deliberate, disciplined effort.</p>
+          </div>
+          <div class="grit-block" data-letter="I">
+            <div class="grit-letter">I</div>
+            <div class="grit-word">Internal</div>
+            <p class="grit-desc">Our drive comes from within — not trends or shortcuts.</p>
+          </div>
+          <div class="grit-block" data-letter="T">
+            <div class="grit-letter">T</div>
+            <div class="grit-word">Toughness</div>
+            <p class="grit-desc">We handle the hard parts so you never have to.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="crimson-divider"></div>
+
+    <div class="three-col">
+      <div class="mvv-card">
+        <span class="mvv-icon">🎯</span>
+        <div class="mvv-label">Our Mission</div>
+        <div class="mvv-title">To Create Extraordinary Experiences</div>
+        <p class="mvv-text">To deliver flawless, deeply personal event experiences that exceed every expectation — through meticulous planning, bold creativity, and an uncompromising commitment to excellence.</p>
+      </div>
+      <div class="mvv-card">
+        <span class="mvv-icon">🌍</span>
+        <div class="mvv-label">Our Vision</div>
+        <div class="mvv-title">East Africa's Most Trusted Luxury Brand</div>
+        <p class="mvv-text">To be the most respected and sought-after luxury event planning company in East Africa and beyond — known for our discipline, resilience, and leadership in every event we deliver.</p>
+      </div>
+      <div class="mvv-card">
+        <span class="mvv-icon">⚡</span>
+        <div class="mvv-label">Our Purpose</div>
+        <div class="mvv-title">We Carry the Weight You Never Should</div>
+        <p class="mvv-text">We work in the shadows so our clients shine in the spotlight on their most important day. Behind every seamless event is hard work that nobody sees — and that is exactly how we like it.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="page-footer-brand"><span>GRIT</span> Events · Company Profile 2025</div>
+    <div class="page-footer-tagline">Greatness Requires Internal Toughness</div>
+  </div>
+</div>
+
+<!-- ══════════════════════
+     PAGE 3 — SERVICES
+══════════════════════ -->
+<div class="page inner-page">
+  <div class="page-top-bar"></div>
+  <div class="section-header">
+    <div class="section-header-left">
+      <div class="section-num">Section 02</div>
+      <div class="section-name">Our <em>Services</em></div>
+    </div>
+    <div class="section-header-right">Twelve categories of luxury event excellence — all under one roof.</div>
+  </div>
+
+  <div class="page-body">
+    <div class="two-col">
+      <div>
+        <div class="gold-label">Planning & Coordination</div>
+        <div class="service-item">
+          <div class="service-num">01</div>
+          <span class="service-icon">💍</span>
+          <div class="service-text">
+            <h4>Wedding Planning & Design</h4>
+            <p>Full-service luxury wedding planning from concept to final farewell, across Kenya and beyond.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">02</div>
+          <span class="service-icon">🏛️</span>
+          <div class="service-text">
+            <h4>Corporate Events & Summits</h4>
+            <p>Professional conferences, summits, and corporate gatherings executed with precision.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">03</div>
+          <span class="service-icon">✨</span>
+          <div class="service-text">
+            <h4>Gala Dinners & Award Nights</h4>
+            <p>Sophisticated, high-energy gala experiences with impeccable design and programming.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">04</div>
+          <span class="service-icon">🚀</span>
+          <div class="service-text">
+            <h4>Product & Brand Launches</h4>
+            <p>Launch events that generate buzz, create impressions, and position your brand powerfully.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">05</div>
+          <span class="service-icon">🎂</span>
+          <div class="service-text">
+            <h4>Birthday Celebrations</h4>
+            <p>Milestone birthday experiences tailored to your personality — intimate or grand.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">06</div>
+          <span class="service-icon">👶</span>
+          <div class="service-text">
+            <h4>Baby Showers & Gender Reveals</h4>
+            <p>Elegant, beautifully designed celebrations welcoming new life.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="gold-label">Design & Specialist Services</div>
+        <div class="service-item">
+          <div class="service-num">07</div>
+          <span class="service-icon">🌍</span>
+          <div class="service-text">
+            <h4>Traditional Ceremonies — Ruracio</h4>
+            <p>Culturally authentic dowry and traditional ceremonies planned with deep respect.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">08</div>
+          <span class="service-icon">✈️</span>
+          <div class="service-text">
+            <h4>Destination Events</h4>
+            <p>Cross-border event planning with on-ground coordination wherever you need us.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">09</div>
+          <span class="service-icon">💐</span>
+          <div class="service-text">
+            <h4>Premium Décor & Styling</h4>
+            <p>Transforming spaces through floral design, lighting, and intentional styling.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">10</div>
+          <span class="service-icon">🚗</span>
+          <div class="service-text">
+            <h4>Car Décor for Events</h4>
+            <p>Luxury car decoration for weddings, proms, and special occasions.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">11</div>
+          <span class="service-icon">🎯</span>
+          <div class="service-text">
+            <h4>Event Coordination & On-Site Management</h4>
+            <p>Professional day-of coordination — timelines, vendors, and logistics managed flawlessly.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-num">12</div>
+          <span class="service-icon">🤝</span>
+          <div class="service-text">
+            <h4>Vendor Sourcing & Management</h4>
+            <p>Access to our vetted network of photographers, caterers, florists, and more across Kenya.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-callout">
+      <p class="quote-callout-text">"From intimate gatherings of 20 to grand productions of 2,000 — every GRIT Events client receives the same uncompromising level of care, creativity, and execution."</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="page-footer-brand"><span>GRIT</span> Events · Company Profile 2025</div>
+    <div class="page-footer-tagline">gritevents.github.io · +254 707 768 071</div>
+  </div>
+</div>
+
+<!-- ══════════════════════
+     PAGE 4 — HOW WE WORK & VENDORS
+══════════════════════ -->
+<div class="page inner-page">
+  <div class="page-top-bar"></div>
+  <div class="section-header">
+    <div class="section-header-left">
+      <div class="section-num">Section 03</div>
+      <div class="section-name">How We <em>Work</em></div>
+    </div>
+    <div class="section-header-right">Our process is what separates a good event from an extraordinary one.</div>
+  </div>
+
+  <div class="page-body">
+    <div class="two-col">
+      <div>
+        <div class="gold-label">Our Process</div>
+        <div class="process-step">
+          <div class="process-step-num">01</div>
+          <div class="process-step-content">
+            <h4>Discovery Consultation</h4>
+            <p>We meet, listen deeply, and understand your vision, budget, and non-negotiables. Every great event begins here.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num">02</div>
+          <div class="process-step-content">
+            <h4>Site Visit & Assessment</h4>
+            <p>We visit your venue — measuring, photographing, and assessing every operational detail before any decisions are made.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num">03</div>
+          <div class="process-step-content">
+            <h4>Concept & Design Development</h4>
+            <p>Mood boards, floor plans, colour stories, and design direction — your full event concept built for your approval.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num">04</div>
+          <div class="process-step-content">
+            <h4>Vendor Sourcing & Briefing</h4>
+            <p>All suppliers sourced, vetted, contracted, and briefed. We become your single point of contact for every vendor.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-step-num">05</div>
+          <div class="process-step-content">
+            <h4>Execution & On-Site Management</h4>
+            <p>Setup, coordination, management — our team handles everything from dawn until the last guest leaves.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="gold-label">Our Vendor Network</div>
+        <p class="body-text" style="margin-bottom:20px;">We maintain a curated, vetted network of trusted professionals across every event supplier category in Nairobi and Kenya.</p>
+
+        <div class="vendor-item"><div class="vendor-dot"></div><span class="vendor-text">Photographers & Videographers</span></div>
+        <div class="vendor-item"><div class="vendor-dot"></div><span class="vendor-text">Caterers & Beverage Teams</span></div>
+        <div class="vendor-item"><div class="vendor-dot"></div><span class="vendor-text">Florists & Décor Suppliers</span></div>
+        <div class="vendor-item"><div class="vendor-dot"></div><span class="vendor-text">Entertainment & Professional MCs</span></div>
+        <div class="vendor-item"><div class="vendor-dot"></div><span class="vendor-text">Tent, Marquee & Furniture Hire</span></div>
+        <div class="vendor-item"><div class="vendor-dot"></div><span class="vendor-text">Sound, AV & Lighting Technicians</span></div>
+        <div class="vendor-item"><div class="vendor-dot"></div><span class="vendor-text">Guest Transport & Logistics</span></div>
+        <div class="vendor-item"><div class="vendor-dot"></div><span class="vendor-text">Signage & Stationery Designers</span></div>
+
+        <div class="crimson-divider"></div>
+
+        <div class="gold-label">Core Values</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="padding:14px;border:1px solid var(--border);text-align:center;">
+            <div style="font-size:20px;margin-bottom:6px;">💎</div>
+            <div style="font-size:8px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;">Excellence</div>
+          </div>
+          <div style="padding:14px;border:1px solid var(--border);text-align:center;">
+            <div style="font-size:20px;margin-bottom:6px;">🤝</div>
+            <div style="font-size:8px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;">Integrity</div>
+          </div>
+          <div style="padding:14px;border:1px solid var(--border);text-align:center;">
+            <div style="font-size:20px;margin-bottom:6px;">💡</div>
+            <div style="font-size:8px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;">Creativity</div>
+          </div>
+          <div style="padding:14px;border:1px solid var(--border);text-align:center;">
+            <div style="font-size:20px;margin-bottom:6px;">🔥</div>
+            <div style="font-size:8px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;">Resilience</div>
+          </div>
+          <div style="padding:14px;border:1px solid var(--border);text-align:center;">
+            <div style="font-size:20px;margin-bottom:6px;">👑</div>
+            <div style="font-size:8px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;">Leadership</div>
+          </div>
+          <div style="padding:14px;border:1px solid var(--border);text-align:center;">
+            <div style="font-size:20px;margin-bottom:6px;">❤️</div>
+            <div style="font-size:8px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;">Client First</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="page-footer-brand"><span>GRIT</span> Events · Company Profile 2025</div>
+    <div class="page-footer-tagline">Greatness Requires Internal Toughness</div>
+  </div>
+</div>
+
+<!-- ══════════════════════
+     PAGE 5 — BACK COVER
+══════════════════════ -->
+<div class="page">
+  <div class="page-top-bar"></div>
+  <div class="back-cover">
+
+    <div class="back-left">
+      <div>
+        <h2 class="back-title">Ready to Build<br>Something<br><em>Extraordinary?</em></h2>
+      </div>
+      <div>
+        <p class="back-quote">"Every great event begins with a conversation. Tell us your vision — we will handle everything else."</p>
+        <br>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:14px;color:rgba(255,255,255,0.4);letter-spacing:1px;position:relative;z-index:2;">— Grace Titus, Founder · GRIT Events</p>
+      </div>
+    </div>
+
+    <div class="back-right">
+      <div>
+        <div class="back-contact-title">Get In Touch</div>
+
+        <div class="back-contact-item">
+          <span class="back-contact-icon">📞</span>
+          <div>
+            <div class="back-contact-label">Primary Phone</div>
+            <div class="back-contact-val">+254 707 768 071</div>
+          </div>
+        </div>
+        <div class="back-contact-item">
+          <span class="back-contact-icon">📱</span>
+          <div>
+            <div class="back-contact-label">Secondary Phone</div>
+            <div class="back-contact-val">+254 701 441 045</div>
+          </div>
+        </div>
+        <div class="back-contact-item">
+          <span class="back-contact-icon">✉️</span>
+          <div>
+            <div class="back-contact-label">Email</div>
+            <div class="back-contact-val">gracetitusn@gmail.com</div>
+          </div>
+        </div>
+        <div class="back-contact-item">
+          <span class="back-contact-icon">🌐</span>
+          <div>
+            <div class="back-contact-label">Website</div>
+            <div class="back-contact-val">gritevents.github.io</div>
+          </div>
+        </div>
+        <div class="back-contact-item">
+          <span class="back-contact-icon">💬</span>
+          <div>
+            <div class="back-contact-label">WhatsApp</div>
+            <div class="back-contact-val">+254 707 768 071</div>
+          </div>
+        </div>
+        <div class="back-contact-item">
+          <span class="back-contact-icon">📍</span>
+          <div>
+            <div class="back-contact-label">Location</div>
+            <div class="back-contact-val">Nairobi, Kenya<br>East Africa & International</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="back-logo-block">
+        <span class="back-logo-name">GRIT</span>
+        <span class="back-logo-sub">Events · Established 2024 · Nairobi, Kenya</span>
+        <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:rgba(245,240,232,0.3);margin-top:10px;line-height:1.5;">Greatness Requires Internal Toughness</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div><!-- end doc-wrapper -->
+</body>
+</html>
