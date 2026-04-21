@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GRIT Events — Nairobi's premier luxury event planning company. Find all our links, social media, portfolio, website and services here.">
+<meta name="keywords" content="GRIT Events Nairobi, luxury event planner Kenya, Grace Titus, event planning East Africa">
+<meta property="og:title" content="GRIT Events — All Links">
+<meta property="og:description" content="Greatness Requires Internal Toughness. Luxury event planning across East Africa.">
+<title>GRIT Events — Links</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Josefin+Sans:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --crimson: #8B0000;
+  --crimson-glow: rgba(139,0,0,0.4);
+  --black: #1A1A1A;
+  --black-deep: #080808;
+  --gold: #C9A84C;
+  --gold-glow: rgba(201,168,76,0.3);
+  --cream: #F5F0E8;
+  --glass: rgba(255,255,255,0.04);
+  --glass-border: rgba(255,255,255,0.08);
+  --glass-gold: rgba(201,168,76,0.12);
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  cursor: none;
+  background: var(--black-deep);
+}
+
+/* ── CUSTOM CURSOR ── */
+.cursor { width:8px; height:8px; background:var(--gold); border-radius:50%; position:fixed; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); transition:transform 0.1s; }
+.cursor-ring { width:28px; height:28px; border:1px solid rgba(201,168,76,0.5); border-radius:50%; position:fixed; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition:width 0.2s, height 0.2s; }
+
+/* ── FIXED CINEMATIC BACKGROUND ── */
+.bg-fixed {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Luxury event background using CSS art + gradients */
+.bg-scene {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(139,0,0,0.35) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(201,168,76,0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 100%, rgba(139,0,0,0.2) 0%, transparent 40%),
+    linear-gradient(160deg, #0a0404 0%, #150808 25%, #0d0d0d 50%, #080808 75%, #0a0a04 100%);
+}
+
+/* Chandelier lights effect */
+.bg-lights {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 25% 15%, rgba(201,168,76,0.12) 0%, transparent 30%),
+    radial-gradient(circle at 75% 20%, rgba(201,168,76,0.08) 0%, transparent 25%),
+    radial-gradient(circle at 50% 10%, rgba(201,168,76,0.15) 0%, transparent 20%),
+    radial-gradient(circle at 15% 60%, rgba(139,0,0,0.08) 0%, transparent 35%),
+    radial-gradient(circle at 85% 50%, rgba(139,0,0,0.06) 0%, transparent 30%);
+  animation: lightsFloat 8s ease-in-out infinite alternate;
+}
+
+@keyframes lightsFloat {
+  from { opacity: 0.7; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(-8px); }
+}
+
+/* Candle/bokeh particles */
+.bg-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: particleFloat linear infinite;
+  pointer-events: none;
+}
+
+/* Table setup silhouette shapes */
+.bg-table-left {
+  position: absolute;
+  bottom: 0; left: -5%;
+  width: 30%;
+  height: 45%;
+  background: linear-gradient(135deg, rgba(139,0,0,0.08) 0%, transparent 60%);
+  border-right: 1px solid rgba(201,168,76,0.06);
+  clip-path: polygon(0 100%, 100% 60%, 100% 100%);
+}
+
+.bg-table-right {
+  position: absolute;
+  bottom: 0; right: -5%;
+  width: 30%;
+  height: 45%;
+  background: linear-gradient(225deg, rgba(139,0,0,0.06) 0%, transparent 60%);
+  border-left: 1px solid rgba(201,168,76,0.05);
+  clip-path: polygon(0 60%, 100% 100%, 0 100%);
+}
+
+/* Decorative diagonal lines */
+.bg-lines {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -55deg,
+    transparent,
+    transparent 120px,
+    rgba(201,168,76,0.02) 120px,
+    rgba(201,168,76,0.02) 121px
+  );
+}
+
+/* Vignette */
+.bg-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.7) 100%);
+}
+
+@keyframes particleFloat {
+  0% { transform: translateY(100vh) scale(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 0.6; }
+  100% { transform: translateY(-20px) scale(1); opacity: 0; }
+}
+
+/* ── MAIN CONTENT ── */
+.main {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px 80px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ── HEADER ── */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.2s forwards;
+  width: 100%;
+}
+
+/* Logo / Monogram */
+.logo-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.logo-ring {
+  width: 90px; height: 90px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: ringPulse 3s ease-in-out infinite;
+}
+
+.logo-ring::before {
+  content: '';
+  position: absolute;
+  width: 106px; height: 106px;
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 50%;
+  animation: ringPulse 3s ease-in-out infinite reverse;
+}
+
+.logo-ring::after {
+  content: '';
+  position: absolute;
+  width: 122px; height: 122px;
+  border: 1px solid rgba(139,0,0,0.15);
+  border-radius: 50%;
+}
+
+@keyframes ringPulse {
+  0%, 100% { box-shadow: 0 0 0 rgba(201,168,76,0); }
+  50% { box-shadow: 0 0 24px rgba(201,168,76,0.15); }
+}
+
+.logo-letters {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: -3px;
+  line-height: 1;
+}
+
+.logo-g { color: var(--crimson); }
+.logo-e { color: var(--gold); }
+
+.brand-name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 8px;
+  color: var(--cream);
+  display: block;
+  margin-top: 16px;
+}
+
+.brand-sub {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: block;
+  margin-top: 4px;
+}
+
+/* Gold divider */
+.header-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px auto;
+  width: 200px;
+}
+
+.div-line { flex:1; height:1px; background:linear-gradient(90deg, transparent, var(--gold), transparent); }
+.div-diamond { width:5px; height:5px; background:var(--gold); transform:rotate(45deg); }
+
+.tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: rgba(245,240,232,0.55);
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+
+/* Location pill */
+.location-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  padding: 6px 16px;
+  margin-top: 14px;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: rgba(245,240,232,0.5);
+  text-transform: uppercase;
+}
+
+.location-dot {
+  width: 6px; height: 6px;
+  background: var(--crimson);
+  border-radius: 50%;
+  animation: dotPulse 2s ease infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+/* ── ABOUT SNIPPET ── */
+.about-snippet {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-top: 2px solid var(--crimson);
+  padding: 20px 24px;
+  margin-bottom: 32px;
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.5s forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-snippet::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.3), transparent);
+}
+
+.about-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(245,240,232,0.65);
+}
+
+.about-text strong { color: var(--gold); font-weight: 600; }
+
+/* ── STATS ROW ── */
+.stats-row {
+  display: flex;
+  gap: 0;
+  width: 100%;
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.7s forwards;
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+  padding: 16px 8px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-right: none;
+  transition: background 0.3s;
+}
+
+.stat-item:last-child { border-right: 1px solid var(--glass-border); }
+.stat-item:hover { background: rgba(139,0,0,0.08); }
+
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+}
+
+.stat-label {
+  font-size: 7px;
+  letter-spacing: 2px;
+  color: rgba(245,240,232,0.35);
+  text-transform: uppercase;
+  margin-top: 4px;
+  display: block;
+}
+
+/* ── SECTION LABEL ── */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 12px;
+  margin-top: 8px;
+}
+
+.section-label-line { flex:1; height:1px; background:rgba(201,168,76,0.15); }
+
+.section-label-text {
+  font-size: 8px;
+  letter-spacing: 4px;
+  color: rgba(201,168,76,0.5);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ── LINK CARDS ── */
+.links-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.link-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, background 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.link-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(139,0,0,0.08), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.link-card:hover {
+  background: rgba(139,0,0,0.1);
+  border-color: rgba(201,168,76,0.35);
+  box-shadow: 0 8px 32px rgba(139,0,0,0.2), 0 0 0 1px rgba(201,168,76,0.1);
+  transform: translateY(-2px) !important;
+}
+
+.link-card:hover::before { opacity: 1; }
+
+/* Left color accent */
+.link-accent {
+  width: 4px;
+  align-self: stretch;
+  flex-shrink: 0;
+  transition: width 0.3s;
+}
+
+.link-card:hover .link-accent { width: 6px; }
+
+/* Icon wrap */
+.link-icon-wrap {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Text */
+.link-text {
+  flex: 1;
+  padding: 14px 16px 14px 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.link-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--cream);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.link-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  color: rgba(245,240,232,0.45);
+  font-style: italic;
+}
+
+/* Arrow */
+.link-arrow {
+  padding: 0 18px;
+  font-size: 16px;
+  color: var(--gold);
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.3s, transform 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.link-card:hover .link-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Coming soon badge */
+.coming-badge {
+  background: rgba(201,168,76,0.1);
+  border: 1px solid rgba(201,168,76,0.25);
+  padding: 3px 10px;
+  font-size: 7px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-right: 16px;
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+/* ── CONTACT BAR ── */
+.contact-bar {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 32px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 1.8s forwards;
+}
+
+.contact-btn {
+  flex: 1;
+  padding: 14px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  border: 1px solid;
+}
+
+.contact-btn.primary {
+  background: var(--crimson);
+  border-color: var(--crimson);
+  color: var(--cream);
+}
+
+.contact-btn.primary:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--black);
+}
+
+.contact-btn.secondary {
+  background: transparent;
+  border-color: rgba(245,240,232,0.15);
+  color: rgba(245,240,232,0.6);
+}
+
+.contact-btn.secondary:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.contact-btn.wa {
+  background: rgba(37,211,102,0.08);
+  border-color: rgba(37,211,102,0.3);
+  color: #25D366;
+  flex: 0 0 auto;
+  padding: 14px 18px;
+}
+
+.contact-btn.wa:hover {
+  background: #25D366;
+  color: white;
+}
+
+/* ── TAGLINE FOOTER ── */
+.page-footer {
+  margin-top: 48px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 2s forwards;
+}
+
+.footer-grit {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 6px;
+  color: rgba(245,240,232,0.2);
+  text-transform: uppercase;
+}
+
+.footer-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 12px;
+  color: rgba(245,240,232,0.2);
+  margin-top: 4px;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(24px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--black-deep); }
+::-webkit-scrollbar-thumb { background: var(--crimson); }
+
+/* ── RESPONSIVE ── */
+@media(max-width:560px) {
+  .main { padding: 48px 16px 60px; }
+  .stats-row { flex-wrap: wrap; }
+  .stat-item { min-width: 50%; border-right: none; }
+  .stat-item:nth-child(2) { border-right: 1px solid var(--glass-border); }
+  .contact-bar { flex-wrap: wrap; }
+  .contact-btn.wa { flex: 1 0 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- FIXED BACKGROUND -->
+<div class="bg-fixed">
+  <div class="bg-scene"></div>
+  <div class="bg-lights"></div>
+  <div class="bg-lines"></div>
+  <div class="bg-particles" id="particles"></div>
+  <div class="bg-table-left"></div>
+  <div class="bg-table-right"></div>
+  <div class="bg-vignette"></div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo-wrap">
+      <div class="logo-ring">
+        <div class="logo-letters">
+          <span class="logo-g">G</span><span class="logo-e">E</span>
+        </div>
+      </div>
+      <span class="brand-name">GRIT</span>
+      <span class="brand-sub">Events</span>
+    </div>
+
+    <div class="header-divider">
+      <div class="div-line"></div>
+      <div class="div-diamond"></div>
+      <div class="div-line"></div>
+    </div>
+
+    <p class="tagline">Greatness Requires Internal Toughness</p>
+    <div class="location-pill">
+      <div class="location-dot"></div>
+      Nairobi, Kenya · East Africa · International
+    </div>
+  </div>
+
+  <!-- ABOUT SNIPPET -->
+  <div class="about-snippet">
+    <p class="about-text">
+      We are <strong>Nairobi's premier luxury event planning company</strong> — building extraordinary experiences through precision, passion, and relentless excellence. From weddings to corporate summits, every event we touch becomes unforgettable.
+    </p>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-row">
+    <div class="stat-item">
+      <span class="stat-num">12+</span>
+      <span class="stat-label">Categories</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">5★</span>
+      <span class="stat-label">Google</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">24/7</span>
+      <span class="stat-label">Available</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Satisfaction</span>
+    </div>
+  </div>
+
+  <!-- ── WEBSITE & PROFILE ── -->
+  <div class="section-label">
+    <div class="section-label-line"></div>
+    <span class="section-label-text">Our Digital Home</span>
+    <div class="section-label-line"></div>
+  </div>
+
+  <div class="links-stack" id="linksStack">
+
+    <a href="https://gritevents.github.io" target="_blank" class="link-card" data-delay="800">
+      <div class="link-accent" style="background:var(--crimson)"></div>
+      <div class="link-icon-wrap">🌐</div>
+      <div class="link-text">
+        <span class="link-title">Official Website</span>
+        <span class="link-desc">gritevents.github.io — Full site with all pages</span>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <a href="https://gritevents.github.io/about.html" target="_blank" class="link-card" data-delay="900">
+      <div class="link-accent" style="background:var(--gold)"></div>
+      <div class="link-icon-wrap">👑</div>
+      <div class="link-text">
+        <span class="link-title">Company Profile</span>
+        <span class="link-desc">Our story, mission, vision & values</span>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <a href="https://gritevents.github.io/portfolio.html" target="_blank" class="link-card" data-delay="1000">
+      <div class="link-accent" style="background:var(--crimson)"></div>
+      <div class="link-icon-wrap">📸</div>
+      <div class="link-text">
+        <span class="link-title">Event Portfolio</span>
+        <span class="link-desc">Our work — weddings, galas, summits & more</span>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <a href="https://gritevents.github.io/services.html" target="_blank" class="link-card" data-delay="1100">
+      <div class="link-accent" style="background:var(--gold)"></div>
+      <div class="link-icon-wrap">🛎️</div>
+      <div class="link-text">
+        <span class="link-title">Our Services</span>
+        <span class="link-desc">12+ event categories — explore what we offer</span>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+  </div>
+
+  <!-- ── SOCIALS ── -->
+  <div class="section-label" style="margin-top:24px">
+    <div class="section-label-line"></div>
+    <span class="section-label-text">Follow Us</span>
+    <div class="section-label-line"></div>
+  </div>
+
+  <div class="links-stack">
+
+    <a href="#" target="_blank" class="link-card" data-delay="1200">
+      <div class="link-accent" style="background:linear-gradient(180deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)"></div>
+      <div class="link-icon-wrap">📸</div>
+      <div class="link-text">
+        <span class="link-title">Instagram</span>
+        <span class="link-desc">Event highlights, behind the scenes & inspiration</span>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <a href="#" target="_blank" class="link-card" data-delay="1280">
+      <div class="link-accent" style="background:#000000"></div>
+      <div class="link-icon-wrap">🎵</div>
+      <div class="link-text">
+        <span class="link-title">TikTok</span>
+        <span class="link-desc">Event setups, reveals & planning content</span>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <a href="#" target="_blank" class="link-card" data-delay="1360">
+      <div class="link-accent" style="background:#1877F2"></div>
+      <div class="link-icon-wrap">👥</div>
+      <div class="link-text">
+        <span class="link-title">Facebook</span>
+        <span class="link-desc">Updates, events & community</span>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <a href="#" target="_blank" class="link-card" data-delay="1440">
+      <div class="link-accent" style="background:#0A66C2"></div>
+      <div class="link-icon-wrap">💼</div>
+      <div class="link-text">
+        <span class="link-title">LinkedIn</span>
+        <span class="link-desc">Corporate events, summits & professional network</span>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <a href="#" target="_blank" class="link-card" data-delay="1520">
+      <div class="link-accent" style="background:#000000"></div>
+      <div class="link-icon-wrap">𝕏</div>
+      <div class="link-text">
+        <span class="link-title">Twitter / X</span>
+        <span class="link-desc">Thoughts, tips & event planning insights</span>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+  </div>
+
+  <!-- ── RESOURCES ── -->
+  <div class="section-label" style="margin-top:24px">
+    <div class="section-label-line"></div>
+    <span class="section-label-text">Resources & More</span>
+    <div class="section-label-line"></div>
+  </div>
+
+  <div class="links-stack">
+
+    <a href="https://gritevents.github.io/blog.html" target="_blank" class="link-card" data-delay="1600">
+      <div class="link-accent" style="background:var(--crimson)"></div>
+      <div class="link-icon-wrap">📝</div>
+      <div class="link-text">
+        <span class="link-title">The GRIT Blog</span>
+        <span class="link-desc">Event planning tips, trends & insider insights</span>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <a href="https://gritevents.github.io/team.html" target="_blank" class="link-card" data-delay="1680">
+      <div class="link-accent" style="background:var(--gold)"></div>
+      <div class="link-icon-wrap">👥</div>
+      <div class="link-text">
+        <span class="link-title">Meet The Team</span>
+        <span class="link-desc">The people behind every extraordinary event</span>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <a href="https://gritevents.github.io/contact.html" target="_blank" class="link-card" data-delay="1760">
+      <div class="link-accent" style="background:var(--crimson)"></div>
+      <div class="link-icon-wrap">📋</div>
+      <div class="link-text">
+        <span class="link-title">Get A Free Quote</span>
+        <span class="link-desc">Tell us your vision — we'll handle everything else</span>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <!-- Google Business Profile -->
+    <a href="https://maps.google.com/?q=GRIT+Events+Nairobi" target="_blank" class="link-card" data-delay="1840">
+      <div class="link-accent" style="background:#4285F4"></div>
+      <div class="link-icon-wrap">📍</div>
+      <div class="link-text">
+        <span class="link-title">Google Business</span>
+        <span class="link-desc">Find us on Google · Leave us a review ★★★★★</span>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <!-- WhatsApp direct -->
+    <a href="https://wa.me/254707768071?text=Hi%20GRIT%20Events!%20I%20found%20you%20via%20your%20links%20page%20and%20I%27d%20like%20to%20enquire%20about%20an%20event." target="_blank" class="link-card" data-delay="1920">
+      <div class="link-accent" style="background:#25D366"></div>
+      <div class="link-icon-wrap">💬</div>
+      <div class="link-text">
+        <span class="link-title">WhatsApp Us</span>
+        <span class="link-desc">Chat with us directly — fastest response</span>
+      </div>
+      <span class="link-arrow">→</span>
+    </a>
+
+    <!-- Classes - coming soon -->
+    <div class="link-card" data-delay="2000" style="cursor:default; opacity:0.65;">
+      <div class="link-accent" style="background:var(--gold)"></div>
+      <div class="link-icon-wrap">🎓</div>
+      <div class="link-text">
+        <span class="link-title">Event Planning Masterclass</span>
+        <span class="link-desc">Learn the GRIT way — courses & workshops</span>
+      </div>
+      <span class="coming-badge">Coming Soon</span>
+    </div>
+
+  </div>
+
+  <!-- CONTACT BAR -->
+  <div class="contact-bar">
+    <a href="tel:+254707768071" class="contact-btn primary">
+      📞 Call Now
+    </a>
+    <a href="mailto:gracetitusn@gmail.com" class="contact-btn secondary">
+      ✉️ Email Us
+    </a>
+    <a href="https://wa.me/254707768071" class="contact-btn wa" target="_blank">
+      💬
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="page-footer">
+    <div class="footer-grit">GRIT Events</div>
+    <div class="footer-tagline">Greatness Requires Internal Toughness · Nairobi, Kenya · Est. 2024</div>
+  </div>
+
+</div>
+
+<script>
+// ── CURSOR ──
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mx=0, my=0, rx=0, ry=0;
+document.addEventListener('mousemove', e => {
+  mx = e.clientX; my = e.clientY;
+  cursor.style.left = mx+'px'; cursor.style.top = my+'px';
+});
+function animateRing() {
+  rx += (mx-rx)*0.12; ry += (my-ry)*0.12;
+  ring.style.left = rx+'px'; ring.style.top = ry+'px';
+  requestAnimationFrame(animateRing);
+}
+animateRing();
+document.querySelectorAll('a,[href]').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    cursor.style.transform = 'translate(-50%,-50%) scale(2)';
+    ring.style.width = '44px'; ring.style.height = '44px';
+    ring.style.borderColor = 'rgba(139,0,0,0.6)';
+  });
+  el.addEventListener('mouseleave', () => {
+    cursor.style.transform = 'translate(-50%,-50%) scale(1)';
+    ring.style.width = '28px'; ring.style.height = '28px';
+    ring.style.borderColor = 'rgba(201,168,76,0.5)';
+  });
+});
+
+// ── FLOATING PARTICLES ──
+const particleContainer = document.getElementById('particles');
+function createParticle() {
+  const p = document.createElement('div');
+  p.className = 'particle';
+  const size = Math.random() * 4 + 1;
+  const isGold = Math.random() > 0.5;
+  const left = Math.random() * 100;
+  const duration = Math.random() * 12 + 8;
+  const delay = Math.random() * 8;
+  p.style.cssText = `
+    width:${size}px; height:${size}px;
+    left:${left}%;
+    background: ${isGold ? 'rgba(201,168,76,0.4)' : 'rgba(139,0,0,0.3)'};
+    animation-duration:${duration}s;
+    animation-delay:${delay}s;
+    box-shadow: 0 0 ${size*2}px ${isGold ? 'rgba(201,168,76,0.3)' : 'rgba(139,0,0,0.2)'};
+  `;
+  particleContainer.appendChild(p);
+  setTimeout(() => p.remove(), (duration + delay) * 1000);
+}
+// Create initial particles
+for(let i = 0; i < 18; i++) createParticle();
+// Keep creating
+setInterval(createParticle, 1200);
+
+// ── STAGGERED LINK REVEALS ──
+const cards = document.querySelectorAll('.link-card');
+cards.forEach(card => {
+  const delay = parseInt(card.dataset.delay || 800);
+  setTimeout(() => {
+    card.classList.add('visible');
+  }, delay);
+});
+
+// ── RIPPLE ON CLICK ──
+document.querySelectorAll('.link-card').forEach(card => {
+  card.addEventListener('click', function(e) {
+    if(!this.href || this.href === '#' || this.href === window.location.href) return;
+    const ripple = document.createElement('span');
+    const rect = this.getBoundingClientRect();
+    ripple.style.cssText = `
+      position:absolute; border-radius:50%;
+      width:4px; height:4px;
+      background:rgba(201,168,76,0.4);
+      left:${e.clientX-rect.left}px;
+      top:${e.clientY-rect.top}px;
+      transform:scale(0);
+      animation:ripple 0.6s ease forwards;
+      pointer-events:none; z-index:10;
+    `;
+    this.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 600);
+  });
+});
+
+// Ripple keyframe
+const style = document.createElement('style');
+style.textContent = '@keyframes ripple{to{transform:scale(80);opacity:0;}}';
+document.head.appendChild(style);
+</script>
+</body>
+</html>
