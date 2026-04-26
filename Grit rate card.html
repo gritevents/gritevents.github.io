@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRIT Events — Rate Card 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Josefin+Sans:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --crimson: #8B0000;
+  --black: #1A1A1A;
+  --black-deep: #0D0D0D;
+  --gold: #C9A84C;
+  --cream: #F5F0E8;
+  --cream-dark: #EDE6D6;
+  --light: #faf8f4;
+  --border: #e8e0d0;
+  --gray: #888;
+  --rate: 130; /* 1 USD = KES 130 — update as needed */
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { font-size:16px; }
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  background: #ddd8cc;
+  color: var(--black);
+}
+
+/* ── CONTROL BAR ── */
+.control-bar {
+  background: var(--black);
+  padding: 14px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  gap: 20px;
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--gold);
+}
+
+.ctrl-brand {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 5px;
+  color: var(--cream);
+}
+.ctrl-brand span { color: var(--gold); }
+
+.ctrl-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+
+.ctrl-btn {
+  padding: 9px 22px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-print { background: var(--gold); color: var(--black); }
+.btn-print:hover { background: #b8943e; }
+.btn-pdf { background: var(--crimson); color: var(--cream); }
+.btn-pdf:hover { background: #6b0000; }
+
+.ctrl-note {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: rgba(245,240,232,0.3);
+  text-transform: uppercase;
+}
+
+/* ── DOCUMENT WRAPPER ── */
+.doc-wrap {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px 80px;
+}
+
+/* ── DOCUMENT ── */
+.document {
+  background: white;
+  box-shadow: 0 8px 60px rgba(0,0,0,0.18);
+}
+
+/* ══ COVER STRIP ══ */
+.cover-strip {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  min-height: 280px;
+}
+
+.cover-left {
+  background: var(--crimson);
+  padding: 48px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-left::before {
+  content: 'GE';
+  position: absolute;
+  bottom: -30px; left: -20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 200px;
+  color: rgba(255,255,255,0.04);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.cover-mono {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 64px;
+  letter-spacing: -5px;
+  line-height: 1;
+  color: white;
+}
+.cover-mono span { color: var(--gold); }
+
+.cover-brand {
+  display: block;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 7px;
+  color: white;
+  margin-top: 8px;
+}
+
+.cover-brand-sub {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.cover-contacts {
+  position: relative;
+  z-index: 2;
+}
+
+.cover-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.cover-dot { width: 4px; height: 4px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+.cover-contact-text { font-size: 11px; letter-spacing: 1px; color: rgba(255,255,255,0.55); }
+
+/* Cover right */
+.cover-right {
+  background: var(--black);
+  padding: 48px 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-right::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, var(--gold), transparent);
+  opacity: 0.4;
+}
+
+.cover-doc-type {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  letter-spacing: 10px;
+  color: var(--cream);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.cover-doc-year {
+  font-size: 10px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+.cover-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 17px;
+  color: rgba(245,240,232,0.5);
+  line-height: 1.6;
+  border-left: 2px solid var(--crimson);
+  padding-left: 18px;
+  margin-top: 24px;
+}
+
+.cover-right-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.cover-stat-row {
+  display: flex;
+  gap: 32px;
+}
+
+.cover-stat-item { text-align: left; }
+.cover-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+}
+.cover-stat-label {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: rgba(245,240,232,0.25);
+  text-transform: uppercase;
+}
+
+.cover-avail {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: rgba(245,240,232,0.25);
+  text-transform: uppercase;
+  text-align: right;
+}
+
+/* Gold top accent */
+.top-accent {
+  height: 5px;
+  background: linear-gradient(90deg, var(--crimson), var(--gold), var(--crimson));
+}
+
+/* ══ INTRO STRIP ══ */
+.intro-strip {
+  background: var(--light);
+  padding: 32px 52px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.intro-text {
+  flex: 1;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
+}
+
+.intro-text strong { color: var(--black); }
+
+.intro-note {
+  background: white;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  padding: 18px 22px;
+  min-width: 260px;
+}
+
+.intro-note-label {
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.intro-note-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.exchange-rate-note {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #aaa;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* ══ SECTION HEADER ══ */
+.section-header {
+  background: var(--black);
+  padding: 22px 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.section-icon { font-size: 20px; }
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--cream);
+  line-height: 1;
+}
+
+.section-title em { font-style: italic; color: var(--crimson); }
+
+.section-note {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: rgba(245,240,232,0.3);
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+/* ══ RATE TABLE ══ */
+.rate-table-wrap { padding: 0 0 4px; }
+
+/* Table column headers */
+.table-head {
+  display: grid;
+  grid-template-columns: 1fr 160px 140px 160px;
+  gap: 0;
+  padding: 12px 52px;
+  background: var(--cream-dark);
+  border-bottom: 2px solid var(--crimson);
+}
+
+.th {
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: var(--crimson);
+  text-transform: uppercase;
+}
+
+.th-right { text-align: right; }
+
+/* Rate row */
+.rate-row {
+  display: grid;
+  grid-template-columns: 1fr 160px 140px 160px;
+  gap: 0;
+  padding: 18px 52px;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+  transition: background 0.2s;
+}
+
+.rate-row:hover { background: var(--light); }
+
+.rate-row:nth-child(even) { background: #fdFbf8; }
+.rate-row:nth-child(even):hover { background: var(--light); }
+
+.rate-service { }
+
+.rate-service-name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: var(--black);
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.rate-service-desc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  color: #999;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.rate-includes {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #bbb;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 2px;
+}
+
+.rate-kes {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--crimson);
+  text-align: right;
+  line-height: 1;
+}
+
+.rate-kes-label {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #ccc;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 2px;
+}
+
+.rate-usd {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  color: var(--gold);
+  text-align: right;
+  line-height: 1;
+}
+
+.rate-usd-label {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #ccc;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 2px;
+}
+
+/* Starting from tag */
+.starting-tag {
+  display: inline-block;
+  font-size: 7px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+  border: 1px solid rgba(201,168,76,0.3);
+  padding: 2px 7px;
+  margin-bottom: 6px;
+}
+
+/* ══ PACKAGE SECTION ══ */
+.packages-section { padding: 0 52px 40px; background: var(--light); }
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.package-card {
+  border: 1px solid var(--border);
+  overflow: hidden;
+  position: relative;
+  background: white;
+}
+
+.package-card.featured {
+  border-color: var(--gold);
+  transform: scaleY(1.01);
+}
+
+.package-card-top {
+  padding: 24px 24px 20px;
+  background: var(--black);
+  position: relative;
+}
+
+.package-card.featured .package-card-top {
+  background: var(--crimson);
+}
+
+.package-badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  background: var(--gold);
+  color: var(--black);
+  font-size: 7px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  font-weight: 700;
+}
+
+.package-icon { font-size: 24px; margin-bottom: 12px; display: block; }
+
+.package-name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: var(--cream);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.package-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: rgba(245,240,232,0.5);
+}
+
+.package-price-block {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.package-from {
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.package-kes {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--crimson);
+  line-height: 1;
+}
+
+.package-usd {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  color: var(--gold);
+  margin-top: 4px;
+  display: block;
+}
+
+.package-includes {
+  padding: 20px 24px;
+}
+
+.package-includes-title {
+  font-size: 8px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.package-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.package-item-dot {
+  width: 5px; height: 5px;
+  background: var(--crimson);
+  border-radius: 50%;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.package-item-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* ══ ADD-ONS ══ */
+.addons-section { padding: 0 52px 8px; }
+
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  background: rgba(201,168,76,0.06);
+  margin-top: 4px;
+}
+
+.addon-item {
+  padding: 18px 20px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.addon-item:nth-child(3n) { border-right: none; }
+.addon-item:nth-last-child(-n+3) { border-bottom: none; }
+
+.addon-icon { font-size: 16px; margin-bottom: 8px; display: block; }
+
+.addon-name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--black);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.addon-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--crimson);
+}
+
+.addon-usd {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  color: var(--gold);
+  margin-left: 6px;
+}
+
+/* ══ TERMS ══ */
+.terms-section {
+  padding: 32px 52px;
+  background: var(--black);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.terms-col-title {
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.terms-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  align-items: flex-start;
+}
+
+.terms-dot {
+  width: 5px; height: 5px;
+  background: var(--crimson);
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.terms-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  color: rgba(245,240,232,0.55);
+  line-height: 1.6;
+}
+
+.terms-text strong { color: var(--gold); }
+
+/* ══ FOOTER ══ */
+.doc-footer {
+  background: var(--crimson);
+  padding: 20px 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.doc-footer-brand {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 5px;
+  color: var(--cream);
+}
+
+.doc-footer-contact {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: rgba(245,240,232,0.6);
+  text-align: right;
+}
+
+.doc-footer-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: rgba(245,240,232,0.5);
+}
+
+/* Bottom gold bar */
+.bottom-bar {
+  height: 5px;
+  background: linear-gradient(90deg, var(--gold), var(--crimson), var(--gold));
+}
+
+/* ── SECTION SPACING ── */
+.section-spacer { height: 4px; background: var(--border); }
+
+/* ── PRINT STYLES ── */
+@media print {
+  .control-bar { display: none !important; }
+  .doc-wrap { margin: 0; padding: 0; max-width: 100%; }
+  .document { box-shadow: none; }
+  body { background: white; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+@media(max-width:800px) {
+  .cover-strip { grid-template-columns: 1fr; }
+  .cover-right { display: none; }
+  .table-head, .rate-row { grid-template-columns: 1fr 130px 120px; }
+  .th:last-child, .rate-usd, .rate-usd-label { display: none; }
+  .packages-grid { grid-template-columns: 1fr; }
+  .addons-grid { grid-template-columns: 1fr 1fr; }
+  .terms-section { grid-template-columns: 1fr; }
+  .intro-strip { flex-direction: column; }
+  .intro-note { min-width: auto; width: 100%; }
+  .section-header, .rate-table-wrap, .packages-section, .addons-section, .terms-section, .doc-footer { padding-left: 28px; padding-right: 28px; }
+  .table-head, .rate-row { padding-left: 28px; padding-right: 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- CONTROL BAR -->
+<div class="control-bar">
+  <div class="ctrl-brand">GRIT <span>Events</span> · Rate Card 2025</div>
+  <div class="ctrl-actions">
+    <span class="ctrl-note">1 USD = KES 130 (approx)</span>
+    <button class="ctrl-btn btn-pdf" onclick="window.print()">🖨️ Print / Save PDF</button>
+  </div>
+</div>
+
+<div class="doc-wrap">
+<div class="document">
+
+<!-- TOP ACCENT -->
+<div class="top-accent"></div>
+
+<!-- ══ COVER STRIP ══ -->
+<div class="cover-strip">
+  <div class="cover-left">
+    <div>
+      <div class="cover-mono">G<span>E</span></div>
+      <span class="cover-brand">GRIT</span>
+      <span class="cover-brand-sub">Events</span>
+    </div>
+    <div class="cover-contacts">
+      <div class="cover-contact-row">
+        <div class="cover-dot"></div>
+        <span class="cover-contact-text">+254 707 768 071</span>
+      </div>
+      <div class="cover-contact-row">
+        <div class="cover-dot"></div>
+        <span class="cover-contact-text">+254 701 441 045</span>
+      </div>
+      <div class="cover-contact-row">
+        <div class="cover-dot"></div>
+        <span class="cover-contact-text">gracetitusn@gmail.com</span>
+      </div>
+      <div class="cover-contact-row">
+        <div class="cover-dot"></div>
+        <span class="cover-contact-text">gritevents.github.io</span>
+      </div>
+      <div class="cover-contact-row">
+        <div class="cover-dot"></div>
+        <span class="cover-contact-text">Nairobi, Kenya · Available 24/7</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-right">
+    <div>
+      <div class="cover-doc-type">Rate Card</div>
+      <div class="cover-doc-year">2025 · Nairobi, Kenya</div>
+      <p class="cover-tagline">
+        "All prices are starting rates. Final pricing is confirmed after a consultation and site visit — because no two extraordinary events are the same."
+      </p>
+    </div>
+    <div class="cover-right-bottom">
+      <div class="cover-stat-row">
+        <div class="cover-stat-item">
+          <span class="cover-stat-num">12+</span>
+          <span class="cover-stat-label">Services</span>
+        </div>
+        <div class="cover-stat-item">
+          <span class="cover-stat-num">5★</span>
+          <span class="cover-stat-label">Google Rating</span>
+        </div>
+        <div class="cover-stat-item">
+          <span class="cover-stat-num">24/7</span>
+          <span class="cover-stat-label">Available</span>
+        </div>
+      </div>
+      <div class="cover-avail">
+        Prices in KES & USD<br>Valid Jan–Dec 2025
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ INTRO STRIP ══ -->
+<div class="intro-strip">
+  <p class="intro-text">
+    At <strong>GRIT Events</strong>, we believe every event is unique — and so is its investment. The rates below are <strong>starting from</strong> prices based on standard scope. Your final quotation is prepared after a free consultation where we understand your vision, guest count, venue, and specific requirements. <strong>No two GRIT Events are priced the same — because no two are ever the same.</strong>
+  </p>
+  <div class="intro-note">
+    <div class="intro-note-label">💡 Important Note</div>
+    <p class="intro-note-text">All prices are quoted in <strong>Kenyan Shillings (KES)</strong> with USD equivalents for reference. A <strong>50% deposit</strong> is required upon booking confirmation. The balance is due 7 days before the event.</p>
+    <p class="exchange-rate-note">USD rates calculated at approx. KES 130 per USD. Exchange rates may vary.</p>
+  </div>
+</div>
+
+<!-- ══ SECTION 1: PLANNING & CELEBRATIONS ══ -->
+<div class="section-header">
+  <div class="section-header-left">
+    <span class="section-icon">💍</span>
+    <div class="section-title">Celebrations &amp; <em>Ceremonies</em></div>
+  </div>
+  <span class="section-note">All prices starting from · Final quote after consultation</span>
+</div>
+
+<div class="rate-table-wrap">
+  <div class="table-head">
+    <div class="th">Service</div>
+    <div class="th" style="text-align:center">What's Included</div>
+    <div class="th th-right">KES</div>
+    <div class="th th-right">USD</div>
+  </div>
+
+  <div class="rate-row">
+    <div class="rate-service">
+      <div class="starting-tag">Most Popular</div>
+      <div class="rate-service-name">Wedding — Full Planning & Design</div>
+      <div class="rate-service-desc">End-to-end planning from concept to final farewell</div>
+    </div>
+    <div class="rate-includes">Site visit · Vendor mgmt<br>Décor · Full coordination</div>
+    <div>
+      <div class="rate-kes">80,000</div>
+      <span class="rate-kes-label">KES · Starting From</span>
+    </div>
+    <div>
+      <div class="rate-usd">$ 615</div>
+      <span class="rate-usd-label">USD · Approx</span>
+    </div>
+  </div>
+
+  <div class="rate-row">
+    <div class="rate-service">
+      <div class="rate-service-name">Wedding — Day-Of Coordination Only</div>
+      <div class="rate-service-desc">You've planned it — we run it flawlessly on the day</div>
+    </div>
+    <div class="rate-includes">Runsheet · On-site mgmt<br>Vendor coordination</div>
+    <div>
+      <div class="rate-kes">35,000</div>
+      <span class="rate-kes-label">KES · Starting From</span>
+    </div>
+    <div>
+      <div class="rate-usd">$ 269</div>
+      <span class="rate-usd-label">USD · Approx</span>
+    </div>
+  </div>
+
+  <div class="rate-row">
+    <div class="rate-service">
+      <div class="rate-service-name">Traditional Ceremony — Ruracio / Dowry</div>
+      <div class="rate-service-desc">Culturally authentic planning with modern elegance</div>
+    </div>
+    <div class="rate-includes">Cultural consult · Décor<br>Programme · Coordination</div>
+    <div>
+      <div class="rate-kes">30,000</div>
+      <span class="rate-kes-label">KES · Starting From</span>
+    </div>
+    <div>
+      <div class="rate-usd">$ 231</div>
+      <span class="rate-usd-label">USD · Approx</span>
+    </div>
+  </div>
+
+  <div class="rate-row">
+    <div class="rate-service">
+      <div class="rate-service-name">Birthday Celebration</div>
+      <div class="rate-service-desc">Milestone experiences tailored to your personality</div>
+    </div>
+    <div class="rate-includes">Concept · Décor<br>Catering coord · Styling</div>
+    <div>
+      <div class="rate-kes">25,000</div>
+      <span class="rate-kes-label">KES · Starting From</span>
+    </div>
+    <div>
+      <div class="rate-usd">$ 192</div>
+      <span class="rate-usd-label">USD · Approx</span>
+    </div>
+  </div>
+
+  <div class="rate-row">
+    <div class="rate-service">
+      <div class="rate-service-name">Baby Shower &amp; Gender Reveal</div>
+      <div class="rate-service-desc">Elegant celebrations welcoming new life beautifully</div>
+    </div>
+    <div class="rate-includes">Styling · Florals<br>Setup · Coordination</div>
+    <div>
+      <div class="rate-kes">15,000</div>
+      <span class="rate-kes-label">KES · Starting From</span>
+    </div>
+    <div>
+      <div class="rate-usd">$ 115</div>
+      <span class="rate-usd-label">USD · Approx</span>
+    </div>
+  </div>
+
+  <div class="rate-row">
+    <div class="rate-service">
+      <div class="rate-service-name">Anniversary Celebration</div>
+      <div class="rate-service-desc">Honouring milestones with intention and beauty</div>
+    </div>
+    <div class="rate-includes">Concept · Venue styling<br>Catering coord</div>
+    <div>
+      <div class="rate-kes">20,000</div>
+      <span class="rate-kes-label">KES · Starting From</span>
+    </div>
+    <div>
+      <div class="rate-usd">$ 154</div>
+      <span class="rate-usd-label">USD · Approx</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-spacer"></div>
+
+<!-- ══ SECTION 2: CORPORATE & PROFESSIONAL ══ -->
+<div class="section-header">
+  <div class="section-header-left">
+    <span class="section-icon">🏛️</span>
+    <div class="section-title">Corporate &amp; <em>Professional</em></div>
+  </div>
+  <span class="section-note">All prices starting from · Scale with event complexity</span>
+</div>
+
+<div class="rate-table-wrap">
+  <div class="table-head">
+    <div class="th">Service</div>
+    <div class="th" style="text-align:center">What's Included</div>
+    <div class="th th-right">KES</div>
+    <div class="th th-right">USD</div>
+  </div>
+
+  <div class="rate-row">
+    <div class="rate-service">
+      <div class="starting-tag">High Demand</div>
+      <div class="rate-service-name">Corporate Event &amp; Summit</div>
+      <div class="rate-service-desc">Full conference / summit management across East Africa</div>
+    </div>
+    <div class="rate-includes">Delegate mgmt · AV<br>Staging · Runsheet</div>
+    <div>
+      <div class="rate-kes">60,000</div>
+      <span class="rate-kes-label">KES · Starting From</span>
+    </div>
+    <div>
+      <div class="rate-usd">$ 462</div>
+      <span class="rate-usd-label">USD · Approx</span>
+    </div>
+  </div>
+
+  <div class="rate-row">
+    <div class="rate-service">
+      <div class="rate-service-name">Gala Dinner &amp; Award Night</div>
+      <div class="rate-service-desc">Sophisticated galas with impeccable design &amp; programming</div>
+    </div>
+    <div class="rate-includes">Décor · Programme<br>Awards staging · Catering</div>
+    <div>
+      <div class="rate-kes">50,000</div>
+      <span class="rate-kes-label">KES · Starting From</span>
+    </div>
+    <div>
+      <div class="rate-usd">$ 385</div>
+      <span class="rate-usd-label">USD · Approx</span>
+    </div>
+  </div>
+
+  <div class="rate-row">
+    <div class="rate-service">
+      <div class="rate-service-name">Product &amp; Brand Launch</div>
+      <div class="rate-service-desc">Launch events that create powerful market impressions</div>
+    </div>
+    <div class="rate-includes">Concept · AV · Reveal<br>Press experience</div>
+    <div>
+      <div class="rate-kes">45,000</div>
+      <span class="rate-kes-label">KES · Starting From</span>
+    </div>
+    <div>
+      <div class="rate-usd">$ 346</div>
+      <span class="rate-usd-label">USD · Approx</span>
+    </div>
+  </div>
+
+  <div class="rate-row">
+    <div class="rate-service">
+      <div class="rate-service-name">Book Launch &amp; Creative Event</div>
+      <div class="rate-service-desc">Narrative event design aligned to your creative work</div>
+    </div>
+    <div class="rate-includes">Concept · Styling<br>Author experience</div>
+    <div>
+      <div class="rate-kes">20,000</div>
+      <span class="rate-kes-label">KES · Starting From</span>
+    </div>
+    <div>
+      <div class="rate-usd">$ 154</div>
+      <span class="rate-usd-label">USD · Approx</span>
+    </div>
+  </div>
+
+  <div class="rate-row">
+    <div class="rate-service">
+      <div class="rate-service-name">End-of-Year Party &amp; Staff Event</div>
+      <div class="rate-service-desc">Corporate celebrations that build culture and reward teams</div>
+    </div>
+    <div class="rate-includes">Theme · Entertainment<br>Catering · Programme</div>
+    <div>
+      <div class="rate-kes">35,000</div>
+      <span class="rate-kes-label">KES · Starting From</span>
+    </div>
+    <div>
+      <div class="rate-usd">$ 269</div>
+      <span class="rate-usd-label">USD · Approx</span>
+    </div>
+  </div>
+
+  <div class="rate-row">
+    <div class="rate-service">
+      <div class="rate-service-name">Destination Event</div>
+      <div class="rate-service-desc">Cross-border planning with on-ground coordination</div>
+    </div>
+    <div class="rate-includes">Logistics · Venue scouting<br>Local vendor mgmt</div>
+    <div>
+      <div class="rate-kes">100,000+</div>
+      <span class="rate-kes-label">KES · Starting From</span>
+    </div>
+    <div>
+      <div class="rate-usd">$ 769+</div>
+      <span class="rate-usd-label">USD · Approx</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-spacer"></div>
+
+<!-- ══ SECTION 3: DESIGN & DÉCOR ══ -->
+<div class="section-header">
+  <div class="section-header-left">
+    <span class="section-icon">💐</span>
+    <div class="section-title">Design, Décor &amp; <em>Specialist</em></div>
+  </div>
+  <span class="section-note">Standalone services · Can be combined with full planning</span>
+</div>
+
+<div class="rate-table-wrap">
+  <div class="table-head">
+    <div class="th">Service</div>
+    <div class="th" style="text-align:center">What's Included</div>
+    <div class="th th-right">KES</div>
+    <div class="th th-right">USD</div>
+  </div>
+
+  <div class="rate-row">
+    <div class="rate-service">
+      <div class="rate-service-name">Premium Décor &amp; Venue Styling</div>
+      <div class="rate-service-desc">Full venue transformation — florals, lighting, furniture &amp; staging</div>
+    </div>
+    <div class="rate-includes">Concept · Florals<br>Setup · Teardown</div>
+    <div>
+      <div class="rate-kes">20,000</div>
+      <span class="rate-kes-label">KES · Starting From</span>
+    </div>
+    <div>
+      <div class="rate-usd">$ 154</div>
+      <span class="rate-usd-label">USD · Approx</span>
+    </div>
+  </div>
+
+  <div class="rate-row">
+    <div class="rate-service">
+      <div class="rate-service-name">Event Coordination — Day-Of Only</div>
+      <div class="rate-service-desc">Professional on-site management of your planned event</div>
+    </div>
+    <div class="rate-includes">Runsheet · Vendor mgmt<br>On-site team</div>
+    <div>
+      <div class="rate-kes">20,000</div>
+      <span class="rate-kes-label">KES · Starting From</span>
+    </div>
+    <div>
+      <div class="rate-usd">$ 154</div>
+      <span class="rate-usd-label">USD · Approx</span>
+    </div>
+  </div>
+
+  <div class="rate-row">
+    <div class="rate-service">
+      <div class="rate-service-name">Vendor Sourcing &amp; Management Only</div>
+      <div class="rate-service-desc">We source, vet, brief and manage all your suppliers</div>
+    </div>
+    <div class="rate-includes">Sourcing · Briefing<br>Negotiation · Mgmt</div>
+    <div>
+      <div class="rate-kes">15,000</div>
+      <span class="rate-kes-label">KES · Starting From</span>
+    </div>
+    <div>
+      <div class="rate-usd">$ 115</div>
+      <span class="rate-usd-label">USD · Approx</span>
+    </div>
+  </div>
+
+  <div class="rate-row">
+    <div class="rate-service">
+      <div class="rate-service-name">Car Décor for Events</div>
+      <div class="rate-service-desc">Luxury car decoration for weddings, proms &amp; special occasions</div>
+    </div>
+    <div class="rate-includes">Florals · Ribbons<br>Signage · Setup</div>
+    <div>
+      <div class="rate-kes">8,000</div>
+      <span class="rate-kes-label">KES · Starting From</span>
+    </div>
+    <div>
+      <div class="rate-usd">$ 62</div>
+      <span class="rate-usd-label">USD · Approx</span>
+    </div>
+  </div>
+
+</div>
+
+<div class="section-spacer"></div>
+
+<!-- ══ PACKAGES ══ -->
+<div class="section-header">
+  <div class="section-header-left">
+    <span class="section-icon">✨</span>
+    <div class="section-title">Curated <em>Packages</em></div>
+  </div>
+  <span class="section-note">Best value · Bundled services · Custom quotes available</span>
+</div>
+
+<div class="packages-section" style="padding-top:24px;">
+  <div class="packages-grid">
+
+    <!-- PACKAGE 1 -->
+    <div class="package-card">
+      <div class="package-card-top">
+        <span class="package-icon">🌸</span>
+        <div class="package-name">The Essentials</div>
+        <p class="package-tagline">Beautiful on a focused budget</p>
+      </div>
+      <div class="package-price-block">
+        <span class="package-from">Starting From</span>
+        <div class="package-kes">KES 25,000</div>
+        <span class="package-usd">≈ USD 192</span>
+      </div>
+      <div class="package-includes">
+        <div class="package-includes-title">What's Included</div>
+        <div class="package-item"><div class="package-item-dot"></div><span class="package-item-text">Initial consultation & vision session</span></div>
+        <div class="package-item"><div class="package-item-dot"></div><span class="package-item-text">Basic décor concept & styling</span></div>
+        <div class="package-item"><div class="package-item-dot"></div><span class="package-item-text">Vendor sourcing (up to 3 suppliers)</span></div>
+        <div class="package-item"><div class="package-item-dot"></div><span class="package-item-text">Day-of coordination (4 hours)</span></div>
+      </div>
+    </div>
+
+    <!-- PACKAGE 2 — FEATURED -->
+    <div class="package-card featured">
+      <div class="package-card-top">
+        <div class="package-badge">Most Popular</div>
+        <span class="package-icon">💎</span>
+        <div class="package-name">The Signature</div>
+        <p class="package-tagline">The full GRIT experience</p>
+      </div>
+      <div class="package-price-block">
+        <span class="package-from">Starting From</span>
+        <div class="package-kes">KES 65,000</div>
+        <span class="package-usd">≈ USD 500</span>
+      </div>
+      <div class="package-includes">
+        <div class="package-includes-title">What's Included</div>
+        <div class="package-item"><div class="package-item-dot"></div><span class="package-item-text">Full planning & project management</span></div>
+        <div class="package-item"><div class="package-item-dot"></div><span class="package-item-text">Site visit & venue assessment</span></div>
+        <div class="package-item"><div class="package-item-dot"></div><span class="package-item-text">Full décor concept & execution</span></div>
+        <div class="package-item"><div class="package-item-dot"></div><span class="package-item-text">All vendor sourcing & management</span></div>
+        <div class="package-item"><div class="package-item-dot"></div><span class="package-item-text">Programme & runsheet creation</span></div>
+        <div class="package-item"><div class="package-item-dot"></div><span class="package-item-text">Full day-of coordination</span></div>
+      </div>
+    </div>
+
+    <!-- PACKAGE 3 -->
+    <div class="package-card">
+      <div class="package-card-top">
+        <span class="package-icon">👑</span>
+        <div class="package-name">The Grand GRIT</div>
+        <p class="package-tagline">For events that demand perfection</p>
+      </div>
+      <div class="package-price-block">
+        <span class="package-from">Starting From</span>
+        <div class="package-kes">KES 120,000</div>
+        <span class="package-usd">≈ USD 923</span>
+      </div>
+      <div class="package-includes">
+        <div class="package-includes-title">What's Included</div>
+        <div class="package-item"><div class="package-item-dot"></div><span class="package-item-text">Everything in The Signature</span></div>
+        <div class="package-item"><div class="package-item-dot"></div><span class="package-item-text">Premium floral installations</span></div>
+        <div class="package-item"><div class="package-item-dot"></div><span class="package-item-text">Lighting design & atmosphere</span></div>
+        <div class="package-item"><div class="package-item-dot"></div><span class="package-item-text">Dedicated 2-person on-day team</span></div>
+        <div class="package-item"><div class="package-item-dot"></div><span class="package-item-text">Bespoke signage & stationery</span></div>
+        <div class="package-item"><div class="package-item-dot"></div><span class="package-item-text">Post-event debrief & photos</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section-spacer"></div>
+
+<!-- ══ ADD-ONS ══ -->
+<div class="section-header">
+  <div class="section-header-left">
+    <span class="section-icon">➕</span>
+    <div class="section-title">Add-On <em>Services</em></div>
+  </div>
+  <span class="section-note">Available to add to any package or standalone booking</span>
+</div>
+
+<div class="addons-section" style="padding-top:0">
+  <div class="addons-grid">
+    <div class="addon-item">
+      <span class="addon-icon">🌸</span>
+      <div class="addon-name">Floral Upgrade</div>
+      <div><span class="addon-price">KES 8,000+</span><span class="addon-usd">≈ $62</span></div>
+    </div>
+    <div class="addon-item">
+      <span class="addon-icon">💡</span>
+      <div class="addon-name">Lighting Design</div>
+      <div><span class="addon-price">KES 10,000+</span><span class="addon-usd">≈ $77</span></div>
+    </div>
+    <div class="addon-item">
+      <span class="addon-icon">🪧</span>
+      <div class="addon-name">Signage & Stationery</div>
+      <div><span class="addon-price">KES 6,000+</span><span class="addon-usd">≈ $46</span></div>
+    </div>
+    <div class="addon-item">
+      <span class="addon-icon">🚗</span>
+      <div class="addon-name">Car Décor</div>
+      <div><span class="addon-price">KES 8,000+</span><span class="addon-usd">≈ $62</span></div>
+    </div>
+    <div class="addon-item">
+      <span class="addon-icon">📸</span>
+      <div class="addon-name">Photography Coord</div>
+      <div><span class="addon-price">KES 5,000+</span><span class="addon-usd">≈ $38</span></div>
+    </div>
+    <div class="addon-item">
+      <span class="addon-icon">🎤</span>
+      <div class="addon-name">MC / Entertainment</div>
+      <div><span class="addon-price">KES 12,000+</span><span class="addon-usd">≈ $92</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section-spacer"></div>
+
+<!-- ══ TERMS ══ -->
+<div class="terms-section">
+  <div>
+    <div class="terms-col-title">Payment Terms</div>
+    <div class="terms-item">
+      <div class="terms-dot"></div>
+      <span class="terms-text"><strong>50% non-refundable deposit</strong> required to confirm your booking and begin planning</span>
+    </div>
+    <div class="terms-item">
+      <div class="terms-dot"></div>
+      <span class="terms-text"><strong>Balance (50%)</strong> due 7 days before your event date</span>
+    </div>
+    <div class="terms-item">
+      <div class="terms-dot"></div>
+      <span class="terms-text">Payment via <strong>M-Pesa, bank transfer</strong> or cash by arrangement</span>
+    </div>
+    <div class="terms-item">
+      <div class="terms-dot"></div>
+      <span class="terms-text">All bookings confirmed in <strong>writing with a signed agreement</strong></span>
+    </div>
+    <div class="terms-item">
+      <div class="terms-dot"></div>
+      <span class="terms-text">Rate card <strong>valid January – December 2025</strong>. Subject to change with 30 days notice</span>
+    </div>
+  </div>
+  <div>
+    <div class="terms-col-title">Important Notes</div>
+    <div class="terms-item">
+      <div class="terms-dot"></div>
+      <span class="terms-text">All prices are <strong>starting from rates</strong>. Final pricing confirmed after consultation &amp; site visit</span>
+    </div>
+    <div class="terms-item">
+      <div class="terms-dot"></div>
+      <span class="terms-text"><strong>Vendor costs are separate</strong> from GRIT Events planning fees unless stated otherwise</span>
+    </div>
+    <div class="terms-item">
+      <div class="terms-dot"></div>
+      <span class="terms-text">A <strong>free initial consultation</strong> is included with every enquiry — no obligation</span>
+    </div>
+    <div class="terms-item">
+      <div class="terms-dot"></div>
+      <span class="terms-text">Cancellations within <strong>14 days of event</strong> forfeit the full deposit</span>
+    </div>
+    <div class="terms-item">
+      <div class="terms-dot"></div>
+      <span class="terms-text">Travel outside Nairobi attracts an additional <strong>logistics fee</strong></span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<div class="doc-footer">
+  <div class="doc-footer-brand">GRIT Events</div>
+  <div class="doc-footer-tagline">Greatness Requires Internal Toughness</div>
+  <div class="doc-footer-contact">
+    +254 707 768 071 · +254 701 441 045<br>
+    gracetitusn@gmail.com · gritevents.github.io
+  </div>
+</div>
+<div class="bottom-bar"></div>
+
+</div><!-- end document -->
+</div><!-- end doc-wrap -->
+
+</body>
+</html>
